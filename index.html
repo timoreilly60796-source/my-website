@@ -395,35 +395,43 @@ footer{background:var(--navy);padding:60px 0 28px}
 }
 
 @media(max-width:768px){
-  /* ── NAV ── */
+  /* ── FIX 3: Nav height reduced to 64px ── */
+  .nav-inner{height:64px;padding:0 1.25rem;}
   .nav-menu{display:none!important}
   .nav-actions{display:none!important}
   .hamburger{display:flex}
-  .logo-name{font-size:1.4rem}
-  .logo-mark{width:44px;height:44px}
-  .logo-mark svg{width:44px!important;height:44px!important}
+  .logo-name{font-size:1.5rem}
+  .logo-mark{width:42px;height:42px}
+  .logo-mark svg{width:42px!important;height:42px!important}
   .logo{gap:10px}
+  .logo::after{display:none}
 
-  /* ── HERO ── */
+  /* ── FIX 1: Hero video hidden on mobile, static overlay fallback ── */
+  .hero-bg video{display:none;}
+  .hero-bg{background:linear-gradient(135deg,#0B1C2E 0%,#0a2a2f 60%,#122536 100%);}
   .hero{height:100svh;min-height:580px;max-height:none;}
-  .hero-content{padding:80px 1.25rem 0;}
+  .hero-content{padding:72px 1.25rem 0;}
   .hero h1{font-size:clamp(1.8rem,6.5vw,2.6rem);max-width:100%;line-height:1.15;}
   .hero-sub{font-size:0.9rem;max-width:100%;margin-top:0.75rem;}
   .hero-ctas{flex-direction:column;align-items:stretch;gap:0.75rem;margin-top:1.5rem;}
-  .btn-hero-primary,.btn-hero-ghost{width:100%;text-align:center;justify-content:center;font-size:0.9rem;padding:0.85rem 1.5rem;}
+  /* ── FIX 5: Ghost button more visible on mobile ── */
+  .btn-hero-primary{width:100%;text-align:center;justify-content:center;font-size:0.95rem;padding:0.9rem 1.5rem;}
+  .btn-hero-ghost{width:100%;text-align:center;justify-content:center;font-size:0.95rem;padding:0.9rem 1.5rem;border-color:rgba(255,255,255,0.65);background:rgba(255,255,255,0.12);}
   .hero-trust-row{gap:0.5rem;flex-wrap:wrap;margin-top:1.25rem;}
   .hero-trust-pill{font-size:0.72rem;padding:0.35rem 0.75rem;}
   .hero-tag{font-size:0.65rem;}
-  .hero-wedge{height:160px;}
+  .hero-wedge{height:140px;}
 
-  /* ── MISSION ── */
-  .mission-block{margin-top:-60px;padding:0 0 48px;}
+  /* ── FIX 2: Mission negative margin tied to wedge height ── */
+  .mission-block{margin-top:-50px;padding:0 0 48px;}
   .mission-centered{padding:0 0.5rem;}
   .mission-heading{font-size:clamp(1.4rem,5vw,1.9rem);}
   .mission-body{font-size:0.9rem;}
 
   /* ── SECTION COMMON ── */
-  #services,#approach,#industries,#testimonials,#team,#why,#cta-block,#contact{padding:56px 0;}
+  #services,#approach,#industries,#testimonials,#team,#why,#contact{padding:56px 0;}
+  /* ── FIX 10: CTA block extra bottom padding for mobile bar ── */
+  #cta-block{padding:56px 0 80px;}
   .section-header{margin-bottom:2rem;}
   .section-header h2,.section-title{font-size:clamp(1.4rem,5vw,2rem)!important;}
   .section-sub{font-size:0.9rem;}
@@ -458,8 +466,9 @@ footer{background:var(--navy);padding:60px 0 28px}
   .ind-grid{grid-template-columns:1fr 1fr;gap:0.75rem;}
   .ind-card{padding:1.1rem 1rem;}
 
-  /* ── TESTIMONIALS ── */
+  /* ── FIX 9: Testimonials — smaller quote marks ── */
   .testi-grid{grid-template-columns:1fr;}
+  .quote-mark{font-size:2.2rem!important;}
 
   /* ── TEAM ── */
   .team-grid{grid-template-columns:1fr 1fr;gap:1rem;}
@@ -474,26 +483,41 @@ footer{background:var(--navy);padding:60px 0 28px}
   .contact-info{padding:2rem 1.5rem;order:2;}
   .contact-form-wrap{order:1;}
   .f-row{grid-template-columns:1fr;}
+  /* ── FIX 7: Size tiles font size ── */
   .size-selector{grid-template-columns:repeat(2,1fr);}
+  .size-opt span{font-size:0.78rem;text-align:center;padding:0.65rem 0.5rem;}
   .contact-info-item{flex-direction:row;gap:0.75rem;}
 
-  /* ── FOOTER ── */
+  /* ── FIX 8: Footer social centred ── */
   .foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}
   .foot-brand{grid-column:1/-1;}
+  .foot-social{justify-content:center;}
   .foot-bottom{flex-direction:column;text-align:center;gap:0.5rem;}
   .foot-bottom-links{flex-wrap:wrap;justify-content:center;gap:0.5rem 1rem;}
+
+  /* ── FIX 6: Touch targets — hamburger menu min 48px rows ── */
+  #mobile-nav a{min-height:48px;display:flex;align-items:center;}
 
   /* ── MOBILE CTA BAR ── */
   .mobile-cta-bar{display:block}
   body{padding-bottom:72px}
-  .logo::after{display:none}
+}
+
+@media(max-width:600px){
+  .services-grid{grid-template-columns:1fr;}
+  .svc-card{padding:1.5rem 1.25rem;min-height:auto;}
+  .steps{grid-template-columns:1fr;}
+  .ind-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr 1fr;}
 }
 
 @media(max-width:480px){
   /* Hero */
   .hero h1{font-size:1.65rem;line-height:1.18;}
   .hero-tag{font-size:0.62rem;}
-  .hero-content{padding:72px 1rem 0;}
+  .hero-content{padding:68px 1rem 0;}
+  .hero-wedge{height:120px;}
+  .mission-block{margin-top:-35px;}
 
   /* Services */
   .services-grid{grid-template-columns:1fr;}
@@ -509,8 +533,8 @@ footer{background:var(--navy);padding:60px 0 28px}
   .team-grid{grid-template-columns:1fr;}
   .team-avatar{height:240px;}
 
-  /* Logo */
-  .logo-name{font-size:1.2rem;}
+  /* ── FIX 11: Logo kept larger at 480px since it's only 3 chars ── */
+  .logo-name{font-size:1.4rem;}
   .logo-mark{width:40px;height:40px;}
   .logo-mark svg{width:40px!important;height:40px!important;}
 
@@ -519,18 +543,20 @@ footer{background:var(--navy);padding:60px 0 28px}
 
   /* Contact form */
   .size-selector{grid-template-columns:1fr 1fr;}
-  .size-opt span{padding:0.6rem 0.5rem;font-size:0.78rem;}
+  .size-opt span{padding:0.6rem 0.5rem;font-size:0.75rem;}
 
   /* Footer */
   .foot-grid{grid-template-columns:1fr;}
 
   /* Mission */
-  .mission-block{margin-top:-40px;}
   .mission-heading{font-size:1.3rem;}
 
   /* Steps */
   .step-n{font-size:1.4rem;}
   .step h4{font-size:1rem;}
+
+  /* Nav */
+  .nav-inner{padding:0 1rem;}
 }
 
 /* ── TEAM SECTION ───────────────────────────────────── */
