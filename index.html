@@ -64,7 +64,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:900;background:var(--white);bor
    2. .hero-wedge clip left base at 55% instead of 100% —
       image extends further down on the left, less white showing
 ─────────────────────────────────────────────────────── */
-.hero{position:relative;width:100%;height:100vh;max-height:900px;overflow:hidden;background:var(--white);}
+.hero{position:relative;width:100%;height:100vh;max-height:900px;overflow:hidden;background:var(--white);isolation:isolate;}
 .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;}
 .hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
 @keyframes heroScale{from{opacity:0;transform:scale(1.05)}to{opacity:1;transform:scale(1)}}
@@ -380,18 +380,16 @@ footer{background:var(--navy);padding:60px 0 28px}
 .foot-bottom a{color:var(--teal)}
 
 /* ── MOBILE STICKY CTA ──────────────────────────────── */
-.mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:800;background:var(--navy);border-top:2px solid var(--teal);padding:0.85rem 1.5rem;}
-.mobile-cta-bar a{display:block;width:100%;background:var(--amber);color:white;font-family:'Sora',sans-serif;font-size:0.97rem;font-weight:700;text-align:center;padding:0.85rem;border-radius:var(--r-btn);box-shadow:var(--shadow-amber);}
 
 /* ── MOBILE DRAWER ───────────────────────────────────── */
 .drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:1100;backdrop-filter:blur(2px);}
-.drawer{position:fixed;top:64px;left:0;right:0;z-index:1200;background:white;border-bottom:2px solid var(--teal);box-shadow:0 8px 32px rgba(0,0,0,0.15);transform:translateY(-105%);transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);pointer-events:none;}
+.drawer{display:none;position:fixed;top:64px;left:0;right:0;z-index:1200;background:white;border-bottom:2px solid var(--teal);box-shadow:0 8px 32px rgba(0,0,0,0.15);transform:translateY(-105%);transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);}
 .drawer-inner{padding:0.5rem 1.5rem 1.5rem;display:flex;flex-direction:column;}
 .drawer-link{display:flex;align-items:center;min-height:52px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;color:var(--ink);border-bottom:1px solid var(--rule);text-decoration:none;transition:color 0.15s;}
 .drawer-link:hover{color:var(--teal);}
 .drawer-cta{display:block;margin-top:1rem;padding:0.9rem;background:var(--amber);color:white;font-family:'Sora',sans-serif;font-weight:700;font-size:0.95rem;text-align:center;border-radius:var(--r-btn);text-decoration:none;}
 body.nav-open .drawer-overlay{display:block;}
-body.nav-open .drawer{transform:translateY(0);pointer-events:auto;}
+body.nav-open .drawer{display:block;transform:translateY(0);}
 body.nav-open .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 body.nav-open .hamburger span:nth-child(2){opacity:0;transform:scaleX(0);}
 body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
@@ -512,8 +510,6 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   #mobile-nav a{min-height:48px;display:flex;align-items:center;}
 
   /* ── MOBILE CTA BAR ── */
-  .mobile-cta-bar{display:block}
-  body{padding-bottom:72px}
 }
 
 @media(max-width:600px){
@@ -714,7 +710,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
     <p class="hero-sub">Enterprise-grade technology services built for small and medium businesses — cloud, security, support, and software that actually fits your scale and budget.</p>
     <div class="hero-ctas">
       <a href="#services" class="btn-hero-primary">Explore Our Services →</a>
-      <a href="#contact" class="btn-hero-ghost">Get a Contact Us ↗</a>
+      <a href="#contact" class="btn-hero-ghost">How We Work ↗</a>
     </div>
     <div class="hero-trust-row">
       <span class="trust-pill">No commitment required</span>
@@ -1203,7 +1199,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
 </footer>
 
-<div class="mobile-cta-bar"><a href="#contact">Book a Contact Us →</a></div>
+
 
 <script>
 // ── DRAWER MENU ──────────────────────────────────────
