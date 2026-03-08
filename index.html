@@ -666,7 +666,7 @@ footer{background:var(--navy);padding:60px 0 28px}
       
       <a href="#contact" class="btn-amber">Contact Us</a>
     </div>
-    <button class="hamburger" onclick="toggleMobile()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -700,7 +700,7 @@ footer{background:var(--navy);padding:60px 0 28px}
   <div class="container">
     <div class="mission-centered">
       <span class="eyebrow">Our Mission</span>
-      <h2 class="mission-heading">Your <span style="color:#2E7D32">business</span> deserves enterprise-level IT.</h2>
+      <h2 class="mission-heading">Your <span style="color:#CC2222">business</span> deserves enterprise-level IT.</h2>
       <p class="mission-body">Too many growing businesses are held back by fragmented IT, outdated infrastructure, and support that wasn't built for their scale. 4DS changes that. We bring the same technology, discipline, and strategic thinking that powers the world's largest organisations — and make it work for yours. From day one, we treat your business the way it deserves to be treated: as an enterprise.</p>
       <a href="#contact" class="mission-cta">Start the conversation →</a>
     </div>
@@ -1180,66 +1180,95 @@ footer{background:var(--navy);padding:60px 0 28px}
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);});
-function toggleMobile(){
-  const hb=document.querySelector('.hamburger');
-  const isOpen = hb.classList.contains('open');
-  const existing = document.getElementById('mobile-nav');
+document.addEventListener('DOMContentLoaded', function(){
+  const btn = document.getElementById('hamburgerBtn');
+  if(!btn) return;
 
-  if(isOpen){
-    hb.classList.remove('open');
-    if(existing){ existing.style.opacity='0'; existing.style.transform='translateY(-8px)'; setTimeout(()=>existing.remove(),200); }
-  } else {
-    hb.classList.add('open');
-    const menu = document.createElement('div');
-    menu.id = 'mobile-nav';
-    menu.style.cssText = `
-      position:fixed;top:64px;left:0;right:0;z-index:1000;
-      background:white;border-bottom:2px solid #009BAA;
-      padding:0.5rem 1.5rem 1.5rem;
-      box-shadow:0 12px 32px rgba(0,0,0,0.15);
-      display:flex;flex-direction:column;gap:0;
-      opacity:0;transform:translateY(-8px);
-      transition:opacity 0.2s,transform 0.2s;
-    `;
-    const links = [
-      ['#services','Services'],['#why','About Us'],['#approach','Our Approach'],
-      ['#industries','Industries'],['#team','Our Team'],['#contact','Contact']
-    ];
-    links.forEach(([href,label])=>{
-      const a = document.createElement('a');
-      a.href = href;
-      a.textContent = label;
-      a.style.cssText = 'display:flex;align-items:center;min-height:48px;padding:0 0;font-family:Inter,sans-serif;font-size:1rem;font-weight:500;color:#141820;border-bottom:1px solid #f0f0f0;text-decoration:none;';
-      a.addEventListener('click', (e)=>{
-        e.preventDefault();
-        hb.classList.remove('open');
-        menu.style.opacity='0';
-        menu.style.transform='translateY(-8px)';
-        setTimeout(()=>{
-          menu.remove();
-          const target = document.querySelector(href);
-          if(target) target.scrollIntoView({behavior:'smooth'});
-        }, 200);
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    const isOpen = btn.classList.contains('open');
+    const existing = document.getElementById('mobile-nav');
+
+    if(isOpen){
+      btn.classList.remove('open');
+      if(existing){
+        existing.style.opacity='0';
+        existing.style.transform='translateY(-8px)';
+        setTimeout(function(){ if(existing.parentNode) existing.parentNode.removeChild(existing); }, 200);
+      }
+    } else {
+      btn.classList.add('open');
+      if(existing && existing.parentNode) existing.parentNode.removeChild(existing);
+
+      const menu = document.createElement('div');
+      menu.id = 'mobile-nav';
+      menu.style.cssText = 'position:fixed;top:64px;left:0;right:0;z-index:9999;background:#fff;border-bottom:2px solid #009BAA;padding:0.5rem 1.5rem 1.5rem;box-shadow:0 12px 32px rgba(0,0,0,0.15);display:flex;flex-direction:column;opacity:0;transform:translateY(-8px);transition:opacity 0.2s,transform 0.2s;';
+
+      var links = [
+        ['#services','Services'],['#why','About Us'],['#approach','Our Approach'],
+        ['#industries','Industries'],['#team','Our Team'],['#contact','Contact']
+      ];
+
+      links.forEach(function(item){
+        const a = document.createElement('a');
+        a.href = item[0];
+        a.textContent = item[1];
+        a.style.cssText = 'display:flex;align-items:center;min-height:48px;font-family:Inter,sans-serif;font-size:1rem;font-weight:500;color:#141820;border-bottom:1px solid #f0f0f0;text-decoration:none;';
+        a.addEventListener('click', function(e){
+          e.preventDefault();
+          e.stopPropagation();
+          btn.classList.remove('open');
+          if(menu.parentNode) menu.parentNode.removeChild(menu);
+          var target = document.querySelector(item[0]);
+          if(target) setTimeout(function(){ target.scrollIntoView({behavior:'smooth'}); }, 50);
+        });
+        menu.appendChild(a);
       });
-      menu.appendChild(a);
+
+      const cta = document.createElement('a');
+      cta.href = '#contact';
+      cta.textContent = 'Contact Us';
+      cta.style.cssText = 'display:block;margin-top:1rem;padding:0.85rem;background:#E8920A;color:white;font-family:Sora,sans-serif;font-weight:700;font-size:0.95rem;text-align:center;border-radius:7px;text-decoration:none;';
+      cta.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        btn.classList.remove('open');
+        if(menu.parentNode) menu.parentNode.removeChild(menu);
+        var t = document.querySelector('#contact');
+        if(t) setTimeout(function(){ t.scrollIntoView({behavior:'smooth'}); }, 50);
+      });
+      menu.appendChild(cta);
+      document.body.appendChild(menu);
+
+      requestAnimationFrame(function(){
+        requestAnimationFrame(function(){
+          menu.style.opacity='1';
+          menu.style.transform='translateY(0)';
+        });
+      });
+
+      // Close on outside tap
+      setTimeout(function(){
+        document.addEventListener('click', function closeOutside(e){
+          if(!menu.contains(e.target) && e.target !== btn){
+            btn.classList.remove('open');
+            if(menu.parentNode) menu.parentNode.removeChild(menu);
+            document.removeEventListener('click', closeOutside);
+          }
+        });
+      }, 100);
+    }
+  });
+
+  // Smooth scroll for all anchor links (skip if handled by menu)
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    if(a.closest('#mobile-nav')) return;
+    a.addEventListener('click', function(e){
+      var href = a.getAttribute('href');
+      var t = document.querySelector(href);
+      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
     });
-    const cta = document.createElement('a');
-    cta.href='#contact';
-    cta.textContent='Contact Us';
-    cta.style.cssText='display:block;margin-top:1rem;padding:0.85rem;background:#E8920A;color:white;font-family:Sora,sans-serif;font-weight:700;font-size:0.95rem;text-align:center;border-radius:7px;text-decoration:none;';
-    cta.addEventListener('click',(e)=>{
-      e.preventDefault();
-      hb.classList.remove('open');
-      menu.style.opacity='0';
-      setTimeout(()=>{ menu.remove(); const t=document.querySelector('#contact'); if(t) t.scrollIntoView({behavior:'smooth'}); },200);
-    });
-    menu.appendChild(cta);
-    document.body.appendChild(menu);
-    requestAnimationFrame(()=>{ menu.style.opacity='1'; menu.style.transform='translateY(0)'; });
-  }
-}
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});
+  });
 });
 function handleSubmit(){
   const fn=document.getElementById('fn').value.trim(),em=document.getElementById('em').value.trim(),co=document.getElementById('co').value.trim(),gd=document.getElementById('gdpr').checked;
