@@ -49,8 +49,8 @@ nav{position:sticky;top:0;left:0;right:0;z-index:900;background:var(--white);bor
 .nav-actions{display:flex;align-items:center;gap:0.75rem}
 .btn-nav-ghost{font-family:'Inter',sans-serif;font-size:0.875rem;font-weight:700;color:var(--ink);padding:0.55rem 1.1rem;border-radius:var(--r-btn);border:1.5px solid var(--rule);background:white;cursor:pointer;transition:all 0.2s;}
 .btn-nav-ghost:hover{border-color:var(--teal-border);color:var(--teal);background:var(--teal-pale)}
-.btn-amber{font-family:'Sora',sans-serif;font-size:0.875rem;font-weight:700;color:white;padding:0.6rem 1.4rem;border-radius:var(--r-btn);background:#CC2222;border:none;cursor:pointer;box-shadow:0 6px 24px rgba(204,34,34,0.35);transition:all 0.2s;display:inline-block;}
-.btn-amber:hover{background:#aa1a1a;transform:translateY(-1px);box-shadow:0 8px 28px rgba(204,34,34,0.45)}
+.btn-amber{font-family:'Sora',sans-serif;font-size:0.875rem;font-weight:700;color:white;padding:0.6rem 1.4rem;border-radius:var(--r-btn);background:var(--amber);border:none;cursor:pointer;box-shadow:var(--shadow-amber);transition:all 0.2s;display:inline-block;}
+.btn-amber:hover{background:var(--amber-deep);transform:translateY(-1px);box-shadow:0 8px 28px rgba(232,146,10,0.45)}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;transition:all 0.2s}
 .hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.25s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -700,7 +700,7 @@ footer{background:var(--navy);padding:60px 0 28px}
   <div class="container">
     <div class="mission-centered">
       <span class="eyebrow">Our Mission</span>
-      <h2 class="mission-heading">Your business deserves enterprise-level IT.</h2>
+      <h2 class="mission-heading">Your <span style="color:#CC2222">business</span> deserves enterprise-level IT.</h2>
       <p class="mission-body">Too many growing businesses are held back by fragmented IT, outdated infrastructure, and support that wasn't built for their scale. 4DS changes that. We bring the same technology, discipline, and strategic thinking that powers the world's largest organisations — and make it work for yours. From day one, we treat your business the way it deserves to be treated: as an enterprise.</p>
       <a href="#contact" class="mission-cta">Start the conversation →</a>
     </div>
