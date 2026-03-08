@@ -666,7 +666,7 @@ footer{background:var(--navy);padding:60px 0 28px}
       
       <a href="#contact" class="btn-amber">Contact Us</a>
     </div>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" onclick="(function(btn){var m=document.getElementById('mobile-nav');if(m){btn.classList.remove('open');m.style.opacity='0';setTimeout(function(){if(m.parentNode)m.parentNode.removeChild(m);},200);return;}btn.classList.add('open');var nav=document.createElement('div');nav.id='mobile-nav';nav.style.cssText='position:fixed;top:64px;left:0;right:0;z-index:9999;background:#fff;border-bottom:2px solid #009BAA;padding:0.5rem 1.5rem 1.5rem;box-shadow:0 12px 32px rgba(0,0,0,0.15);opacity:0;transform:translateY(-8px);transition:opacity 0.2s,transform 0.2s;';[['#services','Services'],['#why','About Us'],['#approach','Our Approach'],['#industries','Industries'],['#team','Our Team'],['#contact','Contact']].forEach(function(l){var a=document.createElement('a');a.href=l[0];a.textContent=l[1];a.style.cssText='display:flex;align-items:center;min-height:48px;font-family:Inter,sans-serif;font-size:1rem;font-weight:500;color:#141820;border-bottom:1px solid #f0f0f0;text-decoration:none;';a.onclick=function(e){e.preventDefault();btn.classList.remove('open');var nm=document.getElementById('mobile-nav');if(nm)nm.parentNode.removeChild(nm);var t=document.querySelector(l[0]);if(t)t.scrollIntoView({behavior:'smooth'});};nav.appendChild(a);});var cta=document.createElement('a');cta.href='#contact';cta.textContent='Contact Us';cta.style.cssText='display:block;margin-top:1rem;padding:0.85rem;background:#E8920A;color:white;font-family:Sora,sans-serif;font-weight:700;font-size:0.95rem;text-align:center;border-radius:7px;text-decoration:none;';cta.onclick=function(e){e.preventDefault();btn.classList.remove('open');var nm=document.getElementById('mobile-nav');if(nm)nm.parentNode.removeChild(nm);var t=document.querySelector('#contact');if(t)t.scrollIntoView({behavior:'smooth'});};nav.appendChild(cta);document.body.appendChild(nav);requestAnimationFrame(function(){nav.style.opacity='1';nav.style.transform='translateY(0)';});})(this)"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -700,7 +700,7 @@ footer{background:var(--navy);padding:60px 0 28px}
   <div class="container">
     <div class="mission-centered">
       <span class="eyebrow">Our Mission</span>
-      <h2 class="mission-heading">Your <span style="color:#CC2222">business</span> deserves enterprise-level IT.</h2>
+      <h2 class="mission-heading">Your <span style="color:#F5C000">business</span> deserves enterprise-level IT.</h2>
       <p class="mission-body">Too many growing businesses are held back by fragmented IT, outdated infrastructure, and support that wasn't built for their scale. 4DS changes that. We bring the same technology, discipline, and strategic thinking that powers the world's largest organisations — and make it work for yours. From day one, we treat your business the way it deserves to be treated: as an enterprise.</p>
       <a href="#contact" class="mission-cta">Start the conversation →</a>
     </div>
@@ -1277,4 +1277,10 @@ function handleSubmit(){
   document.getElementById('theForm').style.display='none';document.getElementById('formOk').style.display='block';
 }
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target);}});},{threshold:0.08});
-document.querySelectorAll('.svc-card,.step,.ind
+document.querySelectorAll('.svc-card,.step,.ind-card,.testi-card,.team-card').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.5s,transform 0.5s';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
