@@ -383,6 +383,19 @@ footer{background:var(--navy);padding:60px 0 28px}
 .mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:800;background:var(--navy);border-top:2px solid var(--teal);padding:0.85rem 1.5rem;}
 .mobile-cta-bar a{display:block;width:100%;background:var(--amber);color:white;font-family:'Sora',sans-serif;font-size:0.97rem;font-weight:700;text-align:center;padding:0.85rem;border-radius:var(--r-btn);box-shadow:var(--shadow-amber);}
 
+/* ── MOBILE DRAWER ───────────────────────────────────── */
+.drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:1100;backdrop-filter:blur(2px);}
+.drawer{position:fixed;top:64px;left:0;right:0;z-index:1200;background:white;border-bottom:2px solid var(--teal);box-shadow:0 8px 32px rgba(0,0,0,0.15);transform:translateY(-105%);transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);pointer-events:none;}
+.drawer-inner{padding:0.5rem 1.5rem 1.5rem;display:flex;flex-direction:column;}
+.drawer-link{display:flex;align-items:center;min-height:52px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;color:var(--ink);border-bottom:1px solid var(--rule);text-decoration:none;transition:color 0.15s;}
+.drawer-link:hover{color:var(--teal);}
+.drawer-cta{display:block;margin-top:1rem;padding:0.9rem;background:var(--amber);color:white;font-family:'Sora',sans-serif;font-weight:700;font-size:0.95rem;text-align:center;border-radius:var(--r-btn);text-decoration:none;}
+body.nav-open .drawer-overlay{display:block;}
+body.nav-open .drawer{transform:translateY(0);pointer-events:auto;}
+body.nav-open .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+body.nav-open .hamburger span:nth-child(2){opacity:0;transform:scaleX(0);}
+body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
 /* ── RESPONSIVE ─────────────────────────────────────── */
 @media(max-width:1024px){
   .services-grid{grid-template-columns:repeat(2,1fr)}
@@ -666,9 +679,23 @@ footer{background:var(--navy);padding:60px 0 28px}
       
       <a href="#contact" class="btn-amber">Contact Us</a>
     </div>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" onclick="(function(btn){var m=document.getElementById('mobile-nav');if(m){btn.classList.remove('open');m.style.opacity='0';setTimeout(function(){if(m.parentNode)m.parentNode.removeChild(m);},200);return;}btn.classList.add('open');var nav=document.createElement('div');nav.id='mobile-nav';nav.style.cssText='position:fixed;top:64px;left:0;right:0;z-index:9999;background:#fff;border-bottom:2px solid #009BAA;padding:0.5rem 1.5rem 1.5rem;box-shadow:0 12px 32px rgba(0,0,0,0.15);opacity:0;transform:translateY(-8px);transition:opacity 0.2s,transform 0.2s;';[['#services','Services'],['#why','About Us'],['#approach','Our Approach'],['#industries','Industries'],['#team','Our Team'],['#contact','Contact']].forEach(function(l){var a=document.createElement('a');a.href=l[0];a.textContent=l[1];a.style.cssText='display:flex;align-items:center;min-height:48px;font-family:Inter,sans-serif;font-size:1rem;font-weight:500;color:#141820;border-bottom:1px solid #f0f0f0;text-decoration:none;';a.onclick=function(e){e.preventDefault();btn.classList.remove('open');var nm=document.getElementById('mobile-nav');if(nm)nm.parentNode.removeChild(nm);var t=document.querySelector(l[0]);if(t)t.scrollIntoView({behavior:'smooth'});};nav.appendChild(a);});var cta=document.createElement('a');cta.href='#contact';cta.textContent='Contact Us';cta.style.cssText='display:block;margin-top:1rem;padding:0.85rem;background:#E8920A;color:white;font-family:Sora,sans-serif;font-weight:700;font-size:0.95rem;text-align:center;border-radius:7px;text-decoration:none;';cta.onclick=function(e){e.preventDefault();btn.classList.remove('open');var nm=document.getElementById('mobile-nav');if(nm)nm.parentNode.removeChild(nm);var t=document.querySelector('#contact');if(t)t.scrollIntoView({behavior:'smooth'});};nav.appendChild(cta);document.body.appendChild(nav);requestAnimationFrame(function(){nav.style.opacity='1';nav.style.transform='translateY(0)';});})(this)"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<!-- ══ MOBILE DRAWER ══════════════════════════════════════ -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-inner">
+    <a href="#services"  class="drawer-link">Services</a>
+    <a href="#why"       class="drawer-link">About Us</a>
+    <a href="#approach"  class="drawer-link">Our Approach</a>
+    <a href="#industries"class="drawer-link">Industries</a>
+    <a href="#team"      class="drawer-link">Our Team</a>
+    <a href="#contact"   class="drawer-link">Contact</a>
+    <a href="#contact"   class="drawer-cta">Contact Us</a>
+  </div>
+</div>
 
 <!-- ══ HERO ═══════════════════════════════════════════════ -->
 <section class="hero" id="home">
@@ -1178,109 +1205,75 @@ footer{background:var(--navy);padding:60px 0 28px}
 
 <div class="mobile-cta-bar"><a href="#contact">Book a Contact Us →</a></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);});
-document.addEventListener('DOMContentLoaded', function(){
-  const btn = document.getElementById('hamburgerBtn');
-  if(!btn) return;
+<script>
+// ── DRAWER MENU ──────────────────────────────────────
+var hamburgerBtn = document.getElementById('hamburgerBtn');
+var drawerOverlay = document.getElementById('drawerOverlay');
+var drawer = document.getElementById('drawer');
 
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    const isOpen = btn.classList.contains('open');
-    const existing = document.getElementById('mobile-nav');
+function openDrawer(){
+  document.body.classList.add('nav-open');
+  hamburgerBtn.setAttribute('aria-label','Close menu');
+}
+function closeDrawer(){
+  document.body.classList.remove('nav-open');
+  hamburgerBtn.setAttribute('aria-label','Open menu');
+}
 
-    if(isOpen){
-      btn.classList.remove('open');
-      if(existing){
-        existing.style.opacity='0';
-        existing.style.transform='translateY(-8px)';
-        setTimeout(function(){ if(existing.parentNode) existing.parentNode.removeChild(existing); }, 200);
-      }
-    } else {
-      btn.classList.add('open');
-      if(existing && existing.parentNode) existing.parentNode.removeChild(existing);
+hamburgerBtn.addEventListener('click', function(){
+  document.body.classList.contains('nav-open') ? closeDrawer() : openDrawer();
+});
+drawerOverlay.addEventListener('click', closeDrawer);
 
-      const menu = document.createElement('div');
-      menu.id = 'mobile-nav';
-      menu.style.cssText = 'position:fixed;top:64px;left:0;right:0;z-index:9999;background:#fff;border-bottom:2px solid #009BAA;padding:0.5rem 1.5rem 1.5rem;box-shadow:0 12px 32px rgba(0,0,0,0.15);display:flex;flex-direction:column;opacity:0;transform:translateY(-8px);transition:opacity 0.2s,transform 0.2s;';
+document.querySelectorAll('.drawer-link, .drawer-cta').forEach(function(a){
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    var href = a.getAttribute('href');
+    closeDrawer();
+    setTimeout(function(){
+      var target = document.querySelector(href);
+      if(target) target.scrollIntoView({behavior:'smooth'});
+    }, 320);
+  });
+});
 
-      var links = [
-        ['#services','Services'],['#why','About Us'],['#approach','Our Approach'],
-        ['#industries','Industries'],['#team','Our Team'],['#contact','Contact']
-      ];
+// ── SMOOTH SCROLL (desktop anchor links) ─────────────
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  if(a.classList.contains('drawer-link') || a.classList.contains('drawer-cta')) return;
+  a.addEventListener('click', function(e){
+    var t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+  });
+});
 
-      links.forEach(function(item){
-        const a = document.createElement('a');
-        a.href = item[0];
-        a.textContent = item[1];
-        a.style.cssText = 'display:flex;align-items:center;min-height:48px;font-family:Inter,sans-serif;font-size:1rem;font-weight:500;color:#141820;border-bottom:1px solid #f0f0f0;text-decoration:none;';
-        a.addEventListener('click', function(e){
-          e.preventDefault();
-          e.stopPropagation();
-          btn.classList.remove('open');
-          if(menu.parentNode) menu.parentNode.removeChild(menu);
-          var target = document.querySelector(item[0]);
-          if(target) setTimeout(function(){ target.scrollIntoView({behavior:'smooth'}); }, 50);
-        });
-        menu.appendChild(a);
-      });
-
-      const cta = document.createElement('a');
-      cta.href = '#contact';
-      cta.textContent = 'Contact Us';
-      cta.style.cssText = 'display:block;margin-top:1rem;padding:0.85rem;background:#E8920A;color:white;font-family:Sora,sans-serif;font-weight:700;font-size:0.95rem;text-align:center;border-radius:7px;text-decoration:none;';
-      cta.addEventListener('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        btn.classList.remove('open');
-        if(menu.parentNode) menu.parentNode.removeChild(menu);
-        var t = document.querySelector('#contact');
-        if(t) setTimeout(function(){ t.scrollIntoView({behavior:'smooth'}); }, 50);
-      });
-      menu.appendChild(cta);
-      document.body.appendChild(menu);
-
-      requestAnimationFrame(function(){
-        requestAnimationFrame(function(){
-          menu.style.opacity='1';
-          menu.style.transform='translateY(0)';
-        });
-      });
-
-      // Close on outside tap
-      setTimeout(function(){
-        document.addEventListener('click', function closeOutside(e){
-          if(!menu.contains(e.target) && e.target !== btn){
-            btn.classList.remove('open');
-            if(menu.parentNode) menu.parentNode.removeChild(menu);
-            document.removeEventListener('click', closeOutside);
-          }
-        });
-      }, 100);
+// ── SCROLL ANIMATIONS ─────────────────────────────────
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.style.opacity='1';
+      e.target.style.transform='translateY(0)';
+      io.unobserve(e.target);
     }
   });
-
-  // Smooth scroll for all anchor links (skip if handled by menu)
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    if(a.closest('#mobile-nav')) return;
-    a.addEventListener('click', function(e){
-      var href = a.getAttribute('href');
-      var t = document.querySelector(href);
-      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
-    });
-  });
-});
-function handleSubmit(){
-  const fn=document.getElementById('fn').value.trim(),em=document.getElementById('em').value.trim(),co=document.getElementById('co').value.trim(),gd=document.getElementById('gdpr').checked;
-  if(!fn||!em||!co){alert('Please complete the required fields.');return;}
-  if(!gd){alert('Please agree to the Privacy Policy to continue.');return;}
-  document.getElementById('theForm').style.display='none';document.getElementById('formOk').style.display='block';
-}
-const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target);}});},{threshold:0.08});
-document.querySelectorAll('.svc-card,.step,.ind-card,.testi-card,.team-card').forEach(el=>{
-  el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.5s,transform 0.5s';
+},{threshold:0.08});
+document.querySelectorAll('.svc-card,.step,.ind-card,.testi-card,.team-card').forEach(function(el){
+  el.style.opacity='0';
+  el.style.transform='translateY(20px)';
+  el.style.transition='opacity 0.5s,transform 0.5s';
   io.observe(el);
 });
+
+// ── FORM SUBMIT ───────────────────────────────────────
+function handleSubmit(){
+  var fn=document.getElementById('fn').value.trim();
+  var em=document.getElementById('em').value.trim();
+  var co=document.getElementById('co').value.trim();
+  var gd=document.getElementById('gdpr').checked;
+  if(!fn||!em||!co){alert('Please complete the required fields.');return;}
+  if(!gd){alert('Please agree to the Privacy Policy to continue.');return;}
+  document.getElementById('theForm').style.display='none';
+  document.getElementById('formOk').style.display='block';
+}
 </script>
 </body>
 </html>
