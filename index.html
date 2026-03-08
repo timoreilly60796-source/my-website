@@ -29,7 +29,7 @@ a{text-decoration:none}
 section{padding:96px 0}
 
 /* ── NAV ─────────────────────────────────────────────── */
-nav{position:sticky;top:0;left:0;right:0;z-index:900;background:var(--white);border-bottom:1px solid var(--rule);box-shadow:var(--shadow-md);}
+nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);border-bottom:1px solid var(--rule);box-shadow:var(--shadow-md);}
 .nav-inner{max-width:1260px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:82px;}
 .logo{display:flex;align-items:center;gap:16px;position:relative}
 .logo::after{content:'';position:absolute;right:-24px;top:50%;transform:translateY(-50%);width:1px;height:32px;background:linear-gradient(to bottom,transparent,var(--teal-border),transparent);}
@@ -64,7 +64,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:900;background:var(--white);bor
    2. .hero-wedge clip left base at 55% instead of 100% —
       image extends further down on the left, less white showing
 ─────────────────────────────────────────────────────── */
-.hero{position:relative;width:100%;height:100vh;max-height:900px;overflow:hidden;background:var(--white);isolation:isolate;}
+.hero{position:relative;width:100%;height:100vh;max-height:900px;overflow:hidden;background:var(--white);}
 .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;}
 .hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
 @keyframes heroScale{from{opacity:0;transform:scale(1.05)}to{opacity:1;transform:scale(1)}}
@@ -382,8 +382,9 @@ footer{background:var(--navy);padding:60px 0 28px}
 /* ── MOBILE STICKY CTA ──────────────────────────────── */
 
 /* ── MOBILE DRAWER ───────────────────────────────────── */
-.drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:1100;backdrop-filter:blur(2px);}
-.drawer{display:none;position:fixed;top:64px;left:0;right:0;z-index:1200;background:white;border-bottom:2px solid var(--teal);box-shadow:0 8px 32px rgba(0,0,0,0.15);transform:translateY(-105%);transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);}
+.drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:8900;backdrop-filter:blur(2px);}
+.drawer{display:none;position:fixed;top:64px;left:0;right:0;z-index:8950;background:white;border-bottom:2px solid var(--teal);box-shadow:0 8px 32px rgba(0,0,0,0.15);transform:translateY(-105%);transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);}
+@media(min-width:769px){.drawer,.drawer-overlay{display:none!important;}}
 .drawer-inner{padding:0.5rem 1.5rem 1.5rem;display:flex;flex-direction:column;}
 .drawer-link{display:flex;align-items:center;min-height:52px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;color:var(--ink);border-bottom:1px solid var(--rule);text-decoration:none;transition:color 0.15s;}
 .drawer-link:hover{color:var(--teal);}
@@ -419,7 +420,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
   /* ── FIX 1: Hero video hidden on mobile, static overlay fallback ── */
   .hero-bg video{display:none;}
-  .hero-bg{background:linear-gradient(135deg,#0B1C2E 0%,#0a2a2f 60%,#122536 100%);}
+  /* REPLACE this URL with your iStock frame when purchased */
+  .hero-bg{background:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&fit=crop') center center/cover no-repeat;}
   .hero{height:100svh;min-height:580px;max-height:none;}
   .hero-content{padding:72px 1.25rem 0;}
   .hero h1{font-size:clamp(1.8rem,6.5vw,2.6rem);max-width:100%;line-height:1.15;}
