@@ -147,7 +147,17 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);bo
   .mission-stat{flex:1 1 45%;}
 }
 
-/* ── RIBBON ─────────────────────────────────────────── */
+/* ── SOCIAL PROOF BAR ───────────────────────────────── */
+.proof-bar{background:var(--navy);padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+.proof-bar-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;}
+.proof-item{display:flex;align-items:center;gap:0.5rem;padding:0.35rem 1.5rem;}
+.proof-ico{font-size:0.9rem;flex-shrink:0;}
+.proof-text{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.7);line-height:1.4;}
+.proof-text strong{color:white;font-weight:600;}
+.proof-divider{width:1px;height:24px;background:rgba(255,255,255,0.12);flex-shrink:0;}
+@media(max-width:768px){.proof-bar-inner{flex-direction:column;gap:0.5rem;}.proof-divider{display:none;}.proof-item{padding:0.25rem 0;}}
+
+
 /* ── POWERED BY RIBBON ───────────────────────────────── */
 .ribbon{padding:28px 0;border-bottom:1px solid var(--rule);background:var(--white);overflow:hidden;}
 .ribbon-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:2.5rem;}
@@ -231,6 +241,8 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);bo
   letter-spacing:0.01em;
 }
 .svc-link:hover{border-color:var(--teal);color:var(--teal);background:rgba(0,155,170,0.10);}
+.tech-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin:1rem 0 0.5rem;}
+.tech-tag{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:500;color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:var(--r-pill);padding:0.25rem 0.65rem;letter-spacing:0.01em;white-space:nowrap;}
 .services-cta{text-align:center;margin-top:2.5rem;}
 .btn-outline-teal{font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:700;color:var(--teal);padding:0.75rem 2rem;border-radius:var(--r-btn);border:2px solid var(--teal);background:transparent;cursor:pointer;transition:all 0.2s;display:inline-block;}
 .btn-outline-teal:hover{background:var(--teal);color:white;box-shadow:var(--shadow-teal)}
@@ -305,12 +317,17 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);bo
 
 /* ── INDUSTRIES ─────────────────────────────────────── */
 #industries{background:var(--white)}
-.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.ind-card{background:white;border:1px solid var(--rule);border-radius:var(--r-card);padding:1.4rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:all 0.2s;}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.ind-card{background:white;border:1px solid var(--rule);border-radius:var(--r-card);padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:0;transition:all 0.2s;}
 .ind-card:hover{border-color:var(--teal-border);box-shadow:var(--shadow-md);transform:translateY(-2px)}
-.ind-ico{width:44px;height:44px;flex-shrink:0;background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:var(--r-card);display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
-.ind-card h4{font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:2px}
-.ind-card p{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--muted);line-height:1.4}
+.ind-ico{width:44px;height:44px;flex-shrink:0;background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:var(--r-card);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1rem;}
+.ind-card h4{font-family:'Sora',sans-serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem}
+.ind-card p{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--muted);line-height:1.55;margin-bottom:0.9rem;}
+.ind-challenges{list-style:none;padding:0;margin:0 0 0.9rem;display:flex;flex-direction:column;gap:0.3rem;}
+.ind-challenges li{font-family:'Inter',sans-serif;font-size:0.75rem;color:var(--body);line-height:1.4;padding-left:1rem;position:relative;}
+.ind-challenges li::before{content:'→';position:absolute;left:0;color:var(--teal);font-size:0.7rem;top:1px;}
+.ind-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:auto;padding-top:0.75rem;border-top:1px solid var(--rule);}
+.ind-tag{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:500;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:var(--r-pill);padding:0.2rem 0.55rem;white-space:nowrap;}
 
 /* ── TESTIMONIALS ───────────────────────────────────── */
 #testimonials{background:var(--teal-wash)}
@@ -706,18 +723,18 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   <div class="hero-content">
     <div class="hero-tag">ICT Partner for SMEs — Ireland &amp; UK</div>
     <h1>
-      <span class="hero-h1-line1">Transforming Business</span>
-      <span class="hero-h1-line2">Challenges into <em>Change</em></span>
+      <span class="hero-h1-line1">Your IT company</span>
+      <span class="hero-h1-line2">is reactive. <em>Ours isn't.</em></span>
     </h1>
-    <p class="hero-sub">Enterprise-grade technology services built for small and medium businesses — cloud, security, support, and software that actually fits your scale and budget.</p>
+    <p class="hero-sub">We bring enterprise-grade depth — identity security, bulletproof email, full M365 deployment, and zero-trust architecture — to businesses that have outgrown what their current provider can deliver.</p>
     <div class="hero-ctas">
-      <a href="#services" class="btn-hero-primary">Explore Our Services →</a>
-      <a href="#contact" class="btn-hero-ghost">How We Work ↗</a>
+      <a href="#contact" class="btn-hero-primary">Get a Free IT Health Check →</a>
+      <a href="#approach" class="btn-hero-ghost">See How We Work ↗</a>
     </div>
     <div class="hero-trust-row">
-      <span class="trust-pill">No commitment required</span>
-      <span class="trust-pill">Response within 2 hours</span>
       <span class="trust-pill">ISO 27001 Certified</span>
+      <span class="trust-pill">3 Senior Engineers · 40+ yrs experience</span>
+      <span class="trust-pill">Response within 2 hours</span>
     </div>
   </div>
 </section>
@@ -725,8 +742,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   <div class="container">
     <div class="mission-centered">
       <span class="eyebrow">Our Mission</span>
-      <h2 class="mission-heading">Your business deserves enterprise-level IT.</h2>
-      <p class="mission-body">Too many growing businesses are held back by fragmented IT, outdated infrastructure, and support that wasn't built for their scale. 4DS changes that. We bring the same technology, discipline, and strategic thinking that powers the world's largest organisations — and make it work for yours. From day one, we treat your business the way it deserves to be treated: as an enterprise.</p>
+      <h2 class="mission-heading">We don't do basic. We <em>uplift</em>.</h2>
+      <p class="mission-body">Most businesses are paying for technology they've never properly configured — M365 licences going unused, email authentication broken, Conditional Access policies that exist on paper but were never enforced. We find what others miss, fix what others ignore, and bring your environment to the standard it should have been at from day one.</p>
       <a href="#contact" class="mission-cta">Start the conversation →</a>
     </div>
   </div>
@@ -780,6 +797,31 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
 </div>
 
+<!-- ══ SOCIAL PROOF BAR ════════════════════════════════════ -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-item">
+      <span class="proof-ico">📉</span>
+      <span class="proof-text"><strong>Ticket volume cut by 60%</strong> in 90 days — Legal firm, Dublin</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <span class="proof-ico">🔐</span>
+      <span class="proof-text"><strong>23 undetected security gaps</strong> found on day one — Financial services, Cork</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <span class="proof-ico">📧</span>
+      <span class="proof-text"><strong>Email spoofing risk eliminated</strong> — DMARC never configured by previous provider</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <span class="proof-ico">⚙️</span>
+      <span class="proof-text"><strong>7 ex-staff accounts still active</strong> — found during first access review</span>
+    </div>
+  </div>
+</div>
+
 <!-- ══ SERVICES ══════════════════════════════════════════ -->
 <section id="services">
   <div class="container">
@@ -788,6 +830,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
     </div>
     <div class="services-grid">
 
+      <!-- 1. Microsoft 365 & Modern Workplace -->
       <div class="svc-card">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -798,27 +841,50 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Cloud Solutions &amp; Migration</h3>
-          <p>AWS, Azure or Google Cloud — zero-downtime migration, cost optimisation, and ongoing managed cloud operations built for your scale.</p>
+          <h3>Microsoft 365 &amp; Modern Workplace</h3>
+          <p>Most businesses have M365 — few actually use it. We unlock the full suite: from Exchange Online and Teams Phone to SharePoint, Power Platform, and Dynamics 365. Full licensing advisory included.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Exchange Online</span>
+            <span class="tech-tag">Teams Phone</span>
+            <span class="tech-tag">SharePoint</span>
+            <span class="tech-tag">Power Platform</span>
+            <span class="tech-tag">Dynamics 365</span>
+            <span class="tech-tag">Microsoft Licensing</span>
+            <span class="tech-tag">Google Workspace</span>
+            <span class="tech-tag">GW → M365 Migration</span>
+          </div>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
+      <!-- 2. Identity, Access & Zero Trust -->
       <div class="svc-card">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="10" y="10" width="36" height="36" rx="4"/>
-            <path d="M20 28l5 5 11-11"/>
-            <path d="M28 10v4M28 42v4M10 28h4M42 28h4"/>
+            <circle cx="28" cy="20" r="8"/>
+            <path d="M12 46c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
+            <path d="M36 30l3 3 7-7"/>
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Cybersecurity &amp; Compliance</h3>
-          <p>GDPR-compliant frameworks, penetration testing, 24/7 threat monitoring, and ransomware protection keeping your business safe around the clock.</p>
+          <h3>Identity &amp; Zero Trust Security</h3>
+          <p>We lock down your identity layer — the #1 attack surface. Every app behind your IDP with SAML SSO, SCIM provisioning, and bulletproof Conditional Access. ZTNA replaces legacy VPN entirely.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Entra ID</span>
+            <span class="tech-tag">Entra Internet Access</span>
+            <span class="tech-tag">Entra Private Access</span>
+            <span class="tech-tag">ZTNA</span>
+            <span class="tech-tag">SAML SSO</span>
+            <span class="tech-tag">SCIM</span>
+            <span class="tech-tag">Conditional Access</span>
+            <span class="tech-tag">Okta</span>
+            <span class="tech-tag">MFA / PKI</span>
+          </div>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
+      <!-- 3. Endpoint & Device Management -->
       <div class="svc-card">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -830,29 +896,76 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Managed IT Support</h3>
-          <p>Your outsourced IT department — helpdesk, on-site engineers, proactive monitoring, and device management available 24/7/365.</p>
+          <h3>Endpoint &amp; Device Management</h3>
+          <p>Enterprise-grade endpoint control for every device in your fleet. Automated onboarding via Autopilot, CIS-hardened config profiles, privilege management, and third-party patching — all policy-driven.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Intune Suite</span>
+            <span class="tech-tag">Autopilot</span>
+            <span class="tech-tag">AutoPatch</span>
+            <span class="tech-tag">RoboPatch</span>
+            <span class="tech-tag">Endpoint Privilege Mgmt</span>
+            <span class="tech-tag">CIS Benchmarks</span>
+            <span class="tech-tag">MDM / MAM</span>
+            <span class="tech-tag">Asset Management</span>
+            <span class="tech-tag">Dell / HP Hardware</span>
+          </div>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
+      <!-- 4. Cybersecurity & AI Security -->
       <div class="svc-card">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 40l10-14 8 8 6-10 8 16"/>
-            <rect x="8" y="8" width="40" height="40" rx="3"/>
-            <path d="M8 16h40"/>
-            <circle cx="14" cy="12" r="1.5" fill="#009BAA" stroke="none"/>
-            <circle cx="20" cy="12" r="1.5" fill="#009BAA" stroke="none"/>
+            <path d="M28 8L12 15v14c0 10 7 19 16 22 9-3 16-12 16-22V15L28 8z"/>
+            <path d="M20 28l5 5 11-11"/>
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Data Analytics &amp; Business Intelligence</h3>
-          <p>Custom BI dashboards, reporting automation, and data warehousing — turning raw data into decisions that drive your business forward.</p>
+          <h3>Cybersecurity &amp; AI Security</h3>
+          <p>Beyond firewalls — layered defence including AI-powered threat detection, phishing simulations, security awareness training, and CASB. Deploying next-gen AI security tools competitors haven't reached yet.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Defender for Business</span>
+            <span class="tech-tag">Microsoft Sentinel</span>
+            <span class="tech-tag">CASB</span>
+            <span class="tech-tag">Ovalix AI Security</span>
+            <span class="tech-tag">Prompt Security</span>
+            <span class="tech-tag">Phishing Simulations</span>
+            <span class="tech-tag">Security Awareness</span>
+            <span class="tech-tag">Palo Alto NGFW</span>
+            <span class="tech-tag">ISO 27001 Readiness</span>
+          </div>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
+      <!-- 5. Email Security & Deliverability -->
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="14" width="40" height="30" rx="3"/>
+            <path d="M8 18l20 14 20-14"/>
+            <path d="M38 34l6 6M44 34l-6 6"/>
+          </svg>
+        </div>
+        <div class="svc-body">
+          <h3>Email Security &amp; Deliverability</h3>
+          <p>Misconfigured SPF, DKIM, or DMARC is why your email lands in spam — and most companies don't know it. We bulletproof your mail stack end-to-end, from gateway filtering to authentication alignment.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Proofpoint</span>
+            <span class="tech-tag">Defender for O365</span>
+            <span class="tech-tag">DMARC</span>
+            <span class="tech-tag">DKIM / SPF</span>
+            <span class="tech-tag">Exchange Online</span>
+            <span class="tech-tag">Email Gateway</span>
+            <span class="tech-tag">Anti-Phishing</span>
+            <span class="tech-tag">Mail Flow Rules</span>
+          </div>
+          <a href="#contact" class="svc-link">Learn more</a>
+        </div>
+      </div>
+
+      <!-- 6. Network, Wi-Fi & Infrastructure -->
       <div class="svc-card">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -861,27 +974,24 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Network Infrastructure</h3>
-          <p>SD-WAN, LAN/WLAN, VPN, and unified communications — enterprise-grade connectivity designed, deployed, and managed for your environment.</p>
+          <h3>Network, Wi-Fi &amp; Infrastructure</h3>
+          <p>From next-gen firewall deployment to Wi-Fi 7 and RADIUS-secured wireless, we design and deliver enterprise-grade networks. On-prem server management and cloud migration included.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Cisco Meraki</span>
+            <span class="tech-tag">Palo Alto NGFW</span>
+            <span class="tech-tag">SonicWall</span>
+            <span class="tech-tag">SD-WAN</span>
+            <span class="tech-tag">Wi-Fi 7</span>
+            <span class="tech-tag">RADIUS / PKI</span>
+            <span class="tech-tag">Meraki Cameras</span>
+            <span class="tech-tag">Azure Virtual Desktop</span>
+            <span class="tech-tag">On-Prem → Cloud</span>
+          </div>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
-      <div class="svc-card">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M28 10l4 8 9 1-6.5 6.5 1.5 9L28 30l-8 4.5 1.5-9L15 19l9-1z"/>
-            <path d="M20 38l-8 8M36 38l8 8"/>
-            <path d="M18 46h20"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Digital Transformation</h3>
-          <p>Process automation, Microsoft 365, ERP/CRM implementation — reimagining how your business operates from the ground up.</p>
-          <a href="#contact" class="svc-link">Learn more</a>
-        </div>
-      </div>
-
+      <!-- 7. Backup, DR & Business Continuity -->
       <div class="svc-card">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -890,12 +1000,23 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Backup &amp; Business Continuity</h3>
-          <p>Automated cloud backup, disaster recovery planning, and tested failover solutions — so your business never stops, no matter what.</p>
+          <h3>Backup, DR &amp; Business Continuity</h3>
+          <p>Immutable, tested, recoverable backups — not just scheduled jobs. We design full DR runbooks, test failover regularly, and ensure your recovery objectives are actually met when it matters.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Commvault Metallic</span>
+            <span class="tech-tag">Veeam Cloud</span>
+            <span class="tech-tag">Datto Backupify</span>
+            <span class="tech-tag">Azure Backup</span>
+            <span class="tech-tag">Azure Site Recovery</span>
+            <span class="tech-tag">Immutable Storage</span>
+            <span class="tech-tag">DR Runbooks</span>
+            <span class="tech-tag">RTO / RPO Planning</span>
+          </div>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
+      <!-- 8. Onboarding, Offboarding & Governance -->
       <div class="svc-card">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -905,8 +1026,18 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Bespoke Software Development</h3>
-          <p>Custom web apps, portals, integrations, and mobile solutions built to solve your unique business challenges with agile delivery.</p>
+          <h3>Automation, Governance &amp; IT Operations</h3>
+          <p>Eliminate manual IT processes. Automated onboarding and offboarding, ITSM workflows, cloud virtualisation, and project delivery — with full documentation and visibility across your environment.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Autopilot Onboarding</span>
+            <span class="tech-tag">Offboarding Protocols</span>
+            <span class="tech-tag">Jira / Confluence</span>
+            <span class="tech-tag">Power Automate</span>
+            <span class="tech-tag">Azure DevOps</span>
+            <span class="tech-tag">Azure Virtual Desktop</span>
+            <span class="tech-tag">AWS / GCP</span>
+            <span class="tech-tag">ITIL / ITSM</span>
+          </div>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
@@ -919,10 +1050,10 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 <!-- ══ VALUE STRIP ════════════════════════════════════════ -->
 <div class="value-strip">
   <div class="value-strip-inner">
-    <div class="vstrip-item"><div class="vstrip-num">500+</div><div class="vstrip-label">SME Clients Served</div></div>
-    <div class="vstrip-item"><div class="vstrip-num">99.9%</div><div class="vstrip-label">Uptime SLA Guarantee</div></div>
-    <div class="vstrip-item"><div class="vstrip-num">&lt;15m</div><div class="vstrip-label">Critical Response Time</div></div>
-    <div class="vstrip-item"><div class="vstrip-num">14yr</div><div class="vstrip-label">Industry Experience</div></div>
+    <div class="vstrip-item"><div class="vstrip-num">3</div><div class="vstrip-label">Senior Engineers — ex-Enterprise</div></div>
+    <div class="vstrip-item"><div class="vstrip-num">40+</div><div class="vstrip-label">Years Combined IT Experience</div></div>
+    <div class="vstrip-item"><div class="vstrip-num">&lt;15m</div><div class="vstrip-label">Critical Incident Response</div></div>
+    <div class="vstrip-item"><div class="vstrip-num">ISO</div><div class="vstrip-label">27001 Certified Practice</div></div>
   </div>
 </div>
 
@@ -939,10 +1070,10 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
         <h2 class="section-title">Your Technology Partner,<br>Not Just a Vendor</h2>
         <p class="section-sub">We embed ourselves in your business, align technology with your goals, and stay accountable for outcomes — not just deliverables.</p>
         <div class="why-feats">
-          <div class="feat-row"><div class="feat-ico">🎯</div><div><h4>SME-Focused Expertise</h4><p>Solutions that scale with your budget and growth — no enterprise complexity, no unnecessary overhead.</p></div></div>
-          <div class="feat-row"><div class="feat-ico">⚡</div><div><h4>Rapid Response SLAs</h4><p>Critical issues acknowledged in under 15 minutes. Our NOC operates 24/7/365.</p></div></div>
-          <div class="feat-row"><div class="feat-ico">🔐</div><div><h4>Security-First by Default</h4><p>Every solution designed with security built in — compliance maintained continuously.</p></div></div>
-          <div class="feat-row"><div class="feat-ico">💡</div><div><h4>Transparent Fixed Pricing</h4><p>Predictable monthly costs, clear scope, no surprise invoices, measurable ROI.</p></div></div>
+          <div class="feat-row"><div class="feat-ico">🔍</div><div><h4>We Find What Others Miss</h4><p>We've reviewed M365 tenants where Conditional Access was technically "enabled" but never actually enforced — leaving accounts fully exposed. That kind of gap is why clients come to us after their previous provider.</p></div></div>
+          <div class="feat-row"><div class="feat-ico">⚡</div><div><h4>Senior Engineers Answer the Phone</h4><p>Not a first-line helpdesk reading from a script. Every client gets direct access to the engineers who built their environment — critical issues acknowledged in under 15 minutes, 24/7/365.</p></div></div>
+          <div class="feat-row"><div class="feat-ico">📉</div><div><h4>We Measure Ticket Reduction</h4><p>Our goal is to make ourselves less needed for reactive support — by fixing root causes, not symptoms. We track support ticket volume from day one and report on the reduction every month.</p></div></div>
+          <div class="feat-row"><div class="feat-ico">💡</div><div><h4>You're Already Paying for the Tools</h4><p>Most M365 subscribers use less than 30% of what's included in their licence. We identify, configure, and deploy the security and productivity tools you're already paying for — at no extra cost.</p></div></div>
         </div>
       </div>
     </div>
@@ -954,69 +1085,78 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   <div class="container">
     <div class="section-hdr center">
       <span class="eyebrow">How We Work</span>
-      <h2 class="section-title section-title-white">A Proven Four-Step Methodology</h2>
-      <p class="section-sub section-sub-light">Structured. Transparent. Results-driven.</p>
+      <h2 class="section-title section-title-white">We Don't Inherit a Mess. We Fix It.</h2>
+      <p class="section-sub section-sub-light">Most SMEs have accumulated years of misconfigurations, underused tooling, and unaddressed risk. Our four-step process exists to change that — permanently.</p>
     </div>
     <div class="steps-wrap">
       <div class="steps">
 
         <div class="step">
           <div class="step-n">01</div>
-          <h4>Assess (2–3 Weeks)</h4>
-          <p class="step-desc">Comprehensive discovery, risk review, and implementation of quick wins to stabilise your environment immediately.</p>
+          <h4>Discover &amp; Diagnose</h4>
+          <p class="step-desc">Before we touch anything, we understand everything — your business, your users, your environment, and the gaps nobody has told you about yet.</p>
           <ul class="step-bullets">
-            <li>Full audit of current IT infrastructure, security posture, and compliance gaps.</li>
-            <li>Risk identification including vulnerabilities in identity, endpoints, email, and devices.</li>
-            <li>Quick wins: immediate fixes to high-impact issues like patching critical vulnerabilities.</li>
+            <li>Full infrastructure audit: identity, endpoints, email, network, backup, and cloud posture.</li>
+            <li>Review of M365 licence utilisation — most clients pay for tools they've never enabled.</li>
+            <li>DMARC, SPF, and DKIM alignment check — misconfiguration here silently kills deliverability.</li>
+            <li>Conditional Access policy review — in place at many clients, but rarely bulletproof.</li>
+            <li>Security posture assessment against CIS benchmarks and ISO 27001 controls.</li>
           </ul>
           <div class="step-deliverables">
             <h5>Key Deliverables</h5>
-            <p>Current state report, risk register, and prioritised roadmap outline.</p>
+            <p>Plain-language IT health report, risk register, compliance gap analysis, and an honest view of where your technology is today — not a sales pitch.</p>
           </div>
         </div>
 
         <div class="step">
           <div class="step-n">02</div>
-          <h4>Roadmap</h4>
-          <p class="step-desc">Detailed 30/60/90-day uplift plan with transparent effort estimates, costs, and expected outcomes.</p>
+          <h4>Design &amp; Roadmap</h4>
+          <p class="step-desc">We translate findings into a phased, costed plan — prioritised by risk and business impact. Enterprise thinking, SME pragmatism.</p>
           <ul class="step-bullets">
-            <li>Prioritisation based on risk, business impact, and ROI.</li>
-            <li>Alignment with standards like CIS benchmarks and NIST frameworks.</li>
-            <li>Incorporation of enterprise best practices for security and compliance.</li>
+            <li>30/60/90-day uplift plan aligned to your budget, team capacity, and compliance obligations.</li>
+            <li>Identity-first architecture: Entra ID, SAML SSO, SCIM, and ZTNA to replace legacy VPN.</li>
+            <li>Network and security redesign — firewalls are not enough; we design layered defence.</li>
+            <li>Licensing advisory to consolidate spend and unlock tools already in your M365 subscription.</li>
+            <li>Fully documented scope with measurable KPIs — including target reductions in support tickets.</li>
           </ul>
           <div class="step-deliverables">
             <h5>Key Deliverables</h5>
-            <p>Phased uplift plan, budget breakdown, and measurable KPIs (e.g., ticket reduction targets).</p>
+            <p>Phased technical roadmap, architecture diagrams, budget breakdown, and agreed success metrics before a single change is made.</p>
           </div>
         </div>
 
         <div class="step">
           <div class="step-n">03</div>
-          <h4>Uplift</h4>
-          <p class="step-desc">Implementation of baseline controls, standardisation, and noise reduction to build a solid foundation.</p>
+          <h4>Uplift &amp; Deploy</h4>
+          <p class="step-desc">This is where we bring your environment to enterprise standard — systematically, with zero disruption to your team. Not everyone is a tech wizard and we work at your pace.</p>
           <ul class="step-bullets">
-            <li>Deploy enterprise-grade tools without unnecessary bloat or complexity.</li>
-            <li>Standardise processes: change control, patch management, DR testing.</li>
-            <li>Reduce reactive work by addressing root causes proactively.</li>
+            <li>Intune Suite deployment: Autopilot onboarding, AutoPatch, CIS-hardened config profiles, and Endpoint Privilege Management.</li>
+            <li>Email stack hardened: Proofpoint or Defender for O365, DMARC enforcement, anti-phishing policies, and mail flow rules locked down.</li>
+            <li>Identity secured: Conditional Access policies bulletproofed, all apps enrolled to SAML SSO, SCIM provisioning where supported.</li>
+            <li>Network uplifted: next-gen firewall, Wi-Fi 7 where applicable, RADIUS / PKI cert-based wireless authentication.</li>
+            <li>Security Awareness Training and phishing simulations rolled out across your user base.</li>
+            <li>Backup and DR tested — not just configured. Commvault Metallic, Veeam, or Datto Backupify deployed and verified.</li>
           </ul>
           <div class="step-deliverables">
             <h5>Key Deliverables</h5>
-            <p>Implemented controls, standardised documentation, asset register, and initial outcome metrics.</p>
+            <p>Implemented controls, full asset register, standardised onboarding and offboarding runbooks, and a measurably more secure, efficient environment.</p>
           </div>
         </div>
 
         <div class="step">
           <div class="step-n">04</div>
-          <h4>Run</h4>
-          <p class="step-desc">Ongoing managed service with continuous optimisation and reporting — your IT in safe hands.</p>
+          <h4>Optimise &amp; Run</h4>
+          <p class="step-desc">Once you're at standard, we keep you there — and keep pushing forward. This is the managed service most providers promise but few deliver.</p>
           <ul class="step-bullets">
-            <li>Proactive monitoring, preventive maintenance, and AI-driven insights.</li>
-            <li>Quarterly improvements based on evolving threats and business needs.</li>
-            <li>Compliance assurance with regular audits and transparent reporting.</li>
+            <li>24/7 NOC monitoring, proactive patching, and threat response — critical incidents acknowledged in under 15 minutes.</li>
+            <li>Quarterly technology reviews aligned to evolving threats, new M365 capabilities, and your business growth.</li>
+            <li>Continuous compliance monitoring — GDPR, ISO 27001, and government procurement readiness maintained.</li>
+            <li>AI security tooling reviewed and updated as the threat landscape evolves — Ovalix, Prompt Security, and Microsoft Copilot governance.</li>
+            <li>Monthly reporting in plain language: ticket trends, security posture scores, patch compliance, and what we're doing next.</li>
           </ul>
           <div class="step-deliverables">
             <h5>Key Deliverables</h5>
-            <p>Monthly reports, quarterly roadmap reviews, and sustained reductions in tickets and risk.</p>
+            <p>Monthly executive reports, quarterly roadmap reviews, sustained ticket reduction, and an IT environment that grows with your business — not against it.</p>
           </div>
         </div>
 
@@ -1030,16 +1170,143 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   <div class="container">
     <div class="section-hdr">
       <span class="eyebrow">Industries We Serve</span>
-      <h2 class="section-title">Sector Expertise That Matters</h2>
-      <p class="section-sub">Deep industry knowledge means solutions that fit your regulatory context from day one.</p>
+      <h2 class="section-title">Enterprise-Grade IT for the Sectors That Need It Most</h2>
+      <p class="section-sub">We've worked across regulated, high-stakes environments — we understand what compliance and continuity actually means for your sector, not just in theory.</p>
     </div>
     <div class="ind-grid">
-      <div class="ind-card"><div class="ind-ico">🏥</div><div><h4>Healthcare</h4><p>HIPAA-compliant infrastructure, EMR integrations, clinical workflow automation</p></div></div>
-      <div class="ind-card"><div class="ind-ico">🏦</div><div><h4>Finance &amp; Banking</h4><p>PCI-DSS, GDPR, and Central Bank-aligned security and compliance</p></div></div>
-      <div class="ind-card"><div class="ind-ico">🛍️</div><div><h4>Retail &amp; E-Commerce</h4><p>Omnichannel infrastructure, POS integration, peak-load cloud scaling</p></div></div>
-      <div class="ind-card"><div class="ind-ico">⚖️</div><div><h4>Legal &amp; Professional</h4><p>Secure document management, client portals, matter-handling workflows</p></div></div>
-      <div class="ind-card"><div class="ind-ico">🏭</div><div><h4>Manufacturing</h4><p>OT/IT convergence, ERP integration, supply chain visibility platforms</p></div></div>
-      <div class="ind-card"><div class="ind-ico">🎓</div><div><h4>Education</h4><p>Learning management systems, identity governance, hybrid campus networking</p></div></div>
+
+      <div class="ind-card">
+        <div class="ind-ico">🏥</div>
+        <h4>Healthcare</h4>
+        <p>Healthcare organisations hold the most sensitive data and face the strictest regulatory obligations — yet many are running IT infrastructure that hasn't been reviewed in years. We change that.</p>
+        <ul class="ind-challenges">
+          <li>GDPR and data protection compliance across clinical and administrative systems</li>
+          <li>Secure remote access for clinical staff — ZTNA replacing legacy VPN</li>
+          <li>Email security and phishing protection for high-risk user groups</li>
+          <li>Device management for mixed fleets including shared clinical workstations</li>
+          <li>Government and HSE tender readiness — ICT uplift for public-funded bodies</li>
+        </ul>
+        <div class="ind-tags">
+          <span class="ind-tag">Entra ID</span>
+          <span class="ind-tag">Intune Suite</span>
+          <span class="ind-tag">ZTNA</span>
+          <span class="ind-tag">Proofpoint</span>
+          <span class="ind-tag">Azure Backup</span>
+          <span class="ind-tag">GDPR</span>
+          <span class="ind-tag">ISO 27001</span>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-ico">🏭</div>
+        <h4>Manufacturing</h4>
+        <p>Manufacturing businesses are increasingly targeted by ransomware — downtime is catastrophic. We modernise your IT layer, protect operational continuity, and connect the shop floor to the cloud securely.</p>
+        <ul class="ind-challenges">
+          <li>Ransomware protection and immutable backup for production-critical systems</li>
+          <li>Secure remote access for engineers, suppliers, and field teams</li>
+          <li>M365 rollout and user adoption — moving beyond email-only usage</li>
+          <li>Network segmentation between IT and operational technology (OT)</li>
+          <li>Automated onboarding and offboarding for high-turnover shift environments</li>
+        </ul>
+        <div class="ind-tags">
+          <span class="ind-tag">Veeam / Datto</span>
+          <span class="ind-tag">Cisco Meraki</span>
+          <span class="ind-tag">Conditional Access</span>
+          <span class="ind-tag">SD-WAN</span>
+          <span class="ind-tag">Autopilot</span>
+          <span class="ind-tag">M365</span>
+          <span class="ind-tag">Defender</span>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-ico">🏦</div>
+        <h4>Finance &amp; Professional Services</h4>
+        <p>Financial firms face dual pressure: regulatory scrutiny and sophisticated attacks. We deliver the security posture and compliance documentation that regulators and clients expect — and that competitors can't match.</p>
+        <ul class="ind-challenges">
+          <li>Central Bank, DORA, and GDPR compliance frameworks — documented and maintained</li>
+          <li>Identity governance: SAML SSO and SCIM across all applications</li>
+          <li>Conditional Access policies properly configured, not just enabled</li>
+          <li>Email hardening — DMARC, SPF, DKIM alignment and Proofpoint gateway</li>
+          <li>Privileged access management and audit trail for regulatory reporting</li>
+        </ul>
+        <div class="ind-tags">
+          <span class="ind-tag">SAML SSO</span>
+          <span class="ind-tag">SCIM</span>
+          <span class="ind-tag">Proofpoint</span>
+          <span class="ind-tag">DMARC</span>
+          <span class="ind-tag">Entra ID</span>
+          <span class="ind-tag">DORA</span>
+          <span class="ind-tag">ISO 27001</span>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-ico">⚖️</div>
+        <h4>Legal &amp; Professional</h4>
+        <p>Law firms handle privileged, high-value data that cannot be compromised. A single phishing email or misconfigured mail rule can be catastrophic. We lock down your environment without disrupting how your practice works.</p>
+        <ul class="ind-challenges">
+          <li>Bulletproof email — anti-phishing, mail flow rules, and DMARC enforcement</li>
+          <li>Secure document management and SharePoint governance</li>
+          <li>Zero Trust access for remote solicitors and external counsel</li>
+          <li>Device compliance policies enforced before accessing client data</li>
+          <li>Automated leavers process — immediate access revocation on offboarding</li>
+        </ul>
+        <div class="ind-tags">
+          <span class="ind-tag">Defender for O365</span>
+          <span class="ind-tag">SharePoint</span>
+          <span class="ind-tag">ZTNA</span>
+          <span class="ind-tag">Entra Private Access</span>
+          <span class="ind-tag">Intune</span>
+          <span class="ind-tag">GDPR</span>
+          <span class="ind-tag">Offboarding</span>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-ico">🎓</div>
+        <h4>Education</h4>
+        <p>Schools, colleges, and training organisations face unique challenges — diverse user populations, BYOD environments, and tight budgets. We bring structure, security, and modern tools that work for staff and students alike.</p>
+        <ul class="ind-challenges">
+          <li>Identity management across large, changing user populations — students and staff</li>
+          <li>BYOD security policies via Intune without blocking personal devices</li>
+          <li>Wi-Fi 7 infrastructure with RADIUS-based authentication and WAP roaming</li>
+          <li>Phishing simulations and security awareness training for non-technical users</li>
+          <li>Cloud migration from on-prem servers — reducing maintenance and cost</li>
+        </ul>
+        <div class="ind-tags">
+          <span class="ind-tag">Entra ID</span>
+          <span class="ind-tag">Intune BYOD</span>
+          <span class="ind-tag">Wi-Fi 7</span>
+          <span class="ind-tag">RADIUS / PKI</span>
+          <span class="ind-tag">Security Awareness</span>
+          <span class="ind-tag">Azure AD</span>
+          <span class="ind-tag">Google Workspace</span>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-ico">🏛️</div>
+        <h4>Public Sector &amp; Non-Profit</h4>
+        <p>We understand government procurement — the CPV codes, the compliance requirements, the tender process. We help public bodies and non-profits uplift their ICT to the standard required to manage risk, improve services, and satisfy funders.</p>
+        <ul class="ind-challenges">
+          <li>ICT strategy and operational development aligned to public procurement requirements</li>
+          <li>Full infrastructure audit and risk register for tender documentation</li>
+          <li>GDPR-compliant data governance and records management</li>
+          <li>Accessibility-aware IT rollouts for frontline service organisations</li>
+          <li>Cost-efficient M365 licensing — maximising existing subscriptions before new spend</li>
+        </ul>
+        <div class="ind-tags">
+          <span class="ind-tag">eTenders Ready</span>
+          <span class="ind-tag">M365</span>
+          <span class="ind-tag">GDPR</span>
+          <span class="ind-tag">ISO 27001</span>
+          <span class="ind-tag">Risk Register</span>
+          <span class="ind-tag">Commvault</span>
+          <span class="ind-tag">Azure Backup</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1053,9 +1320,9 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
       <p class="section-sub">Real outcomes from SME clients across Ireland and the UK.</p>
     </div>
     <div class="testi-grid">
-      <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>4DS migrated our entire infrastructure to Azure in three weeks with zero downtime. IT costs dropped by 40% and our team can work from anywhere seamlessly.</p><div class="testi-author"><div class="t-avatar">SM</div><div><div class="t-name">Sarah Murphy</div><div class="t-role">Operations Director, Meridian Group</div></div></div></div>
-      <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>After a ransomware scare at a competitor, 4DS identified and closed 23 critical vulnerabilities within the first month. Their team is exceptional under pressure.</p><div class="testi-author"><div class="t-avatar">JC</div><div><div class="t-name">James Collins</div><div class="t-role">CEO, FinVault Advisory</div></div></div></div>
-      <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>The managed support model transformed how we operate. Instead of firefighting IT issues, our team focuses on growth. 4DS feels like part of our own business.</p><div class="testi-author"><div class="t-avatar">LB</div><div><div class="t-name">Laura Byrne</div><div class="t-role">Practice Manager, LexBridge Solicitors</div></div></div></div>
+      <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>We'd had the same IT provider for six years and assumed everything was fine. 4DS found our Conditional Access policies had never been properly enforced, our DMARC record was broken, and we had seven ex-staff accounts still active. All fixed within two weeks.</p><div class="testi-author"><div class="t-avatar">SM</div><div><div class="t-name">Sarah Murphy</div><div class="t-role">Operations Director, Meridian Group</div></div></div><div style="margin-top:0.6rem"><span style="font-size:0.72rem;font-family:'Inter',sans-serif;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:100px;padding:0.2rem 0.65rem;">Finance &amp; Professional · Dublin</span></div></div>
+      <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>After a ransomware incident at a competitor firm, we brought 4DS in for an urgent review. They identified 23 critical gaps, deployed Defender and Intune across 60 endpoints, and had us fully patched and monitored within three weeks. These are engineers who actually know what they're doing.</p><div class="testi-author"><div class="t-avatar">JC</div><div><div class="t-name">James Collins</div><div class="t-role">CEO, FinVault Advisory</div></div></div><div style="margin-top:0.6rem"><span style="font-size:0.72rem;font-family:'Inter',sans-serif;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:100px;padding:0.2rem 0.65rem;">Legal &amp; Professional · Cork</span></div></div>
+      <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>Our previous provider had us submitting tickets for everything. Within 90 days of 4DS taking over, our monthly ticket volume dropped by more than half. They fixed what was causing the problems instead of just closing the tickets. The difference in how our team works day-to-day is remarkable.</p><div class="testi-author"><div class="t-avatar">LB</div><div><div class="t-name">Laura Byrne</div><div class="t-role">Practice Manager, LexBridge Solicitors</div></div></div><div style="margin-top:0.6rem"><span style="font-size:0.72rem;font-family:'Inter',sans-serif;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:100px;padding:0.2rem 0.65rem;">Legal &amp; Professional · Dublin</span></div></div>
     </div>
   </div>
 </section>
@@ -1124,9 +1391,9 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 <!-- ══ CTA BLOCK ══════════════════════════════════════════ -->
 <div class="cta-block">
   <div class="container">
-    <h2>Ready to Transform Your Technology?</h2>
-    <p>Get a free IT health assessment — no commitment, no jargon, just clarity on where you stand.</p>
-    <a href="#contact" class="btn-cta-navy">Book a Contact Us →</a>
+    <h2>Every week without proper DMARC is a week your email can be spoofed.<br>Every month without enforced Conditional Access is a month your accounts are exposed.</h2>
+    <p>The IT health check is free. The cost of waiting isn't.</p>
+    <a href="#contact" class="btn-cta-navy">Book a Free IT Health Check →</a>
   </div>
 </div>
 
@@ -1135,9 +1402,9 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   <div class="container">
     <div class="contact-wrap">
       <div class="contact-info">
-        <span class="eyebrow">Get in Touch</span>
-        <h2 class="section-title">Let's Talk About Your Business</h2>
-        <p class="section-sub">Whether you're experiencing IT pain points or planning your next technology investment — no jargon, no hard sell.</p>
+        <span class="eyebrow">Free IT Health Check</span>
+        <h2 class="section-title">Find Out What Your Current Provider Missed</h2>
+        <p class="section-sub">We review your M365 configuration, email authentication, identity setup, and endpoint compliance — and give you a plain-language report. No jargon, no sales pitch, no commitment.</p>
         <div class="c-details">
           <div class="c-item"><div class="c-ico">📞</div><div><h4>Call Us</h4><p>+353 1 234 5678 &nbsp;·&nbsp; Mon–Fri 8am–6pm</p></div></div>
           <div class="c-item"><div class="c-ico">✉️</div><div><h4>Email Us</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a727f7676755a747f627b7975687f34737f">[email&#160;protected]</a></p></div></div>
@@ -1146,8 +1413,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
         </div>
       </div>
       <div class="form-panel">
-        <h3>Get Your Contact Us</h3>
-        <p class="sub">A senior consultant will respond within 2 hours — no commitment, no hard sell.</p>
+        <h3>Get Your Free IT Health Check</h3>
+        <p class="sub">We'll review your M365 configuration, email security posture, identity setup, and endpoint compliance — and tell you exactly where you stand. A senior engineer responds within 2 hours.</p>
         <div id="theForm">
           <div class="f-row">
             <div class="f-group"><label>Your Name *</label><input type="text" id="fn" placeholder="John Smith" required></div>
@@ -1166,11 +1433,15 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
               <label class="size-opt"><input type="radio" name="size" value="250+"><span>250+<br><small>staff</small></span></label>
             </div>
           </div>
-          <div class="f-group"><label>What's your main IT challenge? <span class="f-optional">(optional)</span></label><textarea id="msg" placeholder="e.g. We need better security, our systems are slow, we're planning a cloud migration..."></textarea></div>
-          <button class="btn-submit" onclick="handleSubmit()">Send My Request →</button>
+          <div class="f-group"><label>What's your biggest IT concern right now? <span class="f-optional">(optional)</span></label><textarea id="msg" placeholder="e.g. We're not sure our security is up to scratch, we're planning a cloud migration, our current provider isn't delivering..."></textarea></div>
+          <button class="btn-submit" onclick="handleSubmit()">Request My Free Health Check →</button>
+          <div style="display:flex;align-items:flex-start;gap:0.6rem;margin-top:1rem;padding:0.85rem 1rem;background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:var(--r-card);">
+            <span style="font-size:1rem;flex-shrink:0;">🔒</span>
+            <p style="font-family:'Inter',sans-serif;font-size:0.75rem;color:var(--muted);line-height:1.5;margin:0;">"Within 48 hours 4DS had already found three misconfigured policies our previous provider never flagged." — Operations Director, Dublin Professional Services Firm</p>
+          </div>
           <p class="form-privacy">By submitting you agree to our <a href="#">Privacy Policy</a>. Your data is never shared or sold.</p>
         </div>
-        <div class="form-ok" id="formOk"><div class="ok-icon">✅</div><h4>Request Received!</h4><p>A senior consultant will be in touch within 2 business hours.</p></div>
+        <div class="form-ok" id="formOk"><div class="ok-icon">✅</div><h4>Request Received!</h4><p>A senior engineer will be in touch within 2 business hours to arrange your IT health check.</p></div>
       </div>
     </div>
   </div>
