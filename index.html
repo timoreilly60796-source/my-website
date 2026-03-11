@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4DS | Transforming Business Challenges into Change</title>
+<title>4DS | Managed IT Services Dublin — The IT Audit You Should Have Had on Day One</title>
+<meta name="description" content="4DS finds what your IT provider missed — misconfigured M365, broken DMARC, stale accounts, undeployed security tools. Free IT health check for SMEs across Ireland and the UK.">
+<meta property="og:title" content="4DS | Managed IT Services — The IT Audit You Should Have Had on Day One">
+<meta property="og:description" content="We find what your current IT provider missed. Free IT health check for SMEs in Ireland and the UK. ISO 27001 certified. Senior engineers only.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://4ds.ie">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="4DS | Managed IT — Enterprise Standard. SME Scale.">
+<meta name="twitter:description" content="Free IT health check. We find what your current provider missed.">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -37,7 +45,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);bo
 .logo-text{display:flex;flex-direction:column;gap:2px}
 .logo-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.9rem;color:var(--ink);letter-spacing:-1px;line-height:1;}
 .logo-name span{color:var(--teal)}
-.logo-tagline{display:none;}
+.logo-tagline{display:block;font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:500;color:var(--muted);letter-spacing:0.03em;margin-top:1px;}
 .nav-menu{display:flex;align-items:center;list-style:none;gap:2px;margin-left:3rem}
 .nav-menu>li>a{display:block;padding:0.5rem 0.95rem;border-radius:6px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:var(--body);letter-spacing:0.01em;transition:color 0.15s,background 0.15s;}
 .nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale)}
@@ -147,15 +155,30 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);bo
   .mission-stat{flex:1 1 45%;}
 }
 
-/* ── SOCIAL PROOF BAR ───────────────────────────────── */
-.proof-bar{background:var(--navy);padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
-.proof-bar-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;}
-.proof-item{display:flex;align-items:center;gap:0.5rem;padding:0.35rem 1.5rem;}
-.proof-ico{font-size:0.9rem;flex-shrink:0;}
-.proof-text{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.7);line-height:1.4;}
-.proof-text strong{color:white;font-weight:600;}
-.proof-divider{width:1px;height:24px;background:rgba(255,255,255,0.12);flex-shrink:0;}
-@media(max-width:768px){.proof-bar-inner{flex-direction:column;gap:0.5rem;}.proof-divider{display:none;}.proof-item{padding:0.25rem 0;}}
+/* ── BEFORE / AFTER ─────────────────────────────────── */
+.before-after{background:var(--surface);padding:64px 0;border-bottom:1px solid var(--rule);}
+.ba-hdr{text-align:center;margin-bottom:2.5rem;}
+.ba-title{font-family:'Sora',sans-serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;color:var(--ink);margin-top:0.4rem;}
+.ba-grid{display:grid;grid-template-columns:1fr 48px 1fr;gap:0;align-items:stretch;max-width:960px;margin:0 auto;}
+.ba-col{background:white;border:1px solid var(--rule);border-radius:var(--r-card);padding:2rem;}
+.ba-before{border-color:#fca5a5;background:#fff5f5;}
+.ba-after{border-color:var(--teal-border);background:#e6f6f8;}
+.ba-col-label{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.25rem;padding:0.3rem 0.8rem;border-radius:var(--r-pill);display:inline-block;}
+.ba-before .ba-col-label{background:#fef2f2;color:#dc2626;}
+.ba-after .ba-col-label{background:var(--teal-pale);color:var(--teal-deep);}
+.ba-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;}
+.ba-col ul li{font-family:'Inter',sans-serif;font-size:0.83rem;line-height:1.55;padding-left:1.4rem;position:relative;}
+.ba-before ul li::before{content:'✕';position:absolute;left:0;color:#dc2626;font-size:0.7rem;top:2px;font-weight:700;}
+.ba-after ul li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-size:0.8rem;top:1px;font-weight:700;}
+.ba-before ul li{color:var(--muted);}
+.ba-after ul li{color:var(--body);}
+.ba-divider{display:flex;align-items:center;justify-content:center;}
+.ba-arrow{font-size:1.5rem;color:var(--teal);font-weight:300;}
+@media(max-width:768px){
+  .ba-grid{grid-template-columns:1fr;gap:1rem;}
+  .ba-divider{transform:rotate(90deg);}
+}
+
 
 
 /* ── POWERED BY RIBBON ───────────────────────────────── */
@@ -241,27 +264,32 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);bo
   letter-spacing:0.01em;
 }
 .svc-link:hover{border-color:var(--teal);color:var(--teal);background:rgba(0,155,170,0.10);}
-.tech-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin:1rem 0 0.5rem;}
+.tech-tags{display:none;gap:0.4rem;margin:1rem 0 0.5rem;flex-wrap:wrap;}
+.tech-tags.open{display:flex;flex-wrap:wrap;}
 .tech-tag{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:500;color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:var(--r-pill);padding:0.25rem 0.65rem;letter-spacing:0.01em;white-space:nowrap;}
 .services-cta{text-align:center;margin-top:2.5rem;}
 .btn-outline-teal{font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:700;color:var(--teal);padding:0.75rem 2rem;border-radius:var(--r-btn);border:2px solid var(--teal);background:transparent;cursor:pointer;transition:all 0.2s;display:inline-block;}
 .btn-outline-teal:hover{background:var(--teal);color:white;box-shadow:var(--shadow-teal)}
 
 /* ── VALUE STRIP ────────────────────────────────────── */
-.value-strip{background:var(--navy);padding:56px 0}
+.value-strip{background:var(--navy);border-top:none;border-bottom:none;padding:56px 0}
 .value-strip-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
 .vstrip-item{text-align:center}
 .vstrip-num{font-family:'Sora',sans-serif;font-size:2.3rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;}
 .vstrip-label{font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.50);margin-top:6px;font-weight:500;}
 
+
 /* ── WHY US ─────────────────────────────────────────── */
-#why{background:var(--teal-wash)}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.why-img-wrap{position:relative}
-.why-img-wrap img{width:100%;border-radius:var(--r-card);border:1px solid var(--teal-border);box-shadow:var(--shadow-lg);}
-.why-cert{position:absolute;bottom:-20px;right:-16px;background:var(--navy);border:2px solid var(--teal);border-radius:var(--r-card);padding:1rem 1.4rem;text-align:center;box-shadow:var(--shadow-navy);}
-.why-cert .cert-label{font-family:'Inter',sans-serif;font-size:0.63rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.45);font-weight:700;}
-.why-cert .cert-val{font-family:'Sora',sans-serif;font-size:1.6rem;font-weight:800;color:var(--teal);letter-spacing:-1px;line-height:1.1;}
+#why{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.why-grid{display:grid;grid-template-columns:340px 1fr;gap:4rem;align-items:start;}
+.why-creds{position:sticky;top:100px;}
+.why-cred-items{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0 1.25rem;}
+.why-cred-item{background:white;border:1px solid var(--rule);border-radius:var(--r-card);padding:1rem 1.1rem;text-align:center;}
+.why-cred-val{font-family:'Sora',sans-serif;font-size:1.8rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;}
+.why-cred-label{font-family:'Inter',sans-serif;font-size:0.72rem;color:var(--muted);margin-top:4px;line-height:1.3;}
+.why-cred-badges{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;}
+.why-badge{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;color:var(--teal-deep);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:var(--r-pill);padding:0.25rem 0.65rem;}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr;gap:2rem;}.why-creds{position:static;}}
 .why-feats{display:grid;gap:0.9rem;margin-top:2rem}
 .feat-row{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem 1.2rem;background:white;border:1px solid var(--rule);border-left:3px solid var(--teal-border);border-radius:var(--r-card);transition:border-left-color 0.2s,box-shadow 0.2s;}
 .feat-row:hover{border-left-color:var(--teal);box-shadow:var(--shadow-sm)}
@@ -612,7 +640,66 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   .nav-inner{padding:0 1rem;}
 }
 
-/* ── FORM IMPROVEMENTS ──────────────────────────────── */
+/* ── CORE SERVICE BADGE ─────────────────────────────── */
+.svc-card.core-svc{border:1.5px solid var(--teal);position:relative;}
+.core-badge{position:absolute;top:-1px;right:16px;font-family:'Sora',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--teal);color:white;padding:0.2rem 0.65rem;border-radius:0 0 6px 6px;}
+/* ── FAQ ────────────────────────────────────────────── */
+.faq-section{background:var(--surface);padding:80px 0;border-top:1px solid var(--rule);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:960px;margin:2.5rem auto 0;}
+.faq-item{background:white;border:1px solid var(--rule);border-radius:var(--r-card);padding:1.4rem 1.5rem;cursor:pointer;transition:border-color 0.2s,box-shadow 0.2s;}
+.faq-item:hover{border-color:var(--teal-border);box-shadow:0 2px 12px rgba(0,155,170,0.08);}
+.faq-item.open{border-color:var(--teal);}
+.faq-q{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;}
+.faq-q h4{font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:600;color:var(--ink);line-height:1.4;margin:0;}
+.faq-toggle{font-size:1.2rem;color:var(--teal);flex-shrink:0;transition:transform 0.2s;font-weight:300;line-height:1;}
+.faq-item.open .faq-toggle{transform:rotate(45deg);}
+.faq-a{font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--body);line-height:1.6;margin-top:0.85rem;display:none;}
+.faq-item.open .faq-a{display:block;}
+@media(max-width:768px){.faq-grid{grid-template-columns:1fr;}}
+/* ── BUYER SELECTOR ─────────────────────────────────── */
+.buyer-selector{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.buyer-label{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.5);font-weight:500;}
+.buyer-btn{font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;padding:0.35rem 0.85rem;border-radius:var(--r-pill);border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.65);cursor:pointer;transition:all 0.2s;}
+.buyer-btn:hover{border-color:rgba(255,255,255,0.5);color:white;}
+.buyer-btn.active{background:var(--teal);border-color:var(--teal);color:white;}
+
+/* ── ONE THING WORTH KNOWING ────────────────────────── */
+.one-thing{background:var(--navy);border:1px solid var(--teal-border);border-left:3px solid var(--teal);border-radius:var(--r-card);padding:1.1rem 1.25rem;margin:1.25rem 0;}
+.one-thing-label{font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal);display:block;margin-bottom:0.5rem;}
+.one-thing p{font-family:'Inter',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;margin:0;}
+
+/* ── NOT THE RIGHT FIT ──────────────────────────────── */
+.not-fit{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:64px 0;}
+.not-fit-inner{max-width:820px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:3rem;align-items:start;}
+.not-fit-hdr .eyebrow{display:block;margin-bottom:0.5rem;}
+.not-fit-hdr h3{font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.4;margin:0;}
+.not-fit-body p{font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);line-height:1.65;margin-bottom:0.85rem;}
+.not-fit-body ul{list-style:none;padding:0;margin:0 0 0.85rem;display:flex;flex-direction:column;gap:0.65rem;}
+.not-fit-body ul li{font-family:'Inter',sans-serif;font-size:0.83rem;color:var(--body);line-height:1.55;padding-left:1rem;border-left:2px solid var(--rule);}
+.not-fit-body ul li strong{color:var(--ink);}
+.not-fit-close{font-size:0.83rem !important;color:var(--muted) !important;}
+.not-fit-close a{color:var(--teal);font-weight:600;}
+@media(max-width:768px){.not-fit-inner{grid-template-columns:1fr;gap:1.25rem;}}
+
+/* ── FAQ (first open) ───────────────────────────────── */
+
+
+#faq{padding:80px 0;background:var(--surface);}
+.faq-grid{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:0;}
+.faq-item{border-bottom:1px solid var(--rule);}
+.faq-item:first-child{border-top:1px solid var(--rule);}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 0;font-family:'Sora',sans-serif;font-size:0.95rem;font-weight:600;color:var(--ink);text-align:left;line-height:1.4;transition:color 0.15s;}
+.faq-q:hover{color:var(--teal);}
+.faq-q.open{color:var(--teal);}
+.faq-icon{font-size:1.4rem;font-weight:300;flex-shrink:0;color:var(--teal);line-height:1;transition:transform 0.25s;}
+.faq-q.open .faq-icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
+.faq-a.open{max-height:400px;}
+.faq-a p{font-family:'Inter',sans-serif;font-size:0.87rem;color:var(--body);line-height:1.7;padding-bottom:1.1rem;margin:0 0 0.5rem;}
+.faq-a p:last-child{margin-bottom:0;}
+@media(max-width:768px){.faq-q{font-size:0.88rem;}}
+
+
 .f-optional{font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:400;color:var(--muted);}
 .size-selector{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px;}
 .size-opt{cursor:pointer;}
@@ -630,6 +717,119 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   border-color:var(--teal);background:var(--teal-pale);color:var(--teal);
 }
 .size-opt:hover span{border-color:var(--teal-border);}
+/* ── HEALTH CHECK DELIVERABLES ──────────────────────── */
+.health-check-list{background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:var(--r-card);padding:1.25rem 1.4rem;margin:1.25rem 0;}
+.health-check-list h5{font-family:'Sora',sans-serif;font-size:0.8rem;font-weight:700;color:var(--teal-deep);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem;}
+.health-check-list ul{list-style:none;padding:0;margin:0 0 0.85rem;display:flex;flex-direction:column;gap:0.5rem;}
+.health-check-list ul li{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--body);line-height:1.45;padding-left:1.3rem;position:relative;}
+.health-check-list ul li::before{content:'→';position:absolute;left:0;color:var(--teal);font-weight:700;font-size:0.75rem;}
+.risk-reversal{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--teal-deep);font-style:italic;border-top:1px solid var(--teal-border);padding-top:0.75rem;margin:0;}
+/* ── CAPACITY SIGNAL ────────────────────────────────── */
+.capacity-signal{display:flex;align-items:flex-start;gap:0.6rem;background:var(--amber-pale);border:1px solid #f5c97a;border-radius:var(--r-card);padding:0.85rem 1rem;margin:1.25rem 0;font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--body);line-height:1.5;}
+.capacity-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0;margin-top:4px;box-shadow:0 0 0 3px rgba(34,197,94,0.2);}
+/* ── LEAD MAGNET ────────────────────────────────────── */
+.lead-magnet{background:var(--navy-light);border-top:1px solid rgba(255,255,255,0.07);padding:40px 0;}
+.lead-magnet-inner{max-width:680px;margin:0 auto;text-align:center;padding:0 2rem;}
+.lead-magnet h4{font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:0.5rem;}
+.lead-magnet p{font-family:'Inter',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.65);margin-bottom:1.25rem;line-height:1.5;}
+.lead-magnet-form{display:flex;gap:0.6rem;max-width:440px;margin:0 auto;}
+.lead-magnet-form input{flex:1;font-family:'Inter',sans-serif;font-size:0.85rem;padding:0.65rem 1rem;border-radius:var(--r-btn);border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:white;outline:none;}
+.lead-magnet-form input::placeholder{color:rgba(255,255,255,0.35);}
+.lead-magnet-form input:focus{border-color:var(--teal);}
+.lead-magnet-form button{font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;padding:0.65rem 1.25rem;border-radius:var(--r-btn);border:none;background:var(--teal);color:white;cursor:pointer;white-space:nowrap;transition:background 0.2s;}
+.lead-magnet-form button:hover{background:var(--teal-deep);}
+.lead-magnet-note{font-family:'Inter',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.35);margin-top:0.6rem;}
+@media(max-width:480px){.lead-magnet-form{flex-direction:column;}.lead-magnet-form button{width:100%;}}
+
+/* ── SERVICE CARD EXPAND ────────────────────────────── */
+.svc-card.hidden-svc{display:none;}
+.svc-card.hidden-svc.revealed{display:flex;}
+.show-more-svcs{display:block;margin:2rem auto 0;font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:700;color:var(--teal);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:var(--r-btn);padding:0.7rem 1.5rem;cursor:pointer;transition:background 0.2s,border-color 0.2s;}
+.show-more-svcs:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.25);}
+
+.why-levity{font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:600;color:var(--teal);font-style:italic;margin-top:1.25rem;padding-left:1rem;border-left:2px solid var(--teal-border);}
+
+/* ── CORE EXPERTISE BADGE ───────────────────────────── */
+.core-badge{display:inline-block;font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;background:rgba(0,155,170,0.18);color:#7ee8f0;border:1px solid rgba(0,155,170,0.35);border-radius:var(--r-pill);padding:0.2rem 0.55rem;vertical-align:middle;margin-left:0.5rem;position:relative;top:-1px;}
+
+
+/* ── PRICING SIGNAL ─────────────────────────────────── */
+.pricing-signal{background:var(--amber-pale);border:1px solid #f5c97a;border-radius:var(--r-card);padding:1rem 1.25rem;margin-bottom:1.25rem;}
+.pricing-signal h5{font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#92650a;margin-bottom:0.4rem;}
+.pricing-signal p{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--body);line-height:1.55;margin:0;}
+
+/* ── PROCESS STEPS ──────────────────────────────────── */
+.process-steps{display:flex;flex-direction:column;gap:0.6rem;margin:1rem 0 1.25rem;}
+.ps-step{display:flex;align-items:flex-start;gap:0.65rem;font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--body);line-height:1.45;}
+.ps-n{width:20px;height:20px;border-radius:50%;background:var(--teal);color:white;font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+
+/* ── STICKY MOBILE CTA ──────────────────────────────── */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--navy);border-top:2px solid var(--teal);padding:0.85rem 1.25rem;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(100%);transition:transform 0.3s ease;}
+.sticky-cta.visible{transform:translateY(0);}
+.sticky-cta-text{font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.7);line-height:1.3;}
+.sticky-cta-text strong{color:white;display:block;font-family:'Sora',sans-serif;font-size:0.88rem;}
+.sticky-cta-btn{font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;background:var(--teal);color:white;border:none;border-radius:var(--r-btn);padding:0.65rem 1.1rem;white-space:nowrap;text-decoration:none;cursor:pointer;flex-shrink:0;}
+@media(max-width:768px){.sticky-cta{display:flex;}}
+
+/* ── FLOATING DESKTOP CTA ───────────────────────────── */
+.float-cta{display:none;position:fixed;bottom:2rem;right:2rem;z-index:998;background:var(--teal);color:white;font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;padding:0.75rem 1.3rem;border-radius:var(--r-pill);text-decoration:none;box-shadow:0 4px 20px rgba(0,155,170,0.4);opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s,background 0.2s;}
+.float-cta.visible{opacity:1;transform:translateY(0);}
+.float-cta:hover{background:var(--teal-deep);}
+@media(min-width:769px){.float-cta{display:block;}}
+
+/* ── SOUND FAMILIAR ─────────────────────────────────── */
+.sound-familiar{background:var(--navy);padding:48px 0;}
+.sf-inner{max-width:760px;margin:0 auto;text-align:center;padding:0 2rem;}
+.sf-inner .eyebrow{color:var(--teal);}
+.sf-quote{font-family:'Sora',sans-serif;font-size:clamp(1.1rem,2vw,1.4rem);font-weight:600;color:white;line-height:1.6;margin:1rem 0 1.5rem;font-style:italic;}
+.sf-quote em{color:var(--teal);font-style:normal;}
+.sf-cta-row{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+
+/* ── AUTHORITY CALLOUT ──────────────────────────────── */
+.authority-callout{background:var(--navy);border-left:3px solid var(--teal);border-radius:0 var(--r-card) var(--r-card) 0;padding:1.1rem 1.4rem;margin:1.5rem 0;}
+.authority-callout h5{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal);margin-bottom:0.5rem;}
+.authority-callout p{font-family:'Inter',sans-serif;font-size:0.84rem;color:rgba(255,255,255,0.8);line-height:1.6;margin:0;}
+.authority-callout p strong{color:white;}
+
+/* ── MISCONCEPTIONS ─────────────────────────────────── */
+.misconceptions{background:var(--surface);padding:64px 0;border-bottom:1px solid var(--rule);}
+.mc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem;}
+.mc-card{background:white;border:1px solid var(--rule);border-radius:var(--r-card);padding:1.4rem 1.3rem;}
+.mc-myth{font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#dc2626;background:#fef2f2;border:1px solid #fca5a5;border-radius:var(--r-pill);display:inline-block;padding:0.2rem 0.7rem;margin-bottom:0.75rem;}
+.mc-card h4{font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;line-height:1.3;}
+.mc-card p{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--muted);line-height:1.55;margin:0;}
+@media(max-width:768px){.mc-grid{grid-template-columns:1fr;}}
+
+/* ── FIRST REVIEW FINDINGS ──────────────────────────── */
+.first-review{background:var(--navy);padding:64px 0;}
+.fr-inner{max-width:860px;margin:0 auto;padding:0 2rem;}
+.fr-hdr{text-align:center;margin-bottom:2.5rem;}
+.fr-hdr .eyebrow{color:var(--teal);}
+.fr-hdr h2{font-family:'Sora',sans-serif;font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:700;color:white;margin:0.4rem 0 0.75rem;}
+.fr-hdr p{font-family:'Inter',sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.6;}
+.fr-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.5rem;}
+.fr-stat{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-card);padding:1.1rem 1.25rem;display:flex;align-items:flex-start;gap:0.9rem;}
+.fr-n{font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:var(--teal);line-height:1;flex-shrink:0;}
+.fr-label{font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.65);line-height:1.45;padding-top:0.25rem;}
+.fr-label strong{color:white;display:block;font-size:0.84rem;margin-bottom:0.15rem;}
+.fr-footnote{font-family:'Inter',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.35);text-align:center;font-style:italic;}
+@media(max-width:600px){.fr-stats{grid-template-columns:1fr;}}
+
+/* ── NOT RIGHT FIT ──────────────────────────────────── */
+.not-right-fit{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-card);padding:1.4rem 1.6rem;margin:2rem 0 0;}
+.not-right-fit h5{font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:0.6rem;}
+.not-right-fit p{font-family:'Inter',sans-serif;font-size:0.83rem;color:var(--body);line-height:1.6;margin:0;}
+
+/* ── SEND TO COLLEAGUE ──────────────────────────────── */
+.send-colleague{display:flex;align-items:center;justify-content:center;gap:0.75rem;margin-top:2rem;padding:1rem;background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-card);}
+.send-colleague p{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--muted);margin:0;}
+.send-colleague a{font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;color:var(--teal);text-decoration:none;white-space:nowrap;}
+.send-colleague a:hover{text-decoration:underline;}
+
+/* ── TECH TAGS TOGGLE ───────────────────────────────── */
+.svc-tags-toggle{font-family:'Inter',sans-serif;font-size:0.72rem;color:var(--teal);background:none;border:none;cursor:pointer;padding:0;margin-top:0.5rem;display:inline-block;}
+.svc-tags-toggle:hover{text-decoration:underline;}
+
 .form-privacy{
   font-family:'Inter',sans-serif;font-size:0.74rem;color:var(--muted);
   text-align:center;margin-top:0.85rem;line-height:1.5;
@@ -641,6 +841,18 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 </style>
 </head>
 <body>
+
+<!-- ══ STICKY MOBILE CTA ════════════════════════════════════ -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-text">
+    <strong>Free IT Health Check</strong>
+    Find out what your current provider missed
+  </div>
+  <a href="#contact" class="sticky-cta-btn" onclick="document.getElementById('stickyCta').classList.remove('visible')">Get Started →</a>
+</div>
+
+<!-- ══ FLOATING DESKTOP CTA ════════════════════════════════ -->
+<a href="#contact" class="float-cta" id="floatCta">Book Free Health Check →</a>
 
 <!-- ══ NAV ═══════════════════════════════════════════════ -->
 <nav id="nav">
@@ -667,23 +879,30 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
       </div>
       <div class="logo-text">
         <div class="logo-name">4<span>DS</span></div>
-        <div class="logo-tagline">ICT Solutions for SMEs</div>
+        <div class="logo-tagline">Enterprise standard. SME scale.</div>
       </div>
     </a>
     <ul class="nav-menu">
       <li class="nav-dropdown"><a href="#services">Services ▾</a>
         <ul class="dropdown">
-          <li><a href="#services">Cloud Solutions</a></li><li><a href="#services">Cybersecurity</a></li>
-          <li><a href="#services">Managed IT Support</a></li><li><a href="#services">Data Analytics</a></li>
-          <li><a href="#services">Network Infrastructure</a></li><li><a href="#services">Digital Transformation</a></li>
-          <li><a href="#services">Business Continuity</a></li><li><a href="#services">Software Development</a></li>
+          <li><a href="#services">Microsoft 365 &amp; Modern Workplace</a></li>
+          <li><a href="#services">Identity &amp; Zero Trust</a></li>
+          <li><a href="#services">Endpoint &amp; Device Management</a></li>
+          <li><a href="#services">Cybersecurity &amp; AI Security</a></li>
+          <li><a href="#services">Email Security &amp; Deliverability</a></li>
+          <li><a href="#services">Network, Wi-Fi &amp; Infrastructure</a></li>
+          <li><a href="#services">Backup, DR &amp; Continuity</a></li>
+          <li><a href="#services">Automation &amp; IT Governance</a></li>
         </ul>
       </li>
       <li class="nav-dropdown"><a href="#industries">Industries ▾</a>
         <ul class="dropdown">
-          <li><a href="#industries">Healthcare</a></li><li><a href="#industries">Finance &amp; Banking</a></li>
-          <li><a href="#industries">Retail</a></li><li><a href="#industries">Legal Services</a></li>
-          <li><a href="#industries">Manufacturing</a></li><li><a href="#industries">Education</a></li>
+          <li><a href="#industries">Healthcare</a></li>
+          <li><a href="#industries">Manufacturing</a></li>
+          <li><a href="#industries">Finance &amp; Professional Services</a></li>
+          <li><a href="#industries">Legal &amp; Professional</a></li>
+          <li><a href="#industries">Education</a></li>
+          <li><a href="#industries">Public Sector &amp; Non-Profit</a></li>
         </ul>
       </li>
       <li><a href="#why">About</a></li>
@@ -721,12 +940,18 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
   <div class="hero-wedge"></div>
   <div class="hero-content">
-    <div class="hero-tag">ICT Partner for SMEs — Ireland &amp; UK</div>
+    <div class="hero-tag">The IT audit you should have had from day one &nbsp;·&nbsp; Ireland &amp; UK &nbsp;·&nbsp; NIS2 &amp; GDPR Specialists</div>
+    <div class="buyer-selector">
+      <span class="buyer-label">I am:</span>
+      <button class="buyer-btn active" onclick="setBuyer(this,'ops')">Responsible for IT decisions</button>
+      <button class="buyer-btn" onclick="setBuyer(this,'ceo')">CEO / MD</button>
+      <button class="buyer-btn" onclick="setBuyer(this,'tender')">In procurement / tendering</button>
+    </div>
     <h1>
       <span class="hero-h1-line1">Your IT company</span>
       <span class="hero-h1-line2">is reactive. <em>Ours isn't.</em></span>
     </h1>
-    <p class="hero-sub">We bring enterprise-grade depth — identity security, bulletproof email, full M365 deployment, and zero-trust architecture — to businesses that have outgrown what their current provider can deliver.</p>
+    <p class="hero-sub" id="heroSub">Most IT providers configure your environment once and never look again. If you suspect yours hasn't looked under the hood in years — you're in the right place.</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-hero-primary">Get a Free IT Health Check →</a>
       <a href="#approach" class="btn-hero-ghost">See How We Work ↗</a>
@@ -735,24 +960,157 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
       <span class="trust-pill">ISO 27001 Certified</span>
       <span class="trust-pill">3 Senior Engineers · 40+ yrs experience</span>
       <span class="trust-pill">Response within 2 hours</span>
+      <span class="trust-pill">eTenders Registered</span>
     </div>
   </div>
 </section>
 <section class="mission-block">
   <div class="container">
     <div class="mission-centered">
-      <span class="eyebrow">Our Mission</span>
+      <span class="eyebrow">The IT audit you should have had from day one</span>
       <h2 class="mission-heading">We don't do basic. We <em>uplift</em>.</h2>
       <p class="mission-body">Most businesses are paying for technology they've never properly configured — M365 licences going unused, email authentication broken, Conditional Access policies that exist on paper but were never enforced. We find what others miss, fix what others ignore, and bring your environment to the standard it should have been at from day one.</p>
-      <a href="#contact" class="mission-cta">Start the conversation →</a>
+      <a href="#contact" class="mission-cta">Find out what your current provider missed →</a>
     </div>
   </div>
 </section>
 
+
+<!-- ══ SOUND FAMILIAR ══════════════════════════════════════ -->
+<div class="sound-familiar">
+  <div class="sf-inner">
+    <span class="eyebrow">Sound familiar?</span>
+    <p class="sf-quote">
+      "We know something isn't right. The same issues keep coming up. We've raised it with our current provider and got reassurances. <em>But nothing has actually changed.</em>"
+    </p>
+    <p style="font-family:'Inter',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;line-height:1.6;">This is the most common thing we hear from businesses that come to us. They weren't looking for a new IT provider — they were hoping their current one would eventually step up. Most had been waiting for over a year.</p>
+    <div class="sf-cta-row">
+      <a href="#contact" class="btn-hero-primary" style="font-size:0.88rem;padding:0.75rem 1.4rem;">Get a Free IT Health Check →</a>
+      <a href="#before-after" class="btn-hero-ghost" style="font-size:0.88rem;padding:0.75rem 1.4rem;" onclick="event.preventDefault();document.querySelector('.before-after').scrollIntoView({behavior:'smooth'})">See What We Typically Find ↓</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BEFORE / AFTER ══════════════════════════════════════ -->
+<div class="before-after">
+  <div class="container">
+    <div class="ba-hdr">
+      <span class="eyebrow" style="color:var(--teal)">The Difference</span>
+      <h2 class="ba-title">What changes when you work with 4DS</h2>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col ba-before">
+        <div class="ba-col-label">Before</div>
+        <ul>
+          <li>Conditional Access "enabled" — but never actually enforced</li>
+          <li>DMARC not configured — your email domain is spoofable</li>
+          <li>Ex-staff accounts still active weeks after they left</li>
+          <li>M365 licence features unused — you're paying for tools nobody's deployed</li>
+          <li>Same support tickets raised every month — symptoms patched, root cause ignored</li>
+          <li>Security posture unknown — no audit, no register, no visibility</li>
+          <li>Tender submitted — and failed on ICT compliance criteria</li>
+        </ul>
+      </div>
+      <div class="ba-divider">
+        <div class="ba-arrow">→</div>
+      </div>
+      <div class="ba-col ba-after">
+        <div class="ba-col-label">After 4DS</div>
+        <ul>
+          <li>Conditional Access policies bulletproofed, tested, and documented</li>
+          <li>DMARC, DKIM, and SPF fully aligned — email authentication enforced</li>
+          <li>Automated offboarding — access revoked on the day someone leaves</li>
+          <li>Full M365 suite deployed — Defender, Intune, Autopilot, and Power Platform active</li>
+          <li>Ticket volume falling monthly — root causes fixed, not just closed</li>
+          <li>Live risk register, asset register, and security posture score — full visibility</li>
+          <li>Tender-ready ICT documentation — compliance evidence prepared and current</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ WHY US — moved here so trust is established before services ══ -->
+<section id="why" class="why-early">
+  <div class="container">
+    <div class="why-grid">
+      <!-- LEFT: Credentials panel -->
+      <div class="why-creds">
+        <span class="eyebrow">Why 4DS</span>
+        <h2 class="section-title">Most IT providers configure your environment once.<br>We audit it continuously.</h2>
+        <div class="why-cred-items">
+          <div class="why-cred-item">
+            <div class="why-cred-val">ISO</div>
+            <div class="why-cred-label">27001 Certified Practice</div>
+          </div>
+          <div class="why-cred-item">
+            <div class="why-cred-val">3</div>
+            <div class="why-cred-label">Senior Engineers — ex-Enterprise</div>
+          </div>
+          <div class="why-cred-item">
+            <div class="why-cred-val">&lt;15m</div>
+            <div class="why-cred-label">Critical Incident Response</div>
+          </div>
+          <div class="why-cred-item">
+            <div class="why-cred-val">40+</div>
+            <div class="why-cred-label">Years Combined Experience</div>
+          </div>
+        </div>
+        <div class="why-cred-badges">
+          <span class="why-badge">eTenders Registered</span>
+          <span class="why-badge">PI Insured</span>
+          <span class="why-badge">DPC Compliant</span>
+          <span class="why-badge">NIS2 Ready</span>
+        </div>
+        <p class="why-levity">We've never found an M365 tenant that didn't need work. Not once.</p>
+      </div>
+      <!-- RIGHT: Feat rows -->
+      <div class="why-feats">
+        <div class="feat-row"><div class="feat-ico">🔍</div><div><h4>We Find What Others Miss</h4><p>We've reviewed M365 tenants where Conditional Access was technically "enabled" but never actually enforced — leaving accounts fully exposed. That kind of gap is why clients come to us after their previous provider.</p></div></div>
+        <div class="feat-row"><div class="feat-ico">⚡</div><div><h4>Senior Engineers Answer the Phone</h4><p>Not a first-line helpdesk reading from a script. Every client gets direct access to the engineers who built their environment — critical issues acknowledged in under 15 minutes, 24/7/365.</p></div></div>
+        <div class="feat-row"><div class="feat-ico">📉</div><div><h4>We Measure Ticket Reduction</h4><p>Our goal is to make ourselves less needed for reactive support — by fixing root causes, not symptoms. We track support ticket volume from day one and report on the reduction every month.</p></div></div>
+        <div class="feat-row"><div class="feat-ico">💡</div><div><h4>You're Already Paying for the Tools</h4><p>Most M365 subscribers use less than 30% of what's included in their licence. We identify, configure, and deploy the security and productivity tools you're already paying for — at no extra cost.</p></div></div>
+        <div class="one-thing">
+          <span class="one-thing-label">One thing worth knowing</span>
+          <p>Most M365 Business Premium licences include Microsoft Defender for Endpoint — enterprise-grade endpoint protection worth €15/user/month if bought separately. Fewer than 15% of SMEs on this licence have it deployed. If yours isn't active, you're paying for enterprise-grade security and getting none of it. We find this in 9 out of 10 environments we review.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MISCONCEPTIONS ══════════════════════════════════════ -->
+<div class="misconceptions">
+  <div class="container">
+    <div class="section-hdr center">
+      <span class="eyebrow">Common Misconceptions</span>
+      <h2 class="section-title">Things that sound right — but aren't</h2>
+      <p class="section-sub">These are the beliefs that leave SME environments exposed. We find the consequences of all three in almost every audit we run.</p>
+    </div>
+    <div class="mc-grid">
+      <div class="mc-card">
+        <span class="mc-myth">Myth</span>
+        <h4>"Our firewall protects us from phishing."</h4>
+        <p>A firewall controls network traffic. It cannot inspect the content of an email, detect a credential-harvesting link, or stop an employee from entering their password on a spoofed login page. Phishing bypasses firewalls entirely — and it's the #1 entry point for ransomware in SMEs.</p>
+      </div>
+      <div class="mc-card">
+        <span class="mc-myth">Myth</span>
+        <h4>"Microsoft backs up our Microsoft 365 data."</h4>
+        <p>Microsoft provides infrastructure redundancy — not data backup. If a file is deleted, a mailbox is wiped, or ransomware encrypts your SharePoint, Microsoft's retention window is limited and not designed for full recovery. You need a dedicated third-party backup. Most businesses don't have one.</p>
+      </div>
+      <div class="mc-card">
+        <span class="mc-myth">Myth</span>
+        <h4>"No news from our IT provider means everything is fine."</h4>
+        <p>Silence from your IT provider means they're not looking. A properly managed environment generates alerts, compliance reports, patch logs, and security posture scores — regularly. If you're not receiving monthly reports with data in them, your environment is being managed reactively, not proactively.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ══ RIBBON ═════════════════════════════════════════════ -->
 <div class="ribbon">
   <div class="ribbon-inner">
-    <div class="ribbon-label">Powered by</div>
+    <div class="ribbon-label">Expertise across</div>
     <div class="ribbon-track-wrap">
       <div class="ribbon-track" id="ribbonTrack">
 
@@ -797,36 +1155,15 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
 </div>
 
-<!-- ══ SOCIAL PROOF BAR ════════════════════════════════════ -->
-<div class="proof-bar">
-  <div class="proof-bar-inner">
-    <div class="proof-item">
-      <span class="proof-ico">📉</span>
-      <span class="proof-text"><strong>Ticket volume cut by 60%</strong> in 90 days — Legal firm, Dublin</span>
-    </div>
-    <div class="proof-divider"></div>
-    <div class="proof-item">
-      <span class="proof-ico">🔐</span>
-      <span class="proof-text"><strong>23 undetected security gaps</strong> found on day one — Financial services, Cork</span>
-    </div>
-    <div class="proof-divider"></div>
-    <div class="proof-item">
-      <span class="proof-ico">📧</span>
-      <span class="proof-text"><strong>Email spoofing risk eliminated</strong> — DMARC never configured by previous provider</span>
-    </div>
-    <div class="proof-divider"></div>
-    <div class="proof-item">
-      <span class="proof-ico">⚙️</span>
-      <span class="proof-text"><strong>7 ex-staff accounts still active</strong> — found during first access review</span>
-    </div>
-  </div>
-</div>
+
+
 
 <!-- ══ SERVICES ══════════════════════════════════════════ -->
 <section id="services">
   <div class="container">
     <div class="section-hdr">
-      <h2 class="section-title">What we deliver</h2>
+      <h2 class="section-title">Where the gaps live — and what we do about them</h2>
+      <p class="section-sub section-sub-light">These are the areas where SMEs most commonly come to us first — and where we most consistently find what previous providers missed. Identity, email security, and endpoint management are where the biggest gaps tend to live.</p>
     </div>
     <div class="services-grid">
 
@@ -853,12 +1190,13 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <span class="tech-tag">Google Workspace</span>
             <span class="tech-tag">GW → M365 Migration</span>
           </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
       <!-- 2. Identity, Access & Zero Trust -->
-      <div class="svc-card">
+      <div class="svc-card core-svc">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="28" cy="20" r="8"/>
@@ -867,7 +1205,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Identity &amp; Zero Trust Security</h3>
+          <h3>Identity &amp; Zero Trust Security <span class="core-badge">Core Expertise</span></h3>
           <p>We lock down your identity layer — the #1 attack surface. Every app behind your IDP with SAML SSO, SCIM provisioning, and bulletproof Conditional Access. ZTNA replaces legacy VPN entirely.</p>
           <div class="tech-tags">
             <span class="tech-tag">Entra ID</span>
@@ -880,6 +1218,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <span class="tech-tag">Okta</span>
             <span class="tech-tag">MFA / PKI</span>
           </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
@@ -909,12 +1248,13 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <span class="tech-tag">Asset Management</span>
             <span class="tech-tag">Dell / HP Hardware</span>
           </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
       <!-- 4. Cybersecurity & AI Security -->
-      <div class="svc-card">
+      <div class="svc-card core-svc">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M28 8L12 15v14c0 10 7 19 16 22 9-3 16-12 16-22V15L28 8z"/>
@@ -922,7 +1262,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Cybersecurity &amp; AI Security</h3>
+          <h3>Cybersecurity &amp; AI Security <span class="core-badge">Core Expertise</span></h3>
           <p>Beyond firewalls — layered defence including AI-powered threat detection, phishing simulations, security awareness training, and CASB. Deploying next-gen AI security tools competitors haven't reached yet.</p>
           <div class="tech-tags">
             <span class="tech-tag">Defender for Business</span>
@@ -935,12 +1275,13 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <span class="tech-tag">Palo Alto NGFW</span>
             <span class="tech-tag">ISO 27001 Readiness</span>
           </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
       <!-- 5. Email Security & Deliverability -->
-      <div class="svc-card">
+      <div class="svc-card core-svc hidden-svc">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="8" y="14" width="40" height="30" rx="3"/>
@@ -949,7 +1290,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </svg>
         </div>
         <div class="svc-body">
-          <h3>Email Security &amp; Deliverability</h3>
+          <h3>Email Security &amp; Deliverability <span class="core-badge">Core Expertise</span></h3>
           <p>Misconfigured SPF, DKIM, or DMARC is why your email lands in spam — and most companies don't know it. We bulletproof your mail stack end-to-end, from gateway filtering to authentication alignment.</p>
           <div class="tech-tags">
             <span class="tech-tag">Proofpoint</span>
@@ -961,12 +1302,13 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <span class="tech-tag">Anti-Phishing</span>
             <span class="tech-tag">Mail Flow Rules</span>
           </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
       <!-- 6. Network, Wi-Fi & Infrastructure -->
-      <div class="svc-card">
+      <div class="svc-card hidden-svc">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="28" cy="28" r="18"/>
@@ -987,12 +1329,13 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <span class="tech-tag">Azure Virtual Desktop</span>
             <span class="tech-tag">On-Prem → Cloud</span>
           </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
       <!-- 7. Backup, DR & Business Continuity -->
-      <div class="svc-card">
+      <div class="svc-card hidden-svc">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M36 20a8 8 0 1 0-16 0v4H14v20h28V24h-6v-4z"/>
@@ -1012,12 +1355,13 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <span class="tech-tag">DR Runbooks</span>
             <span class="tech-tag">RTO / RPO Planning</span>
           </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
       <!-- 8. Onboarding, Offboarding & Governance -->
-      <div class="svc-card">
+      <div class="svc-card hidden-svc">
         <div class="svc-icon">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="10" y="10" width="36" height="36" rx="3"/>
@@ -1038,10 +1382,14 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <span class="tech-tag">AWS / GCP</span>
             <span class="tech-tag">ITIL / ITSM</span>
           </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
           <a href="#contact" class="svc-link">Learn more</a>
         </div>
       </div>
 
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <button class="show-more-svcs" id="showMoreSvcs" onclick="revealServices()">Show all 8 services ↓</button>
     </div>
     <div class="services-cta"><a href="#contact" class="btn-outline-teal">Discuss Your Requirements →</a></div>
   </div>
@@ -1056,29 +1404,6 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
     <div class="vstrip-item"><div class="vstrip-num">ISO</div><div class="vstrip-label">27001 Certified Practice</div></div>
   </div>
 </div>
-
-<!-- ══ WHY US ═════════════════════════════════════════════ -->
-<section id="why">
-  <div class="container">
-    <div class="why-grid">
-      <div class="why-img-wrap">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80" alt="IT team">
-        <div class="why-cert"><div class="cert-label">ISO Certified</div><div class="cert-val">27001</div></div>
-      </div>
-      <div>
-        <span class="eyebrow">Why 4DS</span>
-        <h2 class="section-title">Your Technology Partner,<br>Not Just a Vendor</h2>
-        <p class="section-sub">We embed ourselves in your business, align technology with your goals, and stay accountable for outcomes — not just deliverables.</p>
-        <div class="why-feats">
-          <div class="feat-row"><div class="feat-ico">🔍</div><div><h4>We Find What Others Miss</h4><p>We've reviewed M365 tenants where Conditional Access was technically "enabled" but never actually enforced — leaving accounts fully exposed. That kind of gap is why clients come to us after their previous provider.</p></div></div>
-          <div class="feat-row"><div class="feat-ico">⚡</div><div><h4>Senior Engineers Answer the Phone</h4><p>Not a first-line helpdesk reading from a script. Every client gets direct access to the engineers who built their environment — critical issues acknowledged in under 15 minutes, 24/7/365.</p></div></div>
-          <div class="feat-row"><div class="feat-ico">📉</div><div><h4>We Measure Ticket Reduction</h4><p>Our goal is to make ourselves less needed for reactive support — by fixing root causes, not symptoms. We track support ticket volume from day one and report on the reduction every month.</p></div></div>
-          <div class="feat-row"><div class="feat-ico">💡</div><div><h4>You're Already Paying for the Tools</h4><p>Most M365 subscribers use less than 30% of what's included in their licence. We identify, configure, and deploy the security and productivity tools you're already paying for — at no extra cost.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ══ APPROACH ═══════════════════════════════════════════ -->
 <section id="approach">
@@ -1316,26 +1641,50 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   <div class="container">
     <div class="section-hdr">
       <span class="eyebrow">Client Stories</span>
-      <h2 class="section-title">What Our Clients Say</h2>
-      <p class="section-sub">Real outcomes from SME clients across Ireland and the UK.</p>
+      <h2 class="section-title">These businesses had the same IT provider for years.<br>Here's what we found.</h2>
+      <p class="section-sub">Real findings, real fixes, real outcomes — from SME clients across Ireland.</p>
     </div>
     <div class="testi-grid">
       <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>We'd had the same IT provider for six years and assumed everything was fine. 4DS found our Conditional Access policies had never been properly enforced, our DMARC record was broken, and we had seven ex-staff accounts still active. All fixed within two weeks.</p><div class="testi-author"><div class="t-avatar">SM</div><div><div class="t-name">Sarah Murphy</div><div class="t-role">Operations Director, Meridian Group</div></div></div><div style="margin-top:0.6rem"><span style="font-size:0.72rem;font-family:'Inter',sans-serif;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:100px;padding:0.2rem 0.65rem;">Finance &amp; Professional · Dublin</span></div></div>
       <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>After a ransomware incident at a competitor firm, we brought 4DS in for an urgent review. They identified 23 critical gaps, deployed Defender and Intune across 60 endpoints, and had us fully patched and monitored within three weeks. These are engineers who actually know what they're doing.</p><div class="testi-author"><div class="t-avatar">JC</div><div><div class="t-name">James Collins</div><div class="t-role">CEO, FinVault Advisory</div></div></div><div style="margin-top:0.6rem"><span style="font-size:0.72rem;font-family:'Inter',sans-serif;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:100px;padding:0.2rem 0.65rem;">Legal &amp; Professional · Cork</span></div></div>
       <div class="testi-card"><div class="testi-top"><div class="stars">★★★★★</div><div class="quote-mark">"</div></div><p>Our previous provider had us submitting tickets for everything. Within 90 days of 4DS taking over, our monthly ticket volume dropped by more than half. They fixed what was causing the problems instead of just closing the tickets. The difference in how our team works day-to-day is remarkable.</p><div class="testi-author"><div class="t-avatar">LB</div><div><div class="t-name">Laura Byrne</div><div class="t-role">Practice Manager, LexBridge Solicitors</div></div></div><div style="margin-top:0.6rem"><span style="font-size:0.72rem;font-family:'Inter',sans-serif;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:100px;padding:0.2rem 0.65rem;">Legal &amp; Professional · Dublin</span></div></div>
     </div>
+    <div class="send-colleague">
+      <p>Need to share this with someone who holds the budget?</p>
+      <a href="/cdn-cgi/l/email-protection#211e5254434b4442551c68750151534e574845445301564e535549014d4e4e4a484f4601405501c3a1b50115657207434e45581c680142404c44014042534e5252015549485201687501424e4c51404f580f01764e5355490140015344404501c3a1b5015549445801454e01400147534444016875014944404d554901424944424a0155494055015244444c44450146444f54484f444d580154524447544d1b0149555551521b0e0e1545520f4844">Send this page to a colleague →</a>
+    </div>
   </div>
 </section>
 
-<!-- ══ TEAM ════════════════════════════════════════════ -->
+<!-- ══ LEAD MAGNET (mid-page) ═══════════════════════════════ -->
+<div class="lead-magnet">
+  <div class="lead-magnet-inner">
+    <h4>📋 Not ready to book a call yet? Take this away first.</h4>
+    <p>Download our free guide: <em>"10 Things Your IT Provider Should Be Doing — But Probably Isn't."</em> Written by engineers who've worked inside the enterprises your IT provider claims to emulate.</p>
+    <div class="lead-magnet-form">
+      <input type="email" id="lmEmail" placeholder="your@email.com">
+      <button onclick="handleLeadMagnet()">Send Me the Guide →</button>
+    </div>
+    <p class="lead-magnet-note">No spam. One email with the guide. That's it.</p>
+    <div id="lmOk" style="display:none;color:var(--teal);font-family:'Inter',sans-serif;font-size:0.85rem;margin-top:0.75rem;">✅ On its way — check your inbox.</div>
+    <div style="margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <p style="font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">Follow us for practical IT insights — no fluff, no vendor marketing.</p>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;color:white;background:#0077B5;padding:0.55rem 1.2rem;border-radius:var(--r-btn);text-decoration:none;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Follow 4DS on LinkedIn
+      </a>
+    </div>
+  </div>
+</div>
+
 <section id="team">
   <div class="container">
     <div class="section-hdr">
       <span class="eyebrow">The People Behind 4DS</span>
-      <h2 class="section-title">You're not buying software.<br>You're hiring a team.</h2>
-      <p class="section-sub">Every client gets direct access to senior engineers and consultants — not a ticketing queue. Here's who picks up the phone.</p>
+      <h2 class="section-title">Three senior engineers.<br>Every client, direct access.</h2>
+      <p class="section-sub">No account managers. No junior helpdesk. No escalation queue. When you work with 4DS, you work directly with the engineers who know your environment inside out.</p>
     </div>
-    <div class="team-grid">
+    <div class="team-grid" style="grid-template-columns:repeat(3,1fr);">
       <div class="team-card">
         <div class="team-avatar">
           <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80" alt="Conor Walsh">
@@ -1344,7 +1693,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           <h4>Conor Walsh</h4>
           <span class="team-role">CEO &amp; Co-Founder</span>
           <p>20 years leading enterprise IT transformations across financial services and healthcare. Founded 4DS to make that expertise accessible to every SME.</p>
-          <div class="team-tags"><span>Strategy</span><span>Cloud</span><span>Leadership</span></div>
+          <div class="team-tags"><span>Strategy</span><span>Cloud</span><span>M365</span></div>
         </div>
       </div>
       <div class="team-card">
@@ -1354,8 +1703,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
         <div class="team-body">
           <h4>Aoife Brennan</h4>
           <span class="team-role">Head of Cybersecurity</span>
-          <p>Former CISO at two FTSE-listed firms. CISSP certified, GDPR specialist, and the person our clients call when they need to know they're protected.</p>
-          <div class="team-tags"><span>CISSP</span><span>GDPR</span><span>Pen Testing</span></div>
+          <p>Former CISO at two FTSE-listed firms. CISSP certified, GDPR specialist, and the engineer our clients call when they need to know they're protected.</p>
+          <div class="team-tags"><span>CISSP</span><span>GDPR</span><span>Zero Trust</span></div>
         </div>
       </div>
       <div class="team-card">
@@ -1366,34 +1715,196 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           <h4>Darragh Ó'Sullivan</h4>
           <span class="team-role">Head of Infrastructure</span>
           <p>AWS and Azure certified architect with a background in building resilient, high-availability systems for banks and hospitals. Zero-downtime is his baseline.</p>
-          <div class="team-tags"><span>AWS</span><span>Azure</span><span>DevOps</span></div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">
-          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80" alt="Rachel Doherty">
-        </div>
-        <div class="team-body">
-          <h4>Rachel Doherty</h4>
-          <span class="team-role">Client Success Director</span>
-          <p>Rachel ensures every client relationship stays strategic, not transactional. She runs quarterly reviews, tracks ROI, and holds us accountable to your outcomes.</p>
-          <div class="team-tags"><span>Account Management</span><span>ROI</span></div>
+          <div class="team-tags"><span>Azure</span><span>Intune</span><span>DevOps</span></div>
         </div>
       </div>
     </div>
     <div class="team-footer">
-      <p>Our full team of <strong>40+ engineers, consultants, and specialists</strong> are based across Dublin, Cork, and London.</p>
-      <a href="#contact" class="btn-outline-teal">Meet the full team →</a>
+      <p>Unlike larger MSPs where your account gets handed to a junior helpdesk, every 4DS client works directly with the engineers who built and know their environment — no middleman, no escalation queue.</p>
+      <div class="capacity-signal">
+        <span class="capacity-dot"></span>
+        <span>We take on a small number of new clients each quarter to ensure every engagement gets our full attention. <strong>We currently have capacity for new managed service clients — enquire to check availability.</strong></span>
+      </div>
+      <a href="#contact" class="btn-outline-teal">Work With Us →</a>
     </div>
   </div>
 </section>
+
+<!-- ══ NOT THE RIGHT FIT ════════════════════════════════════ -->
+<div class="not-fit">
+  <div class="container">
+    <div class="not-fit-inner">
+      <div class="not-fit-hdr">
+        <span class="eyebrow">Honest about this</span>
+        <h3>When 4DS probably isn't the right fit</h3>
+      </div>
+      <div class="not-fit-body">
+        <p>We're not the right choice for every business — and we'd rather be upfront about that than take on a client we can't genuinely serve.</p>
+        <ul>
+          <li><strong>If you have fewer than 15 users,</strong> our managed service model likely doesn't make financial sense. We can still run the health check — but ongoing managed services would be disproportionate to your size.</li>
+          <li><strong>If you're looking for the cheapest option,</strong> we're not it. We price fairly for senior-level work. There are cheaper providers — they will give you what they charge for.</li>
+          <li><strong>If you need a large on-site team,</strong> we're three engineers. We handle everything remotely and via trusted partners — but if your primary requirement is an on-site presence five days a week, we should be honest that we're not structured for that.</li>
+        </ul>
+        <p class="not-fit-close">If none of the above applies — and you're a 15–300 user business that wants IT done properly — <a href="#contact">let's talk</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FAQ ══════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-hdr center">
+      <span class="eyebrow">Common Questions</span>
+      <h2 class="section-title">Things procurement teams and decision-makers ask us</h2>
+      <p class="section-sub">Straight answers. No deflection.</p>
+    </div>
+    <div class="faq-grid">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          We already have an IT provider. How does switching work?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>The most common thing we hear from new clients is: <em>"We knew something wasn't right, but we were worried about the disruption."</em> Our transition process is designed to be invisible to your team — no downtime, no retraining, no Day One chaos.</p>
+          <p>We shadow your current setup for two weeks before we touch anything. We document your environment, map your users, and build your new configuration in parallel. We don't declare the handover complete until you're satisfied nothing has changed — except the quality.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Are you a Microsoft certified partner?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes. Our engineers hold current Microsoft certifications across M365, Entra ID, Intune, Defender, and Azure. We're also ISO 27001 certified as a practice — meaning our internal processes meet the same standard we implement for clients. Certification documentation is available on request for tender submissions.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do you handle data security during an engagement?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>All access is granted via delegated admin or time-limited credentials — we never ask for permanent global admin rights. Every action taken in your environment is logged and available to you. We are GDPR compliant, PI insured, and operate under a signed Data Processing Agreement with every client before any work begins.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What's the difference between the free health check and a full engagement?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>The free health check is a remote diagnostic — we review your M365 configuration, email authentication, identity posture, and endpoint compliance, then give you a plain-language report with the top 3 priority actions. No site visit, no commitment, no invoice.</p>
+          <p>A full engagement begins after that — if the findings warrant it and you want to proceed. At that point we scope, price, and agree a 30/60/90-day remediation and managed service plan. You decide whether to proceed based on the findings, not on a sales pitch.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you offer fixed-price contracts with no billable hours?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes — this is non-negotiable for us. All managed service engagements are priced on a fixed monthly fee per user. No billable hours, no surprise invoices, no "that's out of scope" conversations every time something needs doing. You know your IT cost on day one and it doesn't change without your agreement.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can you help us prepare for a government tender or HSE/HIQA compliance review?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes — and this is an area where we add disproportionate value. We've helped clients pass eTenders ICT compliance requirements that they previously failed, and we can prepare the security documentation, risk register, and evidence pack that public sector and healthcare procurement processes require. If you're submitting a tender and need your ICT posture to hold up to scrutiny, start with the health check.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          We're locked into a contract with our current provider. Can you still help?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes — and this is more common than you'd think. We can shadow your current setup, begin planning your new environment, and time the transition to coincide with your contract end date. The health check findings give you documented evidence of any gaps — useful context when your current contract comes up for renewal.</p>
+          <p>We've done this for every client who came to us mid-contract. The transition is invisible to your team. The planning work costs nothing.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do we know the health check findings are genuine — not engineered to create work?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>You receive the full report regardless of whether you proceed with us. Every finding is documented with evidence — screenshots, configuration exports, or log data — so you can verify it independently or show it to your current provider.</p>
+          <p>We've also told prospective clients that their current provider is doing a good job and they shouldn't switch. It's happened twice. We'd rather lose a potential client than recommend unnecessary work.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          We've had a bad experience with an IT company before. Why would 4DS be different?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>We know most businesses that come to us have been let down at least once. We're not going to ask you to take our word for it. The health check exists precisely so you can evaluate us based on what we actually find — not what we claim. You get the report whether or not you proceed.</p>
+          <p>The structural difference: you work directly with the engineers who know your environment. There's no account manager between you and the person who built your setup. If something goes wrong, the same engineer who configured it is the one who fixes it.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FIRST REVIEW FINDINGS ═══════════════════════════════ -->
+<div class="first-review">
+  <div class="fr-inner">
+    <div class="fr-hdr">
+      <span class="eyebrow" style="color:var(--teal)">What a first review typically finds</span>
+      <h2>In the last 10 environments we audited:</h2>
+      <p>These aren't edge cases. They are the standard state of an SME environment that hasn't had a proper independent review.</p>
+    </div>
+    <div class="fr-stats">
+      <div class="fr-stat">
+        <div class="fr-n">8/10</div>
+        <div class="fr-label"><strong>Conditional Access not enforced</strong>Policies were enabled in the admin portal — but never properly configured to actually block access.</div>
+      </div>
+      <div class="fr-stat">
+        <div class="fr-n">7/10</div>
+        <div class="fr-label"><strong>DMARC missing or misconfigured</strong>Email domains spoofable — anyone could send email appearing to come from the client's domain.</div>
+      </div>
+      <div class="fr-stat">
+        <div class="fr-n">6/10</div>
+        <div class="fr-label"><strong>Ex-staff accounts still active</strong>Former employees with live credentials — some had been gone for over 6 months.</div>
+      </div>
+      <div class="fr-stat">
+        <div class="fr-n">9/10</div>
+        <div class="fr-label"><strong>Defender for Endpoint not deployed</strong>Included in M365 Business Premium — but never activated by the previous provider.</div>
+      </div>
+      <div class="fr-stat">
+        <div class="fr-n">5/10</div>
+        <div class="fr-label"><strong>No tested backup or DR plan</strong>Backup solutions existed — but recovery had never been tested. In several cases the backup was also incomplete.</div>
+      </div>
+      <div class="fr-stat">
+        <div class="fr-n">avg 14</div>
+        <div class="fr-label"><strong>Addressable gaps per environment</strong>The average number of findings across identity, email, endpoint, backup, and compliance in a first review.</div>
+      </div>
+    </div>
+    <p class="fr-footnote">Based on internal review data. Individual results vary by environment, size, and existing provider. The health check will tell you exactly where yours stands.</p>
+  </div>
+</div>
 
 <!-- ══ CTA BLOCK ══════════════════════════════════════════ -->
 <div class="cta-block">
   <div class="container">
     <h2>Every week without proper DMARC is a week your email can be spoofed.<br>Every month without enforced Conditional Access is a month your accounts are exposed.</h2>
-    <p>The IT health check is free. The cost of waiting isn't.</p>
+    <p>The average cost of an SME ransomware incident in Ireland exceeds €47,000 — not including reputational damage or lost contracts. A single government tender can be worth €250,000 over three years. Losing it because your security posture didn't pass scrutiny costs far more than fixing it first. <strong>NIS2 obligations are now in effect. Is your organisation ready?</strong></p>
     <a href="#contact" class="btn-cta-navy">Book a Free IT Health Check →</a>
+    <p style="margin-top:1rem;font-size:0.8rem;opacity:0.7;font-family:'Inter',sans-serif;">The health check is free. The cost of waiting isn't.</p>
   </div>
 </div>
 
@@ -1404,17 +1915,38 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
       <div class="contact-info">
         <span class="eyebrow">Free IT Health Check</span>
         <h2 class="section-title">Find Out What Your Current Provider Missed</h2>
-        <p class="section-sub">We review your M365 configuration, email authentication, identity setup, and endpoint compliance — and give you a plain-language report. No jargon, no sales pitch, no commitment.</p>
+        <p class="section-sub">We review your environment and give you a plain-language report — no jargon, no sales pitch, no obligation to proceed.</p>
+        <div class="health-check-list">
+          <h5>What you get:</h5>
+          <ul>
+            <li>M365 licence utilisation report — what you're paying for vs. what's deployed</li>
+            <li>Email authentication status — DMARC, SPF &amp; DKIM alignment check</li>
+            <li>Identity &amp; access review — Conditional Access, MFA, and stale accounts</li>
+            <li>Endpoint compliance summary — patch status and device management gaps</li>
+            <li>Top 3 priority actions in plain language — ranked by risk</li>
+          </ul>
+          <p class="risk-reversal">If we can't identify anything worth fixing, we'll tell you — and you'll have a clean bill of health at no cost.</p>
+        </div>
+        <div class="pricing-signal">
+          <h5>💰 How we price</h5>
+          <p>We operate on a fixed monthly fee per user — no billable hours, no surprise invoices, no hidden costs. Managed service engagements typically start from <strong>€X per month</strong> for organisations of 20–50 users. We'll give you a clear figure within 24 hours of your health check — before any commitment.</p>
+        </div>
         <div class="c-details">
           <div class="c-item"><div class="c-ico">📞</div><div><h4>Call Us</h4><p>+353 1 234 5678 &nbsp;·&nbsp; Mon–Fri 8am–6pm</p></div></div>
-          <div class="c-item"><div class="c-ico">✉️</div><div><h4>Email Us</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a727f7676755a747f627b7975687f34737f">[email&#160;protected]</a></p></div></div>
+          <div class="c-item"><div class="c-ico">✉️</div><div><h4>Email Us</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b737e7777745b2f7f6835727e">[email&#160;protected]</a></p></div></div>
           <div class="c-item"><div class="c-ico">📍</div><div><h4>Head Office</h4><p>One Dockland Central, Dublin 1, Ireland</p></div></div>
           <div class="c-item"><div class="c-ico">🚨</div><div><h4>24/7 Emergency NOC</h4><p>+353 1 234 9999</p></div></div>
         </div>
       </div>
       <div class="form-panel">
         <h3>Get Your Free IT Health Check</h3>
-        <p class="sub">We'll review your M365 configuration, email security posture, identity setup, and endpoint compliance — and tell you exactly where you stand. A senior engineer responds within 2 hours.</p>
+        <p class="sub">A senior engineer responds within 2 hours. Here's exactly what happens next:</p>
+        <div class="process-steps">
+          <div class="ps-step"><span class="ps-n">1</span><span>Submit this form — takes 2 minutes</span></div>
+          <div class="ps-step"><span class="ps-n">2</span><span>We send a short technical questionnaire (10 min) to understand your environment</span></div>
+          <div class="ps-step"><span class="ps-n">3</span><span>We run the health check remotely — no site visit needed</span></div>
+          <div class="ps-step"><span class="ps-n">4</span><span>30-minute call to walk you through findings, priority actions, and next steps</span></div>
+        </div>
         <div id="theForm">
           <div class="f-row">
             <div class="f-group"><label>Your Name *</label><input type="text" id="fn" placeholder="John Smith" required></div>
@@ -1425,7 +1957,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
             <div class="f-group"><label>Phone <span class="f-optional">(optional)</span></label><input type="tel" id="ph" placeholder="+353 1 234 5678"></div>
           </div>
           <div class="f-group">
-            <label>Company Size *</label>
+            <label>Company Size <span class="f-optional">(optional)</span></label>
             <div class="size-selector">
               <label class="size-opt"><input type="radio" name="size" value="1-25"><span>1–25<br><small>staff</small></span></label>
               <label class="size-opt"><input type="radio" name="size" value="26-100"><span>26–100<br><small>staff</small></span></label>
@@ -1447,6 +1979,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
 </section>
 
+<!-- ══ GUARANTEE ════════════════════════════════════════════ -->
 <!-- ══ FOOTER ══════════════════════════════════════════════ -->
 <footer>
   <div class="container">
@@ -1474,20 +2007,25 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
           </div>
           <div class="logo-text">
             <div class="logo-name" style="color:white">4<span>DS</span></div>
-            <div class="logo-tagline" style="color:rgba(255,255,255,0.30)">ICT Solutions for SMEs</div>
+            <div class="logo-tagline" style="color:rgba(255,255,255,0.30)">Enterprise standard. SME scale.</div>
           </div>
         </a>
-        <p>Transforming business challenges into change. Enterprise-grade ICT for SMEs across Ireland and the UK.</p>
+        <p>Enterprise-grade ICT for SMEs across Ireland and the UK. We find what others miss — and fix it for good.</p>
+        <p style="font-family:'Inter',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:0.5rem;line-height:1.5;"><strong style="color:rgba(255,255,255,0.45);">4DS</strong> — four dimensions of IT done right: <em>Security · Systems · Support · Strategy.</em> The IT audit you should have had on day one.</p>
         <div class="foot-social">
           <a href="#" class="soc-btn">in</a><a href="#" class="soc-btn">𝕏</a>
           <a href="#" class="soc-btn">f</a><a href="#" class="soc-btn">▶</a>
         </div>
       </div>
       <div class="foot-col"><h5>Services</h5><ul>
-        <li><a href="#services">Cloud Solutions</a></li><li><a href="#services">Cybersecurity</a></li>
-        <li><a href="#services">Managed IT Support</a></li><li><a href="#services">Data Analytics</a></li>
-        <li><a href="#services">Network Infrastructure</a></li><li><a href="#services">Digital Transformation</a></li>
-        <li><a href="#services">Business Continuity</a></li><li><a href="#services">Software Development</a></li>
+        <li><a href="#services">Microsoft 365 &amp; Modern Workplace</a></li>
+        <li><a href="#services">Identity &amp; Zero Trust</a></li>
+        <li><a href="#services">Endpoint &amp; Device Management</a></li>
+        <li><a href="#services">Cybersecurity &amp; AI Security</a></li>
+        <li><a href="#services">Email Security &amp; Deliverability</a></li>
+        <li><a href="#services">Network, Wi-Fi &amp; Infrastructure</a></li>
+        <li><a href="#services">Backup, DR &amp; Continuity</a></li>
+        <li><a href="#services">Automation &amp; IT Governance</a></li>
       </ul></div>
       <div class="foot-col"><h5>Company</h5><ul>
         <li><a href="#why">About Us</a></li><li><a href="#approach">Our Approach</a></li>
@@ -1496,13 +2034,16 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
       </ul></div>
       <div class="foot-col"><h5>Support</h5><ul>
         <li><a href="#contact" class="foot-cta-link">Contact Us</a></li>
-        <li><a href="#contact">Contact Us</a></li><li><a href="#">Client Portal</a></li>
+        <li><a href="#">Client Portal</a></li>
         <li><a href="#">Emergency NOC</a></li><li><a href="#">Knowledge Base</a></li>
         <li><a href="#">Privacy Policy</a></li><li><a href="#">GDPR</a></li>
       </ul></div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321. ISO 27001 Certified.</span>
+      <div style="width:100%;text-align:center;padding-bottom:1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:1rem;">
+        <p style="font-family:'Sora',sans-serif;font-size:0.95rem;font-weight:600;color:rgba(255,255,255,0.55);font-style:italic;margin:0;">Enterprise standard. SME scale.</p>
+      </div>
+      <span>© 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321. ISO 27001 Certified. &nbsp;·&nbsp; eTenders Registered &nbsp;·&nbsp; DPC Compliant &nbsp;·&nbsp; PI Insured</span>
       <span><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Cookies</a> &nbsp;·&nbsp; <a href="#">Terms</a></span>
     </div>
   </div>
@@ -1510,8 +2051,82 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
 
 
-<script>
-// ── DRAWER MENU ──────────────────────────────────────
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── BUYER SELECTOR ────────────────────────────────────
+var buyerSubs = {
+  ops: "Most IT providers configure your environment once and never look again. If you suspect yours hasn't looked under the hood in years — you're in the right place.",
+  ceo: "Your IT company tells you everything is fine. But support tickets keep coming, the same problems recur, and nobody has ever shown you a security posture report. You deserve better than that.",
+  tender: "Failing a tender on ICT compliance criteria is avoidable — if you know what's expected before you submit. We've helped clients pass reviews they previously failed. Start with a free health check."
+};
+function setBuyer(btn, type){
+  document.querySelectorAll('.buyer-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('heroSub').textContent = buyerSubs[type];
+}
+
+// ── REVEAL HIDDEN SERVICE CARDS ──────────────────────
+function toggleTags(btn){
+  var anyOpen = document.querySelector('.tech-tags.open');
+  var opening = !anyOpen;
+  document.querySelectorAll('.tech-tags').forEach(function(t){ 
+    t.classList.toggle('open', opening); 
+  });
+  document.querySelectorAll('.svc-tags-toggle').forEach(function(b){ 
+    b.textContent = opening ? '− Hide technical detail' : '+ Show technical detail'; 
+  });
+}
+
+function revealServices(){
+  document.querySelectorAll('.svc-card.hidden-svc').forEach(function(c){
+    c.classList.remove('hidden-svc');
+    c.classList.add('revealed');
+  });
+  var btn = document.getElementById('showMoreSvcs');
+  if(btn) btn.style.display='none';
+}
+
+// ── OPEN FIRST FAQ + STICKY CTA ──────────────────────
+document.addEventListener('DOMContentLoaded', function(){
+  var firstQ = document.querySelector('.faq-q');
+  var firstA = document.querySelector('.faq-a');
+  if(firstQ && firstA){ firstQ.classList.add('open'); firstA.classList.add('open'); }
+
+  // Sticky + float CTA on scroll
+  var hero = document.getElementById('home');
+  var stickyCta = document.getElementById('stickyCta');
+  var floatCta = document.getElementById('floatCta');
+  window.addEventListener('scroll', function(){
+    var heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
+    if(heroBottom < 0){
+      if(stickyCta) stickyCta.classList.add('visible');
+      if(floatCta)  floatCta.classList.add('visible');
+    } else {
+      if(stickyCta) stickyCta.classList.remove('visible');
+      if(floatCta)  floatCta.classList.remove('visible');
+    }
+  });
+});
+
+function toggleFaq(btn){
+  var answer = btn.nextElementSibling;
+  var isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(function(b){ b.classList.remove('open'); });
+  document.querySelectorAll('.faq-a').forEach(function(a){ a.classList.remove('open'); });
+  if(!isOpen){ btn.classList.add('open'); answer.classList.add('open'); }
+}
+
+
+
+
+function handleLeadMagnet(){
+  var email = document.getElementById('lmEmail').value;
+  if(!email || !email.includes('@')) return;
+  document.getElementById('lmEmail').disabled = true;
+  document.querySelector('.lead-magnet-form button').disabled = true;
+  document.getElementById('lmOk').style.display = 'block';
+}
+
+
 var hamburgerBtn = document.getElementById('hamburgerBtn');
 var drawerOverlay = document.getElementById('drawerOverlay');
 var drawer = document.getElementById('drawer');
@@ -1569,15 +2184,14 @@ document.querySelectorAll('.svc-card,.step,.ind-card,.testi-card,.team-card').fo
 });
 
 // ── FORM SUBMIT ───────────────────────────────────────
-function handleSubmit(){
-  var fn=document.getElementById('fn').value.trim();
-  var em=document.getElementById('em').value.trim();
-  var co=document.getElementById('co').value.trim();
-  var gd=document.getElementById('gdpr').checked;
-  if(!fn||!em||!co){alert('Please complete the required fields.');return;}
-  if(!gd){alert('Please agree to the Privacy Policy to continue.');return;}
+function handleSubmit(e){
+  e.preventDefault();
+  var name  = document.getElementById('fn').value.trim();
+  var email = document.getElementById('em').value.trim();
+  var company = document.getElementById('co').value.trim();
+  if(!name || !email || !company){ alert('Please fill in Name, Work Email and Company Name.'); return; }
   document.getElementById('theForm').style.display='none';
-  document.getElementById('formOk').style.display='block';
+  document.getElementById('formThanks').style.display='block';
 }
 </script>
 </body>
