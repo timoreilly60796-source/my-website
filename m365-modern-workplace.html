@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>4DS | Microsoft 365 & Modern Workplace | Ireland &amp; UK</title>
+<meta name="description" content="4DS delivers Microsoft 365 & Modern Workplace for SMEs across Ireland and the UK. ISO 27001 certified. Senior engineers. Fixed monthly fee. Free IT health check.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#009BAA;--teal-deep:#007280;--teal-pale:#EEF9FB;--teal-border:#A8DCE3;--teal-wash:#F0FAFB;
+  --navy:#0B1C2E;--navy-mid:#122536;--navy-light:#1E3448;
+  --amber:#E8920A;--amber-deep:#C97A06;
+  --ink:#141820;--body:#2C3340;--muted:#555F6E;--rule:#E2E8ED;--surface:#F8FAFB;
+  --r-card:6px;--r-btn:7px;--r-pill:100px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md:0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg:0 12px 40px rgba(0,0,0,0.10);
+  --shadow-amber:0 6px 24px rgba(232,146,10,0.35);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--body);background:#fff;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;color:var(--ink);line-height:1.15;}
+a{text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 2rem}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:900;background:#fff;border-bottom:1px solid var(--rule);box-shadow:var(--shadow-sm);}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:72px;}
+.logo{display:flex;align-items:center;gap:12px;}
+.logo-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.6rem;color:var(--ink);letter-spacing:-1px;}
+.logo-name span{color:var(--teal)}
+.logo-tagline{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);font-weight:500;display:block;margin-top:1px;}
+.nav-back{font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color 0.15s;}
+.nav-back:hover{color:var(--teal)}
+.nav-cta{font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;color:#fff;padding:0.55rem 1.2rem;background:var(--amber);border-radius:var(--r-btn);border:none;cursor:pointer;box-shadow:var(--shadow-amber);transition:background 0.2s;}
+.nav-cta:hover{background:var(--amber-deep)}
+
+/* HERO */
+.hero{background:var(--navy);padding:72px 0 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 40%,rgba(0,155,170,0.14) 0%,transparent 60%);}
+.hero-inner{display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:start;position:relative;z-index:1;}
+.hero-left{padding-top:0.5rem;}
+
+/* BUYER BAR */
+.buyer-bar{display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.buyer-label{font-family:'Inter',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.4);}
+.buyer-btn{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;padding:0.28rem 0.75rem;border-radius:var(--r-pill);border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.18s;}
+.buyer-btn:hover,.buyer-btn.active{background:var(--teal);border-color:var(--teal);color:#fff;}
+
+.hero-eyebrow{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:0.75rem;}
+.hero h1{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1rem;}
+.hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+.hero-sub{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(255,255,255,0.68);line-height:1.7;margin-bottom:1.5rem;max-width:520px;}
+.trust-pills{display:flex;flex-wrap:wrap;gap:1rem;}
+.trust-pill{font-family:'Inter',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.55);}
+.trust-pill::before{content:'\2713';color:var(--teal);font-weight:700;margin-right:5px;}
+
+/* FORM CARD */
+.form-card{background:#fff;border-radius:10px;padding:2rem;box-shadow:0 20px 60px rgba(0,0,0,0.25);}
+.form-card h3{font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;}
+.form-card .form-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.5;}
+.f-group{margin-bottom:0.85rem;}
+.f-group label{display:block;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;color:var(--ink);margin-bottom:0.3rem;}
+.f-group input,.f-group select,.f-group textarea{width:100%;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--ink);padding:0.6rem 0.85rem;border:1.5px solid var(--rule);border-radius:var(--r-card);background:#fff;transition:border-color 0.15s;outline:none;}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{border-color:var(--teal);}
+.f-group textarea{resize:vertical;min-height:80px;}
+.f-optional{color:var(--muted);font-weight:400;}
+.btn-submit{width:100%;font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:700;padding:0.85rem;background:var(--amber);color:#fff;border:none;border-radius:var(--r-btn);cursor:pointer;box-shadow:var(--shadow-amber);transition:background 0.2s;margin-top:0.25rem;}
+.btn-submit:hover{background:var(--amber-deep)}
+.form-micro{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);text-align:center;margin-top:0.65rem;line-height:1.5;}
+.form-thanks{display:none;text-align:center;padding:1.5rem 0;}
+.form-thanks h4{font-family:'Sora',sans-serif;font-size:1rem;color:var(--ink);margin-bottom:0.5rem;}
+.form-thanks p{font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--muted);line-height:1.6;}
+
+/* SECTIONS */
+section{padding:64px 0;}
+.eyebrow{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:0.6rem;}
+.section-title{font-family:'Sora',sans-serif;font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:800;color:var(--ink);line-height:1.15;letter-spacing:-0.025em;margin-bottom:0.65rem;}
+.section-sub{font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.65;max-width:580px;margin-bottom:2rem;}
+
+/* WHAT WE COVER */
+.covers-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;}
+.cover-item{display:flex;gap:0.85rem;padding:1rem 1.1rem;border:1px solid var(--rule);border-left:3px solid var(--teal-border);border-radius:var(--r-card);transition:border-left-color 0.2s;}
+.cover-item:hover{border-left-color:var(--teal);}
+.cover-ico{font-size:1.2rem;flex-shrink:0;}
+.cover-item h4{font-family:'Sora',sans-serif;font-size:0.83rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.cover-item p{font-family:'Inter',sans-serif;font-size:0.77rem;color:var(--muted);line-height:1.5;}
+
+/* PERSONA SECTION */
+.persona-section{background:var(--surface);padding:64px 0;}
+.persona-tabs{display:flex;gap:0;border-bottom:2px solid var(--rule);margin-bottom:2rem;}
+.persona-tab{font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;padding:0.65rem 1.25rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.15s;}
+.persona-tab.active{color:var(--teal);border-bottom-color:var(--teal);}
+.persona-tab:hover{color:var(--teal)}
+.persona-content{display:none;}
+.persona-content.active{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;animation:pFade 0.25s ease;}
+@keyframes pFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.persona-headline{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:0.75rem;}
+.persona-body{font-family:'Inter',sans-serif;font-size:0.87rem;color:var(--body);line-height:1.7;margin-bottom:1.25rem;}
+.persona-pains{display:flex;flex-direction:column;gap:0.5rem;}
+.pain-item{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--body);line-height:1.5;padding:0.6rem 0.85rem;background:#fff;border-radius:var(--r-card);border-left:3px solid var(--amber);}
+.persona-aside{background:#fff;border:1px solid var(--rule);border-radius:var(--r-card);padding:1.5rem;}
+.persona-aside h4{font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:700;color:var(--ink);margin-bottom:1rem;}
+.persona-stat{display:flex;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);align-items:flex-start;}
+.persona-stat:last-child{border-bottom:none;}
+.p-stat-n{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;min-width:48px;line-height:1;}
+.p-stat-label{font-family:'Inter',sans-serif;font-size:0.76rem;color:var(--body);line-height:1.4;}
+.p-stat-label strong{display:block;color:var(--ink);font-size:0.78rem;}
+.persona-cta-row{margin-top:1.25rem;}
+.btn-persona-cta{display:inline-block;font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;padding:0.7rem 1.4rem;background:var(--teal);color:#fff;border-radius:var(--r-btn);transition:background 0.2s;}
+.btn-persona-cta:hover{background:var(--teal-deep)}
+
+/* FINDINGS */
+.findings-section{background:#fff;padding:64px 0;}
+.findings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:0;}
+.finding-card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-card);padding:1.25rem;}
+.finding-n{font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;margin-bottom:0.3rem;}
+.finding-card h4{font-family:'Sora',sans-serif;font-size:0.83rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;}
+.finding-card p{font-family:'Inter',sans-serif;font-size:0.77rem;color:var(--muted);line-height:1.55;}
+
+/* HOW IT WORKS */
+.how-section{background:var(--navy);padding:64px 0;}
+.how-section .section-title{color:#fff;}
+.how-section .section-sub{color:rgba(255,255,255,0.55);}
+.how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:0;}
+.how-step{padding:1.25rem;background:rgba(255,255,255,0.04);border:1px solid rgba(0,155,170,0.18);border-radius:var(--r-card);}
+.step-n{font-family:'Sora',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;color:var(--teal);margin-bottom:0.5rem;display:block;}
+.how-step h4{font-family:'Sora',sans-serif;font-size:0.87rem;font-weight:700;color:#fff;margin-bottom:0.4rem;}
+.how-step p{font-family:'Inter',sans-serif;font-size:0.76rem;color:rgba(255,255,255,0.5);line-height:1.55;}
+
+/* BOTTOM CTA */
+.bottom-cta{background:var(--teal-wash);border-top:1px solid var(--teal-border);padding:48px 0;text-align:center;}
+.bottom-cta h2{font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:800;color:var(--ink);margin-bottom:0.5rem;}
+.bottom-cta p{font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--muted);margin-bottom:1.5rem;}
+.btn-cta{display:inline-block;font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:700;padding:0.85rem 2rem;background:var(--amber);color:#fff;border-radius:var(--r-btn);box-shadow:var(--shadow-amber);transition:background 0.2s;}
+.btn-cta:hover{background:var(--amber-deep)}
+.btn-cta-ghost{display:inline-block;font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;padding:0.82rem 1.75rem;color:var(--teal);border-radius:var(--r-btn);border:1.5px solid var(--teal-border);background:#fff;margin-left:0.75rem;transition:all 0.2s;}
+.btn-cta-ghost:hover{border-color:var(--teal);background:var(--teal-pale)}
+
+/* FOOTER */
+footer{background:var(--navy);padding:1.5rem 0;}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;}
+.foot-inner span,.foot-inner a{font-family:'Inter',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);}
+.foot-inner a:hover{color:var(--teal)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .form-card{max-width:480px;}
+  .covers-grid{grid-template-columns:1fr;}
+  .persona-content.active{grid-template-columns:1fr;gap:1.5rem;}
+  .findings-grid{grid-template-columns:1fr 1fr;}
+  .how-steps{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .findings-grid,.how-steps{grid-template-columns:1fr;}
+  .persona-tabs{overflow-x:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="../ict-services.html" class="logo">
+      <div style="width:40px;height:40px;display:flex;align-items:center;"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" stroke="#009BAA" stroke-width="1.8" fill="#009BAA" fill-opacity="0.08"/>
+  <circle cx="24" cy="24" r="6" stroke="#007280" stroke-width="1.6" fill="none"/>
+  <line x1="24" y1="18" x2="24" y2="3" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="29" y1="22" x2="42" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="29" y1="27" x2="42" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="24" y1="30" x2="24" y2="45" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="19" y1="27" x2="6" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="19" y1="22" x2="6" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <circle cx="24" cy="3" r="2.2" fill="#009BAA"/>
+  <circle cx="42" cy="13.5" r="2.2" fill="#009BAA"/>
+  <circle cx="42" cy="34.5" r="2.2" fill="#009BAA"/>
+  <circle cx="24" cy="45" r="2.2" fill="#009BAA"/>
+  <circle cx="6" cy="34.5" r="2.2" fill="#009BAA"/>
+  <circle cx="6" cy="13.5" r="2.2" fill="#009BAA"/>
+  <circle cx="24" cy="24" r="3.2" fill="#009BAA"/>
+</svg></div>
+      <div>
+        <div class="logo-name">4<span>DS</span></div>
+        <div class="logo-tagline">Enterprise standard. SME scale.</div>
+      </div>
+    </a>
+    <a href="../ict-services.html#services" class="nav-back">&#8592; All Services</a>
+    <a href="#enquiry" class="nav-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="buyer-bar">
+          <span class="buyer-label">I am:</span>
+          <button class="buyer-btn active" data-buyer="generic" onclick="setPersona('generic')">Overview</button>
+<button class="buyer-btn" data-buyer="ops" onclick="setPersona('ops')">IT Lead</button>
+<button class="buyer-btn" data-buyer="ceo" onclick="setPersona('ceo')">CEO / MD</button>
+<button class="buyer-btn" data-buyer="tender" onclick="setPersona('tender')">Procurement</button>
+        </div>
+        <span class="hero-eyebrow">Microsoft 365 Deep-Dive</span>
+        <h1>You are paying for Microsoft 365.<br><em>Most of it is switched off.</em></h1>
+        <p class="hero-sub" id="heroSub">The average SME uses less than 30% of their Microsoft 365 licence. We activate, configure, and optimise the full suite - at no extra licence cost.</p>
+        <div class="trust-pills">
+          <span class="trust-pill">Microsoft Certified Engineers</span><span class="trust-pill">ISO 27001 Certified</span><span class="trust-pill">Fixed monthly fee, no billable hours</span>
+        </div>
+      </div>
+
+      <!-- ENQUIRY FORM -->
+      <div class="form-card" id="enquiry">
+        <h3>Speak to a senior engineer</h3>
+        <p class="form-sub" id="enquiryNote">Tell us about your M365 environment and what you are looking to improve.</p>
+        <div id="enquiryForm">
+          <input type="hidden" id="formBuyer" value="generic">
+          <div class="f-group"><label>Your Name *</label><input type="text" id="eName" placeholder="Jane Murphy" required></div>
+          <div class="f-group"><label>Work Email *</label><input type="email" id="eEmail" placeholder="jane@company.ie" required></div>
+          <div class="f-group"><label>Company Name *</label><input type="text" id="eCompany" placeholder="Your Company Ltd" required></div>
+          <div class="f-group"><label>Phone <span class="f-optional">(optional)</span></label><input type="tel" id="ePhone" placeholder="+353 1 234 5678"></div>
+          <div class="f-group"><label>Brief note <span class="f-optional">(optional)</span></label><textarea id="eNote" placeholder="Tell us what you are looking to resolve or improve..."></textarea></div>
+          <button class="btn-submit" onclick="handleEnquiry(event)">Send Enquiry &rarr;</button>
+          <p class="form-micro">A senior engineer responds within 2 hours. No commitment required.</p>
+        </div>
+        <div class="form-thanks" id="enquiryThanks">
+          <div style="font-size:2rem;margin-bottom:0.75rem;">&#10003;</div>
+          <h4>Enquiry received</h4>
+          <p>A senior engineer will be in touch within 2 business hours.<br>No commitment is required at this stage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE COVER -->
+<section>
+  <div class="container">
+    <span class="eyebrow">What it covers</span>
+    <h2 class="section-title">Everything included in this service</h2>
+    <p class="section-sub">Delivered by senior engineers on a fixed monthly fee. No billable hours. No scope surprises.</p>
+    <div class="covers-grid">
+      <div class="cover-item"><div class="cover-ico">📧</div><div><h4>Exchange Online &amp; Mail Flow</h4><p>Full configuration of Exchange Online including routing, shared mailboxes, distribution groups, archiving, and litigation hold.</p></div></div>
+<div class="cover-item"><div class="cover-ico">💬</div><div><h4>Microsoft Teams &amp; Teams Phone</h4><p>Teams governance, guest access controls, channel policy, Teams Phone for PSTN calling, and meeting room integration.</p></div></div>
+<div class="cover-item"><div class="cover-ico">📁</div><div><h4>SharePoint &amp; OneDrive</h4><p>Intranet architecture, permission structure, document governance, data classification, and retention policies.</p></div></div>
+<div class="cover-item"><div class="cover-ico">⚡</div><div><h4>Power Platform &amp; Automation</h4><p>Power Automate workflows, Power Apps for internal tools, Power BI dashboards for operational reporting.</p></div></div>
+<div class="cover-item"><div class="cover-ico">🔑</div><div><h4>Licensing Advisory</h4><p>Licence audit and utilisation review. Recommendations for right-sizing that typically recover 20-40% of monthly spend.</p></div></div>
+<div class="cover-item"><div class="cover-ico">🔄</div><div><h4>Google Workspace Migration</h4><p>Full tenant migration from Google Workspace to M365 with zero data loss and structured user onboarding.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONA SECTION -->
+<div class="persona-section">
+  <div class="container">
+    <span class="eyebrow">Tailored to your role</span>
+    <h2 class="section-title">What this means for you</h2>
+    <p class="section-sub">Select your role to see how this service maps to your specific situation.</p>
+    <div class="persona-tabs">
+      <button class="persona-tab active" data-buyer="generic" onclick="setPersona('generic')">Overview</button>
+<button class="persona-tab" data-buyer="ops" onclick="setPersona('ops')">IT Lead</button>
+<button class="persona-tab" data-buyer="ceo" onclick="setPersona('ceo')">CEO / MD</button>
+<button class="persona-tab" data-buyer="tender" onclick="setPersona('tender')">Procurement</button>
+    </div>
+    
+      <div class="persona-content active" data-buyer="generic">
+        <div>
+          <h3 class="persona-headline">M365 is the most under-utilised tool in most SME environments</h3>
+          <p class="persona-body">Most businesses have Microsoft 365. Very few have it properly configured. The result is the same set of problems recurring endlessly - permissions that don't work, files that can't be found, email that lands in junk, and tools that nobody uses because nobody set them up. We configure and govern the full suite so it works the way it should.</p>
+          <div class="persona-pains"><div class="pain-item">Microsoft 365 renews automatically each month but nobody has reviewed what is actually deployed</div>
+<div class="pain-item">Support tickets keep recurring because the root configuration has never been fixed</div>
+<div class="pain-item">Guest and external access has never been reviewed or documented</div>
+<div class="pain-item">Power Platform tools are included in the licence but have never been activated</div></div>
+          <div class="persona-cta-row">
+            <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
+          </div>
+        </div>
+        <div class="persona-aside">
+          <h4>By the numbers</h4>
+          <div class="persona-stat"><div class="p-stat-n">30%</div><div class="p-stat-label"><strong>Average M365 feature utilisation in SMEs before a 4DS engagement</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">€14.4k</div><div class="p-stat-label"><strong>Average unused licence spend identified in a first review</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">2-4 wks</div><div class="p-stat-label"><strong>Typical time for full M365 environment uplift</strong></div></div>
+        </div>
+      </div>
+      <div class="persona-content" data-buyer="ops">
+        <div>
+          <h3 class="persona-headline">The same tickets keep coming back because the configuration was never finished</h3>
+          <p class="persona-body">Every recurring support issue in a Microsoft 365 environment traces back to a configuration decision that was made incorrectly at setup and never corrected. Permissions that seem fine but break when someone shares a folder. Conditional Access that shows as enabled but was never tested. DMARC that was added but never progressed to enforcement. We audit the root configuration and fix it properly.</p>
+          <div class="persona-pains"><div class="pain-item">Recurring permissions issues across SharePoint and Teams that close and reopen</div>
+<div class="pain-item">MFA is enabled for some users but not enforced - you cannot certify it is on for everyone</div>
+<div class="pain-item">Guest accounts from old projects are still in the tenant with no review process</div>
+<div class="pain-item">Power Automate and Power Apps are licensed but nobody has been given ownership of them</div></div>
+          <div class="persona-cta-row">
+            <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
+          </div>
+        </div>
+        <div class="persona-aside">
+          <h4>By the numbers</h4>
+          <div class="persona-stat"><div class="p-stat-n">8/10</div><div class="p-stat-label"><strong>Environments with SharePoint permissions incorrectly inherited from top-level site</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">6/10</div><div class="p-stat-label"><strong>Tenants with unlicensed or blocked Power Platform that is included in their existing licence</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">90 days</div><div class="p-stat-label"><strong>Typical timeframe to achieve measurable reduction in recurring M365-related support tickets</strong></div></div>
+        </div>
+      </div>
+      <div class="persona-content" data-buyer="ceo">
+        <div>
+          <h3 class="persona-headline">Microsoft 365 is one of your largest recurring IT costs - are you getting the value?</h3>
+          <p class="persona-body">M365 Business Premium typically costs between €20 and €25 per user per month. For a 50-person business that is €12,000 to €15,000 per year. Our first engagement with a new client consistently finds that a significant portion of that spend is on features that were purchased but never activated. We identify what is unused, right-size the licence, and deploy what you are already paying for.</p>
+          <div class="persona-pains"><div class="pain-item">No one has reviewed whether the current licence tier is right for your headcount and growth</div>
+<div class="pain-item">You have no visibility into how M365 is actually being used across the business</div>
+<div class="pain-item">Your IT provider renews the licence each year but has never presented a utilisation report</div>
+<div class="pain-item">Competitors on the same tools appear to be getting significantly more value from them</div></div>
+          <div class="persona-cta-row">
+            <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
+          </div>
+        </div>
+        <div class="persona-aside">
+          <h4>By the numbers</h4>
+          <div class="persona-stat"><div class="p-stat-n">€14.4k</div><div class="p-stat-label"><strong>Average unused M365 licence spend identified per client in a first engagement</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">40%</div><div class="p-stat-label"><strong>Portion of licence spend frequently recoverable through right-sizing and deployment</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">1 month</div><div class="p-stat-label"><strong>Typical time to visibility on full licence utilisation after engagement begins</strong></div></div>
+        </div>
+      </div>
+      <div class="persona-content" data-buyer="tender">
+        <div>
+          <h3 class="persona-headline">M365 governance is a scored criterion in most ICT compliance frameworks</h3>
+          <p class="persona-body">Public sector and healthcare procurement processes increasingly include Microsoft 365 governance as a scored requirement. This covers documented data retention and classification policies, evidence of SharePoint and Teams governance, MFA enforcement records, and Exchange Online compliance configuration. A poorly governed M365 environment will cost points on the governance assessment - or disqualify a submission entirely.</p>
+          <div class="persona-pains"><div class="pain-item">No documented data retention or classification policy applied to M365 workloads</div>
+<div class="pain-item">Teams and SharePoint permissions have never been formally reviewed or evidenced</div>
+<div class="pain-item">No periodic licence or access reviews to reference in a submission</div>
+<div class="pain-item">Exchange Online compliance features such as eDiscovery, archiving, and DLP are not configured</div></div>
+          <div class="persona-cta-row">
+            <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
+          </div>
+        </div>
+        <div class="persona-aside">
+          <h4>By the numbers</h4>
+          <div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Practice-level certification available for tender documentation</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">48 hrs</div><div class="p-stat-label"><strong>Typical turnaround to produce M365 governance evidence pack for tender</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>Of 4DS-managed M365 environments have documented governance baselines</strong></div></div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- FINDINGS -->
+<section class="findings-section">
+  <div class="container">
+    <span class="eyebrow">What a first review typically finds</span>
+    <h2 class="section-title">The gaps we find in almost every environment</h2>
+    <p class="section-sub">These are not edge cases. They are the standard state of an SME environment without an independent review.</p>
+    <div class="findings-grid">
+      <div class="finding-card"><div class="finding-n">9/10</div><h4>No Teams governance policy</h4><p>Guest access open by default. No channel naming conventions. No retention applied to Teams chats or files.</p></div>
+<div class="finding-card"><div class="finding-n">8/10</div><h4>SharePoint permissions broken</h4><p>Sensitive documents accessible to all staff due to top-level permissions propagating through the entire intranet.</p></div>
+<div class="finding-card"><div class="finding-n">€14.4k</div><h4>Average unused licence spend</h4><p>The average value of M365 licence features identified as purchased but never deployed in a first engagement.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--teal)">How we deliver it</span>
+    <h2 class="section-title">The 4DS delivery process</h2>
+    <p class="section-sub">Four stages. No handovers to junior staff mid-project. No scope surprises.</p>
+    <div class="how-steps">
+      <div class="how-step"><span class="step-n">STEP 01</span><h4>Licence Audit</h4><p>Every licence reviewed, utilisation mapped, cost recovery identified. Report produced before any work begins.</p></div>
+<div class="how-step"><span class="step-n">STEP 02</span><h4>Environment Baseline</h4><p>Full documentation of current tenant configuration across Exchange, Teams, SharePoint, and security settings.</p></div>
+<div class="how-step"><span class="step-n">STEP 03</span><h4>Uplift &amp; Configure</h4><p>Systematic configuration of every M365 workload to your requirements and Microsoft best practice governance standards.</p></div>
+<div class="how-step"><span class="step-n">STEP 04</span><h4>Ongoing Optimisation</h4><p>Monthly licence review, quarterly policy audit, proactive adoption of new Microsoft features as they release.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <div class="container">
+    <h2>Find out what your M365 environment is actually worth</h2>
+    <p>We audit your tenant, identify what is deployed versus purchased, and give you a plain-language report. No invoice. No commitment.</p>
+    <a href="#enquiry" class="btn-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Send an Enquiry &rarr;</a>
+    <a href="../ict-services.html#contact" class="btn-cta-ghost">Get a Free Health Check</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-inner">
+      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321. ISO 27001 Certified.</span>
+      <span>
+        <a href="../ict-services.html">Home</a> &nbsp;&middot;&nbsp;
+        <a href="../ict-services.html#services">All Services</a> &nbsp;&middot;&nbsp;
+        <a href="../ict-services.html#contact">Contact</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.buyerSubs = {
+  generic: "The average SME uses less than 30% of their Microsoft 365 licence. We activate, configure, and optimise the full suite - at no extra licence cost.",
+  ops: "The same problems keep resurfacing because M365 was configured once and never governed. We fix the root configuration and put the governance in place that prevents them recurring.",
+  ceo: "Your business is paying for Microsoft 365 every month. We will show you exactly what you are getting for that spend - and what you are not.",
+  tender: "A properly governed Microsoft 365 environment with documented data retention, permission structure, and security policies is a prerequisite for most public sector ICT frameworks.",
+};
+window.enquiryNotes = {
+  generic: "Tell us about your M365 environment and what you are looking to improve.",
+  ops: "Tell us about the issues you are seeing and we will identify the root configuration causes.",
+  ceo: "Tell us the size of your organisation and we will produce a licence utilisation estimate.",
+  tender: "Tell us your submission deadline and the framework you are tendering under.",
+};
+
+// Persona switching
+function setPersona(type, scrollTo) {
+  document.querySelectorAll('.buyer-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.buyer===type); });
+  document.querySelectorAll('.persona-tab').forEach(function(b){ b.classList.toggle('active', b.dataset.buyer===type); });
+  document.querySelectorAll('.persona-content').forEach(function(b){ b.classList.toggle('active', b.dataset.buyer===type); });
+  var heroSub = document.getElementById('heroSub');
+  if(heroSub && window.buyerSubs && window.buyerSubs[type]){ heroSub.textContent = window.buyerSubs[type]; }
+  // Update hidden form field
+  var buyerField = document.getElementById('formBuyer');
+  if(buyerField) buyerField.value = type;
+  // Update enquiry label
+  var enquiryNote = document.getElementById('enquiryNote');
+  if(enquiryNote && window.enquiryNotes && window.enquiryNotes[type]){ enquiryNote.textContent = window.enquiryNotes[type]; }
+  if(scrollTo){ document.querySelector('.persona-section').scrollIntoView({behavior:'smooth'}); }
+}
+
+// Read buyer from URL on load
+document.addEventListener('DOMContentLoaded', function(){
+  var params = new URLSearchParams(window.location.search);
+  var buyer = params.get('buyer') || 'generic';
+  setPersona(buyer);
+});
+
+// Form submit
+function handleEnquiry(e){
+  e.preventDefault();
+  var name = document.getElementById('eName').value.trim();
+  var email = document.getElementById('eEmail').value.trim();
+  var company = document.getElementById('eCompany').value.trim();
+  if(!name || !email || !company){ return; }
+  document.getElementById('enquiryForm').style.display='none';
+  document.getElementById('enquiryThanks').style.display='block';
+}
+
+// Nav hamburger (minimal - no drawer needed on lean page)
+
+</script>
+</body>
+</html>
