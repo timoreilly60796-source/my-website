@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>4DS | Cybersecurity & AI Security | Ireland &amp; UK</title>
-<meta name="description" content="4DS delivers Cybersecurity & AI Security for SMEs across Ireland and the UK. ISO 27001 certified. Senior engineers. Fixed monthly fee. Free IT health check.">
+<title>Cybersecurity &amp; AI Security Services Ireland | 4DS</title>
+<meta name="description" content="4DS delivers layered cybersecurity for SMEs across Ireland and the UK. Microsoft Defender XDR, AI security governance, NIS2 compliance, ISO 27001 readiness, phishing simulations and 24/7 incident response. ISO 27001 certified practice.">
+<meta name="keywords" content="cybersecurity Ireland, AI security, Microsoft Defender XDR, NIS2 compliance Ireland, ISO 27001, incident response, SIEM, Sentinel, Copilot security, managed security services Ireland, 4DS">
+<meta property="og:title" content="Cybersecurity &amp; AI Security | 4DS Ireland">
+<meta property="og:description" content="Layered defence across identity, endpoint, email, network and AI. Monitored continuously, reported monthly. ISO 27001 certified. Free security review.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://4ds.ie/services/cybersecurity-ai-security">
+<link rel="canonical" href="https://4ds.ie/services/cybersecurity-ai-security">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -26,16 +32,49 @@ a{text-decoration:none}
 .container{max-width:1100px;margin:0 auto;padding:0 2rem}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:900;background:#fff;border-bottom:1px solid var(--rule);box-shadow:var(--shadow-sm);}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:72px;}
-.logo{display:flex;align-items:center;gap:12px;}
-.logo-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.6rem;color:var(--ink);letter-spacing:-1px;}
-.logo-name span{color:var(--teal)}
-.logo-tagline{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);font-weight:500;display:block;margin-top:1px;}
-.nav-back{font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color 0.15s;}
-.nav-back:hover{color:var(--teal)}
-.nav-cta{font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;color:#fff;padding:0.55rem 1.2rem;background:var(--amber);border-radius:var(--r-btn);border:none;cursor:pointer;box-shadow:var(--shadow-amber);transition:background 0.2s;}
-.nav-cta:hover{background:var(--amber-deep)}
+nav{position:sticky;top:0;z-index:9000;background:#fff;border-bottom:1px solid var(--rule);box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.nav-inner{max-width:1260px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:82px;}
+.logo{display:flex;align-items:center;gap:16px;position:relative;}
+.logo::after{content:'';position:absolute;right:-24px;top:50%;transform:translateY(-50%);width:1px;height:32px;background:linear-gradient(to bottom,transparent,var(--teal-border),transparent);}
+.logo-mark{width:52px;height:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.logo-text{display:flex;flex-direction:column;gap:2px;}
+.logo-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.9rem;color:var(--ink);letter-spacing:-1px;line-height:1;}
+.logo-name span{color:var(--teal);}
+.logo-tagline{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:500;color:var(--muted);letter-spacing:0.03em;margin-top:1px;}
+.nav-menu{display:flex;align-items:center;list-style:none;gap:2px;margin-left:3rem;}
+.nav-menu>li>a{display:block;padding:0.5rem 0.95rem;border-radius:6px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:var(--body);letter-spacing:0.01em;transition:color 0.15s,background 0.15s;}
+.nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale);}
+.nav-menu>li>a.active-page{color:var(--teal);}
+.nav-dropdown{position:relative;}
+.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
+.nav-dropdown:hover .dropdown{display:block;}
+.dropdown li a{display:block;padding:0.55rem 1rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;color:var(--body);transition:all 0.15s;}
+.dropdown li a:hover{color:var(--teal);background:var(--teal-pale);}
+.dropdown li a.current-page{color:var(--teal);font-weight:700;background:var(--teal-pale);}
+.nav-actions{display:flex;align-items:center;gap:0.75rem;}
+.btn-amber{font-family:'Sora',sans-serif;font-size:0.875rem;font-weight:700;color:white;padding:0.6rem 1.4rem;border-radius:var(--r-btn);background:var(--amber);border:none;cursor:pointer;box-shadow:0 6px 24px rgba(232,146,10,0.35);transition:all 0.2s;display:inline-block;}
+.btn-amber:hover{background:var(--amber-deep);transform:translateY(-1px);}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;transition:all 0.2s;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.25s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+/* DRAWER */
+.drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:8998;backdrop-filter:blur(2px);}
+.drawer{position:fixed;top:0;right:-320px;width:300px;height:100vh;background:white;z-index:8999;transition:right 0.35s cubic-bezier(0.22,1,0.36,1);box-shadow:0 12px 40px rgba(0,0,0,0.10);overflow-y:auto;}
+.drawer-inner{display:flex;flex-direction:column;gap:0.15rem;padding:5rem 1.5rem 2rem;}
+.drawer-heading{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:0.5rem 1rem 0.25rem;}
+.drawer-link{display:block;padding:0.7rem 1rem;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:600;color:var(--ink);border-radius:6px;transition:all 0.15s;}
+.drawer-link:hover{background:var(--teal-pale);color:var(--teal);}
+.drawer-link.current{color:var(--teal);background:var(--teal-pale);}
+.drawer-sub-link{display:block;padding:0.55rem 1rem 0.55rem 1.75rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:500;color:var(--body);border-radius:6px;transition:all 0.15s;}
+.drawer-sub-link:hover{background:var(--teal-pale);color:var(--teal);}
+.drawer-sub-link.current{color:var(--teal);font-weight:600;}
+.drawer-divider{height:1px;background:var(--rule);margin:0.5rem 0;}
+.drawer-cta{display:block;margin-top:1rem;padding:0.85rem 1rem;background:var(--amber);color:white;font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;border-radius:var(--r-btn);text-align:center;box-shadow:0 6px 24px rgba(232,146,10,0.35);}
+.drawer-cta:hover{background:var(--amber-deep);}
+body.nav-open .drawer{right:0;}
+body.nav-open .drawer-overlay{display:block;}
 
 /* HERO */
 .hero{background:var(--navy);padding:72px 0 60px;position:relative;overflow:hidden;}
@@ -103,9 +142,9 @@ section{padding:64px 0;}
 .pain-item{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--body);line-height:1.5;padding:0.6rem 0.85rem;background:#fff;border-radius:var(--r-card);border-left:3px solid var(--amber);}
 .persona-aside{background:#fff;border:1px solid var(--rule);border-radius:var(--r-card);padding:1.5rem;}
 .persona-aside h4{font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:700;color:var(--ink);margin-bottom:1rem;}
-.persona-stat{display:flex;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);align-items:flex-start;}
+.persona-stat{display:grid;grid-template-columns:90px 1fr;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);align-items:start;}
 .persona-stat:last-child{border-bottom:none;}
-.p-stat-n{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;min-width:48px;line-height:1;}
+.p-stat-n{font-family:'Sora',sans-serif;font-size:clamp(0.8rem,1.6vw,1.1rem);font-weight:800;color:var(--teal);letter-spacing:0;line-height:1.2;white-space:nowrap;padding-right:0.5rem;}
 .p-stat-label{font-family:'Inter',sans-serif;font-size:0.76rem;color:var(--body);line-height:1.4;}
 .p-stat-label strong{display:block;color:var(--ink);font-size:0.78rem;}
 .persona-cta-row{margin-top:1.25rem;}
@@ -116,7 +155,7 @@ section{padding:64px 0;}
 .findings-section{background:#fff;padding:64px 0;}
 .findings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:0;}
 .finding-card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-card);padding:1.25rem;}
-.finding-n{font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;margin-bottom:0.3rem;}
+.finding-n{font-family:'Sora',sans-serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:800;color:var(--teal);letter-spacing:0;margin-bottom:0.3rem;white-space:nowrap;}
 .finding-card h4{font-family:'Sora',sans-serif;font-size:0.83rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;}
 .finding-card p{font-family:'Inter',sans-serif;font-size:0.77rem;color:var(--muted);line-height:1.55;}
 
@@ -147,56 +186,122 @@ footer{background:var(--navy);padding:1.5rem 0;}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:2.5rem;}
-  .form-card{max-width:480px;}
+  .hamburger{display:flex;}
+  .nav-menu,.nav-actions{display:none;}
+  .nav-inner{padding:0 1.25rem;height:68px;}
+  .logo::after{display:none;}
+  .hero{padding:48px 0 40px;}
+  .hero-inner{display:block!important;max-width:100%!important;}
   .covers-grid{grid-template-columns:1fr;}
   .persona-content.active{grid-template-columns:1fr;gap:1.5rem;}
+  .persona-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;}
   .findings-grid{grid-template-columns:1fr 1fr;}
   .how-steps{grid-template-columns:1fr 1fr;}
+  .contact-grid{grid-template-columns:1fr!important;gap:2rem!important;}
 }
 @media(max-width:600px){
+  section{padding:48px 0;}
+  .hero{padding:36px 0 32px;}
+  .hero h1{font-size:1.6rem;}
+  .trust-pills{gap:0.75rem;}
+  .buyer-bar{flex-wrap:wrap;}
   .findings-grid,.how-steps{grid-template-columns:1fr;}
-  .persona-tabs{overflow-x:auto;}
+  .persona-stat{grid-template-columns:72px 1fr;}
+}
+@media(max-width:400px){
+  .hero h1{font-size:1.4rem;}
+  .section-title{font-size:1.3rem;}
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="nav">
   <div class="nav-inner">
     <a href="../ict-services.html" class="logo">
-      <div style="width:40px;height:40px;display:flex;align-items:center;"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" stroke="#009BAA" stroke-width="1.8" fill="#009BAA" fill-opacity="0.08"/>
-  <circle cx="24" cy="24" r="6" stroke="#007280" stroke-width="1.6" fill="none"/>
-  <line x1="24" y1="18" x2="24" y2="3" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="29" y1="22" x2="42" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="29" y1="27" x2="42" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="24" y1="30" x2="24" y2="45" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="19" y1="27" x2="6" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="19" y1="22" x2="6" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <circle cx="24" cy="3" r="2.2" fill="#009BAA"/>
-  <circle cx="42" cy="13.5" r="2.2" fill="#009BAA"/>
-  <circle cx="42" cy="34.5" r="2.2" fill="#009BAA"/>
-  <circle cx="24" cy="45" r="2.2" fill="#009BAA"/>
-  <circle cx="6" cy="34.5" r="2.2" fill="#009BAA"/>
-  <circle cx="6" cy="13.5" r="2.2" fill="#009BAA"/>
-  <circle cx="24" cy="24" r="3.2" fill="#009BAA"/>
-</svg></div>
-      <div>
+      <div class="logo-mark"><svg width="52" height="52" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" stroke="#009BAA" stroke-width="1.8" fill="#009BAA" fill-opacity="0.08"/>
+          <circle cx="24" cy="24" r="6" stroke="#007280" stroke-width="1.6" fill="none"/>
+          <line x1="24" y1="18" x2="24" y2="3"    stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="29" y1="22" x2="42" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="29" y1="27" x2="42" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="24" y1="30" x2="24" y2="45"   stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="19" y1="27" x2="6"  y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="19" y1="22" x2="6"  y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <circle cx="24" cy="3"    r="2.2" fill="#009BAA"/>
+          <circle cx="42" cy="13.5" r="2.2" fill="#009BAA"/>
+          <circle cx="42" cy="34.5" r="2.2" fill="#009BAA"/>
+          <circle cx="24" cy="45"   r="2.2" fill="#009BAA"/>
+          <circle cx="6"  cy="34.5" r="2.2" fill="#009BAA"/>
+          <circle cx="6"  cy="13.5" r="2.2" fill="#009BAA"/>
+          <circle cx="24" cy="24"   r="3.2" fill="#009BAA"/>
+        </svg></div>
+      <div class="logo-text">
         <div class="logo-name">4<span>DS</span></div>
         <div class="logo-tagline">Enterprise standard. SME scale.</div>
       </div>
     </a>
-    <a href="../ict-services.html#services" class="nav-back">&#8592; All Services</a>
-    <a href="#enquiry" class="nav-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+    <ul class="nav-menu">
+      <li class="nav-dropdown"><a href="../ict-services.html#services" class="active-page">Services &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="m365-modern-workplace.html">Microsoft 365 &amp; Modern Workplace</a></li>
+          <li><a href="identity-zero-trust.html">Identity &amp; Zero Trust</a></li>
+          <li><a href="endpoint-device-management.html">Endpoint &amp; Device Management</a></li>
+          <li><a href="cybersecurity-ai-security.html" class="current-page">Cybersecurity &amp; AI Security</a></li>
+          <li><a href="email-security-deliverability.html">Email Security &amp; Deliverability</a></li>
+          <li><a href="network-wifi-infrastructure.html">Network, Wi-Fi &amp; Infrastructure</a></li>
+          <li><a href="backup-dr-continuity.html">Backup, DR &amp; Continuity</a></li>
+          <li><a href="automation-it-governance.html">Automation &amp; IT Governance</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown"><a href="../ict-services.html#industries">Industries &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="../ict-services.html#industries">Healthcare</a></li>
+          <li><a href="../ict-services.html#industries">Manufacturing</a></li>
+          <li><a href="../ict-services.html#industries">Finance &amp; Professional Services</a></li>
+          <li><a href="../ict-services.html#industries">Legal &amp; Professional</a></li>
+          <li><a href="../ict-services.html#industries">Education</a></li>
+          <li><a href="../ict-services.html#industries">Public Sector &amp; Non-Profit</a></li>
+        </ul>
+      </li>
+      <li><a href="../ict-services.html#why">About</a></li>
+      <li><a href="../ict-services.html#approach">Approach</a></li>
+      <li><a href="../ict-services.html#testimonials">Clients</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<!-- MOBILE DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-inner">
+    <span class="drawer-heading">Services</span>
+    <a href="m365-modern-workplace.html" class="drawer-sub-link">Microsoft 365 &amp; Modern Workplace</a>
+    <a href="identity-zero-trust.html" class="drawer-sub-link">Identity &amp; Zero Trust</a>
+    <a href="endpoint-device-management.html" class="drawer-sub-link">Endpoint &amp; Device Management</a>
+    <a href="cybersecurity-ai-security.html" class="drawer-sub-link current">Cybersecurity &amp; AI Security</a>
+    <a href="email-security-deliverability.html" class="drawer-sub-link">Email Security &amp; Deliverability</a>
+    <a href="network-wifi-infrastructure.html" class="drawer-sub-link">Network, Wi-Fi &amp; Infrastructure</a>
+    <a href="backup-dr-continuity.html" class="drawer-sub-link">Backup, DR &amp; Continuity</a>
+    <a href="automation-it-governance.html" class="drawer-sub-link">Automation &amp; IT Governance</a>
+    <div class="drawer-divider"></div>
+    <a href="../ict-services.html#industries" class="drawer-link">Industries</a>
+    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
+    <a href="../ict-services.html#approach"   class="drawer-link">Approach</a>
+    <a href="../ict-services.html#testimonials" class="drawer-link">Clients</a>
+    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Get Free Health Check</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="hero-inner">
+    <div class="hero-inner" style="display:block;max-width:680px;">
       <div class="hero-left">
         <div class="buyer-bar">
           <span class="buyer-label">I am:</span>
@@ -213,26 +318,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
         </div>
       </div>
 
-      <!-- ENQUIRY FORM -->
-      <div class="form-card" id="enquiry">
-        <h3>Speak to a senior engineer</h3>
-        <p class="form-sub" id="enquiryNote">Tell us about your current security stack and any recent incidents or concerns.</p>
-        <div id="enquiryForm">
-          <input type="hidden" id="formBuyer" value="generic">
-          <div class="f-group"><label>Your Name *</label><input type="text" id="eName" placeholder="Jane Murphy" required></div>
-          <div class="f-group"><label>Work Email *</label><input type="email" id="eEmail" placeholder="jane@company.ie" required></div>
-          <div class="f-group"><label>Company Name *</label><input type="text" id="eCompany" placeholder="Your Company Ltd" required></div>
-          <div class="f-group"><label>Phone <span class="f-optional">(optional)</span></label><input type="tel" id="ePhone" placeholder="+353 1 234 5678"></div>
-          <div class="f-group"><label>Brief note <span class="f-optional">(optional)</span></label><textarea id="eNote" placeholder="Tell us what you are looking to resolve or improve..."></textarea></div>
-          <button class="btn-submit" onclick="handleEnquiry(event)">Send Enquiry &rarr;</button>
-          <p class="form-micro">A senior engineer responds within 2 hours. No commitment required.</p>
-        </div>
-        <div class="form-thanks" id="enquiryThanks">
-          <div style="font-size:2rem;margin-bottom:0.75rem;">&#10003;</div>
-          <h4>Enquiry received</h4>
-          <p>A senior engineer will be in touch within 2 business hours.<br>No commitment is required at this stage.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -253,6 +338,166 @@ footer{background:var(--navy);padding:1.5rem 0;}
     </div>
   </div>
 </section>
+
+<!-- ══ CYBERSECURITY INFOGRAPHIC ══ -->
+<section style="padding:40px 0;background:var(--surface);">
+  <div class="container">
+    <span class="eyebrow">Platform overview</span>
+  </div>
+  <style>
+  .cyig{width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;}
+  .cyig-inner{border-radius:10px;overflow:hidden;border:1px solid var(--rule);}
+
+  /* header */
+  .cyig-hdr{background:var(--navy);padding:26px 38px 22px;position:relative;overflow:hidden;}
+  .cyig-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 40%,rgba(0,155,170,0.16) 0%,transparent 55%);pointer-events:none;}
+  .cyig-hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .cyig-eyebrow{font-family:'Inter',sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
+  .cyig-title{font-family:'Sora',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1.1;}
+  .cyig-title em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+  .cyig-sub{font-family:'Inter',sans-serif;font-size:0.76rem;color:rgba(255,255,255,0.48);margin-top:4px;max-width:440px;}
+  .cyig-stats{display:flex;gap:18px;flex-wrap:wrap;}
+  .cyig-stat-n{font-family:'Sora',sans-serif;font-size:1.25rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;}
+  .cyig-stat-l{font-family:'Inter',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.38);margin-top:2px;max-width:76px;line-height:1.3;}
+
+  /* body */
+  .cyig-body{background:var(--surface);padding:20px 26px;}
+  .cyig-slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;}
+
+  /* threat row */
+  .cyig-threat{background:linear-gradient(90deg,#2d0a0a,#1a0505);border:1px solid #6b1414;border-radius:8px;padding:10px 16px;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .cyig-threat-label{font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;color:#fc8181;flex-shrink:0;display:flex;align-items:center;gap:5px;}
+  .cyig-tc{font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:600;padding:2px 8px;border-radius:100px;background:rgba(197,48,48,0.2);border:1px solid rgba(197,48,48,0.4);color:#fc8181;white-space:nowrap;}
+
+  /* layers */
+  .cyig-layers{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
+  .cyig-layer{display:grid;grid-template-columns:170px 1fr;border-radius:7px;overflow:hidden;border:1px solid var(--rule);}
+  .cyig-lid{padding:11px 12px;display:flex;align-items:center;gap:8px;}
+  .cyig-lid img{width:26px;height:26px;object-fit:contain;flex-shrink:0;}
+  .cyig-lname{font-family:'Sora',sans-serif;font-size:0.73rem;font-weight:700;line-height:1.2;}
+  .cyig-ltool{font-family:'Inter',sans-serif;font-size:0.58rem;margin-top:2px;opacity:0.7;}
+  .cyig-lcontent{padding:9px 12px;display:flex;align-items:center;flex-wrap:wrap;gap:5px;}
+  .cyig-li{display:flex;align-items:center;gap:4px;padding:3px 8px;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.63rem;font-weight:500;border:1px solid;white-space:nowrap;}
+  .cyig-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+
+  .cyig-layer.id .cyig-lid{background:#EEF9FB;} .cyig-layer.id .cyig-lname{color:var(--teal-deep);} .cyig-layer.id .cyig-ltool{color:var(--teal);} .cyig-layer.id .cyig-lcontent{background:white;} .cyig-layer.id .cyig-li{background:var(--teal-pale);border-color:var(--teal-border);color:var(--teal-deep);} .cyig-layer.id .cyig-dot{background:var(--teal);}
+  .cyig-layer.ep .cyig-lid{background:#F0FFF4;} .cyig-layer.ep .cyig-lname{color:#276749;} .cyig-layer.ep .cyig-ltool{color:#38A169;} .cyig-layer.ep .cyig-lcontent{background:white;} .cyig-layer.ep .cyig-li{background:#F0FFF4;border-color:#9AE6B4;color:#276749;} .cyig-layer.ep .cyig-dot{background:#48BB78;}
+  .cyig-layer.em .cyig-lid{background:#FEF3C7;} .cyig-layer.em .cyig-lname{color:#92600A;} .cyig-layer.em .cyig-ltool{color:var(--amber);} .cyig-layer.em .cyig-lcontent{background:white;} .cyig-layer.em .cyig-li{background:#FEF3E2;border-color:#F5D9A8;color:#92600A;} .cyig-layer.em .cyig-dot{background:var(--amber);}
+  .cyig-layer.nw .cyig-lid{background:#EDE9FE;} .cyig-layer.nw .cyig-lname{color:#5B21B6;} .cyig-layer.nw .cyig-ltool{color:#7C3AED;} .cyig-layer.nw .cyig-lcontent{background:white;} .cyig-layer.nw .cyig-li{background:#EDE9FE;border-color:#C4B5FD;color:#5B21B6;} .cyig-layer.nw .cyig-dot{background:#7C3AED;}
+  .cyig-layer.ai{border-color:var(--teal-border);} .cyig-layer.ai .cyig-lid{background:var(--navy);border-right:2px solid var(--teal);} .cyig-layer.ai .cyig-lname{color:white;} .cyig-layer.ai .cyig-ltool{color:var(--teal);} .cyig-layer.ai .cyig-lcontent{background:var(--navy-mid);} .cyig-layer.ai .cyig-li{background:rgba(0,155,170,0.15);border-color:rgba(0,155,170,0.4);color:rgba(255,255,255,0.82);} .cyig-layer.ai .cyig-dot{background:var(--teal);}
+
+  /* siem bar */
+  .cyig-siem{background:var(--navy-mid);border:1px solid rgba(0,155,170,0.3);border-radius:8px;padding:10px 16px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .cyig-siem img{width:24px;height:24px;object-fit:contain;flex-shrink:0;}
+  .cyig-siem-title{font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;color:white;}
+  .cyig-siem-sub{font-family:'Inter',sans-serif;font-size:0.63rem;color:rgba(255,255,255,0.48);}
+  .cyig-siem-chips{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;}
+  .cyig-siem-chip{font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:600;padding:2px 8px;border-radius:100px;background:rgba(0,155,170,0.15);border:1px solid rgba(0,155,170,0.3);color:var(--teal);white-space:nowrap;}
+
+  /* stats */
+  .cyig-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:12px;}
+  .cyig-sc{background:white;border:1px solid var(--rule);border-radius:7px;padding:10px 12px;border-top:3px solid var(--teal);}
+  .cyig-sc.a{border-top-color:var(--amber);}
+  .cyig-sc.r{border-top-color:#C53030;}
+  .cyig-sc-n{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;margin-bottom:3px;}
+  .cyig-sc.a .cyig-sc-n{color:var(--amber);}
+  .cyig-sc.r .cyig-sc-n{color:#C53030;}
+  .cyig-sc-l{font-family:'Inter',sans-serif;font-size:0.64rem;color:var(--body);line-height:1.4;}
+
+  /* nis2 band */
+  .cyig-nis2{background:var(--navy);border-radius:8px;padding:14px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .cyig-nis2-title{font-family:'Sora',sans-serif;font-size:0.7rem;font-weight:700;color:var(--teal);margin-bottom:3px;}
+  .cyig-nis2-desc{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.48);line-height:1.4;}
+
+  /* responsive */
+  @media(max-width:860px){
+    .cyig{padding:0 1rem;}
+    .cyig-hdr{padding:20px 18px 18px;}
+    .cyig-body{padding:16px 16px;}
+    .cyig-layer{grid-template-columns:1fr;}
+    .cyig-lid{border-bottom:1px solid var(--rule);}
+    .cyig-stats-row{grid-template-columns:1fr 1fr;}
+    .cyig-nis2{grid-template-columns:1fr;}
+    .cyig-siem-chips{display:none;}
+  }
+  @media(max-width:520px){
+    .cyig{padding:0 0.5rem;}
+    .cyig-stats-row{grid-template-columns:1fr;}
+    .cyig-hdr-inner{flex-direction:column;align-items:flex-start;}
+  }
+  </style>
+
+  <div class="cyig">
+    <div class="cyig-inner">
+      <div class="cyig-hdr">
+        <div class="cyig-hdr-inner">
+          <div>
+            <span class="cyig-eyebrow">Cybersecurity &amp; AI Security</span>
+            <div class="cyig-title">Security is not a product.<br><em>It is a posture you maintain.</em></div>
+            <div class="cyig-sub">Layered defence across identity, endpoint, email, network and AI — monitored continuously, reported monthly.</div>
+          </div>
+          <div class="cyig-stats">
+            <div><div class="cyig-stat-n">€47k+</div><div class="cyig-stat-l">Average SME ransomware cost in Ireland</div></div>
+            <div><div class="cyig-stat-n">74</div><div class="cyig-stat-l">Days avg. to detect breach without monitoring</div></div>
+            <div><div class="cyig-stat-n">23</div><div class="cyig-stat-l">Avg. gaps found in a first 4DS review</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cyig-body">
+        <span class="cyig-slabel">What attackers target</span>
+        <div class="cyig-threat">
+          <div class="cyig-threat-label">&#9888; Attack vectors</div>
+          <span class="cyig-tc">Stolen credentials</span><span class="cyig-tc">Phishing &amp; BEC</span><span class="cyig-tc">Unpatched endpoints</span><span class="cyig-tc">Exposed services</span><span class="cyig-tc">Shadow IT &amp; SaaS</span><span class="cyig-tc">AI prompt injection</span><span class="cyig-tc">Supply chain</span><span class="cyig-tc">Ransomware</span>
+        </div>
+
+        <span class="cyig-slabel">Your layered defence stack</span>
+        <div class="cyig-layers">
+          <div class="cyig-layer id">
+            <div class="cyig-lid"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID"><div><div class="cyig-lname">Identity &amp; Access</div><div class="cyig-ltool">Microsoft Entra ID</div></div></div>
+            <div class="cyig-lcontent"><span class="cyig-li"><span class="cyig-dot"></span>MFA enforced — all users</span><span class="cyig-li"><span class="cyig-dot"></span>Conditional Access</span><span class="cyig-li"><span class="cyig-dot"></span>Stale account remediation</span><span class="cyig-li"><span class="cyig-dot"></span>Privileged Identity Mgmt</span><span class="cyig-li"><span class="cyig-dot"></span>Legacy auth blocked</span></div>
+          </div>
+          <div class="cyig-layer ep">
+            <div class="cyig-lid"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Intune"><div><div class="cyig-lname">Endpoint &amp; Device</div><div class="cyig-ltool">Defender for Endpoint + Intune</div></div></div>
+            <div class="cyig-lcontent"><span class="cyig-li"><span class="cyig-dot"></span>EDR on every device</span><span class="cyig-li"><span class="cyig-dot"></span>CIS-hardened config</span><span class="cyig-li"><span class="cyig-dot"></span>Automated patching</span><span class="cyig-li"><span class="cyig-dot"></span>BitLocker encryption</span><span class="cyig-li"><span class="cyig-dot"></span>Local admin removal</span></div>
+          </div>
+          <div class="cyig-layer em">
+            <div class="cyig-lid"><img src="https://img.icons8.com/fluent/96/microsoft-defender.png" alt="Defender O365"><div><div class="cyig-lname">Email &amp; Collaboration</div><div class="cyig-ltool">Defender for O365 + DMARC</div></div></div>
+            <div class="cyig-lcontent"><span class="cyig-li"><span class="cyig-dot"></span>DMARC p=reject enforced</span><span class="cyig-li"><span class="cyig-dot"></span>Anti-phishing policies</span><span class="cyig-li"><span class="cyig-dot"></span>Safe links &amp; attachments</span><span class="cyig-li"><span class="cyig-dot"></span>Impersonation protection</span><span class="cyig-li"><span class="cyig-dot"></span>Phishing simulations</span></div>
+          </div>
+          <div class="cyig-layer nw">
+            <div class="cyig-lid"><img src="https://az-icons.com/export/icons/f9e49b2f6656066720a98c5e9923c6f7.svg" alt="Firewall"><div><div class="cyig-lname">Network &amp; Cloud Apps</div><div class="cyig-ltool">NGFW + Defender Cloud Apps</div></div></div>
+            <div class="cyig-lcontent"><span class="cyig-li"><span class="cyig-dot"></span>Next-gen firewall</span><span class="cyig-li"><span class="cyig-dot"></span>Shadow IT discovery</span><span class="cyig-li"><span class="cyig-dot"></span>CASB app controls</span><span class="cyig-li"><span class="cyig-dot"></span>SSL/TLS inspection</span><span class="cyig-li"><span class="cyig-dot"></span>IDS/IPS active</span></div>
+          </div>
+          <div class="cyig-layer ai">
+            <div class="cyig-lid"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot"><div><div class="cyig-lname">AI Security &amp; Governance</div><div class="cyig-ltool">Copilot + AI Policy Framework</div></div></div>
+            <div class="cyig-lcontent"><span class="cyig-li"><span class="cyig-dot"></span>Copilot data access controls</span><span class="cyig-li"><span class="cyig-dot"></span>Prompt injection protection</span><span class="cyig-li"><span class="cyig-dot"></span>Data oversharing prevention</span><span class="cyig-li"><span class="cyig-dot"></span>AI usage policy</span><span class="cyig-li"><span class="cyig-dot"></span>Third-party AI governance</span></div>
+          </div>
+        </div>
+
+        <div class="cyig-siem">
+          <img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="Sentinel">
+          <div><div class="cyig-siem-title">Microsoft Sentinel — SIEM &amp; Continuous Monitoring</div><div class="cyig-siem-sub">All signals from every layer feed into Sentinel. Alerts reviewed by engineers. Monthly posture report delivered to every client.</div></div>
+          <div class="cyig-siem-chips"><span class="cyig-siem-chip">24/7 Detection</span><span class="cyig-siem-chip">&lt;15 min response</span><span class="cyig-siem-chip">Monthly reporting</span><span class="cyig-siem-chip">IR playbooks</span></div>
+        </div>
+
+        <div class="cyig-stats-row">
+          <div class="cyig-sc"><div class="cyig-sc-n">9/10</div><div class="cyig-sc-l">Environments with Defender for Endpoint never activated</div></div>
+          <div class="cyig-sc a"><div class="cyig-sc-n">7/10</div><div class="cyig-sc-l">Environments with no centralised security log monitoring</div></div>
+          <div class="cyig-sc r"><div class="cyig-sc-n">€47k+</div><div class="cyig-sc-l">Average SME ransomware remediation cost in Ireland</div></div>
+          <div class="cyig-sc"><div class="cyig-sc-n">100%</div><div class="cyig-sc-l">Of 4DS managed clients have a tested incident response plan</div></div>
+        </div>
+
+        <div class="cyig-nis2">
+          <div><div class="cyig-nis2-title">NIS2 Compliance</div><div class="cyig-nis2-desc">Full Article 21 technical control framework. Fines up to €10M or 2% of global turnover for non-compliance.</div></div>
+          <div><div class="cyig-nis2-title">ISO 27001 Readiness</div><div class="cyig-nis2-desc">Gap assessment, risk register, policy documentation, and certification readiness. ISO 27001 practice held.</div></div>
+          <div><div class="cyig-nis2-title">Incident Response</div><div class="cyig-nis2-desc">Documented IR plan, tabletop exercises, 24/7 detection and containment. RTO/RPO validated annually.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- PERSONA SECTION -->
 <div class="persona-section">
@@ -375,15 +620,43 @@ footer{background:var(--navy);padding:1.5rem 0;}
   </div>
 </section>
 
-<!-- BOTTOM CTA -->
-<div class="bottom-cta">
+
+<!-- CONTACT FORM -->
+<section style="padding:72px 0;background:var(--surface);" id="contact-section">
   <div class="container">
-    <h2>Find out how many security gaps your current provider has left open</h2>
-    <p>The average first review finds 23 addressable gaps. Every finding is documented with evidence and ranked by risk.</p>
-    <a href="#enquiry" class="btn-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Send an Enquiry &rarr;</a>
-    <a href="../ict-services.html#contact" class="btn-cta-ghost">Get a Free Health Check</a>
+    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;">
+      <div>
+        <span class="eyebrow">Get in touch</span>
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-sub" style="margin-bottom:1.5rem;">Tell us about your current security environment and any concerns. A senior engineer responds within 2 hours. No commitment required.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;">
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>We review your full security posture across identity, endpoint, email and network</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Every finding documented with evidence and ranked by risk</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Fixed monthly fee — no billable hours, no surprise invoices</li>
+        </ul>
+      </div>
+      <div class="form-card" id="enquiry">
+        <h3>Speak to a senior engineer</h3>
+        <p class="form-sub" id="enquiryNote">Tell us about your current security stack and any recent incidents or concerns.</p>
+        <div id="enquiryForm">
+          <input type="hidden" id="formBuyer" value="generic">
+          <div class="f-group"><label>Your Name *</label><input type="text" id="eName" placeholder="Jane Murphy" required></div>
+          <div class="f-group"><label>Work Email *</label><input type="email" id="eEmail" placeholder="jane@company.ie" required></div>
+          <div class="f-group"><label>Company Name *</label><input type="text" id="eCompany" placeholder="Your Company Ltd" required></div>
+          <div class="f-group"><label>Phone <span class="f-optional">(optional)</span></label><input type="tel" id="ePhone" placeholder="+353 1 234 5678"></div>
+          <div class="f-group"><label>Brief note <span class="f-optional">(optional)</span></label><textarea id="eNote" placeholder="Tell us what you are looking to resolve or improve..."></textarea></div>
+          <button class="btn-submit" onclick="handleEnquiry(event)">Send Enquiry &rarr;</button>
+          <p class="form-micro">A senior engineer responds within 2 hours. No commitment required.</p>
+        </div>
+        <div class="form-thanks" id="enquiryThanks">
+          <div style="font-size:2rem;margin-bottom:0.75rem;">&#10003;</div>
+          <h4>Enquiry received</h4>
+          <p>A senior engineer will be in touch within 2 business hours.<br>No commitment is required at this stage.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -447,7 +720,14 @@ function handleEnquiry(e){
   document.getElementById('enquiryThanks').style.display='block';
 }
 
-// Nav hamburger (minimal - no drawer needed on lean page)
+// Nav hamburger
+var hamburgerBtn = document.getElementById('hamburgerBtn');
+var drawerOverlay = document.getElementById('drawerOverlay');
+function openDrawer(){ document.body.classList.add('nav-open'); hamburgerBtn.classList.add('open'); }
+function closeDrawer(){ document.body.classList.remove('nav-open'); hamburgerBtn.classList.remove('open'); }
+if(hamburgerBtn){ hamburgerBtn.addEventListener('click', function(){ document.body.classList.contains('nav-open') ? closeDrawer() : openDrawer(); }); }
+if(drawerOverlay){ drawerOverlay.addEventListener('click', closeDrawer); }
+document.querySelectorAll('.drawer-link,.drawer-sub-link').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 
 </script>
 </body>
