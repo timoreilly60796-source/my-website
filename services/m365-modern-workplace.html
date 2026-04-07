@@ -179,17 +179,56 @@ footer{background:var(--navy);padding:1.5rem 0;}
 .foot-inner a:hover{color:var(--teal)}
 
 /* RESPONSIVE */
+/* ── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:2.5rem;}
-  .form-card{max-width:480px;}
+  /* Nav */
+  .hamburger{display:flex;}
+  .nav-menu,.nav-actions{display:none;}
+  .nav-inner{padding:0 1.25rem;height:68px;}
+  .logo::after{display:none;}
+
+  /* Hero */
+  .hero{padding:48px 0 40px;}
+  .hero-inner{display:block!important;max-width:100%!important;}
+
+  /* Covers */
   .covers-grid{grid-template-columns:1fr;}
+
+  /* Persona */
   .persona-content.active{grid-template-columns:1fr;gap:1.5rem;}
+  .persona-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+
+  /* Findings & How */
   .findings-grid{grid-template-columns:1fr 1fr;}
   .how-steps{grid-template-columns:1fr 1fr;}
+
+  /* Contact form — switch to single column */
+  .contact-grid{grid-template-columns:1fr!important;gap:2rem!important;}
 }
+
 @media(max-width:600px){
+  /* Sections */
+  section{padding:48px 0;}
+
+  /* Hero */
+  .hero{padding:36px 0 32px;}
+  .hero h1{font-size:1.6rem;}
+  .trust-pills{gap:0.75rem;}
+  .buyer-bar{flex-wrap:wrap;}
+
+  /* Findings & How */
   .findings-grid,.how-steps{grid-template-columns:1fr;}
-  .persona-tabs{overflow-x:auto;}
+
+  /* Persona stats */
+  .persona-stat{grid-template-columns:72px 1fr;}
+
+  /* Contact */
+  .contact-grid{padding:0 0!important;}
+}
+
+@media(max-width:400px){
+  .hero h1{font-size:1.4rem;}
+  .section-title{font-size:1.3rem;}
 }
 </style>
 </head>
@@ -381,6 +420,10 @@ footer{background:var(--navy);padding:1.5rem 0;}
     .ig-pillar{border-right:none!important;}
     .ig-icon img{width:44px;height:44px;}
     .ig-chev{font-size:0.62rem;}
+    .m365ig{padding:0 0.75rem;}
+  }
+  @media(max-width:860px){
+    .m365ig{padding:0 1rem;}
   }
   </style>
 
@@ -587,9 +630,9 @@ footer{background:var(--navy);padding:1.5rem 0;}
 </section>
 
 <!-- CONTACT FORM -->
-<section style="padding:72px 0;background:var(--surface);">
+<section style="padding:72px 0;background:var(--surface);" id="contact-section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;">
+    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;">
       <div>
         <span class="eyebrow">Get in touch</span>
         <h2 class="section-title">Speak to a senior engineer</h2>
@@ -694,7 +737,14 @@ function handleEnquiry(e){
   document.getElementById('enquiryThanks').style.display='block';
 }
 
-// Nav hamburger (minimal - no drawer needed on lean page)
+// Nav hamburger
+var hamburgerBtn = document.getElementById('hamburgerBtn');
+var drawerOverlay = document.getElementById('drawerOverlay');
+function openDrawer(){ document.body.classList.add('nav-open'); hamburgerBtn.classList.add('open'); }
+function closeDrawer(){ document.body.classList.remove('nav-open'); hamburgerBtn.classList.remove('open'); }
+if(hamburgerBtn){ hamburgerBtn.addEventListener('click', function(){ document.body.classList.contains('nav-open') ? closeDrawer() : openDrawer(); }); }
+if(drawerOverlay){ drawerOverlay.addEventListener('click', closeDrawer); }
+document.querySelectorAll('.drawer-link,.drawer-sub-link').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 
 </script>
 </body>
