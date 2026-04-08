@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <style>
 :root{
-  --teal:#009BAA;--teal-deep:#007280;--teal-pale:#EEF9FB;--teal-border:#A8DCE3;--teal-wash:#F0FAFB;
+  --teal:#009BAA;--teal-deep:#007280;--teal-pale:#EEF9FB;--teal-border:#A8DCE3;
   --navy:#0B1C2E;--navy-mid:#122536;--navy-light:#1E3448;
   --amber:#E8920A;--amber-deep:#C97A06;
   --ink:#141820;--body:#2C3340;--muted:#555F6E;--rule:#E2E8ED;--surface:#F8FAFB;
@@ -36,124 +36,92 @@ nav{position:sticky;top:0;z-index:9000;background:#fff;border-bottom:1px solid v
 .nav-inner{max-width:1260px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:82px;}
 .logo{display:flex;align-items:center;gap:16px;position:relative;}
 .logo::after{content:'';position:absolute;right:-24px;top:50%;transform:translateY(-50%);width:1px;height:32px;background:linear-gradient(to bottom,transparent,var(--teal-border),transparent);}
-.logo-mark{width:52px;height:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.logo-mark{width:52px;height:52px;flex-shrink:0;}
 .logo-text{display:flex;flex-direction:column;gap:2px;}
 .logo-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.9rem;color:var(--ink);letter-spacing:-1px;line-height:1;}
 .logo-name span{color:var(--teal);}
-.logo-tagline{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:500;color:var(--muted);letter-spacing:0.03em;margin-top:1px;}
+.logo-tagline{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:500;color:var(--muted);}
 .nav-menu{display:flex;align-items:center;list-style:none;gap:2px;margin-left:3rem;}
-.nav-menu>li>a{display:block;padding:0.5rem 0.95rem;border-radius:6px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:var(--body);letter-spacing:0.01em;transition:color 0.15s,background 0.15s;}
+.nav-menu>li>a{display:block;padding:0.5rem 0.95rem;border-radius:6px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:var(--body);transition:color 0.15s,background 0.15s;}
 .nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale);}
-.nav-menu>li>a.active-page{color:var(--teal);}
 .nav-dropdown{position:relative;}
-.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
+.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:260px;box-shadow:var(--shadow-lg);list-style:none;z-index:9001;}
 .nav-dropdown:hover .dropdown{display:block;}
 .dropdown li a{display:block;padding:0.55rem 1rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;color:var(--body);transition:all 0.15s;}
 .dropdown li a:hover{color:var(--teal);background:var(--teal-pale);}
 .dropdown li a.current-page{color:var(--teal);font-weight:700;background:var(--teal-pale);}
 .nav-actions{display:flex;align-items:center;gap:0.75rem;}
-.btn-amber{font-family:'Sora',sans-serif;font-size:0.875rem;font-weight:700;color:white;padding:0.6rem 1.4rem;border-radius:var(--r-btn);background:var(--amber);border:none;cursor:pointer;box-shadow:0 6px 24px rgba(232,146,10,0.35);transition:all 0.2s;display:inline-block;}
+.btn-amber{font-family:'Sora',sans-serif;font-size:0.875rem;font-weight:700;color:white;padding:0.6rem 1.4rem;border-radius:var(--r-btn);background:var(--amber);border:none;cursor:pointer;box-shadow:var(--shadow-amber);transition:all 0.2s;display:inline-block;}
 .btn-amber:hover{background:var(--amber-deep);transform:translateY(-1px);}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;transition:all 0.2s;}
 .hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.25s;}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-/* DRAWER */
 .drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:8998;backdrop-filter:blur(2px);}
-.drawer{position:fixed;top:0;right:-320px;width:300px;height:100vh;background:white;z-index:8999;transition:right 0.35s cubic-bezier(0.22,1,0.36,1);box-shadow:0 12px 40px rgba(0,0,0,0.10);overflow-y:auto;}
-.drawer-inner{display:flex;flex-direction:column;gap:0.15rem;padding:5rem 1.5rem 2rem;}
-.drawer-heading{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:0.5rem 1rem 0.25rem;}
-.drawer-link{display:block;padding:0.7rem 1rem;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:600;color:var(--ink);border-radius:6px;transition:all 0.15s;}
+.drawer{position:fixed;top:0;right:-320px;width:300px;height:100vh;background:white;z-index:8999;transition:right 0.35s cubic-bezier(0.22,1,0.36,1);box-shadow:var(--shadow-lg);padding:2rem 1.5rem;overflow-y:auto;}
+.drawer-inner{display:flex;flex-direction:column;gap:0.25rem;margin-top:3rem;}
+.drawer-link{display:block;padding:0.85rem 1rem;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;color:var(--ink);border-radius:6px;transition:all 0.15s;}
 .drawer-link:hover{background:var(--teal-pale);color:var(--teal);}
-.drawer-link.current{color:var(--teal);background:var(--teal-pale);}
-.drawer-sub-link{display:block;padding:0.55rem 1rem 0.55rem 1.75rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:500;color:var(--body);border-radius:6px;transition:all 0.15s;}
+.drawer-sub-link{display:block;padding:0.6rem 1rem 0.6rem 1.75rem;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:500;color:var(--muted);border-radius:6px;transition:all 0.15s;}
 .drawer-sub-link:hover{background:var(--teal-pale);color:var(--teal);}
-.drawer-sub-link.current{color:var(--teal);font-weight:600;}
-.drawer-divider{height:1px;background:var(--rule);margin:0.5rem 0;}
-.drawer-cta{display:block;margin-top:1rem;padding:0.85rem 1rem;background:var(--amber);color:white;font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;border-radius:var(--r-btn);text-align:center;box-shadow:0 6px 24px rgba(232,146,10,0.35);}
-.drawer-cta:hover{background:var(--amber-deep);}
+.drawer-cta{display:block;margin-top:1.5rem;padding:0.85rem 1rem;background:var(--amber);color:white;font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;border-radius:var(--r-btn);text-align:center;}
 body.nav-open .drawer{right:0;}
 body.nav-open .drawer-overlay{display:block;}
 
 /* HERO */
-.hero{background:var(--navy);padding:72px 0 60px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 40%,rgba(0,155,170,0.14) 0%,transparent 60%);}
-.hero-inner{display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:start;position:relative;z-index:1;}
-.hero-left{padding-top:0.5rem;}
-
-/* BUYER BAR */
-.buyer-bar{display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;margin-bottom:1.5rem;}
-.buyer-label{font-family:'Inter',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.4);}
-.buyer-btn{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;padding:0.28rem 0.75rem;border-radius:var(--r-pill);border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.18s;}
-.buyer-btn:hover,.buyer-btn.active{background:var(--teal);border-color:var(--teal);color:#fff;}
-
-.hero-eyebrow{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:0.75rem;}
-.hero h1{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1rem;}
+.hero{background:var(--navy);padding:88px 0 72px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(0,155,170,0.12) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;display:block;max-width:680px;}
+.buyer-bar{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.buyer-label{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);}
+.buyer-btn{font-family:'Inter',sans-serif;font-size:0.73rem;font-weight:600;padding:0.3rem 0.85rem;border-radius:var(--r-pill);border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.6);cursor:pointer;transition:all 0.2s;}
+.buyer-btn.active,.buyer-btn:hover{background:var(--teal);border-color:var(--teal);color:white;}
+.hero-eyebrow{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:0.85rem;}
+.hero h1{font-family:'Sora',sans-serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:800;color:white;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.1rem;}
 .hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
-.hero-sub{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(255,255,255,0.68);line-height:1.7;margin-bottom:1.5rem;max-width:520px;}
-.trust-pills{display:flex;flex-wrap:wrap;gap:1rem;}
-.trust-pill{font-family:'Inter',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.55);}
-.trust-pill::before{content:'\2713';color:var(--teal);font-weight:700;margin-right:5px;}
-
-/* FORM CARD */
-.form-card{background:#fff;border-radius:10px;padding:2rem;box-shadow:0 20px 60px rgba(0,0,0,0.25);}
-.form-card h3{font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;}
-.form-card .form-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.5;}
-.f-group{margin-bottom:0.85rem;}
-.f-group label{display:block;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;color:var(--ink);margin-bottom:0.3rem;}
-.f-group input,.f-group select,.f-group textarea{width:100%;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--ink);padding:0.6rem 0.85rem;border:1.5px solid var(--rule);border-radius:var(--r-card);background:#fff;transition:border-color 0.15s;outline:none;}
-.f-group input:focus,.f-group select:focus,.f-group textarea:focus{border-color:var(--teal);}
-.f-group textarea{resize:vertical;min-height:80px;}
-.f-optional{color:var(--muted);font-weight:400;}
-.btn-submit{width:100%;font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:700;padding:0.85rem;background:var(--amber);color:#fff;border:none;border-radius:var(--r-btn);cursor:pointer;box-shadow:var(--shadow-amber);transition:background 0.2s;margin-top:0.25rem;}
-.btn-submit:hover{background:var(--amber-deep)}
-.form-micro{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);text-align:center;margin-top:0.65rem;line-height:1.5;}
-.form-thanks{display:none;text-align:center;padding:1.5rem 0;}
-.form-thanks h4{font-family:'Sora',sans-serif;font-size:1rem;color:var(--ink);margin-bottom:0.5rem;}
-.form-thanks p{font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--muted);line-height:1.6;}
+.hero-sub{font-family:'Inter',sans-serif;font-size:1rem;color:rgba(255,255,255,0.7);line-height:1.7;max-width:580px;margin-bottom:1.75rem;}
+.trust-pills{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.trust-pill{font-family:'Inter',sans-serif;font-size:0.74rem;color:rgba(255,255,255,0.55);}
+.trust-pill::before{content:'✓';color:var(--teal);font-weight:700;margin-right:5px;}
 
 /* SECTIONS */
 section{padding:64px 0;}
-.eyebrow{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:0.6rem;}
-.section-title{font-family:'Sora',sans-serif;font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:800;color:var(--ink);line-height:1.15;letter-spacing:-0.025em;margin-bottom:0.65rem;}
-.section-sub{font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.65;max-width:580px;margin-bottom:2rem;}
+.eyebrow{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:0.65rem;}
+.section-title{font-family:'Sora',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:var(--ink);line-height:1.15;letter-spacing:-0.03em;margin-bottom:0.75rem;}
+.section-sub{font-family:'Inter',sans-serif;font-size:0.93rem;color:var(--muted);line-height:1.65;max-width:620px;}
 
-/* WHAT WE COVER */
-.covers-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;}
-.cover-item{display:flex;gap:0.85rem;padding:1rem 1.1rem;border:1px solid var(--rule);border-left:3px solid var(--teal-border);border-radius:var(--r-card);transition:border-left-color 0.2s;}
+/* COVERS */
+.covers-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;margin-top:2rem;}
+.cover-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.1rem;border:1px solid var(--rule);border-left:3px solid var(--teal-border);border-radius:var(--r-card);transition:border-left-color 0.2s;}
 .cover-item:hover{border-left-color:var(--teal);}
-.cover-ico{font-size:1.2rem;flex-shrink:0;}
-.cover-item h4{font-family:'Sora',sans-serif;font-size:0.83rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
-.cover-item p{font-family:'Inter',sans-serif;font-size:0.77rem;color:var(--muted);line-height:1.5;}
+.cover-ico{font-size:1.25rem;flex-shrink:0;margin-top:2px;}
+.cover-item h4{font-family:'Sora',sans-serif;font-size:0.87rem;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.cover-item p{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--muted);line-height:1.55;}
 
-/* PERSONA SECTION */
+/* PERSONA */
 .persona-section{background:var(--surface);padding:64px 0;}
-.persona-tabs{display:flex;gap:0;border-bottom:2px solid var(--rule);margin-bottom:2rem;}
-.persona-tab{font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;padding:0.65rem 1.25rem;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.15s;}
-.persona-tab.active{color:var(--teal);border-bottom-color:var(--teal);}
-.persona-tab:hover{color:var(--teal)}
+.persona-tabs{display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap;}
+.persona-tab{font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;padding:0.55rem 1.1rem;border-radius:var(--r-pill);border:1px solid var(--rule);background:#fff;color:var(--muted);cursor:pointer;transition:all 0.2s;}
+.persona-tab.active{background:var(--teal);border-color:var(--teal);color:white;}
 .persona-content{display:none;}
 .persona-content.active{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;animation:pFade 0.25s ease;}
 @keyframes pFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.persona-headline{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:0.75rem;}
-.persona-body{font-family:'Inter',sans-serif;font-size:0.87rem;color:var(--body);line-height:1.7;margin-bottom:1.25rem;}
-.persona-pains{display:flex;flex-direction:column;gap:0.5rem;}
-.pain-item{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--body);line-height:1.5;padding:0.6rem 0.85rem;background:#fff;border-radius:var(--r-card);border-left:3px solid var(--amber);}
-.persona-aside{background:#fff;border:1px solid var(--rule);border-radius:var(--r-card);padding:1.5rem;}
-.persona-aside h4{font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:700;color:var(--ink);margin-bottom:1rem;}
+.persona-headline{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:0.85rem;line-height:1.3;}
+.persona-body{font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--body);line-height:1.7;margin-bottom:1rem;}
+.persona-pains{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.25rem;}
+.pain-item{font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--body);padding:0.6rem 0.85rem;background:#fff;border-radius:var(--r-card);border-left:3px solid var(--amber);}
 .persona-stat{display:grid;grid-template-columns:90px 1fr;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);align-items:start;}
 .persona-stat:last-child{border-bottom:none;}
-.p-stat-n{font-family:'Sora',sans-serif;font-size:clamp(0.8rem,1.6vw,1.1rem);font-weight:800;color:var(--teal);letter-spacing:0;line-height:1.2;white-space:nowrap;padding-right:0.5rem;}
-.p-stat-label{font-family:'Inter',sans-serif;font-size:0.76rem;color:var(--body);line-height:1.4;}
-.p-stat-label strong{display:block;color:var(--ink);font-size:0.78rem;}
-.persona-cta-row{margin-top:1.25rem;}
+.p-stat-n{font-family:'Sora',sans-serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:800;color:var(--teal);letter-spacing:0;white-space:nowrap;}
+.p-stat-label{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--body);line-height:1.45;}
+.persona-aside h4{font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;color:var(--ink);margin-bottom:0.75rem;}
 .btn-persona-cta{display:inline-block;font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;padding:0.7rem 1.4rem;background:var(--teal);color:#fff;border-radius:var(--r-btn);transition:background 0.2s;}
-.btn-persona-cta:hover{background:var(--teal-deep)}
+.btn-persona-cta:hover{background:var(--teal-deep);}
 
 /* FINDINGS */
 .findings-section{background:#fff;padding:64px 0;}
-.findings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:0;}
+.findings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;}
 .finding-card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-card);padding:1.25rem;}
 .finding-n{font-family:'Sora',sans-serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:800;color:var(--teal);letter-spacing:0;margin-bottom:0.3rem;white-space:nowrap;}
 .finding-card h4{font-family:'Sora',sans-serif;font-size:0.83rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;}
@@ -163,26 +131,35 @@ section{padding:64px 0;}
 .how-section{background:var(--navy);padding:64px 0;}
 .how-section .section-title{color:#fff;}
 .how-section .section-sub{color:rgba(255,255,255,0.55);}
-.how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:0;}
+.how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2rem;}
 .how-step{padding:1.25rem;background:rgba(255,255,255,0.04);border:1px solid rgba(0,155,170,0.18);border-radius:var(--r-card);}
 .step-n{font-family:'Sora',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;color:var(--teal);margin-bottom:0.5rem;display:block;}
 .how-step h4{font-family:'Sora',sans-serif;font-size:0.87rem;font-weight:700;color:#fff;margin-bottom:0.4rem;}
 .how-step p{font-family:'Inter',sans-serif;font-size:0.76rem;color:rgba(255,255,255,0.5);line-height:1.55;}
 
-/* BOTTOM CTA */
-.bottom-cta{background:var(--teal-wash);border-top:1px solid var(--teal-border);padding:48px 0;text-align:center;}
-.bottom-cta h2{font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:800;color:var(--ink);margin-bottom:0.5rem;}
-.bottom-cta p{font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--muted);margin-bottom:1.5rem;}
-.btn-cta{display:inline-block;font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:700;padding:0.85rem 2rem;background:var(--amber);color:#fff;border-radius:var(--r-btn);box-shadow:var(--shadow-amber);transition:background 0.2s;}
-.btn-cta:hover{background:var(--amber-deep)}
-.btn-cta-ghost{display:inline-block;font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;padding:0.82rem 1.75rem;color:var(--teal);border-radius:var(--r-btn);border:1.5px solid var(--teal-border);background:#fff;margin-left:0.75rem;transition:all 0.2s;}
-.btn-cta-ghost:hover{border-color:var(--teal);background:var(--teal-pale)}
+/* CONTACT FORM */
+.form-card{background:#fff;border-radius:10px;padding:2rem;box-shadow:0 20px 60px rgba(0,0,0,0.12);border:1px solid var(--rule);}
+.form-card h3{font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;}
+.form-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.5;}
+.f-group{margin-bottom:0.85rem;}
+.f-group label{display:block;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;color:var(--ink);margin-bottom:0.3rem;}
+.f-group input,.f-group textarea{width:100%;padding:0.6rem 0.85rem;border:1px solid var(--rule);border-radius:var(--r-card);font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--ink);transition:border-color 0.2s;outline:none;}
+.f-group input:focus,.f-group textarea:focus{border-color:var(--teal);}
+.f-group textarea{height:80px;resize:vertical;}
+.f-optional{color:var(--muted);font-weight:400;}
+.btn-submit{width:100%;padding:0.75rem;background:var(--teal);color:#fff;font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;border:none;border-radius:var(--r-btn);cursor:pointer;transition:background 0.2s;}
+.btn-submit:hover{background:var(--teal-deep);}
+.form-micro{font-family:'Inter',sans-serif;font-size:0.72rem;color:var(--muted);text-align:center;margin-top:0.65rem;}
+.form-thanks{display:none;text-align:center;padding:1.5rem 0;}
+.form-thanks h4{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;}
+.form-thanks p{font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--muted);line-height:1.6;}
+.contact-grid{display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;}
 
 /* FOOTER */
 footer{background:var(--navy);padding:1.5rem 0;}
 .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;}
 .foot-inner span,.foot-inner a{font-family:'Inter',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);}
-.foot-inner a:hover{color:var(--teal)}
+.foot-inner a:hover{color:var(--teal);}
 
 /* RESPONSIVE */
 @media(max-width:900px){
@@ -191,7 +168,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
   .nav-inner{padding:0 1.25rem;height:68px;}
   .logo::after{display:none;}
   .hero{padding:48px 0 40px;}
-  .hero-inner{display:block!important;max-width:100%!important;}
   .covers-grid{grid-template-columns:1fr;}
   .persona-content.active{grid-template-columns:1fr;gap:1.5rem;}
   .persona-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;}
@@ -221,29 +197,29 @@ footer{background:var(--navy);padding:1.5rem 0;}
   <div class="nav-inner">
     <a href="../ict-services.html" class="logo">
       <div class="logo-mark"><svg width="52" height="52" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" stroke="#009BAA" stroke-width="1.8" fill="#009BAA" fill-opacity="0.08"/>
-          <circle cx="24" cy="24" r="6" stroke="#007280" stroke-width="1.6" fill="none"/>
-          <line x1="24" y1="18" x2="24" y2="3"    stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-          <line x1="29" y1="22" x2="42" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-          <line x1="29" y1="27" x2="42" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-          <line x1="24" y1="30" x2="24" y2="45"   stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-          <line x1="19" y1="27" x2="6"  y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-          <line x1="19" y1="22" x2="6"  y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-          <circle cx="24" cy="3"    r="2.2" fill="#009BAA"/>
-          <circle cx="42" cy="13.5" r="2.2" fill="#009BAA"/>
-          <circle cx="42" cy="34.5" r="2.2" fill="#009BAA"/>
-          <circle cx="24" cy="45"   r="2.2" fill="#009BAA"/>
-          <circle cx="6"  cy="34.5" r="2.2" fill="#009BAA"/>
-          <circle cx="6"  cy="13.5" r="2.2" fill="#009BAA"/>
-          <circle cx="24" cy="24"   r="3.2" fill="#009BAA"/>
-        </svg></div>
+  <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" stroke="#009BAA" stroke-width="1.8" fill="#009BAA" fill-opacity="0.08"/>
+  <circle cx="24" cy="24" r="6" stroke="#007280" stroke-width="1.6" fill="none"/>
+  <line x1="24" y1="18" x2="24" y2="3"    stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="29" y1="22" x2="42" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="29" y1="27" x2="42" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="24" y1="30" x2="24" y2="45"   stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="19" y1="27" x2="6"  y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <line x1="19" y1="22" x2="6"  y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+  <circle cx="24" cy="3"    r="2.2" fill="#009BAA"/>
+  <circle cx="42" cy="13.5" r="2.2" fill="#009BAA"/>
+  <circle cx="42" cy="34.5" r="2.2" fill="#009BAA"/>
+  <circle cx="24" cy="45"   r="2.2" fill="#009BAA"/>
+  <circle cx="6"  cy="34.5" r="2.2" fill="#009BAA"/>
+  <circle cx="6"  cy="13.5" r="2.2" fill="#009BAA"/>
+  <circle cx="24" cy="24"   r="3.2" fill="#009BAA"/>
+</svg></div>
       <div class="logo-text">
         <div class="logo-name">4<span>DS</span></div>
         <div class="logo-tagline">Enterprise standard. SME scale.</div>
       </div>
     </a>
     <ul class="nav-menu">
-      <li class="nav-dropdown"><a href="../ict-services.html#services" class="active-page">Services &#9662;</a>
+      <li class="nav-dropdown"><a href="../ict-services.html#services">Services &#9662;</a>
         <ul class="dropdown">
           <li><a href="m365-modern-workplace.html">Microsoft 365 &amp; Modern Workplace</a></li>
           <li><a href="identity-zero-trust.html">Identity &amp; Zero Trust</a></li>
@@ -251,18 +227,8 @@ footer{background:var(--navy);padding:1.5rem 0;}
           <li><a href="cybersecurity-ai-security.html">Cybersecurity &amp; AI Security</a></li>
           <li><a href="email-security-deliverability.html" class="current-page">Email Security &amp; Deliverability</a></li>
           <li><a href="network-wifi-infrastructure.html">Network, Wi-Fi &amp; Infrastructure</a></li>
-          <li><a href="backup-dr-continuity.html">Backup, DR &amp; Continuity</a></li>
+          <li><a href="backup-dr-continuity.html">Backup, DR &amp; Business Continuity</a></li>
           <li><a href="automation-it-governance.html">Automation &amp; IT Governance</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown"><a href="../ict-services.html#industries">Industries &#9662;</a>
-        <ul class="dropdown">
-          <li><a href="../ict-services.html#industries">Healthcare</a></li>
-          <li><a href="../ict-services.html#industries">Manufacturing</a></li>
-          <li><a href="../ict-services.html#industries">Finance &amp; Professional Services</a></li>
-          <li><a href="../ict-services.html#industries">Legal &amp; Professional</a></li>
-          <li><a href="../ict-services.html#industries">Education</a></li>
-          <li><a href="../ict-services.html#industries">Public Sector &amp; Non-Profit</a></li>
         </ul>
       </li>
       <li><a href="../ict-services.html#why">About</a></li>
@@ -275,25 +241,20 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
-
-<!-- MOBILE DRAWER -->
 <div class="drawer-overlay" id="drawerOverlay"></div>
 <div class="drawer" id="drawer">
   <div class="drawer-inner">
-    <span class="drawer-heading">Services</span>
-    <a href="m365-modern-workplace.html" class="drawer-sub-link">Microsoft 365 &amp; Modern Workplace</a>
-    <a href="identity-zero-trust.html" class="drawer-sub-link">Identity &amp; Zero Trust</a>
-    <a href="endpoint-device-management.html" class="drawer-sub-link">Endpoint &amp; Device Management</a>
-    <a href="cybersecurity-ai-security.html" class="drawer-sub-link">Cybersecurity &amp; AI Security</a>
-    <a href="email-security-deliverability.html" class="drawer-sub-link current">Email Security &amp; Deliverability</a>
-    <a href="network-wifi-infrastructure.html" class="drawer-sub-link">Network, Wi-Fi &amp; Infrastructure</a>
-    <a href="backup-dr-continuity.html" class="drawer-sub-link">Backup, DR &amp; Continuity</a>
-    <a href="automation-it-governance.html" class="drawer-sub-link">Automation &amp; IT Governance</a>
-    <div class="drawer-divider"></div>
-    <a href="../ict-services.html#industries" class="drawer-link">Industries</a>
-    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
-    <a href="../ict-services.html#approach"   class="drawer-link">Approach</a>
-    <a href="../ict-services.html#testimonials" class="drawer-link">Clients</a>
+    <a href="../ict-services.html#services" class="drawer-link">All Services</a>
+    <a href="m365-modern-workplace.html"    class="drawer-sub-link">M365 &amp; Modern Workplace</a>
+    <a href="identity-zero-trust.html"      class="drawer-sub-link">Identity &amp; Zero Trust</a>
+    <a href="endpoint-device-management.html" class="drawer-sub-link">Endpoint &amp; Device Mgmt</a>
+    <a href="cybersecurity-ai-security.html"  class="drawer-sub-link">Cybersecurity &amp; AI</a>
+    <a href="email-security-deliverability.html" class="drawer-sub-link" style="color:var(--teal);font-weight:700;">Email Security</a>
+    <a href="network-wifi-infrastructure.html"   class="drawer-sub-link">Network &amp; Wi-Fi</a>
+    <a href="backup-dr-continuity.html"          class="drawer-sub-link">Backup &amp; DR</a>
+    <a href="automation-it-governance.html"      class="drawer-sub-link">Automation &amp; Governance</a>
+    <a href="../ict-services.html#why"      class="drawer-link">About Us</a>
+    <a href="../ict-services.html#approach" class="drawer-link">Our Approach</a>
     <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Get Free Health Check</a>
   </div>
 </div>
@@ -301,23 +262,22 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="hero-inner" style="display:block;max-width:680px;">
-      <div class="hero-left">
-        <div class="buyer-bar">
-          <span class="buyer-label">I am:</span>
-          <button class="buyer-btn active" data-buyer="generic" onclick="setPersona('generic')">Overview</button>
-<button class="buyer-btn" data-buyer="ops" onclick="setPersona('ops')">IT Lead</button>
-<button class="buyer-btn" data-buyer="ceo" onclick="setPersona('ceo')">CEO / MD</button>
-<button class="buyer-btn" data-buyer="tender" onclick="setPersona('tender')">Procurement</button>
-        </div>
-        <span class="hero-eyebrow">Core Expertise - Email Security</span>
-        <h1>Your email domain is probably<br><em>being spoofed right now.</em></h1>
-        <p class="hero-sub" id="heroSub">DMARC, DKIM, and SPF are the three DNS records that determine whether your email is trustworthy. We configure and enforce all three - and prevent spoofing of your domain.</p>
-        <div class="trust-pills">
-          <span class="trust-pill">DMARC to p=reject Enforcement</span><span class="trust-pill">Proofpoint &amp; Defender for O365</span><span class="trust-pill">Zero Spoofing Policy</span>
-        </div>
+    <div class="hero-inner">
+      <div class="buyer-bar">
+        <span class="buyer-label">I am:</span>
+        <button class="buyer-btn active" data-buyer="generic" onclick="setPersona('generic')">Overview</button>
+        <button class="buyer-btn" data-buyer="ops" onclick="setPersona('ops')">IT Lead</button>
+        <button class="buyer-btn" data-buyer="ceo" onclick="setPersona('ceo')">CEO / MD</button>
+        <button class="buyer-btn" data-buyer="tender" onclick="setPersona('tender')">Procurement</button>
       </div>
-
+      <span class="hero-eyebrow">Core Expertise — Email Security</span>
+      <h1>Your email domain is probably<br><em>being spoofed right now.</em></h1>
+      <p class="hero-sub" id="heroSub">DMARC, DKIM, and SPF are the three DNS records that determine whether your email is trustworthy. We configure and enforce all three — and prevent spoofing of your domain.</p>
+      <div class="trust-pills">
+        <span class="trust-pill">DMARC to p=reject Enforcement</span>
+        <span class="trust-pill">Proofpoint &amp; Defender for O365</span>
+        <span class="trust-pill">Zero Spoofing Policy</span>
+      </div>
     </div>
   </div>
 </section>
@@ -330,11 +290,11 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <p class="section-sub">Delivered by senior engineers on a fixed monthly fee. No billable hours. No scope surprises.</p>
     <div class="covers-grid">
       <div class="cover-item"><div class="cover-ico">🔏</div><div><h4>DMARC Implementation &amp; Enforcement</h4><p>Policy progression from p=none through p=quarantine to p=reject enforcement. Ongoing DMARC aggregate report analysis and remediation of legitimate sending sources.</p></div></div>
-<div class="cover-item"><div class="cover-ico">✅</div><div><h4>SPF &amp; DKIM Alignment</h4><p>SPF audit and rebuild for all authorised sending sources. DKIM key rotation, selector configuration, and alignment verification across Exchange Online and third-party senders.</p></div></div>
-<div class="cover-item"><div class="cover-ico">🛡️</div><div><h4>Email Gateway Filtering</h4><p>Proofpoint Essentials or Defender for Office 365 Plan 2 deployment. Anti-phishing, safe links, safe attachments, and impersonation protection configured.</p></div></div>
-<div class="cover-item"><div class="cover-ico">📬</div><div><h4>Deliverability Remediation</h4><p>Investigation of deliverability issues including IP reputation, blacklist removal, bounce rate reduction, and bulk mail compliance.</p></div></div>
-<div class="cover-item"><div class="cover-ico">🔄</div><div><h4>Third-Party Sender Management</h4><p>Audit of all services sending on your domain - CRM, marketing, ticketing - and correct SPF and DKIM alignment for each.</p></div></div>
-<div class="cover-item"><div class="cover-ico">📊</div><div><h4>Ongoing DMARC Monitoring</h4><p>Monthly DMARC aggregate report review with alerts for new unauthorised sending sources. Forensic report configuration.</p></div></div>
+      <div class="cover-item"><div class="cover-ico">✅</div><div><h4>SPF &amp; DKIM Alignment</h4><p>SPF audit and rebuild for all authorised sending sources. DKIM key rotation, selector configuration, and alignment verification across Exchange Online and third-party senders.</p></div></div>
+      <div class="cover-item"><div class="cover-ico">🛡️</div><div><h4>Email Gateway Filtering</h4><p>Proofpoint Essentials or Defender for Office 365 Plan 2 deployment. Anti-phishing, safe links, safe attachments, and impersonation protection configured.</p></div></div>
+      <div class="cover-item"><div class="cover-ico">📬</div><div><h4>Deliverability Remediation</h4><p>Investigation of deliverability issues including IP reputation, blacklist removal, bounce rate reduction, and bulk mail compliance.</p></div></div>
+      <div class="cover-item"><div class="cover-ico">🔄</div><div><h4>Third-Party Sender Management</h4><p>Audit of all services sending on your domain — CRM, marketing, ticketing — and correct SPF and DKIM alignment for each.</p></div></div>
+      <div class="cover-item"><div class="cover-ico">📊</div><div><h4>Ongoing DMARC Monitoring</h4><p>Monthly DMARC aggregate report review with alerts for new unauthorised sending sources. Forensic report configuration.</p></div></div>
     </div>
   </div>
 </section>
@@ -345,24 +305,18 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <span class="eyebrow">Platform overview</span>
   </div>
   <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;">
-    <div style="border-radius:10px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 8px 40px rgba(11,28,46,0.10);">
-<style>
+    <style>
 :root{
-  --teal:#009BAA;--teal-deep:#007280;--teal-pale:#EEF9FB;--teal-border:#A8DCE3;
-  --navy:#0B1C2E;--navy-mid:#122536;--navy-light:#1E3448;
-  --amber:#E8920A;--amber-deep:#C97A06;--amber-pale:#FEF3E2;
-  --ink:#141820;--body:#2C3340;--muted:#6B7587;--rule:#DEE4EA;--surface:#F3F5F7;
   --red:#C53030;--red-pale:#FFF5F5;--red-border:#FBBABA;
   --green:#276749;--green-pale:#F0FFF4;--green-border:#9AE6B4;
-  --r:8px;--r-sm:5px;--r-pill:100px;
-  --shadow-amber:0 6px 24px rgba(232,146,10,0.35);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-
-.ig-email-wrap{width:100%;}
+  --r:8px;--r-sm:5px;
+  --amber-pale:#FEF3E2;
+  --muted:#6B7587;--rule:#DEE4EA;--surface:#F3F5F7;
+  --navy-mid:#122536;
+}.emig-card{width:100%;border-radius:10px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 8px 40px rgba(11,28,46,0.12);}
 
 /* ── HEADER ── */
-.hdr{background:var(--navy);padding:26px 38px 22px;position:relative;overflow:hidden;}
+.hdr{background:var(--navy);padding:28px 40px 24px;position:relative;overflow:hidden;}
 .hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 78% 35%,rgba(0,155,170,0.16) 0%,transparent 55%);pointer-events:none;}
 .hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
 .hdr-eyebrow{font-family:'Inter',sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
@@ -374,7 +328,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
 .hdr-stat-l{font-family:'Inter',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.36);margin-top:2px;max-width:80px;line-height:1.35;}
 
 /* ── BODY ── */
-.
+.emig-body{padding:22px 28px;background:var(--surface);}
 .slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:7px;}
 
 /* ── THREE DNS RECORD CARDS ── */
@@ -384,7 +338,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
 .dns-card-hdr img{width:22px;height:22px;object-fit:contain;flex-shrink:0;}
 .dns-card-tag{font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:800;letter-spacing:-0.02em;}
 .dns-card-name{font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:600;opacity:0.65;margin-top:1px;}
-.dns-card-
+.dns-card-body{background:white;padding:10px 14px;}
 .dns-card-desc{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--body);line-height:1.5;margin-bottom:8px;}
 .dns-items{display:flex;flex-direction:column;gap:4px;}
 .dns-item{display:flex;align-items:flex-start;gap:6px;font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);line-height:1.4;}
@@ -469,7 +423,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
 
 /* ── RESPONSIVE ── */
 @media(max-width:760px){
-  .
   .hdr{padding:18px 16px 16px;}
   .footer-strip{padding:12px 16px;}
   .dns-row{grid-template-columns:1fr;}
@@ -484,13 +437,192 @@ footer{background:var(--navy);padding:1.5rem 0;}
   .stats-row,.process-steps{grid-template-columns:1fr;}
   .hdr-inner{flex-direction:column;align-items:flex-start;}
 }
-</style>
 
+    </style>
+    <div class="emig-card">
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-inner">
+    <div>
+      <span class="hdr-eyebrow">Email Security &amp; Deliverability</span>
+      <div class="hdr-title">Your domain is probably<br><em>being spoofed right now.</em></div>
+      <div class="hdr-sub">DMARC, DKIM, and SPF are the three DNS records that determine whether your email is trustworthy. We configure, enforce, and monitor all three.</div>
+    </div>
+    <div class="hdr-stats">
+      <div><div class="hdr-stat-n">7/10</div><div class="hdr-stat-l">SME domains spoofable due to absent DMARC</div></div>
+      <div><div class="hdr-stat-n">94%</div><div class="hdr-stat-l">Of phishing attacks delivered by email (DBIR)</div></div>
+      <div><div class="hdr-stat-n">2 days</div><div class="hdr-stat-l">Typical time to reach p=quarantine from zero</div></div>
     </div>
   </div>
+</div>
+
+<!-- BODY -->
+<div class="emig-body">
+
+  <!-- THREE DNS RECORDS -->
+  <span class="slabel">The three DNS records that authenticate your email</span>
+  <div class="dns-row">
+
+    <div class="dns-card spf">
+      <div class="dns-card-hdr">
+        <img src="https://az-icons.com/export/icons/951234a0ba8dbe62234b12afb5c7a488.svg" alt="SPF">
+        <div><div class="dns-card-tag">SPF</div><div class="dns-card-name">Sender Policy Framework</div></div>
+      </div>
+      <div class="dns-card-body">
+        <div class="dns-card-desc">Lists every server and service authorised to send email from your domain. Receiving servers check against this list.</div>
+        <div class="dns-items">
+          <div class="dns-item">Max 10 DNS lookups — exceeded in 6/10 environments</div>
+          <div class="dns-item">Must include all third-party senders (CRM, marketing, ticketing)</div>
+          <div class="dns-item">Fails silently without DMARC enforcement</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dns-card dkim">
+      <div class="dns-card-hdr">
+        <img src="https://az-icons.com/export/icons/5c9e5285f43633acf1d817f038a3fd74.svg" alt="DKIM">
+        <div><div class="dns-card-tag">DKIM</div><div class="dns-card-name">DomainKeys Identified Mail</div></div>
+      </div>
+      <div class="dns-card-body">
+        <div class="dns-card-desc">Cryptographic signature added to every outbound email. Proves the message was authorised and not tampered with in transit.</div>
+        <div class="dns-items">
+          <div class="dns-item">Separate key pair required per sending domain/service</div>
+          <div class="dns-item">Annual key rotation recommended (2048-bit minimum)</div>
+          <div class="dns-item">Must be configured for Exchange Online and all third-party senders</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dns-card dmarc">
+      <div class="dns-card-hdr">
+        <img src="https://az-icons.com/export/icons/232997b804dcb2f462fff392c28d31ca.svg" alt="DMARC">
+        <div><div class="dns-card-tag">DMARC</div><div class="dns-card-name">Domain-based Message Authentication</div></div>
+      </div>
+      <div class="dns-card-body">
+        <div class="dns-card-desc">Ties SPF and DKIM together. Tells receiving servers what to do with mail that fails authentication — and reports back to you.</div>
+        <div class="dns-items">
+          <div class="dns-item">p=none: monitor only — domain still spoofable</div>
+          <div class="dns-item">p=quarantine: failing mail sent to junk</div>
+          <div class="dns-item">p=reject: failing mail blocked entirely — full protection</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DMARC JOURNEY -->
+  <span class="slabel">The DMARC enforcement journey</span>
+  <div class="journey">
+    <div class="journey-title">
+      <img src="https://az-icons.com/export/icons/232997b804dcb2f462fff392c28d31ca.svg" alt="DMARC">
+      Policy progression from zero to full enforcement — typically 2–4 weeks
+    </div>
+    <div class="journey-steps">
+      <div class="jstep">
+        <div class="jstep-dot none">START</div>
+        <div class="jstep-label">No DMARC</div>
+        <div class="jstep-desc">Domain fully spoofable. No visibility into who is sending.</div>
+        <span class="jstep-badge badge-red">7/10 environments</span>
+      </div>
+      <div class="jstep">
+        <div class="jstep-dot q">p=none</div>
+        <div class="jstep-label">Monitor Mode</div>
+        <div class="jstep-desc">Reports enabled. All legitimate senders identified. No blocking yet.</div>
+        <span class="jstep-badge badge-amber">Audit phase</span>
+      </div>
+      <div class="jstep">
+        <div class="jstep-dot reject">p=quar.</div>
+        <div class="jstep-label">Quarantine</div>
+        <div class="jstep-desc">Failing mail routed to junk. Spoofed emails lose inbox delivery.</div>
+        <span class="jstep-badge badge-teal">Partial protection</span>
+      </div>
+      <div class="jstep">
+        <div class="jstep-dot monitor">p=reject</div>
+        <div class="jstep-label">Full Enforcement</div>
+        <div class="jstep-desc">Spoofed emails blocked entirely. Zero delivery from unauthorised senders.</div>
+        <span class="jstep-badge badge-green">Full protection ✓</span>
+      </div>
+    </div>
+    <div class="journey-timeline">
+      <div class="timeline-note">Day 1 → SPF &amp; DKIM corrected, DMARC p=none + reporting configured</div>
+      <div class="timeline-note"><strong>Day 3–7 →</strong> Aggregate report analysis, all senders verified</div>
+      <div class="timeline-note"><strong>Week 2 →</strong> p=quarantine</div>
+      <div class="timeline-note"><strong>Week 3–4 →</strong> p=reject enforced</div>
+    </div>
+  </div>
+
+  <!-- THREAT ROW -->
+  <div class="threat-row">
+    <div class="threat-label">&#9888; What an unauthenticated domain enables</div>
+    <div class="threat-chips">
+      <span class="tc">Domain spoofing</span>
+      <span class="tc">Invoice fraud (BEC)</span>
+      <span class="tc">Credential phishing</span>
+      <span class="tc">Supplier impersonation</span>
+      <span class="tc">CEO fraud</span>
+      <span class="tc">Client deception</span>
+    </div>
+  </div>
+
+  <!-- GATEWAY PROTECTION -->
+  <span class="slabel">Email gateway — beyond default filtering</span>
+  <div class="protect-grid">
+
+    <div class="protect-card">
+      <div class="protect-card-hdr">
+        <img src="https://az-icons.com/export/icons/a5063b5911ebfde641a1cac4f68bd47e.svg" alt="Defender O365">
+        <div>
+          <div class="protect-card-title">Microsoft Defender for Office 365</div>
+          <div class="protect-card-sub">Plan 2 — advanced threat protection across email &amp; collaboration</div>
+        </div>
+      </div>
+      <div class="protect-items">
+        <div class="pi"><span class="pi-dot" style="background:var(--teal);"></span>Safe links — real-time URL detonation on click</div>
+        <div class="pi"><span class="pi-dot" style="background:var(--teal);"></span>Safe attachments — sandbox detonation before delivery</div>
+        <div class="pi"><span class="pi-dot" style="background:var(--teal);"></span>Anti-phishing &amp; impersonation protection</div>
+        <div class="pi"><span class="pi-dot" style="background:var(--teal);"></span>Attack Simulator for phishing awareness training</div>
+        <div class="pi"><span class="pi-dot" style="background:var(--teal);"></span>Threat Explorer &amp; incident investigation</div>
+      </div>
+    </div>
+
+    <div class="protect-card">
+      <div class="protect-card-hdr">
+        <img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="Deliverability">
+        <div>
+          <div class="protect-card-title">Deliverability &amp; Reputation Management</div>
+          <div class="protect-card-sub">Ensuring legitimate email reaches the inbox every time</div>
+        </div>
+      </div>
+      <div class="protect-items">
+        <div class="pi"><span class="pi-dot" style="background:var(--amber);"></span>IP &amp; domain reputation monitoring and repair</div>
+        <div class="pi"><span class="pi-dot" style="background:var(--amber);"></span>Blacklist identification and removal process</div>
+        <div class="pi"><span class="pi-dot" style="background:var(--amber);"></span>Bounce rate analysis and bulk mail compliance</div>
+        <div class="pi"><span class="pi-dot" style="background:var(--amber);"></span>Third-party sender SPF/DKIM audit (CRM, marketing)</div>
+        <div class="pi"><span class="pi-dot" style="background:var(--amber);"></span>Monthly DMARC aggregate report review</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STATS ROW -->
+  <div class="stats-row">
+    <div class="sc r"><div class="sc-n">7/10</div><div class="sc-l">Domains spoofable — DMARC missing or at p=none</div></div>
+    <div class="sc a"><div class="sc-n">6/10</div><div class="sc-l">SPF records broken or over the 10-lookup limit</div></div>
+    <div class="sc r"><div class="sc-n">8/10</div><div class="sc-l">Environments with no gateway beyond Exchange defaults</div></div>
+    <div class="sc g"><div class="sc-n">€0</div><div class="sc-l">Additional licence cost — DMARC is a DNS change, not a new product</div></div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer-strip" style="justify-content:center;">
+  <div class="footer-text" style="text-align:center;"><strong>Share your domain and we will check your DMARC, SPF, and DKIM status immediately.</strong> Before the first call, at no charge.</div>
+</div>
+
+</div>
+  </div>
 </section>
-
-
 <!-- PERSONA SECTION -->
 <div class="persona-section">
   <div class="container">
@@ -499,87 +631,86 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <p class="section-sub">Select your role to see how this service maps to your specific situation.</p>
     <div class="persona-tabs">
       <button class="persona-tab active" data-buyer="generic" onclick="setPersona('generic')">Overview</button>
-<button class="persona-tab" data-buyer="ops" onclick="setPersona('ops')">IT Lead</button>
-<button class="persona-tab" data-buyer="ceo" onclick="setPersona('ceo')">CEO / MD</button>
-<button class="persona-tab" data-buyer="tender" onclick="setPersona('tender')">Procurement</button>
+      <button class="persona-tab" data-buyer="ops" onclick="setPersona('ops')">IT Lead</button>
+      <button class="persona-tab" data-buyer="ceo" onclick="setPersona('ceo')">CEO / MD</button>
+      <button class="persona-tab" data-buyer="tender" onclick="setPersona('tender')">Procurement</button>
     </div>
-    
-      <div class="persona-content active" data-buyer="generic">
-        <div>
-          <h3 class="persona-headline">Email authentication is invisible until something goes wrong</h3>
-          <p class="persona-body">Your email looks fine from your side. But recipients may be receiving it in junk. Or attackers may be sending invoices, payment instructions, and credential requests from your domain - and your clients have no technical way to tell the difference. DMARC enforcement at p=reject means only authorised senders can successfully deliver email from your domain.</p>
-          <div class="persona-pains"><div class="pain-item">DMARC is not at enforcement level - your domain can be spoofed by anyone</div>
-<div class="pain-item">No visibility into whether legitimate emails are landing in recipients' inboxes</div>
-<div class="pain-item">Third-party services sending from your domain are not properly authenticated</div>
-<div class="pain-item">No email gateway beyond Exchange Online default spam filtering</div></div>
-          <div class="persona-cta-row">
-            <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
-          </div>
+    <div class="persona-content active" data-buyer="generic">
+      <div>
+        <h3 class="persona-headline">Email authentication is invisible until something goes wrong</h3>
+        <p class="persona-body">Your email looks fine from your side. But recipients may be receiving it in junk. Or attackers may be sending invoices, payment instructions, and credential requests from your domain — and your clients have no technical way to tell the difference. DMARC enforcement at p=reject means only authorised senders can successfully deliver email from your domain.</p>
+        <div class="persona-pains">
+          <div class="pain-item">DMARC is not at enforcement level — your domain can be spoofed by anyone</div>
+          <div class="pain-item">No visibility into whether legitimate emails are landing in recipients' inboxes</div>
+          <div class="pain-item">Third-party services sending from your domain are not properly authenticated</div>
+          <div class="pain-item">No email gateway beyond Exchange Online default spam filtering</div>
         </div>
-        <div class="persona-aside">
-          <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>SME environments with DMARC missing or at p=none in a first review</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">94%</div><div class="p-stat-label"><strong>Of phishing attacks are delivered by email (Verizon DBIR)</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">2 days</div><div class="p-stat-label"><strong>Typical time to reach p=quarantine DMARC enforcement from a standing start</strong></div></div>
-        </div>
+        <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
       </div>
-      <div class="persona-content" data-buyer="ops">
-        <div>
-          <h3 class="persona-headline">You have no visibility into what is being sent from your domain right now</h3>
-          <p class="persona-body">DMARC at p=none generates aggregate reports showing every server and service that has sent email claiming to be from your domain. Without this, you are operating blind. We configure DMARC reporting first, analyse the aggregate data to identify every legitimate sending source, correct the alignment for each, and then progress to enforcement. No legitimate mail is disrupted. Spoofing is blocked.</p>
-          <div class="persona-pains"><div class="pain-item">DMARC reporting not configured - no visibility into unauthorised use of your domain</div>
-<div class="pain-item">SPF record has never been audited - may have too many lookups or missing includes for third-party tools</div>
-<div class="pain-item">DKIM is not configured for every sending source - authentication failures on legitimate mail</div>
-<div class="pain-item">No process for reviewing email authentication when a new third-party tool is onboarded</div></div>
-          <div class="persona-cta-row">
-            <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
-          </div>
-        </div>
-        <div class="persona-aside">
-          <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>Environments with DMARC at p=none or missing entirely</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">6/10</div><div class="p-stat-label"><strong>SPF records with lookup limit exceeded or deprecated mechanisms</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">Monthly</div><div class="p-stat-label"><strong>DMARC aggregate report review and anomaly alerting under 4DS managed service</strong></div></div>
-        </div>
+      <div class="persona-aside">
+        <h4>By the numbers</h4>
+        <div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>SME environments with DMARC missing or at p=none in a first review</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">94%</div><div class="p-stat-label"><strong>Of phishing attacks are delivered by email (Verizon DBIR)</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">2 days</div><div class="p-stat-label"><strong>Typical time to reach p=quarantine DMARC enforcement from a standing start</strong></div></div>
       </div>
-      <div class="persona-content" data-buyer="ceo">
-        <div>
-          <h3 class="persona-headline">Business email compromise starts with an unauthenticated domain</h3>
-          <p class="persona-body">The most common fraud scenario we see: a supplier's email domain is spoofed, an invoice is sent to your accounts team from what appears to be a legitimate address, and payment is made. The supplier never sent it. DMARC enforcement on both your domain and your key suppliers' domains is the primary technical control against this attack pattern.</p>
-          <div class="persona-pains"><div class="pain-item">A spoofed email from your domain could be used to defraud your clients or suppliers</div>
-<div class="pain-item">You have no way to know if someone is impersonating your business by email today</div>
-<div class="pain-item">Your accounts team receives payment-related emails - are the sender domains authenticated?</div>
-<div class="pain-item">Business email compromise insurance claims are frequently rejected when basic authentication was not in place</div></div>
-          <div class="persona-cta-row">
-            <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
-          </div>
+    </div>
+    <div class="persona-content" data-buyer="ops">
+      <div>
+        <h3 class="persona-headline">You need visibility into what is being sent from your domain</h3>
+        <p class="persona-body">Security management means more than having a firewall. DMARC aggregate reporting gives you a daily view of every mail server sending on behalf of your domain — including ones you didn't authorise. SPF and DKIM alignment tells you whether your legitimate senders are passing authentication. Without this visibility, you are flying blind.</p>
+        <div class="persona-pains">
+          <div class="pain-item">DMARC at p=none — you can see spoofing attempts but cannot stop them</div>
+          <div class="pain-item">SPF record has never been audited — may have too many lookups or missing includes</div>
+          <div class="pain-item">DKIM is not configured for every sending source — authentication failures on legitimate mail</div>
+          <div class="pain-item">No process for reviewing email authentication when a new third-party tool is onboarded</div>
         </div>
-        <div class="persona-aside">
-          <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">BEC</div><div class="p-stat-label"><strong>Business email compromise is the highest-value cybercrime category per the FBI IC3 report</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>Domains we review are spoofable due to absent or unenforced DMARC</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">€0</div><div class="p-stat-label"><strong>Additional licence cost - DMARC configuration is a DNS and gateway change, not a new product</strong></div></div>
-        </div>
+        <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
       </div>
-      <div class="persona-content" data-buyer="tender">
-        <div>
-          <h3 class="persona-headline">DMARC enforcement is a mandatory baseline control in NIS2 and public sector ICT frameworks</h3>
-          <p class="persona-body">DMARC at p=reject or p=quarantine is specified in NIS2 technical implementation guidance and in most public sector email security requirements as a mandatory anti-spoofing control. Beyond compliance, a domain that can be spoofed represents a reputational and liability risk that procurement assessors are increasingly aware of and will flag in a security review.</p>
-          <div class="persona-pains"><div class="pain-item">DMARC not at enforcement level - cannot certify anti-spoofing controls in a submission</div>
-<div class="pain-item">No documented email authentication policy or third-party sender register for audit purposes</div>
-<div class="pain-item">Defender for O365 or equivalent gateway not deployed - email security posture below typical requirements</div>
-<div class="pain-item">No evidence of periodic authentication audit or DMARC monitoring process</div></div>
-          <div class="persona-cta-row">
-            <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
-          </div>
-        </div>
-        <div class="persona-aside">
-          <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">NIS2</div><div class="p-stat-label"><strong>DMARC enforcement referenced in NIS2 technical implementation guidance</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Practice certification covering email security controls available for submissions</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">48 hrs</div><div class="p-stat-label"><strong>Typical turnaround for email authentication evidence pack production</strong></div></div>
-        </div>
+      <div class="persona-aside">
+        <h4>By the numbers</h4>
+        <div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>Environments with DMARC at p=none or missing entirely</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">6/10</div><div class="p-stat-label"><strong>SPF records with lookup limit exceeded or deprecated mechanisms</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">Monthly</div><div class="p-stat-label"><strong>DMARC aggregate report review and anomaly alerting under 4DS managed service</strong></div></div>
       </div>
+    </div>
+    <div class="persona-content" data-buyer="ceo">
+      <div>
+        <h3 class="persona-headline">Business email compromise starts with an unauthenticated domain</h3>
+        <p class="persona-body">The most common fraud scenario we see: a supplier's email domain is spoofed, an invoice is sent to your accounts team from what appears to be a legitimate address, and payment is made. The supplier never sent it. DMARC enforcement on both your domain and your key suppliers' domains is the primary technical control against this attack pattern.</p>
+        <div class="persona-pains">
+          <div class="pain-item">A spoofed email from your domain could be used to defraud your clients or suppliers</div>
+          <div class="pain-item">You have no way to know if someone is impersonating your business by email today</div>
+          <div class="pain-item">Your accounts team receives payment-related emails — are the sender domains authenticated?</div>
+          <div class="pain-item">Business email compromise insurance claims are frequently rejected when basic authentication was not in place</div>
+        </div>
+        <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
+      </div>
+      <div class="persona-aside">
+        <h4>By the numbers</h4>
+        <div class="persona-stat"><div class="p-stat-n">BEC</div><div class="p-stat-label"><strong>Business email compromise is the highest-value cybercrime category per the FBI IC3 report</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>Domains we review are spoofable due to absent or unenforced DMARC</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">€0</div><div class="p-stat-label"><strong>Additional licence cost — DMARC configuration is a DNS and gateway change, not a new product</strong></div></div>
+      </div>
+    </div>
+    <div class="persona-content" data-buyer="tender">
+      <div>
+        <h3 class="persona-headline">DMARC enforcement is a mandatory baseline control in NIS2 and public sector ICT frameworks</h3>
+        <p class="persona-body">DMARC at p=reject or p=quarantine is specified in NIS2 technical implementation guidance and in most public sector email security requirements as a mandatory anti-spoofing control. Beyond compliance, a domain that can be spoofed represents a reputational and liability risk that procurement assessors are increasingly aware of and will flag in a security review.</p>
+        <div class="persona-pains">
+          <div class="pain-item">DMARC not at enforcement level — cannot certify anti-spoofing controls in a submission</div>
+          <div class="pain-item">No documented email authentication policy or third-party sender register for audit purposes</div>
+          <div class="pain-item">Defender for O365 or equivalent gateway not deployed — email security posture below typical requirements</div>
+          <div class="pain-item">No evidence of periodic authentication audit or DMARC monitoring process</div>
+        </div>
+        <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
+      </div>
+      <div class="persona-aside">
+        <h4>By the numbers</h4>
+        <div class="persona-stat"><div class="p-stat-n">NIS2</div><div class="p-stat-label"><strong>DMARC enforcement referenced in NIS2 technical implementation guidance</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Practice certification covering email security controls available for submissions</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">48 hrs</div><div class="p-stat-label"><strong>Typical turnaround for email authentication evidence pack production</strong></div></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -591,8 +722,8 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <p class="section-sub">These are not edge cases. They are the standard state of an SME environment without an independent review.</p>
     <div class="findings-grid">
       <div class="finding-card"><div class="finding-n">7/10</div><h4>DMARC at p=none or missing</h4><p>Domain spoofable by anyone. p=none monitors but does not block. Most organisations have been at this stage for years with no progression.</p></div>
-<div class="finding-card"><div class="finding-n">6/10</div><h4>SPF record broken or over limit</h4><p>Records exceeding the 10-lookup DNS limit, deprecated PTR mechanisms, or missing includes for third-party senders causing legitimate mail to fail.</p></div>
-<div class="finding-card"><div class="finding-n">8/10</div><h4>No email gateway beyond defaults</h4><p>Exchange Online default filtering is insufficient for targeted phishing and business email compromise. Defender for O365 Plan 2 or Proofpoint required.</p></div>
+      <div class="finding-card"><div class="finding-n">6/10</div><h4>SPF record broken or over limit</h4><p>Records exceeding the 10-lookup DNS limit, deprecated PTR mechanisms, or missing includes for third-party senders causing legitimate mail to fail.</p></div>
+      <div class="finding-card"><div class="finding-n">8/10</div><h4>No email gateway beyond defaults</h4><p>Exchange Online default filtering is insufficient for targeted phishing and business email compromise. Defender for O365 Plan 2 or Proofpoint required.</p></div>
     </div>
   </div>
 </section>
@@ -605,18 +736,17 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <p class="section-sub">Four stages. No handovers to junior staff mid-project. No scope surprises.</p>
     <div class="how-steps">
       <div class="how-step"><span class="step-n">STEP 01</span><h4>Authentication Audit</h4><p>DNS record review for SPF, DKIM, and DMARC. Deliverability test across major inbox providers. Third-party sender inventory.</p></div>
-<div class="how-step"><span class="step-n">STEP 02</span><h4>Record Correction</h4><p>SPF rebuilt for all authorised sources. DKIM keys generated and published. DMARC at p=none with RUA and RUF reporting configured.</p></div>
-<div class="how-step"><span class="step-n">STEP 03</span><h4>DMARC Progression</h4><p>Aggregate report analysis to identify all legitimate sending sources. Systematic progression to p=quarantine then p=reject over 2-4 weeks.</p></div>
-<div class="how-step"><span class="step-n">STEP 04</span><h4>Ongoing Monitoring</h4><p>Monthly DMARC report review. Alerts for new unauthorised senders. Annual deliverability audit and DKIM key rotation.</p></div>
+      <div class="how-step"><span class="step-n">STEP 02</span><h4>Record Correction</h4><p>SPF rebuilt for all authorised sources. DKIM keys generated and published. DMARC at p=none with RUA and RUF reporting configured.</p></div>
+      <div class="how-step"><span class="step-n">STEP 03</span><h4>DMARC Progression</h4><p>Aggregate report analysis to identify all legitimate sending sources. Systematic progression to p=quarantine then p=reject over 2-4 weeks.</p></div>
+      <div class="how-step"><span class="step-n">STEP 04</span><h4>Ongoing Monitoring</h4><p>Monthly DMARC report review. Alerts for new unauthorised senders. Annual deliverability audit and DKIM key rotation.</p></div>
     </div>
   </div>
 </section>
 
-
 <!-- CONTACT FORM -->
 <section style="padding:72px 0;background:var(--surface);" id="contact-section">
   <div class="container">
-    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;">
+    <div class="contact-grid">
       <div>
         <span class="eyebrow">Get in touch</span>
         <h2 class="section-title">Get in touch</h2>
@@ -628,7 +758,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
         </ul>
       </div>
       <div class="form-card" id="enquiry">
-        <h3>Speak to a senior engineer</h3>
+        <h3>Get in touch</h3>
         <p class="form-sub" id="enquiryNote">Tell us your domain name and we can run an immediate DMARC and SPF check before the call.</p>
         <div id="enquiryForm">
           <input type="hidden" id="formBuyer" value="generic">
@@ -658,7 +788,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
       <span>
         <a href="../ict-services.html">Home</a> &nbsp;&middot;&nbsp;
         <a href="../ict-services.html#services">All Services</a> &nbsp;&middot;&nbsp;
-        <a href="../ict-services.html#contact">Contact</a>
+        <a href="#enquiry" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
       </span>
     </div>
   </div>
@@ -666,7 +796,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
 
 <script>
 window.buyerSubs = {
-  generic: "DMARC, DKIM, and SPF are the three DNS records that determine whether your email is trustworthy. We configure and enforce all three - and prevent spoofing of your domain.",
+  generic: "DMARC, DKIM, and SPF are the three DNS records that determine whether your email is trustworthy. We configure and enforce all three — and prevent spoofing of your domain.",
   ops: "You have no visibility into whether your email is landing in spam or being spoofed. We configure DMARC reporting so you can see every message sent using your domain.",
   ceo: "Without DMARC enforcement, anyone can send email pretending to be from your business. We found this in 7 out of 10 environments we reviewed last year.",
   tender: "DMARC at enforcement level is a mandatory technical control in NIS2 guidance and most public sector ICT security frameworks. We configure and document it to evidence standard.",
@@ -678,30 +808,24 @@ window.enquiryNotes = {
   tender: "Tell us your domain and the framework you are targeting. We will confirm current authentication status.",
 };
 
-// Persona switching
-function setPersona(type, scrollTo) {
+function setPersona(type) {
   document.querySelectorAll('.buyer-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.buyer===type); });
   document.querySelectorAll('.persona-tab').forEach(function(b){ b.classList.toggle('active', b.dataset.buyer===type); });
   document.querySelectorAll('.persona-content').forEach(function(b){ b.classList.toggle('active', b.dataset.buyer===type); });
   var heroSub = document.getElementById('heroSub');
   if(heroSub && window.buyerSubs && window.buyerSubs[type]){ heroSub.textContent = window.buyerSubs[type]; }
-  // Update hidden form field
   var buyerField = document.getElementById('formBuyer');
   if(buyerField) buyerField.value = type;
-  // Update enquiry label
   var enquiryNote = document.getElementById('enquiryNote');
   if(enquiryNote && window.enquiryNotes && window.enquiryNotes[type]){ enquiryNote.textContent = window.enquiryNotes[type]; }
-  if(scrollTo){ document.querySelector('.persona-section').scrollIntoView({behavior:'smooth'}); }
 }
 
-// Read buyer from URL on load
 document.addEventListener('DOMContentLoaded', function(){
   var params = new URLSearchParams(window.location.search);
   var buyer = params.get('buyer') || 'generic';
   setPersona(buyer);
 });
 
-// Form submit
 function handleEnquiry(e){
   e.preventDefault();
   var name = document.getElementById('eName').value.trim();
@@ -719,8 +843,7 @@ function openDrawer(){ document.body.classList.add('nav-open'); hamburgerBtn.cla
 function closeDrawer(){ document.body.classList.remove('nav-open'); hamburgerBtn.classList.remove('open'); }
 if(hamburgerBtn){ hamburgerBtn.addEventListener('click', function(){ document.body.classList.contains('nav-open') ? closeDrawer() : openDrawer(); }); }
 if(drawerOverlay){ drawerOverlay.addEventListener('click', closeDrawer); }
-document.querySelectorAll('.drawer-link,.drawer-sub-link').forEach(function(a){ a.addEventListener('click', closeDrawer); });
-
+document.querySelectorAll('.drawer-link,.drawer-sub-link,.drawer-cta').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 </script>
 </body>
 </html>
