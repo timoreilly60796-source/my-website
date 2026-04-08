@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>4DS | Automation & IT Governance | Ireland &amp; UK</title>
-<meta name="description" content="4DS delivers Automation & IT Governance for SMEs across Ireland and the UK. ISO 27001 certified. Senior engineers. Fixed monthly fee. Free IT health check.">
+<title>IT Automation &amp; Governance Services Ireland | 4DS</title>
+<meta name="description" content="4DS automates onboarding, offboarding, patching and reporting for SMEs across Ireland and the UK. Power Automate workflows, asset register, ITIL-aligned process design, and ISO 27001 governance framework. Fixed monthly fee. Free governance review.">
+<meta name="keywords" content="IT automation Ireland, Power Automate, IT governance, onboarding automation, offboarding, ITIL, ISO 27001, asset register, CMDB, 4DS">
+<meta property="og:title" content="IT Automation &amp; Governance | 4DS Ireland">
+<meta property="og:description" content="9 in 10 environments have no documented onboarding process. We automate IT operations and build the governance framework that makes IT repeatable and auditable.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://4ds.ie/services/automation-it-governance">
+<link rel="canonical" href="https://4ds.ie/services/automation-it-governance">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -26,16 +32,49 @@ a{text-decoration:none}
 .container{max-width:1100px;margin:0 auto;padding:0 2rem}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:900;background:#fff;border-bottom:1px solid var(--rule);box-shadow:var(--shadow-sm);}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:72px;}
-.logo{display:flex;align-items:center;gap:12px;}
-.logo-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.6rem;color:var(--ink);letter-spacing:-1px;}
-.logo-name span{color:var(--teal)}
-.logo-tagline{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);font-weight:500;display:block;margin-top:1px;}
-.nav-back{font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color 0.15s;}
-.nav-back:hover{color:var(--teal)}
-.nav-cta{font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;color:#fff;padding:0.55rem 1.2rem;background:var(--amber);border-radius:var(--r-btn);border:none;cursor:pointer;box-shadow:var(--shadow-amber);transition:background 0.2s;}
-.nav-cta:hover{background:var(--amber-deep)}
+nav{position:sticky;top:0;z-index:9000;background:#fff;border-bottom:1px solid var(--rule);box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.nav-inner{max-width:1260px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:82px;}
+.logo{display:flex;align-items:center;gap:16px;position:relative;}
+.logo::after{content:'';position:absolute;right:-24px;top:50%;transform:translateY(-50%);width:1px;height:32px;background:linear-gradient(to bottom,transparent,var(--teal-border),transparent);}
+.logo-mark{width:52px;height:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.logo-text{display:flex;flex-direction:column;gap:2px;}
+.logo-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.9rem;color:var(--ink);letter-spacing:-1px;line-height:1;}
+.logo-name span{color:var(--teal);}
+.logo-tagline{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:500;color:var(--muted);letter-spacing:0.03em;margin-top:1px;}
+.nav-menu{display:flex;align-items:center;list-style:none;gap:2px;margin-left:3rem;}
+.nav-menu>li>a{display:block;padding:0.5rem 0.95rem;border-radius:6px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:var(--body);letter-spacing:0.01em;transition:color 0.15s,background 0.15s;}
+.nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale);}
+.nav-menu>li>a.active-page{color:var(--teal);}
+.nav-dropdown{position:relative;}
+.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
+.nav-dropdown:hover .dropdown{display:block;}
+.dropdown li a{display:block;padding:0.55rem 1rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;color:var(--body);transition:all 0.15s;}
+.dropdown li a:hover{color:var(--teal);background:var(--teal-pale);}
+.dropdown li a.current-page{color:var(--teal);font-weight:700;background:var(--teal-pale);}
+.nav-actions{display:flex;align-items:center;gap:0.75rem;}
+.btn-amber{font-family:'Sora',sans-serif;font-size:0.875rem;font-weight:700;color:white;padding:0.6rem 1.4rem;border-radius:var(--r-btn);background:var(--amber);border:none;cursor:pointer;box-shadow:0 6px 24px rgba(232,146,10,0.35);transition:all 0.2s;display:inline-block;}
+.btn-amber:hover{background:var(--amber-deep);transform:translateY(-1px);}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;transition:all 0.2s;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.25s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+/* DRAWER */
+.drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:8998;backdrop-filter:blur(2px);}
+.drawer{position:fixed;top:0;right:-320px;width:300px;height:100vh;background:white;z-index:8999;transition:right 0.35s cubic-bezier(0.22,1,0.36,1);box-shadow:0 12px 40px rgba(0,0,0,0.10);overflow-y:auto;}
+.drawer-inner{display:flex;flex-direction:column;gap:0.15rem;padding:5rem 1.5rem 2rem;}
+.drawer-heading{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:0.5rem 1rem 0.25rem;}
+.drawer-link{display:block;padding:0.7rem 1rem;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:600;color:var(--ink);border-radius:6px;transition:all 0.15s;}
+.drawer-link:hover{background:var(--teal-pale);color:var(--teal);}
+.drawer-link.current{color:var(--teal);background:var(--teal-pale);}
+.drawer-sub-link{display:block;padding:0.55rem 1rem 0.55rem 1.75rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:500;color:var(--body);border-radius:6px;transition:all 0.15s;}
+.drawer-sub-link:hover{background:var(--teal-pale);color:var(--teal);}
+.drawer-sub-link.current{color:var(--teal);font-weight:600;}
+.drawer-divider{height:1px;background:var(--rule);margin:0.5rem 0;}
+.drawer-cta{display:block;margin-top:1rem;padding:0.85rem 1rem;background:var(--amber);color:white;font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;border-radius:var(--r-btn);text-align:center;box-shadow:0 6px 24px rgba(232,146,10,0.35);}
+.drawer-cta:hover{background:var(--amber-deep);}
+body.nav-open .drawer{right:0;}
+body.nav-open .drawer-overlay{display:block;}
 
 /* HERO */
 .hero{background:var(--navy);padding:72px 0 60px;position:relative;overflow:hidden;}
@@ -103,9 +142,9 @@ section{padding:64px 0;}
 .pain-item{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--body);line-height:1.5;padding:0.6rem 0.85rem;background:#fff;border-radius:var(--r-card);border-left:3px solid var(--amber);}
 .persona-aside{background:#fff;border:1px solid var(--rule);border-radius:var(--r-card);padding:1.5rem;}
 .persona-aside h4{font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:700;color:var(--ink);margin-bottom:1rem;}
-.persona-stat{display:flex;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);align-items:flex-start;}
+.persona-stat{display:grid;grid-template-columns:90px 1fr;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);align-items:start;}
 .persona-stat:last-child{border-bottom:none;}
-.p-stat-n{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;min-width:48px;line-height:1;}
+.p-stat-n{font-family:'Sora',sans-serif;font-size:clamp(0.8rem,1.6vw,1.1rem);font-weight:800;color:var(--teal);letter-spacing:0;line-height:1.2;white-space:nowrap;padding-right:0.5rem;}
 .p-stat-label{font-family:'Inter',sans-serif;font-size:0.76rem;color:var(--body);line-height:1.4;}
 .p-stat-label strong{display:block;color:var(--ink);font-size:0.78rem;}
 .persona-cta-row{margin-top:1.25rem;}
@@ -116,7 +155,7 @@ section{padding:64px 0;}
 .findings-section{background:#fff;padding:64px 0;}
 .findings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:0;}
 .finding-card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-card);padding:1.25rem;}
-.finding-n{font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;margin-bottom:0.3rem;}
+.finding-n{font-family:'Sora',sans-serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:800;color:var(--teal);letter-spacing:0;margin-bottom:0.3rem;white-space:nowrap;}
 .finding-card h4{font-family:'Sora',sans-serif;font-size:0.83rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;}
 .finding-card p{font-family:'Inter',sans-serif;font-size:0.77rem;color:var(--muted);line-height:1.55;}
 
@@ -147,56 +186,122 @@ footer{background:var(--navy);padding:1.5rem 0;}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:2.5rem;}
-  .form-card{max-width:480px;}
+  .hamburger{display:flex;}
+  .nav-menu,.nav-actions{display:none;}
+  .nav-inner{padding:0 1.25rem;height:68px;}
+  .logo::after{display:none;}
+  .hero{padding:48px 0 40px;}
+  .hero-inner{display:block!important;max-width:100%!important;}
   .covers-grid{grid-template-columns:1fr;}
   .persona-content.active{grid-template-columns:1fr;gap:1.5rem;}
+  .persona-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;}
   .findings-grid{grid-template-columns:1fr 1fr;}
   .how-steps{grid-template-columns:1fr 1fr;}
+  .contact-grid{grid-template-columns:1fr!important;gap:2rem!important;}
 }
 @media(max-width:600px){
+  section{padding:48px 0;}
+  .hero{padding:36px 0 32px;}
+  .hero h1{font-size:1.6rem;}
+  .trust-pills{gap:0.75rem;}
+  .buyer-bar{flex-wrap:wrap;}
   .findings-grid,.how-steps{grid-template-columns:1fr;}
-  .persona-tabs{overflow-x:auto;}
+  .persona-stat{grid-template-columns:72px 1fr;}
+}
+@media(max-width:400px){
+  .hero h1{font-size:1.4rem;}
+  .section-title{font-size:1.3rem;}
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="nav">
   <div class="nav-inner">
     <a href="../ict-services.html" class="logo">
-      <div style="width:40px;height:40px;display:flex;align-items:center;"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" stroke="#009BAA" stroke-width="1.8" fill="#009BAA" fill-opacity="0.08"/>
-  <circle cx="24" cy="24" r="6" stroke="#007280" stroke-width="1.6" fill="none"/>
-  <line x1="24" y1="18" x2="24" y2="3" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="29" y1="22" x2="42" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="29" y1="27" x2="42" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="24" y1="30" x2="24" y2="45" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="19" y1="27" x2="6" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <line x1="19" y1="22" x2="6" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
-  <circle cx="24" cy="3" r="2.2" fill="#009BAA"/>
-  <circle cx="42" cy="13.5" r="2.2" fill="#009BAA"/>
-  <circle cx="42" cy="34.5" r="2.2" fill="#009BAA"/>
-  <circle cx="24" cy="45" r="2.2" fill="#009BAA"/>
-  <circle cx="6" cy="34.5" r="2.2" fill="#009BAA"/>
-  <circle cx="6" cy="13.5" r="2.2" fill="#009BAA"/>
-  <circle cx="24" cy="24" r="3.2" fill="#009BAA"/>
-</svg></div>
-      <div>
+      <div class="logo-mark"><svg width="52" height="52" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" stroke="#009BAA" stroke-width="1.8" fill="#009BAA" fill-opacity="0.08"/>
+          <circle cx="24" cy="24" r="6" stroke="#007280" stroke-width="1.6" fill="none"/>
+          <line x1="24" y1="18" x2="24" y2="3"    stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="29" y1="22" x2="42" y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="29" y1="27" x2="42" y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="24" y1="30" x2="24" y2="45"   stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="19" y1="27" x2="6"  y2="34.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <line x1="19" y1="22" x2="6"  y2="13.5" stroke="#009BAA" stroke-width="1.2" opacity="0.7"/>
+          <circle cx="24" cy="3"    r="2.2" fill="#009BAA"/>
+          <circle cx="42" cy="13.5" r="2.2" fill="#009BAA"/>
+          <circle cx="42" cy="34.5" r="2.2" fill="#009BAA"/>
+          <circle cx="24" cy="45"   r="2.2" fill="#009BAA"/>
+          <circle cx="6"  cy="34.5" r="2.2" fill="#009BAA"/>
+          <circle cx="6"  cy="13.5" r="2.2" fill="#009BAA"/>
+          <circle cx="24" cy="24"   r="3.2" fill="#009BAA"/>
+        </svg></div>
+      <div class="logo-text">
         <div class="logo-name">4<span>DS</span></div>
         <div class="logo-tagline">Enterprise standard. SME scale.</div>
       </div>
     </a>
-    <a href="../ict-services.html#services" class="nav-back">&#8592; All Services</a>
-    <a href="#enquiry" class="nav-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+    <ul class="nav-menu">
+      <li class="nav-dropdown"><a href="../ict-services.html#services" class="active-page">Services &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="m365-modern-workplace.html">Microsoft 365 &amp; Modern Workplace</a></li>
+          <li><a href="identity-zero-trust.html">Identity &amp; Zero Trust</a></li>
+          <li><a href="endpoint-device-management.html">Endpoint &amp; Device Management</a></li>
+          <li><a href="cybersecurity-ai-security.html">Cybersecurity &amp; AI Security</a></li>
+          <li><a href="email-security-deliverability.html">Email Security &amp; Deliverability</a></li>
+          <li><a href="network-wifi-infrastructure.html">Network, Wi-Fi &amp; Infrastructure</a></li>
+          <li><a href="backup-dr-continuity.html">Backup, DR &amp; Continuity</a></li>
+          <li><a href="automation-it-governance.html" class="current-page">Automation &amp; IT Governance</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown"><a href="../ict-services.html#industries">Industries &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="../ict-services.html#industries">Healthcare</a></li>
+          <li><a href="../ict-services.html#industries">Manufacturing</a></li>
+          <li><a href="../ict-services.html#industries">Finance &amp; Professional Services</a></li>
+          <li><a href="../ict-services.html#industries">Legal &amp; Professional</a></li>
+          <li><a href="../ict-services.html#industries">Education</a></li>
+          <li><a href="../ict-services.html#industries">Public Sector &amp; Non-Profit</a></li>
+        </ul>
+      </li>
+      <li><a href="../ict-services.html#why">About</a></li>
+      <li><a href="../ict-services.html#approach">Approach</a></li>
+      <li><a href="../ict-services.html#testimonials">Clients</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<!-- MOBILE DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-inner">
+    <span class="drawer-heading">Services</span>
+    <a href="m365-modern-workplace.html" class="drawer-sub-link">Microsoft 365 &amp; Modern Workplace</a>
+    <a href="identity-zero-trust.html" class="drawer-sub-link">Identity &amp; Zero Trust</a>
+    <a href="endpoint-device-management.html" class="drawer-sub-link">Endpoint &amp; Device Management</a>
+    <a href="cybersecurity-ai-security.html" class="drawer-sub-link">Cybersecurity &amp; AI Security</a>
+    <a href="email-security-deliverability.html" class="drawer-sub-link">Email Security &amp; Deliverability</a>
+    <a href="network-wifi-infrastructure.html" class="drawer-sub-link">Network, Wi-Fi &amp; Infrastructure</a>
+    <a href="backup-dr-continuity.html" class="drawer-sub-link">Backup, DR &amp; Continuity</a>
+    <a href="automation-it-governance.html" class="drawer-sub-link current">Automation &amp; IT Governance</a>
+    <div class="drawer-divider"></div>
+    <a href="../ict-services.html#industries" class="drawer-link">Industries</a>
+    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
+    <a href="../ict-services.html#approach"   class="drawer-link">Approach</a>
+    <a href="../ict-services.html#testimonials" class="drawer-link">Clients</a>
+    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Get Free Health Check</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="hero-inner">
+    <div class="hero-inner" style="display:block;max-width:680px;">
       <div class="hero-left">
         <div class="buyer-bar">
           <span class="buyer-label">I am:</span>
@@ -213,26 +318,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
         </div>
       </div>
 
-      <!-- ENQUIRY FORM -->
-      <div class="form-card" id="enquiry">
-        <h3>Speak to a senior engineer</h3>
-        <p class="form-sub" id="enquiryNote">Tell us about your current IT processes and where you feel the most operational risk.</p>
-        <div id="enquiryForm">
-          <input type="hidden" id="formBuyer" value="generic">
-          <div class="f-group"><label>Your Name *</label><input type="text" id="eName" placeholder="Jane Murphy" required></div>
-          <div class="f-group"><label>Work Email *</label><input type="email" id="eEmail" placeholder="jane@company.ie" required></div>
-          <div class="f-group"><label>Company Name *</label><input type="text" id="eCompany" placeholder="Your Company Ltd" required></div>
-          <div class="f-group"><label>Phone <span class="f-optional">(optional)</span></label><input type="tel" id="ePhone" placeholder="+353 1 234 5678"></div>
-          <div class="f-group"><label>Brief note <span class="f-optional">(optional)</span></label><textarea id="eNote" placeholder="Tell us what you are looking to resolve or improve..."></textarea></div>
-          <button class="btn-submit" onclick="handleEnquiry(event)">Send Enquiry &rarr;</button>
-          <p class="form-micro">A senior engineer responds within 2 hours. No commitment required.</p>
-        </div>
-        <div class="form-thanks" id="enquiryThanks">
-          <div style="font-size:2rem;margin-bottom:0.75rem;">&#10003;</div>
-          <h4>Enquiry received</h4>
-          <p>A senior engineer will be in touch within 2 business hours.<br>No commitment is required at this stage.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -253,6 +338,270 @@ footer{background:var(--navy);padding:1.5rem 0;}
     </div>
   </div>
 </section>
+
+<!-- ══ AUTOMATION & GOVERNANCE INFOGRAPHIC ══ -->
+<section style="padding:40px 0;background:var(--surface);">
+  <div class="container">
+    <span class="eyebrow">Platform overview</span>
+  </div>
+  <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;">
+  <style>
+  .agig-card{width:100%;border-radius:10px;overflow:hidden;border:1px solid #DEE4EA;box-shadow:0 8px 40px rgba(11,28,46,0.12);}
+
+  /* header */
+  .agig-hdr{background:var(--navy);padding:28px 40px 24px;position:relative;overflow:hidden;}
+  .agig-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 78% 35%,rgba(0,155,170,0.16) 0%,transparent 55%);pointer-events:none;}
+  .agig-hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .agig-eyebrow{font-family:'Inter',sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
+  .agig-title{font-family:'Sora',sans-serif;font-size:clamp(1.2rem,2.2vw,1.7rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1.1;}
+  .agig-title em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+  .agig-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.46);margin-top:4px;max-width:460px;}
+  .agig-hstats{display:flex;gap:18px;flex-wrap:wrap;}
+  .agig-stat-n{font-family:'Sora',sans-serif;font-size:1.25rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;}
+  .agig-stat-l{font-family:'Inter',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.36);margin-top:2px;max-width:82px;line-height:1.35;}
+
+  /* body */
+  .agig-body{background:#F3F5F7;padding:22px 28px;}
+  .agig-slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:#6B7587;display:block;margin-bottom:7px;}
+
+  /* before/after transform */
+  .agig-transform{display:grid;grid-template-columns:1fr 48px 1fr;gap:0;margin-bottom:14px;align-items:stretch;}
+  .agig-before,.agig-after{border-radius:8px;overflow:hidden;border:1px solid #DEE4EA;}
+  .agig-before .agig-col-hdr{background:#2d0a0a;border-bottom:2px solid #6b1414;padding:10px 14px;display:flex;align-items:center;gap:6px;}
+  .agig-before .agig-col-hdr-title{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;color:#fc8181;}
+  .agig-before .agig-col-hdr-sub{font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(252,129,129,0.6);margin-top:1px;}
+  .agig-after .agig-col-hdr{background:var(--teal-pale);border-bottom:2px solid var(--teal-border);padding:10px 14px;display:flex;align-items:center;gap:6px;}
+  .agig-after .agig-col-hdr-title{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;color:var(--teal-deep);}
+  .agig-after .agig-col-hdr-sub{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--teal);margin-top:1px;}
+  .agig-col-body{background:white;padding:10px 14px;display:flex;flex-direction:column;gap:5px;}
+  .agig-col-item{display:flex;align-items:flex-start;gap:6px;font-family:'Inter',sans-serif;font-size:0.67rem;line-height:1.4;padding:4px 0;border-bottom:1px solid #F3F5F7;}
+  .agig-col-item:last-child{border-bottom:none;}
+  .agig-col-item.bad{color:#C53030;} .agig-col-item.bad::before{content:'✕';color:#E53E3E;flex-shrink:0;font-size:0.6rem;margin-top:2px;}
+  .agig-col-item.good{color:#276749;} .agig-col-item.good::before{content:'✓';color:#48BB78;flex-shrink:0;font-size:0.6rem;font-weight:800;margin-top:2px;}
+  .agig-arrow-col{display:flex;align-items:center;justify-content:center;}
+  .agig-arrow-badge{background:var(--teal);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:white;flex-shrink:0;}
+
+  /* automation workflows */
+  .agig-workflows{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;}
+  .agig-wf{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:12px 14px;border-top:3px solid var(--teal);}
+  .agig-wf.amber{border-top-color:#E8920A;}
+  .agig-wf.purple{border-top-color:#5B21B6;}
+  .agig-wf.green{border-top-color:#276749;}
+  .agig-wf.navy{border-top-color:var(--navy);}
+  .agig-wf-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+  .agig-wf-hdr img{width:22px;height:22px;object-fit:contain;flex-shrink:0;}
+  .agig-wf-title{font-family:'Sora',sans-serif;font-size:0.76rem;font-weight:700;color:var(--ink);}
+  .agig-wf-tool{font-family:'Inter',sans-serif;font-size:0.58rem;color:#6B7587;margin-top:1px;}
+  .agig-wf-items{display:flex;flex-direction:column;gap:3px;}
+  .agig-wf-item{font-family:'Inter',sans-serif;font-size:0.63rem;color:#555F6E;display:flex;align-items:flex-start;gap:5px;line-height:1.35;}
+  .agig-wf-item::before{content:'→';color:var(--teal);flex-shrink:0;font-size:0.6rem;margin-top:2px;}
+  .agig-wf.amber .agig-wf-item::before{color:#E8920A;}
+  .agig-wf.purple .agig-wf-item::before{color:#5B21B6;}
+  .agig-wf.green .agig-wf-item::before{color:#276749;}
+  .agig-wf.navy .agig-wf-item::before{color:var(--teal);}
+
+  /* stats */
+  .agig-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:12px;}
+  .agig-sc{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:10px 12px;border-top:3px solid var(--teal);}
+  .agig-sc.a{border-top-color:#E8920A;} .agig-sc.r{border-top-color:#C53030;} .agig-sc.g{border-top-color:#276749;}
+  .agig-sc-n{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;margin-bottom:3px;}
+  .agig-sc.a .agig-sc-n{color:#E8920A;} .agig-sc.r .agig-sc-n{color:#C53030;} .agig-sc.g .agig-sc-n{color:#276749;}
+  .agig-sc-l{font-family:'Inter',sans-serif;font-size:0.63rem;color:#2C3340;line-height:1.4;}
+
+  /* governance band */
+  .agig-gov{background:var(--navy);border-radius:8px;padding:14px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .agig-gov-title{font-family:'Sora',sans-serif;font-size:0.7rem;font-weight:700;color:var(--teal);margin-bottom:3px;}
+  .agig-gov-desc{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.48);line-height:1.4;}
+
+  /* footer */
+  .agig-footer{background:var(--navy);padding:16px 40px;display:flex;align-items:center;justify-content:center;}
+  .agig-footer-text{font-family:'Sora',sans-serif;font-size:clamp(0.85rem,1.4vw,1rem);font-weight:700;color:white;text-align:center;line-height:1.4;}
+  .agig-footer-text em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+
+  /* responsive */
+  @media(max-width:860px){
+    .agig-hdr{padding:20px 20px 18px;} .agig-body{padding:16px 16px;}
+    .agig-transform{grid-template-columns:1fr;}
+    .agig-arrow-col{padding:8px 0;}
+    .agig-arrow-badge{transform:rotate(90deg);}
+    .agig-workflows{grid-template-columns:1fr 1fr;}
+    .agig-stats-row{grid-template-columns:1fr 1fr;}
+    .agig-gov{grid-template-columns:1fr;}
+  }
+  @media(max-width:520px){
+    .agig-workflows{grid-template-columns:1fr;}
+    .agig-stats-row{grid-template-columns:1fr;}
+    .agig-hdr-inner{flex-direction:column;align-items:flex-start;}
+  }
+  </style>
+
+  <div class="agig-card">
+    <!-- HEADER -->
+    <div class="agig-hdr">
+      <div class="agig-hdr-inner">
+        <div>
+          <span class="agig-eyebrow">Automation &amp; IT Governance</span>
+          <div class="agig-title">Manual IT processes do not scale.<br><em>Governance is what makes IT repeatable.</em></div>
+          <div class="agig-sub">Replace memory and habit with documented, automated, auditable processes across every IT function.</div>
+        </div>
+        <div class="agig-hstats">
+          <div><div class="agig-stat-n">4 hrs</div><div class="agig-stat-l">Manual onboarding → under 1 hr automated</div></div>
+          <div><div class="agig-stat-n">€14.4k</div><div class="agig-stat-l">Average unused licence spend found in first review</div></div>
+          <div><div class="agig-stat-n">9/10</div><div class="agig-stat-l">Environments with no documented onboarding</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="agig-body">
+
+      <!-- BEFORE / AFTER -->
+      <div class="agig-slabel">Before and after governance</div>
+      <div class="agig-transform">
+        <div class="agig-before">
+          <div class="agig-col-hdr">
+            <div>
+              <div class="agig-col-hdr-title">Without governance</div>
+              <div class="agig-col-hdr-sub">Running on memory</div>
+            </div>
+          </div>
+          <div class="agig-col-body">
+            <div class="agig-col-item bad">Onboarding takes 4 hours and steps are frequently missed</div>
+            <div class="agig-col-item bad">Leavers' accounts and SaaS access left active after departure</div>
+            <div class="agig-col-item bad">No asset register — unknown licences paid for every month</div>
+            <div class="agig-col-item bad">Production changes made without documentation or rollback plan</div>
+            <div class="agig-col-item bad">Monthly reporting requires hours of manual spreadsheet work</div>
+            <div class="agig-col-item bad">IT processes depend on one person — holiday or departure is a risk</div>
+          </div>
+        </div>
+        <div class="agig-arrow-col">
+          <div class="agig-arrow-badge">&#8594;</div>
+        </div>
+        <div class="agig-after">
+          <div class="agig-col-hdr">
+            <div>
+              <div class="agig-col-hdr-title">With 4DS governance</div>
+              <div class="agig-col-hdr-sub">Documented &amp; automated</div>
+            </div>
+          </div>
+          <div class="agig-col-body">
+            <div class="agig-col-item good">Onboarding completes in under 1 hour via automated workflow</div>
+            <div class="agig-col-item good">Offboarding runs in 15 minutes — full access revocation, every system</div>
+            <div class="agig-col-item good">Complete asset register — hardware, licences, SaaS, cloud resources</div>
+            <div class="agig-col-item good">All changes logged with approval, test, and rollback procedure</div>
+            <div class="agig-col-item good">Monthly reports auto-generated and distributed to stakeholders</div>
+            <div class="agig-col-item good">All processes documented — any engineer can execute them</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKFLOWS -->
+      <div class="agig-slabel">Automation workflows &amp; tools</div>
+      <div class="agig-workflows">
+
+        <div class="agig-wf">
+          <div class="agig-wf-hdr">
+            <img src="https://az-icons.com/export/icons/06c2a09f4135f9abddcf315efd9b90ef.svg" alt="Onboarding">
+            <div><div class="agig-wf-title">User Onboarding</div><div class="agig-wf-tool">Power Automate + Intune</div></div>
+          </div>
+          <div class="agig-wf-items">
+            <div class="agig-wf-item">M365 account &amp; licence provisioning</div>
+            <div class="agig-wf-item">Group membership &amp; app assignment</div>
+            <div class="agig-wf-item">Intune device enrolment triggered</div>
+            <div class="agig-wf-item">Welcome email &amp; manager notification</div>
+          </div>
+        </div>
+
+        <div class="agig-wf amber">
+          <div class="agig-wf-hdr">
+            <img src="https://az-icons.com/export/icons/0495923a6969cd34bde0711df1aad297.svg" alt="Offboarding">
+            <div><div class="agig-wf-title">User Offboarding</div><div class="agig-wf-tool">Power Automate + Entra ID</div></div>
+          </div>
+          <div class="agig-wf-items">
+            <div class="agig-wf-item">Account disabled &amp; MFA devices removed</div>
+            <div class="agig-wf-item">Mailbox converted, OneDrive retained</div>
+            <div class="agig-wf-item">All SaaS access revoked</div>
+            <div class="agig-wf-item">Executed in 15 minutes from trigger</div>
+          </div>
+        </div>
+
+        <div class="agig-wf purple">
+          <div class="agig-wf-hdr">
+            <img src="https://az-icons.com/export/icons/5909f625fdfc6e6b2f81423f01726934.svg" alt="Reporting">
+            <div><div class="agig-wf-title">Automated Reporting</div><div class="agig-wf-tool">Power BI + M365</div></div>
+          </div>
+          <div class="agig-wf-items">
+            <div class="agig-wf-item">Security posture score (monthly)</div>
+            <div class="agig-wf-item">Licence utilisation &amp; cost report</div>
+            <div class="agig-wf-item">Device compliance summary</div>
+            <div class="agig-wf-item">Auto-distributed to stakeholders</div>
+          </div>
+        </div>
+
+        <div class="agig-wf green">
+          <div class="agig-wf-hdr">
+            <img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="Asset">
+            <div><div class="agig-wf-title">Asset Register &amp; CMDB</div><div class="agig-wf-tool">Documented &amp; Maintained</div></div>
+          </div>
+          <div class="agig-wf-items">
+            <div class="agig-wf-item">Hardware inventory — all devices</div>
+            <div class="agig-wf-item">Software licences &amp; renewal dates</div>
+            <div class="agig-wf-item">SaaS subscriptions &amp; costs</div>
+            <div class="agig-wf-item">Cloud resources catalogued</div>
+          </div>
+        </div>
+
+        <div class="agig-wf navy">
+          <div class="agig-wf-hdr">
+            <img src="https://az-icons.com/export/icons/232997b804dcb2f462fff392c28d31ca.svg" alt="Change">
+            <div><div class="agig-wf-title">Change Management</div><div class="agig-wf-tool">ITIL-Aligned Process</div></div>
+          </div>
+          <div class="agig-wf-items">
+            <div class="agig-wf-item">Change request &amp; approval workflow</div>
+            <div class="agig-wf-item">Test plan &amp; rollback documented</div>
+            <div class="agig-wf-item">Change log maintained</div>
+            <div class="agig-wf-item">Post-implementation review</div>
+          </div>
+        </div>
+
+        <div class="agig-wf" style="border-top-color:#5B21B6;">
+          <div class="agig-wf-hdr">
+            <img src="https://az-icons.com/export/icons/4da8cd05c336e516540abe0d69e3423e.svg" alt="Power Automate">
+            <div><div class="agig-wf-title">Power Automate Flows</div><div class="agig-wf-tool">Business Process Automation</div></div>
+          </div>
+          <div class="agig-wf-items">
+            <div class="agig-wf-item">Approval workflows &amp; notifications</div>
+            <div class="agig-wf-item">Ticket creation &amp; routing</div>
+            <div class="agig-wf-item">System integrations (CRM, HR, etc.)</div>
+            <div class="agig-wf-item">Scheduled maintenance triggers</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="agig-stats-row">
+        <div class="agig-sc r"><div class="agig-sc-n">9/10</div><div class="agig-sc-l">No documented onboarding or offboarding process at first engagement</div></div>
+        <div class="agig-sc a"><div class="agig-sc-n">8/10</div><div class="agig-sc-l">No complete asset register — unknown SaaS tools being paid for</div></div>
+        <div class="agig-sc a"><div class="agig-sc-n">€14.4k</div><div class="agig-sc-l">Average unused or duplicate licence spend found in first governance review</div></div>
+        <div class="agig-sc g"><div class="agig-sc-n">100%</div><div class="agig-sc-l">Of 4DS environments have documented asset register and change management process</div></div>
+      </div>
+
+      <!-- GOVERNANCE BAND -->
+      <div class="agig-gov">
+        <div><div class="agig-gov-title">ITIL v4 Aligned</div><div class="agig-gov-desc">Change, incident, and service request processes designed to ITIL v4 alignment. Service catalogue and CMDB produced as standard deliverables.</div></div>
+        <div><div class="agig-gov-title">ISO 27001 Governance</div><div class="agig-gov-desc">Asset management, change control, and access management controls aligned to ISO 27001 Annex A. Documentation available for audit submissions.</div></div>
+        <div><div class="agig-gov-title">Tender &amp; Compliance Ready</div><div class="agig-gov-desc">Complete governance documentation set produced for every engagement — asset register, process docs, and CMDB available for procurement submissions.</div></div>
+      </div>
+
+    </div>
+
+    <div class="agig-footer">
+      <div class="agig-footer-text">IT governance turns tribal knowledge into <em>repeatable, auditable business process.</em></div>
+    </div>
+  </div>
+  </div>
+</section>
+
 
 <!-- PERSONA SECTION -->
 <div class="persona-section">
@@ -375,15 +724,43 @@ footer{background:var(--navy);padding:1.5rem 0;}
   </div>
 </section>
 
-<!-- BOTTOM CTA -->
-<div class="bottom-cta">
+
+<!-- CONTACT FORM -->
+<section style="padding:72px 0;background:var(--surface);" id="contact-section">
   <div class="container">
-    <h2>Find out where your IT processes are running on memory rather than systems</h2>
-    <p>The health check includes a governance posture review covering onboarding, offboarding, asset register completeness, change management maturity, and automation opportunities.</p>
-    <a href="#enquiry" class="btn-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Send an Enquiry &rarr;</a>
-    <a href="../ict-services.html#contact" class="btn-cta-ghost">Get a Free Health Check</a>
+    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;">
+      <div>
+        <span class="eyebrow">Get in touch</span>
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-sub" style="margin-bottom:1.5rem;">Tell us about your current IT processes and where you feel the most operational risk. A senior engineer responds within 2 hours. No commitment required.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;">
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Full governance posture review — onboarding, offboarding, asset register, change management</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Automation opportunities identified and scoped before any commitment</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Fixed monthly fee — no billable hours, no surprise invoices</li>
+        </ul>
+      </div>
+      <div class="form-card" id="enquiry">
+        <h3>Speak to a senior engineer</h3>
+        <p class="form-sub" id="enquiryNote">Tell us about your current IT processes and where you feel the most operational risk.</p>
+        <div id="enquiryForm">
+          <input type="hidden" id="formBuyer" value="generic">
+          <div class="f-group"><label>Your Name *</label><input type="text" id="eName" placeholder="Jane Murphy" required></div>
+          <div class="f-group"><label>Work Email *</label><input type="email" id="eEmail" placeholder="jane@company.ie" required></div>
+          <div class="f-group"><label>Company Name *</label><input type="text" id="eCompany" placeholder="Your Company Ltd" required></div>
+          <div class="f-group"><label>Phone <span class="f-optional">(optional)</span></label><input type="tel" id="ePhone" placeholder="+353 1 234 5678"></div>
+          <div class="f-group"><label>Brief note <span class="f-optional">(optional)</span></label><textarea id="eNote" placeholder="Tell us what you are looking to resolve or improve..."></textarea></div>
+          <button class="btn-submit" onclick="handleEnquiry(event)">Send Enquiry &rarr;</button>
+          <p class="form-micro">A senior engineer responds within 2 hours. No commitment required.</p>
+        </div>
+        <div class="form-thanks" id="enquiryThanks">
+          <div style="font-size:2rem;margin-bottom:0.75rem;">&#10003;</div>
+          <h4>Enquiry received</h4>
+          <p>A senior engineer will be in touch within 2 business hours.<br>No commitment is required at this stage.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -447,7 +824,14 @@ function handleEnquiry(e){
   document.getElementById('enquiryThanks').style.display='block';
 }
 
-// Nav hamburger (minimal - no drawer needed on lean page)
+// Nav hamburger
+var hamburgerBtn = document.getElementById('hamburgerBtn');
+var drawerOverlay = document.getElementById('drawerOverlay');
+function openDrawer(){ document.body.classList.add('nav-open'); hamburgerBtn.classList.add('open'); }
+function closeDrawer(){ document.body.classList.remove('nav-open'); hamburgerBtn.classList.remove('open'); }
+if(hamburgerBtn){ hamburgerBtn.addEventListener('click', function(){ document.body.classList.contains('nav-open') ? closeDrawer() : openDrawer(); }); }
+if(drawerOverlay){ drawerOverlay.addEventListener('click', closeDrawer); }
+document.querySelectorAll('.drawer-link,.drawer-sub-link').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 
 </script>
 </body>
