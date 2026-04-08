@@ -355,156 +355,279 @@ footer{background:var(--navy);padding:1.5rem 0;}
   </div>
 </section>
 
-<!-- ══ M365 PLATFORM INFOGRAPHIC ══ -->
+<!-- ══ M365 MODERN WORKPLACE INFOGRAPHIC ══ -->
 <section style="padding:40px 0;background:var(--surface);">
   <div class="container">
     <span class="eyebrow">Platform overview</span>
   </div>
-
+  <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;">
   <style>
-  .m365ig{width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;}
-  .m365ig-inner{border-radius:10px;overflow:hidden;border:1px solid var(--rule);}
+  .m3ig-card{width:100%;border-radius:10px;overflow:hidden;border:1px solid #DEE4EA;box-shadow:0 8px 40px rgba(11,28,46,0.12);}
+
   /* header */
-  .ig-hdr{background:var(--navy);padding:28px 40px 0;position:relative;overflow:hidden;}
-  .ig-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 78% 55%,rgba(0,155,170,0.14) 0%,transparent 58%);pointer-events:none;}
-  .ig-hdr-top{position:relative;z-index:1;display:flex;align-items:center;gap:14px;margin-bottom:6px;}
-  .ig-flag{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:32px;height:32px;flex-shrink:0;}
-  .ig-flag span{border-radius:2px;}
-  .ig-flag span:nth-child(1){background:#F25022;}
-  .ig-flag span:nth-child(2){background:#7FBA00;}
-  .ig-flag span:nth-child(3){background:#00A4EF;}
-  .ig-flag span:nth-child(4){background:#FFB900;}
-  .ig-title{font-family:'Sora',sans-serif;font-size:clamp(1.2rem,2.5vw,1.75rem);font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1.1;}
-  .ig-sub{position:relative;z-index:1;font-family:'Inter',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.55);margin-bottom:22px;}
-  .ig-icons{position:relative;z-index:1;display:flex;align-items:flex-end;gap:16px;padding:0 2px 28px;flex-wrap:wrap;}
-  .ig-icon{flex-shrink:0;}
-  .ig-icon img{display:block;width:76px;height:76px;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,0.4));transition:transform 0.2s;}
-  .ig-icon img:hover{transform:translateY(-5px);}
-  /* pillars */
-  .ig-pillars{background:#fff;display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--rule);}
-  .ig-pillar{padding:20px 16px 24px;border-right:1px solid var(--rule);}
-  .ig-pillar:last-child{border-right:none;}
-  .ig-pillar-title{font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;color:var(--ink);margin-bottom:12px;line-height:1.25;}
-  .ig-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
-  .ig-list li{font-family:'Inter',sans-serif;font-size:0.76rem;color:var(--body);line-height:1.5;display:flex;align-items:flex-start;gap:6px;}
-  .ig-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:5px;}
-  /* journey */
-  .ig-journey{background:var(--surface);padding:22px 40px 18px;border-bottom:2px solid var(--rule);}
-  .ig-journey-label{font-family:'Sora',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);margin-bottom:14px;display:flex;align-items:center;}
-  .ig-journey-label::after{content:'';flex:1;height:1px;background:var(--rule);margin-left:12px;}
-  .ig-track{display:flex;width:100%;align-items:stretch;}
-  .ig-chev{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:0.73rem;font-weight:700;height:48px;white-space:nowrap;padding:0 8px 0 22px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%,16px 50%);}
-  .ig-chev:first-child{padding-left:16px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%);}
-  .ig-chev.basic{background:#9EA8B5;color:#fff;}
-  .ig-chev.standard{background:#6B8FA8;color:#fff;}
-  .ig-chev.premium{background:var(--teal);color:#fff;}
-  .ig-chev.e3{background:var(--navy-light);color:rgba(255,255,255,0.9);}
-  .ig-chev.e5{background:var(--navy);color:#fff;}
+  .m3ig-hdr{background:var(--navy);padding:28px 40px 24px;position:relative;overflow:hidden;}
+  .m3ig-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 78% 35%,rgba(0,155,170,0.16) 0%,transparent 55%);pointer-events:none;}
+  .m3ig-hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .m3ig-eyebrow{font-family:'Inter',sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
+  .m3ig-title-row{display:flex;align-items:center;gap:12px;margin-bottom:4px;}
+  .m3ig-flag{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:36px;height:36px;flex-shrink:0;}
+  .m3ig-flag span{border-radius:2px;}
+  .m3ig-flag span:nth-child(1){background:#F25022;}
+  .m3ig-flag span:nth-child(2){background:#7FBA00;}
+  .m3ig-flag span:nth-child(3){background:#00A4EF;}
+  .m3ig-flag span:nth-child(4){background:#FFB900;}
+  .m3ig-title{font-family:'Sora',sans-serif;font-size:clamp(1.2rem,2.2vw,1.7rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1.1;}
+  .m3ig-title em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+  .m3ig-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.46);margin-top:4px;max-width:460px;}
+  .m3ig-hstats{display:flex;gap:18px;flex-wrap:wrap;}
+  .m3ig-stat-n{font-family:'Sora',sans-serif;font-size:1.25rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;}
+  .m3ig-stat-l{font-family:'Inter',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.36);margin-top:2px;max-width:82px;line-height:1.35;}
+
+  /* body */
+  .m3ig-body{background:#F3F5F7;padding:22px 28px;}
+  .m3ig-slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:#6B7587;display:block;margin-bottom:7px;}
+
+  /* app icons row */
+  .m3ig-apps{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:14px 18px;margin-bottom:12px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .m3ig-app{display:flex;flex-direction:column;align-items:center;gap:4px;}
+  .m3ig-app img{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.12));}
+  .m3ig-app span{font-family:'Inter',sans-serif;font-size:0.58rem;color:#6B7587;}
+
+  /* threat row */
+  .m3ig-waste{background:linear-gradient(90deg,#1a0a00,#2d1500);border:1px solid #8B4513;border-radius:8px;padding:10px 16px;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .m3ig-waste-label{font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;color:#FBB360;flex-shrink:0;display:flex;align-items:center;gap:5px;}
+  .m3ig-wc{font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:600;padding:2px 8px;border-radius:100px;background:rgba(251,179,96,0.15);border:1px solid rgba(251,179,96,0.35);color:#FBB360;white-space:nowrap;}
+
+  /* layers */
+  .m3ig-layers{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;}
+  .m3ig-layer{display:grid;grid-template-columns:190px 1fr;border-radius:8px;overflow:hidden;border:1px solid #DEE4EA;}
+  .m3ig-lid{padding:11px 13px;display:flex;align-items:center;gap:8px;}
+  .m3ig-lid img{width:24px;height:24px;object-fit:contain;flex-shrink:0;}
+  .m3ig-lname{font-family:'Sora',sans-serif;font-size:0.74rem;font-weight:700;line-height:1.2;}
+  .m3ig-ltool{font-family:'Inter',sans-serif;font-size:0.59rem;margin-top:2px;opacity:0.7;}
+  .m3ig-lcontent{padding:9px 13px;display:flex;align-items:center;flex-wrap:wrap;gap:5px;}
+  .m3ig-li{display:flex;align-items:center;gap:4px;padding:3px 9px;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.63rem;font-weight:500;border:1px solid;white-space:nowrap;}
+  .m3ig-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+
+  .m3ig-layer.email .m3ig-lid{background:#EEF9FB;} .m3ig-layer.email .m3ig-lname{color:var(--teal-deep);} .m3ig-layer.email .m3ig-ltool{color:var(--teal);} .m3ig-layer.email .m3ig-lcontent{background:white;} .m3ig-layer.email .m3ig-li{background:var(--teal-pale);border-color:var(--teal-border);color:var(--teal-deep);} .m3ig-layer.email .m3ig-dot{background:var(--teal);}
+  .m3ig-layer.teams .m3ig-lid{background:#EDE9FE;} .m3ig-layer.teams .m3ig-lname{color:#5B21B6;} .m3ig-layer.teams .m3ig-ltool{color:#7C3AED;} .m3ig-layer.teams .m3ig-lcontent{background:white;} .m3ig-layer.teams .m3ig-li{background:#EDE9FE;border-color:#C4B5FD;color:#5B21B6;} .m3ig-layer.teams .m3ig-dot{background:#7C3AED;}
+  .m3ig-layer.sharepoint .m3ig-lid{background:#FEF3C7;} .m3ig-layer.sharepoint .m3ig-lname{color:#92600A;} .m3ig-layer.sharepoint .m3ig-ltool{color:#E8920A;} .m3ig-layer.sharepoint .m3ig-lcontent{background:white;} .m3ig-layer.sharepoint .m3ig-li{background:#FEF3E2;border-color:#F5D9A8;color:#92600A;} .m3ig-layer.sharepoint .m3ig-dot{background:#E8920A;}
+  .m3ig-layer.security .m3ig-lid{background:#F0FFF4;} .m3ig-layer.security .m3ig-lname{color:#276749;} .m3ig-layer.security .m3ig-ltool{color:#38A169;} .m3ig-layer.security .m3ig-lcontent{background:white;} .m3ig-layer.security .m3ig-li{background:#F0FFF4;border-color:#9AE6B4;color:#276749;} .m3ig-layer.security .m3ig-dot{background:#48BB78;}
+  .m3ig-layer.power .m3ig-lid{background:var(--navy);border-right:2px solid var(--teal);} .m3ig-layer.power .m3ig-lname{color:white;} .m3ig-layer.power .m3ig-ltool{color:var(--teal);} .m3ig-layer.power .m3ig-lcontent{background:var(--navy-mid);} .m3ig-layer.power .m3ig-li{background:rgba(0,155,170,0.15);border-color:rgba(0,155,170,0.4);color:rgba(255,255,255,0.82);} .m3ig-layer.power .m3ig-dot{background:var(--teal);} .m3ig-layer.power{border-color:var(--teal-border);}
+
+  /* licence journey */
+  .m3ig-journey{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:14px 18px;margin-bottom:12px;}
+  .m3ig-journey-title{font-family:'Sora',sans-serif;font-size:0.72rem;font-weight:700;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+  .m3ig-journey-title::after{content:'';flex:1;height:1px;background:#DEE4EA;margin-left:8px;}
+  .m3ig-track{display:flex;width:100%;}
+  .m3ig-chev{flex:1;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;height:42px;padding:0 8px 0 20px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%);}
+  .m3ig-chev:first-child{padding-left:14px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%);}
+  .m3ig-chev.basic{background:#9EA8B5;color:#fff;}
+  .m3ig-chev.standard{background:#6B8FA8;color:#fff;}
+  .m3ig-chev.premium{background:var(--teal);color:#fff;}
+  .m3ig-chev.e3{background:var(--navy-mid);color:#fff;}
+  .m3ig-chev.e5{background:var(--navy);color:#fff;}
+  .m3ig-journey-note{font-family:'Inter',sans-serif;font-size:0.65rem;color:#6B7587;margin-top:9px;line-height:1.4;}
+  .m3ig-journey-note strong{color:var(--teal-deep);}
+
+  /* stats */
+  .m3ig-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:12px;}
+  .m3ig-sc{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:10px 12px;border-top:3px solid var(--teal);}
+  .m3ig-sc.a{border-top-color:#E8920A;} .m3ig-sc.r{border-top-color:#C53030;} .m3ig-sc.g{border-top-color:#276749;}
+  .m3ig-sc-n{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;margin-bottom:3px;}
+  .m3ig-sc.a .m3ig-sc-n{color:#E8920A;} .m3ig-sc.r .m3ig-sc-n{color:#C53030;} .m3ig-sc.g .m3ig-sc-n{color:#276749;}
+  .m3ig-sc-l{font-family:'Inter',sans-serif;font-size:0.63rem;color:#2C3340;line-height:1.4;}
+
+  /* compliance band */
+  .m3ig-compliance{background:var(--navy);border-radius:8px;padding:14px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .m3ig-comp-title{font-family:'Sora',sans-serif;font-size:0.7rem;font-weight:700;color:var(--teal);margin-bottom:3px;}
+  .m3ig-comp-desc{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.48);line-height:1.4;}
+
   /* footer */
-  .ig-footer{background:var(--navy);padding:16px 40px;}
-  .ig-footer-text{font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.58);line-height:1.5;}
+  .m3ig-footer{background:var(--navy);padding:16px 40px;display:flex;align-items:center;justify-content:center;}
+  .m3ig-footer-text{font-family:'Sora',sans-serif;font-size:clamp(0.85rem,1.4vw,1rem);font-weight:700;color:white;text-align:center;line-height:1.4;}
+  .m3ig-footer-text em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+
   /* responsive */
   @media(max-width:860px){
-    .ig-hdr{padding:20px 20px 0;}
-    .ig-icons{gap:12px;}
-    .ig-icon img{width:56px;height:56px;}
-    .ig-pillars{grid-template-columns:1fr 1fr;}
-    .ig-pillar{border-bottom:1px solid var(--rule);}
-    .ig-pillar:nth-child(odd){border-right:1px solid var(--rule);}
-    .ig-pillar:nth-child(even){border-right:none;}
-    .ig-journey,.ig-footer{padding-left:20px;padding-right:20px;}
-    .ig-track{overflow-x:auto;}
+    .m3ig-hdr{padding:20px 20px 18px;} .m3ig-body{padding:16px 16px;}
+    .m3ig-layer{grid-template-columns:1fr;} .m3ig-lid{border-bottom:1px solid #DEE4EA;}
+    .m3ig-stats-row{grid-template-columns:1fr 1fr;}
+    .m3ig-compliance{grid-template-columns:1fr;}
+    .m3ig-track{flex-wrap:wrap;}
+    .m3ig-chev{flex:none;min-width:45%;clip-path:none;border-radius:4px;margin:2px;}
   }
   @media(max-width:520px){
-    .ig-pillars{grid-template-columns:1fr;}
-    .ig-pillar{border-right:none!important;}
-    .ig-icon img{width:44px;height:44px;}
-    .ig-chev{font-size:0.62rem;}
-    .m365ig{padding:0 0.75rem;}
-  }
-  @media(max-width:860px){
-    .m365ig{padding:0 1rem;}
+    .m3ig-stats-row{grid-template-columns:1fr;}
+    .m3ig-hdr-inner{flex-direction:column;align-items:flex-start;}
+    .m3ig-apps{gap:10px;}
+    .m3ig-app img{width:32px;height:32px;}
   }
   </style>
 
-  <div class="m365ig">
-    <div class="m365ig-inner">
-
-      <div class="ig-hdr">
-        <div class="ig-hdr-top">
-          <div class="ig-flag"><span></span><span></span><span></span><span></span></div>
-          <div class="ig-title">Microsoft 365 &amp; Modern Workplace, fully activated</div>
+  <div class="m3ig-card">
+    <!-- HEADER -->
+    <div class="m3ig-hdr">
+      <div class="m3ig-hdr-inner">
+        <div>
+          <span class="m3ig-eyebrow">Microsoft 365 &amp; Modern Workplace</span>
+          <div class="m3ig-title-row">
+            <div class="m3ig-flag"><span></span><span></span><span></span><span></span></div>
+            <div class="m3ig-title">You are paying for the full suite.<br><em>Most of it is switched off.</em></div>
+          </div>
+          <div class="m3ig-sub">The average SME uses less than 30% of their M365 licence. We activate, configure, and govern the full stack.</div>
         </div>
-        <p class="ig-sub">Productivity, collaboration, security and governance. Most SMEs use less than 30% of what they pay for.</p>
-        <div class="ig-icons">
-          <div class="ig-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg" alt="Word"></div>
-          <div class="ig-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"></div>
-          <div class="ig-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_PowerPoint_%282025%E2%80%93present%29.svg" alt="PowerPoint"></div>
-          <div class="ig-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Microsoft_Outlook_Icon_%282025%E2%80%93present%29.svg" alt="Outlook"></div>
-          <div class="ig-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Microsoft_Office_Teams_%282025%E2%80%93present%29.svg" alt="Teams"></div>
-          <div class="ig-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Microsoft_Office_SharePoint_%282025%E2%80%93present%29.svg" alt="SharePoint"></div>
-          <div class="ig-icon"><img src="https://files.brandlogos.net/svg/HNipmYPqfV/microsoft-onedrive-2025-logo-brandlogos.net_ynzfdy0ej.svg" alt="OneDrive"></div>
-          <div class="ig-icon"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot"></div>
-          <div class="ig-icon"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID"></div>
+        <div class="m3ig-hstats">
+          <div><div class="m3ig-stat-n">30%</div><div class="m3ig-stat-l">Average M365 utilisation before a 4DS engagement</div></div>
+          <div><div class="m3ig-stat-n">€14.4k</div><div class="m3ig-stat-l">Average unused licence spend found in first review</div></div>
+          <div><div class="m3ig-stat-n">2-4 wks</div><div class="m3ig-stat-l">Typical full environment uplift timeline</div></div>
         </div>
       </div>
+    </div>
 
-      <div class="ig-pillars">
-        <div class="ig-pillar">
-          <div class="ig-pillar-title">Apps &amp; Productivity</div>
-          <ul class="ig-list">
-            <li>Desktop &amp; web versions included</li>
-            <li>Work from any device, anywhere</li>
-            <li>Co-authoring in real time</li>
-          </ul>
-        </div>
-        <div class="ig-pillar">
-          <div class="ig-pillar-title">Collaboration &amp; Communication</div>
-          <ul class="ig-list">
-            <li>Microsoft Teams chat &amp; meetings</li>
-            <li>Exchange Online email &amp; calendars</li>
-            <li>Unified messaging across devices</li>
-            <li>Teams Phone for PSTN calling</li>
-          </ul>
-        </div>
-        <div class="ig-pillar">
-          <div class="ig-pillar-title">Content &amp; File Sharing</div>
-          <ul class="ig-list">
-            <li>SharePoint intranet &amp; document libraries</li>
-            <li>OneDrive for Business (1TB per user)</li>
-            <li>Governed external sharing</li>
-            <li>Data classification &amp; retention</li>
-          </ul>
-        </div>
-        <div class="ig-pillar">
-          <div class="ig-pillar-title">Security &amp; Identity</div>
-          <ul class="ig-list">
-            <li>Entra ID &amp; Conditional Access</li>
-            <li>MFA &amp; phishing-resistant auth</li>
-            <li>Microsoft Defender for Business</li>
-            <li>Zero Trust access architecture</li>
-          </ul>
-        </div>
+    <div class="m3ig-body">
+
+      <!-- APP ICONS -->
+      <div class="m3ig-slabel">What is included in Microsoft 365 Business Premium</div>
+      <div class="m3ig-apps">
+        <div class="m3ig-app"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg" alt="Word"><span>Word</span></div>
+        <div class="m3ig-app"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"><span>Excel</span></div>
+        <div class="m3ig-app"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_PowerPoint_%282025%E2%80%93present%29.svg" alt="PowerPoint"><span>PowerPoint</span></div>
+        <div class="m3ig-app"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Microsoft_Outlook_Icon_%282025%E2%80%93present%29.svg" alt="Outlook"><span>Outlook</span></div>
+        <div class="m3ig-app"><img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Microsoft_Office_Teams_%282025%E2%80%93present%29.svg" alt="Teams"><span>Teams</span></div>
+        <div class="m3ig-app"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Microsoft_Office_SharePoint_%282025%E2%80%93present%29.svg" alt="SharePoint"><span>SharePoint</span></div>
+        <div class="m3ig-app"><img src="https://files.brandlogos.net/svg/HNipmYPqfV/microsoft-onedrive-2025-logo-brandlogos.net_ynzfdy0ej.svg" alt="OneDrive"><span>OneDrive</span></div>
+        <div class="m3ig-app"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Intune"><span>Intune</span></div>
+        <div class="m3ig-app"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID"><span>Entra ID</span></div>
+        <div class="m3ig-app"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot"><span>Copilot</span></div>
+        <div class="m3ig-app"><img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="Defender"><span>Defender</span></div>
+        <div class="m3ig-app"><img src="https://az-icons.com/export/icons/a5063b5911ebfde641a1cac4f68bd47e.svg" alt="Purview"><span>Purview</span></div>
       </div>
 
-      <div class="ig-journey">
-        <div class="ig-journey-label">Typical Microsoft 365 Plan Journey</div>
-        <div class="ig-track">
-          <div class="ig-chev basic">Business Basic</div>
-          <div class="ig-chev standard">Business Standard</div>
-          <div class="ig-chev premium">Business Premium</div>
-          <div class="ig-chev e3">E3</div>
-          <div class="ig-chev e5">E5</div>
-        </div>
+      <!-- WASTE ROW -->
+      <div class="m3ig-waste">
+        <div class="m3ig-waste-label">&#9888; What is typically switched off in SME environments</div>
+        <span class="m3ig-wc">Intune never activated</span>
+        <span class="m3ig-wc">Defender for Endpoint idle</span>
+        <span class="m3ig-wc">SharePoint permissions broken</span>
+        <span class="m3ig-wc">Teams governance absent</span>
+        <span class="m3ig-wc">Power Platform blocked</span>
+        <span class="m3ig-wc">Copilot data exposure risk</span>
       </div>
 
-      <div class="ig-footer">
-        <div class="ig-footer-text">Business Premium is the baseline for a fully managed modern workplace &mdash; it includes the device management, security, and automation tools the other tiers leave out.</div>
+      <!-- LAYERS -->
+      <div class="m3ig-slabel">What we configure and govern</div>
+      <div class="m3ig-layers">
+
+        <div class="m3ig-layer email">
+          <div class="m3ig-lid">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Microsoft_Outlook_Icon_%282025%E2%80%93present%29.svg" alt="Exchange">
+            <div><div class="m3ig-lname">Exchange Online &amp; Mail Flow</div><div class="m3ig-ltool">Outlook + Exchange</div></div>
+          </div>
+          <div class="m3ig-lcontent">
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Mail routing &amp; flow rules</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Shared mailboxes &amp; distribution groups</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Archiving &amp; litigation hold</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>DMARC, SPF &amp; DKIM alignment</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>DLP &amp; compliance policies</span>
+          </div>
+        </div>
+
+        <div class="m3ig-layer teams">
+          <div class="m3ig-lid">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Microsoft_Office_Teams_%282025%E2%80%93present%29.svg" alt="Teams">
+            <div><div class="m3ig-lname">Microsoft Teams &amp; Teams Phone</div><div class="m3ig-ltool">Teams + PSTN Calling</div></div>
+          </div>
+          <div class="m3ig-lcontent">
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Teams governance policies</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Guest &amp; external access controls</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Channel naming &amp; retention</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Teams Phone PSTN calling</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Meeting room device integration</span>
+          </div>
+        </div>
+
+        <div class="m3ig-layer sharepoint">
+          <div class="m3ig-lid">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Microsoft_Office_SharePoint_%282025%E2%80%93present%29.svg" alt="SharePoint">
+            <div><div class="m3ig-lname">SharePoint &amp; OneDrive</div><div class="m3ig-ltool">SharePoint + OneDrive</div></div>
+          </div>
+          <div class="m3ig-lcontent">
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Intranet architecture &amp; structure</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Permission hierarchy corrected</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Document governance &amp; classification</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Retention &amp; sensitivity labels</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>External sharing policy</span>
+          </div>
+        </div>
+
+        <div class="m3ig-layer security">
+          <div class="m3ig-lid">
+            <img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID">
+            <div><div class="m3ig-lname">Identity &amp; Security</div><div class="m3ig-ltool">Entra ID + Defender</div></div>
+          </div>
+          <div class="m3ig-lcontent">
+            <span class="m3ig-li"><span class="m3ig-dot"></span>MFA enforced — all users</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Conditional Access policies</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Defender for Endpoint activated</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Stale &amp; guest account remediation</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Legacy authentication blocked</span>
+          </div>
+        </div>
+
+        <div class="m3ig-layer power">
+          <div class="m3ig-lid">
+            <img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Power Platform">
+            <div><div class="m3ig-lname">Power Platform &amp; Copilot</div><div class="m3ig-ltool">Power Automate + Copilot</div></div>
+          </div>
+          <div class="m3ig-lcontent">
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Power Automate workflow deployment</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Power BI reporting dashboards</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Copilot data access governance</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>AI usage policy framework</span>
+            <span class="m3ig-li"><span class="m3ig-dot"></span>Licence utilisation optimisation</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LICENCE JOURNEY -->
+      <div class="m3ig-journey">
+        <div class="m3ig-journey-title">Microsoft 365 plan journey</div>
+        <div class="m3ig-track">
+          <div class="m3ig-chev basic">Business Basic</div>
+          <div class="m3ig-chev standard">Business Standard</div>
+          <div class="m3ig-chev premium">Business Premium ★</div>
+          <div class="m3ig-chev e3">E3</div>
+          <div class="m3ig-chev e5">E5</div>
+        </div>
+        <div class="m3ig-journey-note"><strong>Business Premium is the baseline for a fully managed modern workplace</strong> — it includes Intune, Entra ID P1, Defender for Business, and Azure Information Protection that the lower tiers leave out.</div>
+      </div>
+
+      <!-- STATS -->
+      <div class="m3ig-stats-row">
+        <div class="m3ig-sc r"><div class="m3ig-sc-n">9/10</div><div class="m3ig-sc-l">Teams environments with no governance policy — guest access open by default</div></div>
+        <div class="m3ig-sc a"><div class="m3ig-sc-n">8/10</div><div class="m3ig-sc-l">SharePoint permission inheritance broken — sensitive files accessible to all staff</div></div>
+        <div class="m3ig-sc a"><div class="m3ig-sc-n">€14.4k</div><div class="m3ig-sc-l">Average unused M365 licence spend identified in a first engagement</div></div>
+        <div class="m3ig-sc g"><div class="m3ig-sc-n">100%</div><div class="m3ig-sc-l">Of 4DS-managed M365 environments have documented governance baselines</div></div>
+      </div>
+
+      <!-- COMPLIANCE BAND -->
+      <div class="m3ig-compliance">
+        <div><div class="m3ig-comp-title">ISO 27001 &amp; NIS2</div><div class="m3ig-comp-desc">M365 governance aligned to ISO 27001 Annex A controls. Data retention, classification policies, and access management documented for audit.</div></div>
+        <div><div class="m3ig-comp-title">Tender &amp; Procurement</div><div class="m3ig-comp-desc">Teams and SharePoint governance evidence, MFA enforcement records, and compliance configuration — produced within 48 hours for tender submissions.</div></div>
+        <div><div class="m3ig-comp-title">Licence Optimisation</div><div class="m3ig-comp-desc">Licence audit and utilisation review included in every engagement. Recommendations for right-sizing typically recover 20-40% of monthly M365 spend.</div></div>
       </div>
 
     </div>
+
+    <div class="m3ig-footer">
+      <div class="m3ig-footer-text">You are paying for the full suite. <em>We make sure you are using it.</em></div>
+    </div>
+  </div>
   </div>
 </section>
+
 
 
 <!-- PERSONA SECTION -->
