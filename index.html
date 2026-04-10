@@ -954,6 +954,359 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
 </section>
 
+<!-- ══ MICROSOFT PLATFORM INFOGRAPHIC ══════════════════════ -->
+<section style="padding:48px 0;background:var(--surface);">
+  <div class="container">
+    <div class="section-hdr" style="margin-bottom:2rem;text-align:center;">
+      <span class="eyebrow">Platform Architecture</span>
+      <h2 class="section-title">One platform. Every workload covered.</h2>
+      <p class="section-sub" style="margin:0 auto;">Microsoft 365 Business Premium contains every tool your business needs for identity, devices, security, and collaboration. Most SMEs have it. Almost none have it fully deployed.</p>
+    </div>
+  </div>
+  <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;">
+    <style>
+
+
+
+
+.mpa-card{width:100%;max-width:1060px;border-radius:12px;overflow:hidden;box-shadow:0 24px 70px rgba(11,28,46,0.22);}
+
+/* ── HEADER ── */
+.mpa-hdr{background:var(--navy);padding:28px 40px 24px;position:relative;overflow:hidden;}
+.mpa-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 40%,rgba(0,155,170,0.15) 0%,transparent 55%);pointer-events:none;}
+.mpa-hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.mpa-hdr-flag{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:40px;height:40px;flex-shrink:0;}
+.mpa-hdr-flag span{border-radius:2px;}
+.mpa-hdr-flag span:nth-child(1){background:#F25022;}
+.mpa-hdr-flag span:nth-child(2){background:#7FBA00;}
+.mpa-hdr-flag span:nth-child(3){background:#00A4EF;}
+.mpa-hdr-flag span:nth-child(4){background:#FFB900;}
+.mpa-hdr-text{}
+.mpa-hdr-eyebrow{font-family:'Inter',sans-serif;font-size:0.67rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
+.mpa-hdr-title{font-family:'Sora',sans-serif;font-size:clamp(1.3rem,2.4vw,1.85rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1.08;}
+.mpa-hdr-sub{font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.48);margin-top:5px;max-width:520px;}
+.mpa-hdr-badges{display:flex;gap:7px;flex-wrap:wrap;}
+.mpa-hdr-badge{font-family:'Inter',sans-serif;font-size:0.63rem;font-weight:600;padding:3px 10px;border-radius:var(--r-pill);background:rgba(0,155,170,0.15);border:1px solid rgba(0,155,170,0.35);color:rgba(255,255,255,0.68);}
+
+/* ── BODY ── */
+.mpa-body{background:#F3F5F7;padding:22px 28px;}
+.mpa-slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;}
+
+/* ── PLATFORM LAYERS ── */
+.mpa-platform{display:flex;flex-direction:column;gap:0;margin-bottom:16px;border-radius:var(--r);overflow:hidden;border:1px solid var(--rule);}
+
+/* Layer header bar */
+.mpa-plyr-hdr{display:flex;align-items:center;gap:10px;padding:9px 16px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.mpa-plyr-hdr-label{font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;opacity:0.7;}
+.mpa-plyr-hdr-line{flex:1;height:1px;background:rgba(255,255,255,0.08);}
+.mpa-plyr-hdr-link{font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:600;opacity:0.5;text-decoration:none;transition:opacity 0.2s;}
+.mpa-plyr-hdr-link:hover{opacity:0.9;}
+
+/* Layer body */
+.mpa-plyr-body{display:flex;align-items:center;padding:12px 16px;gap:10px;flex-wrap:wrap;}
+
+/* App tile */
+.mpa-atile{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--r-sm);border:1px solid;transition:transform 0.2s,box-shadow 0.2s;cursor:default;flex-shrink:0;}
+.mpa-atile:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,0.12);}
+.mpa-atile img{width:24px;height:24px;object-fit:contain;flex-shrink:0;}
+.mpa-atile-text{}
+.mpa-atile-name{font-family:'Sora',sans-serif;font-size:0.72rem;font-weight:700;line-height:1.15;}
+.mpa-atile-sub{font-family:'Inter',sans-serif;font-size:0.58rem;opacity:0.65;margin-top:1px;}
+
+/* Colour schemes per layer */
+.mpa-layer-productivity .mpa-plyr-hdr{background:#1E3448;}
+.mpa-layer-productivity .mpa-plyr-hdr-label,.mpa-layer-productivity .mpa-plyr-hdr-link{color:white;}
+.mpa-layer-productivity .mpa-plyr-body{background:white;}
+.mpa-layer-productivity .mpa-atile{background:var(--teal-pale);border-color:var(--teal-border);}
+.mpa-layer-productivity .mpa-atile-name{color:var(--teal-deep);}
+.mpa-layer-productivity .mpa-atile-sub{color:var(--teal);}
+
+.mpa-layer-security .mpa-plyr-hdr{background:#1a0a2e;}
+.mpa-layer-security .mpa-plyr-hdr-label,.mpa-layer-security .mpa-plyr-hdr-link{color:white;}
+.mpa-layer-security .mpa-plyr-body{background:white;}
+.mpa-layer-security .mpa-atile{background:#EDE9FE;border-color:#C4B5FD;}
+.mpa-layer-security .mpa-atile-name{color:#5B21B6;}
+.mpa-layer-security .mpa-atile-sub{color:#7C3AED;}
+
+.mpa-layer-endpoint .mpa-plyr-hdr{background:#003d1a;}
+.mpa-layer-endpoint .mpa-plyr-hdr-label,.mpa-layer-endpoint .mpa-plyr-hdr-link{color:white;}
+.mpa-layer-endpoint .mpa-plyr-body{background:white;}
+.mpa-layer-endpoint .mpa-atile{background:#F0FFF4;border-color:#9AE6B4;}
+.mpa-layer-endpoint .mpa-atile-name{color:#276749;}
+.mpa-layer-endpoint .mpa-atile-sub{color:#38A169;}
+
+.mpa-layer-data .mpa-plyr-hdr{background:#3d1a00;}
+.mpa-layer-data .mpa-plyr-hdr-label,.mpa-layer-data .mpa-plyr-hdr-link{color:white;}
+.mpa-layer-data .mpa-plyr-body{background:white;}
+.mpa-layer-data .mpa-atile{background:#FEF3E2;border-color:#F5D9A8;}
+.mpa-layer-data .mpa-atile-name{color:#92600A;}
+.mpa-layer-data .mpa-atile-sub{color:var(--amber);}
+
+.mpa-layer-infra .mpa-plyr-hdr{background:var(--navy-mid);}
+.mpa-layer-infra .mpa-plyr-hdr-label,.mpa-layer-infra .mpa-plyr-hdr-link{color:white;}
+.mpa-layer-infra .mpa-plyr-body{background:var(--navy);}
+.mpa-layer-infra .mpa-atile{background:rgba(0,155,170,0.15);border-color:rgba(0,155,170,0.35);}
+.mpa-layer-infra .mpa-atile-name{color:rgba(255,255,255,0.9);}
+.mpa-layer-infra .mpa-atile-sub{color:var(--teal);}
+
+/* ── SERVICE MAP ── */
+.mpa-svc-map{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;}
+.mpa-svc-tile{background:white;border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;border-top:3px solid var(--teal);transition:box-shadow 0.2s;}
+.mpa-svc-tile:hover{box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.mpa-svc-tile.mpa-amber{border-top-color:var(--amber);}
+.mpa-svc-tile.mpa-purple{border-top-color:#5B21B6;}
+.mpa-svc-tile.mpa-green{border-top-color:#276749;}
+.mpa-svc-tile-title{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:5px;line-height:1.25;}
+.mpa-svc-tile-items{display:flex;flex-direction:column;gap:3px;}
+.mpa-svc-tile-item{font-family:'Inter',sans-serif;font-size:0.63rem;color:var(--muted);display:flex;align-items:flex-start;gap:4px;line-height:1.35;}
+.mpa-svc-tile-item::before{content:'→';color:var(--teal);flex-shrink:0;font-size:0.6rem;margin-top:1px;}
+.mpa-svc-tile.mpa-amber .mpa-svc-tile-item::before{color:var(--amber);}
+.mpa-svc-tile.mpa-purple .mpa-svc-tile-item::before{color:#5B21B6;}
+.mpa-svc-tile.mpa-green .mpa-svc-tile-item::before{color:#276749;}
+
+/* ── CERTIFICATIONS ROW ── */
+.mpa-certs{background:var(--navy);border-radius:var(--r);padding:14px 18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.mpa-cert-item{text-align:center;}
+.mpa-cert-n{font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;color:var(--teal);letter-spacing:-0.03em;line-height:1;margin-bottom:3px;}
+.mpa-cert-l{font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.45);line-height:1.4;}
+
+/* ── FOOTER ── */
+.mpa-footer-strip{background:var(--navy);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.mpa-footer-text{font-family:'Inter',sans-serif;font-size:0.76rem;color:rgba(255,255,255,0.5);}
+.mpa-footer-text strong{color:white;}
+.mpa-footer-cta{font-family:'Sora',sans-serif;font-size:0.76rem;font-weight:700;color:white;text-decoration:none;padding:0.46rem 1.2rem;background:var(--amber);border-radius:6px;box-shadow:var(--shadow-amber);transition:background 0.2s;white-space:nowrap;}
+.mpa-footer-cta:hover{background:var(--amber-deep);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .
+  .mpa-hdr{padding:20px 16px 18px;}
+  .mpa-footer-strip{padding:12px 16px;}
+  .mpa-svc-map{grid-template-columns:1fr 1fr;}
+  .mpa-certs{grid-template-columns:1fr 1fr;}
+  .mpa-plyr-body{gap:7px;}
+  .mpa-atile{padding:6px 9px;}
+  .mpa-atile img{width:20px;height:20px;}
+  .mpa-atile-name{font-size:0.66rem;}
+}
+@media(max-width:480px){
+  .mpa-svc-map,.mpa-certs{grid-template-columns:1fr;}
+}
+
+    </style>
+    <div class="mpa-card">
+
+<!-- HEADER -->
+<div class="mpa-hdr">
+  <div class="mpa-hdr-inner">
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div class="mpa-hdr-flag"><span></span><span></span><span></span><span></span></div>
+      <div class="mpa-hdr-text">
+        <span class="mpa-hdr-eyebrow">Platform Architecture</span>
+        <div class="mpa-hdr-title">The Microsoft Platform<br>4DS Configures &amp; Manages</div>
+        <div class="mpa-hdr-sub">One integrated platform across productivity, identity, security, endpoint, and compliance — deployed, governed, and monitored as a single managed stack.</div>
+      </div>
+    </div>
+    <div class="mpa-hdr-badges">
+      <span class="mpa-hdr-badge">Microsoft Certified</span>
+      <span class="mpa-hdr-badge">ISO 27001 Alignment</span>
+      <span class="mpa-hdr-badge">NIS2 Frameworks</span>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="mpa-body">
+
+  <!-- PLATFORM LAYERS -->
+  <span class="mpa-slabel">The full Microsoft platform stack</span>
+  <div class="mpa-platform">
+
+    <!-- Layer 1: Productivity -->
+    <div class="mpa-layer-productivity">
+      <div class="mpa-plyr-hdr">
+        <div class="mpa-plyr-hdr-label">Productivity &amp; Collaboration</div>
+        <div class="mpa-plyr-hdr-line"></div>
+        <a href="services/m365-modern-workplace.html" class="mpa-plyr-hdr-link">M365 &amp; Modern Workplace →</a>
+      </div>
+      <div class="mpa-plyr-body">
+        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg" alt="Word"><div class="mpa-atile-text"><div class="mpa-atile-name">Word</div><div class="mpa-atile-sub">Docs</div></div></div>
+        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"><div class="mpa-atile-text"><div class="mpa-atile-name">Excel</div><div class="mpa-atile-sub">Spreadsheets</div></div></div>
+        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_PowerPoint_%282025%E2%80%93present%29.svg" alt="PowerPoint"><div class="mpa-atile-text"><div class="mpa-atile-name">PowerPoint</div><div class="mpa-atile-sub">Presentations</div></div></div>
+        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Microsoft_Outlook_Icon_%282025%E2%80%93present%29.svg" alt="Outlook"><div class="mpa-atile-text"><div class="mpa-atile-name">Outlook</div><div class="mpa-atile-sub">Email &amp; calendar</div></div></div>
+        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Microsoft_Office_Teams_%282025%E2%80%93present%29.svg" alt="Teams"><div class="mpa-atile-text"><div class="mpa-atile-name">Teams</div><div class="mpa-atile-sub">Collaboration</div></div></div>
+        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Microsoft_Office_SharePoint_%282025%E2%80%93present%29.svg" alt="SharePoint"><div class="mpa-atile-text"><div class="mpa-atile-name">SharePoint</div><div class="mpa-atile-sub">Intranet</div></div></div>
+        <div class="mpa-atile"><img src="https://files.brandlogos.net/svg/HNipmYPqfV/microsoft-onedrive-2025-logo-brandlogos.net_ynzfdy0ej.svg" alt="OneDrive"><div class="mpa-atile-text"><div class="mpa-atile-name">OneDrive</div><div class="mpa-atile-sub">File storage</div></div></div>
+        <div class="mpa-atile"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot"><div class="mpa-atile-text"><div class="mpa-atile-name">Copilot</div><div class="mpa-atile-sub">AI assistant</div></div></div>
+      </div>
+    </div>
+
+    <!-- Layer 2: Identity & Security -->
+    <div class="mpa-layer-security">
+      <div class="mpa-plyr-hdr">
+        <div class="mpa-plyr-hdr-label">Identity &amp; Access</div>
+        <div class="mpa-plyr-hdr-line"></div>
+        <a href="services/identity-zero-trust.html" class="mpa-plyr-hdr-link">Identity &amp; Zero Trust →</a>
+      </div>
+      <div class="mpa-plyr-body">
+        <div class="mpa-atile"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID"><div class="mpa-atile-text"><div class="mpa-atile-name">Entra ID</div><div class="mpa-atile-sub">Identity provider</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/85f6f83144709b45bb5c2f5c749f6445.svg" alt="MFA"><div class="mpa-atile-text"><div class="mpa-atile-name">MFA</div><div class="mpa-atile-sub">Multi-factor auth</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/5f360a6eb1a9832935cf184718fe7792.svg" alt="Conditional Access"><div class="mpa-atile-text"><div class="mpa-atile-name">Conditional Access</div><div class="mpa-atile-sub">Policy enforcement</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/f7c90a3079ec81426842441d06aab2c3.svg" alt="PIM"><div class="mpa-atile-text"><div class="mpa-atile-name">PIM</div><div class="mpa-atile-sub">Privileged access</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/0495923a6969cd34bde0711df1aad297.svg" alt="ID Protection"><div class="mpa-atile-text"><div class="mpa-atile-name">ID Protection</div><div class="mpa-atile-sub">Risk detection</div></div></div>
+      </div>
+    </div>
+
+    <!-- Layer 3: Endpoint & Device -->
+    <div class="mpa-layer-endpoint">
+      <div class="mpa-plyr-hdr">
+        <div class="mpa-plyr-hdr-label">Endpoint &amp; Device</div>
+        <div class="mpa-plyr-hdr-line"></div>
+        <a href="services/endpoint-device-management.html" class="mpa-plyr-hdr-link">Endpoint Management →</a>
+      </div>
+      <div class="mpa-plyr-body">
+        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Intune"><div class="mpa-atile-text"><div class="mpa-atile-name">Intune</div><div class="mpa-atile-sub">Device management</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/b04289d184d7e6a5ff611483cd2eecf1.svg" alt="Autopilot"><div class="mpa-atile-text"><div class="mpa-atile-name">Autopilot</div><div class="mpa-atile-sub">Zero-touch deploy</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/519e7bc345e3a5efcd2ec11e2006ea3e.svg" alt="AutoPatch"><div class="mpa-atile-text"><div class="mpa-atile-name">AutoPatch</div><div class="mpa-atile-sub">Automated patching</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="Compliance"><div class="mpa-atile-text"><div class="mpa-atile-name">Device Compliance</div><div class="mpa-atile-sub">Policy enforcement</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/5909f625fdfc6e6b2f81423f01726934.svg" alt="Config"><div class="mpa-atile-text"><div class="mpa-atile-name">Device Config</div><div class="mpa-atile-sub">CIS hardening</div></div></div>
+      </div>
+    </div>
+
+    <!-- Layer 4: Security & Compliance -->
+    <div class="mpa-layer-data">
+      <div class="mpa-plyr-hdr">
+        <div class="mpa-plyr-hdr-label">Security &amp; Compliance</div>
+        <div class="mpa-plyr-hdr-line"></div>
+        <a href="services/cybersecurity-ai-security.html" class="mpa-plyr-hdr-link">Cybersecurity &amp; AI →</a>
+      </div>
+      <div class="mpa-plyr-body">
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="Defender"><div class="mpa-atile-text"><div class="mpa-atile-name">Defender XDR</div><div class="mpa-atile-sub">Threat detection</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/c942e4fe2f9031806a31665a08efe37f.svg" alt="Sentinel"><div class="mpa-atile-text"><div class="mpa-atile-name">Sentinel</div><div class="mpa-atile-sub">SIEM &amp; SOAR</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/a5063b5911ebfde641a1cac4f68bd47e.svg" alt="Defender O365"><div class="mpa-atile-text"><div class="mpa-atile-name">Defender for O365</div><div class="mpa-atile-sub">Email security</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/232997b804dcb2f462fff392c28d31ca.svg" alt="Conditional Access"><div class="mpa-atile-text"><div class="mpa-atile-name">DMARC Enforcement</div><div class="mpa-atile-sub">Anti-spoofing</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/4224f24a0c5f6a2a5703db50a29612a0.svg" alt="Purview"><div class="mpa-atile-text"><div class="mpa-atile-name">Purview</div><div class="mpa-atile-sub">Data governance</div></div></div>
+      </div>
+    </div>
+
+    <!-- Layer 5: Infrastructure & Automation -->
+    <div class="mpa-layer-infra">
+      <div class="mpa-plyr-hdr">
+        <div class="mpa-plyr-hdr-label">Automation &amp; Governance</div>
+        <div class="mpa-plyr-hdr-line"></div>
+        <a href="services/automation-it-governance.html" class="mpa-plyr-hdr-link" style="color:var(--teal);">IT Automation →</a>
+      </div>
+      <div class="mpa-plyr-body">
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/4da8cd05c336e516540abe0d69e3423e.svg" alt="Power Automate"><div class="mpa-atile-text"><div class="mpa-atile-name">Power Automate</div><div class="mpa-atile-sub">Workflow automation</div></div></div>
+        <div class="mpa-atile"><img src="https://img.icons8.com/fluent/96/microsoft-power-bi-2021.png" alt="Power BI"><div class="mpa-atile-text"><div class="mpa-atile-name">Power BI</div><div class="mpa-atile-sub">Dashboards</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/659e967167dca5288784b2ea918bb670.svg" alt="CMDB"><div class="mpa-atile-text"><div class="mpa-atile-name">Asset Register</div><div class="mpa-atile-sub">CMDB</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/5c9e5285f43633acf1d817f038a3fd74.svg" alt="Governance"><div class="mpa-atile-text"><div class="mpa-atile-name">ITIL Governance</div><div class="mpa-atile-sub">Process docs</div></div></div>
+        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/f9e49b2f6656066720a98c5e9923c6f7.svg" alt="Security Score"><div class="mpa-atile-text"><div class="mpa-atile-name">Secure Score</div><div class="mpa-atile-sub">Posture tracking</div></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SERVICE MAP -->
+  <span class="mpa-slabel">How 4DS maps to the platform</span>
+  <div class="mpa-svc-map">
+    <div class="mpa-svc-tile">
+      <div class="mpa-svc-tile-title">M365 &amp; Modern Workplace</div>
+      <div class="mpa-svc-tile-items">
+        <div class="mpa-svc-tile-item">Exchange, Teams, SharePoint</div>
+        <div class="mpa-svc-tile-item">Licence audit &amp; right-sizing</div>
+        <div class="mpa-svc-tile-item">Power Platform activation</div>
+      </div>
+    </div>
+    <div class="mpa-svc-tile mpa-purple">
+      <div class="mpa-svc-tile-title">Identity &amp; Zero Trust</div>
+      <div class="mpa-svc-tile-items">
+        <div class="mpa-svc-tile-item">Entra ID &amp; MFA enforcement</div>
+        <div class="mpa-svc-tile-item">Conditional Access policies</div>
+        <div class="mpa-svc-tile-item">Privileged Identity Mgmt</div>
+      </div>
+    </div>
+    <div class="mpa-svc-tile mpa-green">
+      <div class="mpa-svc-tile-title">Endpoint &amp; Device Mgmt</div>
+      <div class="mpa-svc-tile-items">
+        <div class="mpa-svc-tile-item">Intune &amp; Autopilot</div>
+        <div class="mpa-svc-tile-item">CIS benchmark hardening</div>
+        <div class="mpa-svc-tile-item">AutoPatch &amp; EDR</div>
+      </div>
+    </div>
+    <div class="mpa-svc-tile mpa-amber">
+      <div class="mpa-svc-tile-title">Cybersecurity &amp; AI</div>
+      <div class="mpa-svc-tile-items">
+        <div class="mpa-svc-tile-item">Defender XDR + Sentinel</div>
+        <div class="mpa-svc-tile-item">Phishing simulations</div>
+        <div class="mpa-svc-tile-item">NIS2 &amp; ISO 27001 alignment</div>
+      </div>
+    </div>
+    <div class="mpa-svc-tile">
+      <div class="mpa-svc-tile-title">Email Security</div>
+      <div class="mpa-svc-tile-items">
+        <div class="mpa-svc-tile-item">DMARC to p=reject</div>
+        <div class="mpa-svc-tile-item">Defender for O365 Plan 2</div>
+        <div class="mpa-svc-tile-item">SPF &amp; DKIM alignment</div>
+      </div>
+    </div>
+    <div class="mpa-svc-tile mpa-purple">
+      <div class="mpa-svc-tile-title">Network &amp; Infrastructure</div>
+      <div class="mpa-svc-tile-items">
+        <div class="mpa-svc-tile-item">VLAN segmentation</div>
+        <div class="mpa-svc-tile-item">NGFW &amp; enterprise Wi-Fi</div>
+        <div class="mpa-svc-tile-item">SD-WAN &amp; monitoring</div>
+      </div>
+    </div>
+    <div class="mpa-svc-tile mpa-green">
+      <div class="mpa-svc-tile-title">Backup, DR &amp; Continuity</div>
+      <div class="mpa-svc-tile-items">
+        <div class="mpa-svc-tile-item">M365 + server backup</div>
+        <div class="mpa-svc-tile-item">Immutable &amp; air-gapped</div>
+        <div class="mpa-svc-tile-item">Tested RTO/RPO</div>
+      </div>
+    </div>
+    <div class="mpa-svc-tile mpa-amber">
+      <div class="mpa-svc-tile-title">Automation &amp; Governance</div>
+      <div class="mpa-svc-tile-items">
+        <div class="mpa-svc-tile-item">Onboarding/offboarding</div>
+        <div class="mpa-svc-tile-item">Asset register &amp; CMDB</div>
+        <div class="mpa-svc-tile-item">ITIL change management</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS ROW -->
+  <div class="mpa-certs">
+    <div class="mpa-cert-item">
+      <div class="mpa-cert-n">Microsoft</div>
+      <div class="mpa-cert-l">Certified partner across M365, Intune, Entra ID, and Defender</div>
+    </div>
+    <div class="mpa-cert-item">
+      <div class="mpa-cert-n">ISO 27001</div>
+      <div class="mpa-cert-l">We implement controls aligned to ISO 27001 requirements</div>
+    </div>
+    <div class="mpa-cert-item">
+      <div class="mpa-cert-n">NIS2</div>
+      <div class="mpa-cert-l">We implement the technical controls required under NIS2 Article 21</div>
+    </div>
+    <div class="mpa-cert-item">
+      <div class="mpa-cert-n">Microsoft</div>
+      <div class="mpa-cert-l">Certified engineers across M365, Intune, Entra ID, and Defender</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="mpa-footer-strip" style="justify-content:center;">
+  <div class="mpa-footer-text" style="text-align:center;"><strong>4DS configures and manages this entire stack.</strong> Identity, devices, apps, security, and network — from day one, on a fixed monthly fee.</div>
+</div>
+
+</div>
+  </div>
+</section>
+
 
 <!-- ══ BEFORE / AFTER ══════════════════════════════════════ -->
 <div class="before-after">
@@ -1349,358 +1702,6 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
 
 
-<!-- ══ MICROSOFT PLATFORM INFOGRAPHIC ══════════════════════ -->
-<section style="padding:48px 0;background:var(--surface);">
-  <div class="container">
-    <div class="section-hdr" style="margin-bottom:2rem;">
-      <span class="eyebrow">Platform Architecture</span>
-      <h2 class="section-title">One platform. Every workload covered.</h2>
-      <p class="section-sub">Microsoft 365 Business Premium contains every tool your business needs for identity, devices, security, and collaboration. Most SMEs have it. Almost none have it fully deployed.</p>
-    </div>
-  </div>
-  <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;">
-    <style>
-
-
-
-
-.mpa-card{width:100%;max-width:1060px;border-radius:12px;overflow:hidden;box-shadow:0 24px 70px rgba(11,28,46,0.22);}
-
-/* ── HEADER ── */
-.mpa-hdr{background:var(--navy);padding:28px 40px 24px;position:relative;overflow:hidden;}
-.mpa-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 40%,rgba(0,155,170,0.15) 0%,transparent 55%);pointer-events:none;}
-.mpa-hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-.mpa-hdr-flag{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:40px;height:40px;flex-shrink:0;}
-.mpa-hdr-flag span{border-radius:2px;}
-.mpa-hdr-flag span:nth-child(1){background:#F25022;}
-.mpa-hdr-flag span:nth-child(2){background:#7FBA00;}
-.mpa-hdr-flag span:nth-child(3){background:#00A4EF;}
-.mpa-hdr-flag span:nth-child(4){background:#FFB900;}
-.mpa-hdr-text{}
-.mpa-hdr-eyebrow{font-family:'Inter',sans-serif;font-size:0.67rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
-.mpa-hdr-title{font-family:'Sora',sans-serif;font-size:clamp(1.3rem,2.4vw,1.85rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1.08;}
-.mpa-hdr-sub{font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.48);margin-top:5px;max-width:520px;}
-.mpa-hdr-badges{display:flex;gap:7px;flex-wrap:wrap;}
-.mpa-hdr-badge{font-family:'Inter',sans-serif;font-size:0.63rem;font-weight:600;padding:3px 10px;border-radius:var(--r-pill);background:rgba(0,155,170,0.15);border:1px solid rgba(0,155,170,0.35);color:rgba(255,255,255,0.68);}
-
-/* ── BODY ── */
-.mpa-body{background:#F3F5F7;padding:22px 28px;}
-.mpa-slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;}
-
-/* ── PLATFORM LAYERS ── */
-.mpa-platform{display:flex;flex-direction:column;gap:0;margin-bottom:16px;border-radius:var(--r);overflow:hidden;border:1px solid var(--rule);}
-
-/* Layer header bar */
-.mpa-plyr-hdr{display:flex;align-items:center;gap:10px;padding:9px 16px;border-bottom:1px solid rgba(255,255,255,0.08);}
-.mpa-plyr-hdr-label{font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;opacity:0.7;}
-.mpa-plyr-hdr-line{flex:1;height:1px;background:rgba(255,255,255,0.08);}
-.mpa-plyr-hdr-link{font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:600;opacity:0.5;text-decoration:none;transition:opacity 0.2s;}
-.mpa-plyr-hdr-link:hover{opacity:0.9;}
-
-/* Layer body */
-.mpa-plyr-body{display:flex;align-items:center;padding:12px 16px;gap:10px;flex-wrap:wrap;}
-
-/* App tile */
-.mpa-atile{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--r-sm);border:1px solid;transition:transform 0.2s,box-shadow 0.2s;cursor:default;flex-shrink:0;}
-.mpa-atile:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,0.12);}
-.mpa-atile img{width:24px;height:24px;object-fit:contain;flex-shrink:0;}
-.mpa-atile-text{}
-.mpa-atile-name{font-family:'Sora',sans-serif;font-size:0.72rem;font-weight:700;line-height:1.15;}
-.mpa-atile-sub{font-family:'Inter',sans-serif;font-size:0.58rem;opacity:0.65;margin-top:1px;}
-
-/* Colour schemes per layer */
-.mpa-layer-productivity .mpa-plyr-hdr{background:#1E3448;}
-.mpa-layer-productivity .mpa-plyr-hdr-label,.mpa-layer-productivity .mpa-plyr-hdr-link{color:white;}
-.mpa-layer-productivity .mpa-plyr-body{background:white;}
-.mpa-layer-productivity .mpa-atile{background:var(--teal-pale);border-color:var(--teal-border);}
-.mpa-layer-productivity .mpa-atile-name{color:var(--teal-deep);}
-.mpa-layer-productivity .mpa-atile-sub{color:var(--teal);}
-
-.mpa-layer-security .mpa-plyr-hdr{background:#1a0a2e;}
-.mpa-layer-security .mpa-plyr-hdr-label,.mpa-layer-security .mpa-plyr-hdr-link{color:white;}
-.mpa-layer-security .mpa-plyr-body{background:white;}
-.mpa-layer-security .mpa-atile{background:#EDE9FE;border-color:#C4B5FD;}
-.mpa-layer-security .mpa-atile-name{color:#5B21B6;}
-.mpa-layer-security .mpa-atile-sub{color:#7C3AED;}
-
-.mpa-layer-endpoint .mpa-plyr-hdr{background:#003d1a;}
-.mpa-layer-endpoint .mpa-plyr-hdr-label,.mpa-layer-endpoint .mpa-plyr-hdr-link{color:white;}
-.mpa-layer-endpoint .mpa-plyr-body{background:white;}
-.mpa-layer-endpoint .mpa-atile{background:#F0FFF4;border-color:#9AE6B4;}
-.mpa-layer-endpoint .mpa-atile-name{color:#276749;}
-.mpa-layer-endpoint .mpa-atile-sub{color:#38A169;}
-
-.mpa-layer-data .mpa-plyr-hdr{background:#3d1a00;}
-.mpa-layer-data .mpa-plyr-hdr-label,.mpa-layer-data .mpa-plyr-hdr-link{color:white;}
-.mpa-layer-data .mpa-plyr-body{background:white;}
-.mpa-layer-data .mpa-atile{background:#FEF3E2;border-color:#F5D9A8;}
-.mpa-layer-data .mpa-atile-name{color:#92600A;}
-.mpa-layer-data .mpa-atile-sub{color:var(--amber);}
-
-.mpa-layer-infra .mpa-plyr-hdr{background:var(--navy-mid);}
-.mpa-layer-infra .mpa-plyr-hdr-label,.mpa-layer-infra .mpa-plyr-hdr-link{color:white;}
-.mpa-layer-infra .mpa-plyr-body{background:var(--navy);}
-.mpa-layer-infra .mpa-atile{background:rgba(0,155,170,0.15);border-color:rgba(0,155,170,0.35);}
-.mpa-layer-infra .mpa-atile-name{color:rgba(255,255,255,0.9);}
-.mpa-layer-infra .mpa-atile-sub{color:var(--teal);}
-
-/* ── SERVICE MAP ── */
-.mpa-svc-map{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;}
-.mpa-svc-tile{background:white;border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;border-top:3px solid var(--teal);transition:box-shadow 0.2s;}
-.mpa-svc-tile:hover{box-shadow:0 4px 16px rgba(0,0,0,0.08);}
-.mpa-svc-tile.mpa-amber{border-top-color:var(--amber);}
-.mpa-svc-tile.mpa-purple{border-top-color:#5B21B6;}
-.mpa-svc-tile.mpa-green{border-top-color:#276749;}
-.mpa-svc-tile-title{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;color:var(--ink);margin-bottom:5px;line-height:1.25;}
-.mpa-svc-tile-items{display:flex;flex-direction:column;gap:3px;}
-.mpa-svc-tile-item{font-family:'Inter',sans-serif;font-size:0.63rem;color:var(--muted);display:flex;align-items:flex-start;gap:4px;line-height:1.35;}
-.mpa-svc-tile-item::before{content:'→';color:var(--teal);flex-shrink:0;font-size:0.6rem;margin-top:1px;}
-.mpa-svc-tile.mpa-amber .mpa-svc-tile-item::before{color:var(--amber);}
-.mpa-svc-tile.mpa-purple .mpa-svc-tile-item::before{color:#5B21B6;}
-.mpa-svc-tile.mpa-green .mpa-svc-tile-item::before{color:#276749;}
-
-/* ── CERTIFICATIONS ROW ── */
-.mpa-certs{background:var(--navy);border-radius:var(--r);padding:14px 18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
-.mpa-cert-item{text-align:center;}
-.mpa-cert-n{font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;color:var(--teal);letter-spacing:-0.03em;line-height:1;margin-bottom:3px;}
-.mpa-cert-l{font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.45);line-height:1.4;}
-
-/* ── FOOTER ── */
-.mpa-footer-strip{background:var(--navy);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-.mpa-footer-text{font-family:'Inter',sans-serif;font-size:0.76rem;color:rgba(255,255,255,0.5);}
-.mpa-footer-text strong{color:white;}
-.mpa-footer-cta{font-family:'Sora',sans-serif;font-size:0.76rem;font-weight:700;color:white;text-decoration:none;padding:0.46rem 1.2rem;background:var(--amber);border-radius:6px;box-shadow:var(--shadow-amber);transition:background 0.2s;white-space:nowrap;}
-.mpa-footer-cta:hover{background:var(--amber-deep);}
-
-/* ── RESPONSIVE ── */
-@media(max-width:760px){
-  .
-  .mpa-hdr{padding:20px 16px 18px;}
-  .mpa-footer-strip{padding:12px 16px;}
-  .mpa-svc-map{grid-template-columns:1fr 1fr;}
-  .mpa-certs{grid-template-columns:1fr 1fr;}
-  .mpa-plyr-body{gap:7px;}
-  .mpa-atile{padding:6px 9px;}
-  .mpa-atile img{width:20px;height:20px;}
-  .mpa-atile-name{font-size:0.66rem;}
-}
-@media(max-width:480px){
-  .mpa-svc-map,.mpa-certs{grid-template-columns:1fr;}
-}
-
-    </style>
-    <div class="mpa-card">
-
-<!-- HEADER -->
-<div class="mpa-hdr">
-  <div class="mpa-hdr-inner">
-    <div style="display:flex;align-items:flex-start;gap:14px;">
-      <div class="mpa-hdr-flag"><span></span><span></span><span></span><span></span></div>
-      <div class="mpa-hdr-text">
-        <span class="mpa-hdr-eyebrow">Platform Architecture</span>
-        <div class="mpa-hdr-title">The Microsoft Platform<br>4DS Configures &amp; Manages</div>
-        <div class="mpa-hdr-sub">One integrated platform across productivity, identity, security, endpoint, and compliance — deployed, governed, and monitored as a single managed stack.</div>
-      </div>
-    </div>
-    <div class="mpa-hdr-badges">
-      <span class="mpa-hdr-badge">Microsoft Certified</span>
-      <span class="mpa-hdr-badge">ISO 27001 Alignment</span>
-      <span class="mpa-hdr-badge">NIS2 Frameworks</span>
-    </div>
-  </div>
-</div>
-
-<!-- BODY -->
-<div class="mpa-body">
-
-  <!-- PLATFORM LAYERS -->
-  <span class="mpa-slabel">The full Microsoft platform stack</span>
-  <div class="mpa-platform">
-
-    <!-- Layer 1: Productivity -->
-    <div class="mpa-layer-productivity">
-      <div class="mpa-plyr-hdr">
-        <div class="mpa-plyr-hdr-label">Productivity &amp; Collaboration</div>
-        <div class="mpa-plyr-hdr-line"></div>
-        <a href="services/m365-modern-workplace.html" class="mpa-plyr-hdr-link">M365 &amp; Modern Workplace →</a>
-      </div>
-      <div class="mpa-plyr-body">
-        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg" alt="Word"><div class="mpa-atile-text"><div class="mpa-atile-name">Word</div><div class="mpa-atile-sub">Docs</div></div></div>
-        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"><div class="mpa-atile-text"><div class="mpa-atile-name">Excel</div><div class="mpa-atile-sub">Spreadsheets</div></div></div>
-        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_PowerPoint_%282025%E2%80%93present%29.svg" alt="PowerPoint"><div class="mpa-atile-text"><div class="mpa-atile-name">PowerPoint</div><div class="mpa-atile-sub">Presentations</div></div></div>
-        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Microsoft_Outlook_Icon_%282025%E2%80%93present%29.svg" alt="Outlook"><div class="mpa-atile-text"><div class="mpa-atile-name">Outlook</div><div class="mpa-atile-sub">Email &amp; calendar</div></div></div>
-        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Microsoft_Office_Teams_%282025%E2%80%93present%29.svg" alt="Teams"><div class="mpa-atile-text"><div class="mpa-atile-name">Teams</div><div class="mpa-atile-sub">Collaboration</div></div></div>
-        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Microsoft_Office_SharePoint_%282025%E2%80%93present%29.svg" alt="SharePoint"><div class="mpa-atile-text"><div class="mpa-atile-name">SharePoint</div><div class="mpa-atile-sub">Intranet</div></div></div>
-        <div class="mpa-atile"><img src="https://files.brandlogos.net/svg/HNipmYPqfV/microsoft-onedrive-2025-logo-brandlogos.net_ynzfdy0ej.svg" alt="OneDrive"><div class="mpa-atile-text"><div class="mpa-atile-name">OneDrive</div><div class="mpa-atile-sub">File storage</div></div></div>
-        <div class="mpa-atile"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot"><div class="mpa-atile-text"><div class="mpa-atile-name">Copilot</div><div class="mpa-atile-sub">AI assistant</div></div></div>
-      </div>
-    </div>
-
-    <!-- Layer 2: Identity & Security -->
-    <div class="mpa-layer-security">
-      <div class="mpa-plyr-hdr">
-        <div class="mpa-plyr-hdr-label">Identity &amp; Access</div>
-        <div class="mpa-plyr-hdr-line"></div>
-        <a href="services/identity-zero-trust.html" class="mpa-plyr-hdr-link">Identity &amp; Zero Trust →</a>
-      </div>
-      <div class="mpa-plyr-body">
-        <div class="mpa-atile"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID"><div class="mpa-atile-text"><div class="mpa-atile-name">Entra ID</div><div class="mpa-atile-sub">Identity provider</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/85f6f83144709b45bb5c2f5c749f6445.svg" alt="MFA"><div class="mpa-atile-text"><div class="mpa-atile-name">MFA</div><div class="mpa-atile-sub">Multi-factor auth</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/5f360a6eb1a9832935cf184718fe7792.svg" alt="Conditional Access"><div class="mpa-atile-text"><div class="mpa-atile-name">Conditional Access</div><div class="mpa-atile-sub">Policy enforcement</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/f7c90a3079ec81426842441d06aab2c3.svg" alt="PIM"><div class="mpa-atile-text"><div class="mpa-atile-name">PIM</div><div class="mpa-atile-sub">Privileged access</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/0495923a6969cd34bde0711df1aad297.svg" alt="ID Protection"><div class="mpa-atile-text"><div class="mpa-atile-name">ID Protection</div><div class="mpa-atile-sub">Risk detection</div></div></div>
-      </div>
-    </div>
-
-    <!-- Layer 3: Endpoint & Device -->
-    <div class="mpa-layer-endpoint">
-      <div class="mpa-plyr-hdr">
-        <div class="mpa-plyr-hdr-label">Endpoint &amp; Device</div>
-        <div class="mpa-plyr-hdr-line"></div>
-        <a href="services/endpoint-device-management.html" class="mpa-plyr-hdr-link">Endpoint Management →</a>
-      </div>
-      <div class="mpa-plyr-body">
-        <div class="mpa-atile"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Intune"><div class="mpa-atile-text"><div class="mpa-atile-name">Intune</div><div class="mpa-atile-sub">Device management</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/b04289d184d7e6a5ff611483cd2eecf1.svg" alt="Autopilot"><div class="mpa-atile-text"><div class="mpa-atile-name">Autopilot</div><div class="mpa-atile-sub">Zero-touch deploy</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/519e7bc345e3a5efcd2ec11e2006ea3e.svg" alt="AutoPatch"><div class="mpa-atile-text"><div class="mpa-atile-name">AutoPatch</div><div class="mpa-atile-sub">Automated patching</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="Compliance"><div class="mpa-atile-text"><div class="mpa-atile-name">Device Compliance</div><div class="mpa-atile-sub">Policy enforcement</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/5909f625fdfc6e6b2f81423f01726934.svg" alt="Config"><div class="mpa-atile-text"><div class="mpa-atile-name">Device Config</div><div class="mpa-atile-sub">CIS hardening</div></div></div>
-      </div>
-    </div>
-
-    <!-- Layer 4: Security & Compliance -->
-    <div class="mpa-layer-data">
-      <div class="mpa-plyr-hdr">
-        <div class="mpa-plyr-hdr-label">Security &amp; Compliance</div>
-        <div class="mpa-plyr-hdr-line"></div>
-        <a href="services/cybersecurity-ai-security.html" class="mpa-plyr-hdr-link">Cybersecurity &amp; AI →</a>
-      </div>
-      <div class="mpa-plyr-body">
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="Defender"><div class="mpa-atile-text"><div class="mpa-atile-name">Defender XDR</div><div class="mpa-atile-sub">Threat detection</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/c942e4fe2f9031806a31665a08efe37f.svg" alt="Sentinel"><div class="mpa-atile-text"><div class="mpa-atile-name">Sentinel</div><div class="mpa-atile-sub">SIEM &amp; SOAR</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/a5063b5911ebfde641a1cac4f68bd47e.svg" alt="Defender O365"><div class="mpa-atile-text"><div class="mpa-atile-name">Defender for O365</div><div class="mpa-atile-sub">Email security</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/232997b804dcb2f462fff392c28d31ca.svg" alt="Conditional Access"><div class="mpa-atile-text"><div class="mpa-atile-name">DMARC Enforcement</div><div class="mpa-atile-sub">Anti-spoofing</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/4224f24a0c5f6a2a5703db50a29612a0.svg" alt="Purview"><div class="mpa-atile-text"><div class="mpa-atile-name">Purview</div><div class="mpa-atile-sub">Data governance</div></div></div>
-      </div>
-    </div>
-
-    <!-- Layer 5: Infrastructure & Automation -->
-    <div class="mpa-layer-infra">
-      <div class="mpa-plyr-hdr">
-        <div class="mpa-plyr-hdr-label">Automation &amp; Governance</div>
-        <div class="mpa-plyr-hdr-line"></div>
-        <a href="services/automation-it-governance.html" class="mpa-plyr-hdr-link" style="color:var(--teal);">IT Automation →</a>
-      </div>
-      <div class="mpa-plyr-body">
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/4da8cd05c336e516540abe0d69e3423e.svg" alt="Power Automate"><div class="mpa-atile-text"><div class="mpa-atile-name">Power Automate</div><div class="mpa-atile-sub">Workflow automation</div></div></div>
-        <div class="mpa-atile"><img src="https://img.icons8.com/fluent/96/microsoft-power-bi-2021.png" alt="Power BI"><div class="mpa-atile-text"><div class="mpa-atile-name">Power BI</div><div class="mpa-atile-sub">Dashboards</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/659e967167dca5288784b2ea918bb670.svg" alt="CMDB"><div class="mpa-atile-text"><div class="mpa-atile-name">Asset Register</div><div class="mpa-atile-sub">CMDB</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/5c9e5285f43633acf1d817f038a3fd74.svg" alt="Governance"><div class="mpa-atile-text"><div class="mpa-atile-name">ITIL Governance</div><div class="mpa-atile-sub">Process docs</div></div></div>
-        <div class="mpa-atile"><img src="https://az-icons.com/export/icons/f9e49b2f6656066720a98c5e9923c6f7.svg" alt="Security Score"><div class="mpa-atile-text"><div class="mpa-atile-name">Secure Score</div><div class="mpa-atile-sub">Posture tracking</div></div></div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SERVICE MAP -->
-  <span class="mpa-slabel">How 4DS maps to the platform</span>
-  <div class="mpa-svc-map">
-    <div class="mpa-svc-tile">
-      <div class="mpa-svc-tile-title">M365 &amp; Modern Workplace</div>
-      <div class="mpa-svc-tile-items">
-        <div class="mpa-svc-tile-item">Exchange, Teams, SharePoint</div>
-        <div class="mpa-svc-tile-item">Licence audit &amp; right-sizing</div>
-        <div class="mpa-svc-tile-item">Power Platform activation</div>
-      </div>
-    </div>
-    <div class="mpa-svc-tile mpa-purple">
-      <div class="mpa-svc-tile-title">Identity &amp; Zero Trust</div>
-      <div class="mpa-svc-tile-items">
-        <div class="mpa-svc-tile-item">Entra ID &amp; MFA enforcement</div>
-        <div class="mpa-svc-tile-item">Conditional Access policies</div>
-        <div class="mpa-svc-tile-item">Privileged Identity Mgmt</div>
-      </div>
-    </div>
-    <div class="mpa-svc-tile mpa-green">
-      <div class="mpa-svc-tile-title">Endpoint &amp; Device Mgmt</div>
-      <div class="mpa-svc-tile-items">
-        <div class="mpa-svc-tile-item">Intune &amp; Autopilot</div>
-        <div class="mpa-svc-tile-item">CIS benchmark hardening</div>
-        <div class="mpa-svc-tile-item">AutoPatch &amp; EDR</div>
-      </div>
-    </div>
-    <div class="mpa-svc-tile mpa-amber">
-      <div class="mpa-svc-tile-title">Cybersecurity &amp; AI</div>
-      <div class="mpa-svc-tile-items">
-        <div class="mpa-svc-tile-item">Defender XDR + Sentinel</div>
-        <div class="mpa-svc-tile-item">Phishing simulations</div>
-        <div class="mpa-svc-tile-item">NIS2 &amp; ISO 27001 alignment</div>
-      </div>
-    </div>
-    <div class="mpa-svc-tile">
-      <div class="mpa-svc-tile-title">Email Security</div>
-      <div class="mpa-svc-tile-items">
-        <div class="mpa-svc-tile-item">DMARC to p=reject</div>
-        <div class="mpa-svc-tile-item">Defender for O365 Plan 2</div>
-        <div class="mpa-svc-tile-item">SPF &amp; DKIM alignment</div>
-      </div>
-    </div>
-    <div class="mpa-svc-tile mpa-purple">
-      <div class="mpa-svc-tile-title">Network &amp; Infrastructure</div>
-      <div class="mpa-svc-tile-items">
-        <div class="mpa-svc-tile-item">VLAN segmentation</div>
-        <div class="mpa-svc-tile-item">NGFW &amp; enterprise Wi-Fi</div>
-        <div class="mpa-svc-tile-item">SD-WAN &amp; monitoring</div>
-      </div>
-    </div>
-    <div class="mpa-svc-tile mpa-green">
-      <div class="mpa-svc-tile-title">Backup, DR &amp; Continuity</div>
-      <div class="mpa-svc-tile-items">
-        <div class="mpa-svc-tile-item">M365 + server backup</div>
-        <div class="mpa-svc-tile-item">Immutable &amp; air-gapped</div>
-        <div class="mpa-svc-tile-item">Tested RTO/RPO</div>
-      </div>
-    </div>
-    <div class="mpa-svc-tile mpa-amber">
-      <div class="mpa-svc-tile-title">Automation &amp; Governance</div>
-      <div class="mpa-svc-tile-items">
-        <div class="mpa-svc-tile-item">Onboarding/offboarding</div>
-        <div class="mpa-svc-tile-item">Asset register &amp; CMDB</div>
-        <div class="mpa-svc-tile-item">ITIL change management</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CERTIFICATIONS ROW -->
-  <div class="mpa-certs">
-    <div class="mpa-cert-item">
-      <div class="mpa-cert-n">Microsoft</div>
-      <div class="mpa-cert-l">Certified partner across M365, Intune, Entra ID, and Defender</div>
-    </div>
-    <div class="mpa-cert-item">
-      <div class="mpa-cert-n">ISO 27001</div>
-      <div class="mpa-cert-l">We implement controls aligned to ISO 27001 requirements</div>
-    </div>
-    <div class="mpa-cert-item">
-      <div class="mpa-cert-n">NIS2</div>
-      <div class="mpa-cert-l">We implement the technical controls required under NIS2 Article 21</div>
-    </div>
-    <div class="mpa-cert-item">
-      <div class="mpa-cert-n">Microsoft</div>
-      <div class="mpa-cert-l">Certified engineers across M365, Intune, Entra ID, and Defender</div>
-    </div>
-  </div>
-
-</div>
-
-<!-- FOOTER -->
-<div class="mpa-footer-strip" style="justify-content:center;">
-  <div class="mpa-footer-text" style="text-align:center;"><strong>4DS configures and manages this entire stack.</strong> Identity, devices, apps, security, and network — from day one, on a fixed monthly fee.</div>
-</div>
-
-</div>
-  </div>
-</section>
 
 <!-- ══ VALUE STRIP ════════════════════════════════════════ -->
 <div class="value-strip">
