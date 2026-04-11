@@ -3,14 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Microsoft Intune &amp; Endpoint Device Management | 4DS Ireland</title>
-<meta name="description" content="4DS deploys and manages Microsoft Intune for SMEs across Ireland and the UK. Zero-touch Autopilot, CIS-hardened devices, patch management and full MDM coverage. ISO 27001 certified. Free endpoint health check.">
-<meta name="keywords" content="Microsoft Intune Ireland, endpoint device management, MDM, mobile device management, Intune deployment, Windows Autopilot, CIS benchmark, endpoint security, 4DS">
-<meta property="og:title" content="Microsoft Intune &amp; Endpoint Management | 4DS Ireland">
-<meta property="og:description" content="Every device in your fleet is either managed or a liability. 4DS deploys Microsoft Intune to give you full control. ISO 27001 certified. Free health check.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://4ds.ie/services/endpoint-device-management">
-<link rel="canonical" href="https://4ds.ie/services/endpoint-device-management">
+<title>4DS | Identity & Zero Trust Security | Ireland &amp; UK</title>
+<meta name="description" content="4DS delivers Identity & Zero Trust Security for SMEs across Ireland and the UK. ISO 27001 certified. Senior engineers. Fixed monthly fee. Free IT health check.">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -46,8 +40,9 @@ nav{position:sticky;top:0;z-index:9000;background:#fff;border-bottom:1px solid v
 .nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale);}
 .nav-menu>li>a.active-page{color:var(--teal);}
 .nav-dropdown{position:relative;}
-.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
+.dropdown{display:none;position:absolute;top:100%;left:0;padding-top:10px;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
 .nav-dropdown:hover .dropdown{display:block;}
+.dropdown::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;background:transparent;}
 .dropdown li a{display:block;padding:0.55rem 1rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;color:var(--body);transition:all 0.15s;}
 .dropdown li a:hover{color:var(--teal);background:var(--teal-pale);}
 .dropdown li a.current-page{color:var(--teal);font-weight:700;background:var(--teal-pale);}
@@ -246,8 +241,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
       <li class="nav-dropdown"><a href="../ict-services.html#services" class="active-page">Services &#9662;</a>
         <ul class="dropdown">
           <li><a href="m365-modern-workplace.html">Microsoft 365 &amp; Modern Workplace</a></li>
-          <li><a href="identity-zero-trust.html">Identity &amp; Zero Trust</a></li>
-          <li><a href="endpoint-device-management.html" class="current-page">Endpoint &amp; Device Management</a></li>
+          <li><a href="identity-zero-trust.html" class="current-page">Identity &amp; Zero Trust</a></li>
           <li><a href="cybersecurity-ai-security.html">Cybersecurity &amp; AI Security</a></li>
           <li><a href="email-security-deliverability.html">Email Security &amp; Deliverability</a></li>
           <li><a href="network-wifi-infrastructure.html">Network, Wi-Fi &amp; Infrastructure</a></li>
@@ -255,19 +249,9 @@ footer{background:var(--navy);padding:1.5rem 0;}
           <li><a href="automation-it-governance.html">Automation &amp; IT Governance</a></li>
         </ul>
       </li>
-      <li class="nav-dropdown"><a href="../ict-services.html#industries">Industries &#9662;</a>
-        <ul class="dropdown">
-          <li><a href="../ict-services.html#industries">Healthcare</a></li>
-          <li><a href="../ict-services.html#industries">Manufacturing</a></li>
-          <li><a href="../ict-services.html#industries">Finance &amp; Professional Services</a></li>
-          <li><a href="../ict-services.html#industries">Legal &amp; Professional</a></li>
-          <li><a href="../ict-services.html#industries">Education</a></li>
-          <li><a href="../ict-services.html#industries">Public Sector &amp; Non-Profit</a></li>
-        </ul>
-      </li>
-      <li><a href="../ict-services.html#why">About</a></li>
+      <li><a href="../ict-services.html#industries">Industries</a></li>
       <li><a href="../ict-services.html#approach">Approach</a></li>
-      <li><a href="../ict-services.html#testimonials">Clients</a></li>
+      <li><a href="../ict-services.html#why">About</a></li>
     </ul>
     <div class="nav-actions">
       <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
@@ -282,8 +266,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
   <div class="drawer-inner">
     <span class="drawer-heading">Services</span>
     <a href="m365-modern-workplace.html" class="drawer-sub-link">Microsoft 365 &amp; Modern Workplace</a>
-    <a href="identity-zero-trust.html" class="drawer-sub-link">Identity &amp; Zero Trust</a>
-    <a href="endpoint-device-management.html" class="drawer-sub-link current">Endpoint &amp; Device Management</a>
+    <a href="identity-zero-trust.html" class="drawer-sub-link current">Identity &amp; Zero Trust</a>
     <a href="cybersecurity-ai-security.html" class="drawer-sub-link">Cybersecurity &amp; AI Security</a>
     <a href="email-security-deliverability.html" class="drawer-sub-link">Email Security &amp; Deliverability</a>
     <a href="network-wifi-infrastructure.html" class="drawer-sub-link">Network, Wi-Fi &amp; Infrastructure</a>
@@ -291,9 +274,8 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <a href="automation-it-governance.html" class="drawer-sub-link">Automation &amp; IT Governance</a>
     <div class="drawer-divider"></div>
     <a href="../ict-services.html#industries" class="drawer-link">Industries</a>
-    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
     <a href="../ict-services.html#approach"   class="drawer-link">Approach</a>
-    <a href="../ict-services.html#testimonials" class="drawer-link">Clients</a>
+    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
     <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Get Free Health Check</a>
   </div>
 </div>
@@ -310,11 +292,11 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <button class="buyer-btn" data-buyer="ceo" onclick="setPersona('ceo')">CEO / MD</button>
 <button class="buyer-btn" data-buyer="tender" onclick="setPersona('tender')">Procurement</button>
         </div>
-        <span class="hero-eyebrow">Service Deep-Dive - Endpoint</span>
-        <h1>Every device in your fleet<br><em>is either managed or a liability.</em></h1>
-        <p class="hero-sub" id="heroSub">Unmanaged devices are the most common gap in SME environments. We deploy Intune to give you full control over every laptop, phone, and tablet accessing your data.</p>
+        <span class="hero-eyebrow">Core Expertise - Identity Security</span>
+        <h1>Your accounts are the target.<br><em>Stolen passwords should not be enough.</em></h1>
+        <p class="hero-sub" id="heroSub">Compromised credentials are the entry point for over 80% of breaches. We implement Zero Trust controls that stop attackers even after a password is stolen.</p>
         <div class="trust-pills">
-          <span class="trust-pill">Microsoft Intune Certified</span><span class="trust-pill">CIS Benchmark Hardened</span><span class="trust-pill">Zero-touch Autopilot Deployment</span>
+          <span class="trust-pill">Microsoft Entra ID Specialists</span><span class="trust-pill">Zero Trust Architecture</span><span class="trust-pill">NIS2 Framework Aligned</span>
         </div>
       </div>
 
@@ -329,161 +311,261 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <h2 class="section-title">Everything included in this service</h2>
     <p class="section-sub">Delivered by senior engineers on a fixed monthly fee. No billable hours. No scope surprises.</p>
     <div class="covers-grid">
-      <div class="cover-item"><div class="cover-ico">💻</div><div><h4>Microsoft Intune Suite</h4><p>Full Intune deployment including device enrolment, compliance policies, configuration profiles, and application management for Windows, macOS, iOS, and Android.</p></div></div>
-<div class="cover-item"><div class="cover-ico">🚀</div><div><h4>Windows Autopilot</h4><p>Zero-touch device provisioning. Laptops ship directly to staff and self-configure on first login with all policies, apps, and settings applied automatically.</p></div></div>
-<div class="cover-item"><div class="cover-ico">🔧</div><div><h4>Patch Management &amp; AutoPatch</h4><p>Microsoft AutoPatch for Windows and M365 updates. Third-party patching via Intune for Chrome, Adobe, 7-Zip, and 150+ common applications.</p></div></div>
-<div class="cover-item"><div class="cover-ico">🛡️</div><div><h4>CIS Benchmark Hardening</h4><p>CIS-aligned configuration profiles applied to all managed devices. Removable media controls, BitLocker encryption, local admin removal, and firewall policies.</p></div></div>
-<div class="cover-item"><div class="cover-ico">📱</div><div><h4>Mobile Device Management</h4><p>BYOD and corporate device policies for iOS and Android. App protection policies that separate corporate data without requiring full device enrolment.</p></div></div>
-<div class="cover-item"><div class="cover-ico">📦</div><div><h4>Application Deployment</h4><p>Software catalogue via Intune. Apps deployed silently to device groups. Win32 packaging, LOB app deployment, and application lifecycle management.</p></div></div>
+      <div class="cover-item"><div class="cover-ico">🔐</div><div><h4>Conditional Access Policies</h4><p>Device compliance, location, sign-in risk, and user risk conditions enforced before access is granted. Designed for your environment, not copied from a template.</p></div></div>
+<div class="cover-item"><div class="cover-ico">📱</div><div><h4>Multi-Factor Authentication</h4><p>Phishing-resistant MFA (FIDO2, Authenticator number matching) rolled out across all users. Legacy authentication blocked at tenant level.</p></div></div>
+<div class="cover-item"><div class="cover-ico">👤</div><div><h4>Entra ID &amp; Identity Governance</h4><p>User lifecycle, access reviews, privileged identity management, entitlement management, and governed guest access.</p></div></div>
+<div class="cover-item"><div class="cover-ico">🔍</div><div><h4>Identity Risk Detection</h4><p>Entra ID Protection configured for compromised credentials, impossible travel, and anomalous sign-in - with automated remediation.</p></div></div>
+<div class="cover-item"><div class="cover-ico">🏢</div><div><h4>Privileged Access Management</h4><p>Admin accounts separated from daily use. Just-in-time access via PIM. Emergency access accounts properly documented.</p></div></div>
+<div class="cover-item"><div class="cover-ico">📋</div><div><h4>Stale Account Remediation</h4><p>Systematic identification and removal of ex-staff accounts, orphaned service accounts, and dormant guest access with ongoing hygiene process.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ══ INTUNE + ZERO TRUST INFOGRAPHIC ══ -->
+<!-- ══ IDENTITY & ZERO TRUST INFOGRAPHIC ══ -->
 <section style="padding:40px 0;background:var(--surface);">
   <div class="container">
     <span class="eyebrow">Platform overview</span>
   </div>
+  <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;">
   <style>
-  .ig2{width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;}
-  .ig2-inner{border-radius:10px;overflow:hidden;border:1px solid var(--rule);}
-  .ig2-hdr{background:var(--navy);padding:32px 40px 28px;position:relative;overflow:hidden;}
-  .ig2-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(0,155,170,0.16) 0%,transparent 55%);pointer-events:none;}
-  .ig2-hdr-inner{position:relative;z-index:1;}
-  .ig2-eyebrow{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:1rem;}
-  .ig2-title-row{display:flex;align-items:center;gap:16px;margin-bottom:6px;}
-  .ig2-logo{width:56px;height:56px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 4px 14px rgba(0,0,0,0.45));}
-  .ig2-h1{font-family:'Sora',sans-serif;font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:800;color:white;letter-spacing:-0.035em;line-height:1.05;}
-  .ig2-h1 .plus{color:rgba(255,255,255,0.35);font-weight:400;margin:0 4px;}
-  .ig2-h2{font-family:'Sora',sans-serif;font-size:clamp(0.9rem,1.6vw,1.1rem);font-weight:700;color:var(--amber);margin-top:4px;}
-  .ig2-callout{display:inline-flex;align-items:flex-start;gap:12px;background:rgba(0,155,170,0.1);border:1px solid rgba(0,155,170,0.28);border-radius:6px;padding:12px 16px;margin-top:18px;max-width:560px;}
-  .ig2-callout-icon{width:32px;height:32px;border-radius:50%;background:rgba(0,155,170,0.25);border:1px solid rgba(0,155,170,0.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-  .ig2-callout-icon img{width:18px;height:18px;object-fit:contain;}
-  .ig2-callout p{font-family:'Inter',sans-serif;font-size:0.83rem;color:rgba(255,255,255,0.68);line-height:1.55;}
-  .ig2-callout p strong{color:white;}
-  .ig2-pillars{background:#fff;display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--rule);}
-  .ig2-pillar{padding:22px 18px 26px;border-right:1px solid var(--rule);position:relative;overflow:hidden;}
-  .ig2-pillar:last-child{border-right:none;}
-  .ig2-pillar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;}
-  .ig2-pillar:hover::after{transform:scaleX(1);}
-  .ig2-step{font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:block;}
-  .ig2-pico{width:42px;height:42px;border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
-  .ig2-pico img{width:30px;height:30px;object-fit:contain;}
-  .ig2-pico.c1{background:#EEF9FB;border:1px solid var(--teal-border);}
-  .ig2-pico.c2{background:#EEF9FB;border:1px solid var(--teal-border);}
-  .ig2-pico.c3{background:#FEE9E9;border:1px solid #F5BABA;}
-  .ig2-pico.c4{background:#FEF3E2;border:1px solid #F0D0A0;}
-  .ig2-ptitle{font-family:'Sora',sans-serif;font-size:0.87rem;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:6px;}
-  .ig2-pdesc{font-family:'Inter',sans-serif;font-size:0.74rem;color:var(--muted);line-height:1.55;}
-  .ig2-eq{background:var(--navy-mid);padding:20px 36px;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:nowrap;overflow-x:auto;}
-  .ig2-eitem{display:flex;align-items:center;gap:9px;flex-shrink:0;}
-  .ig2-eico{width:38px;height:38px;border-radius:6px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .ig2-eico img{width:22px;height:22px;object-fit:contain;}
-  .ig2-elabel{font-family:'Inter',sans-serif;font-size:0.57rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);display:block;margin-bottom:1px;}
-  .ig2-evalue{font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:800;color:white;letter-spacing:-0.02em;}
-  .ig2-evalue.teal{color:var(--teal);}
-  .ig2-eop{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:400;color:rgba(255,255,255,0.2);padding:0 12px;flex-shrink:0;}
-  .ig2-eres{margin-left:8px;background:rgba(0,155,170,0.15);border:1px solid rgba(0,155,170,0.4);border-radius:6px;padding:8px 16px;flex-shrink:0;text-align:center;}
-  .ig2-eres-label{font-family:'Inter',sans-serif;font-size:0.57rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:2px;}
-  .ig2-eres-value{font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:800;color:white;white-space:nowrap;}
-  .ig2-bottom{background:var(--navy);padding:20px 40px;display:flex;align-items:center;justify-content:center;}
-  .ig2-bottom-text{font-family:'Sora',sans-serif;font-size:clamp(0.95rem,1.6vw,1.2rem);font-weight:700;color:white;line-height:1.4;text-align:center;}
-  .ig2-bottom-text em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+  :root{--red:#C53030;--red-pale:#FFF5F5;--red-border:#FBBABA;--green:#276749;--green-pale:#F0FFF4;--green-border:#9AE6B4;--r:8px;--r-sm:5px;--amber-pale:#FEF3E2;--muted:#6B7587;--rule:#DEE4EA;}
+
+  .izig-card{width:100%;border-radius:10px;overflow:hidden;border:1px solid #DEE4EA;box-shadow:0 8px 40px rgba(11,28,46,0.12);}
+
+  .izig-hdr{background:var(--navy);padding:28px 40px 24px;position:relative;overflow:hidden;}
+  .izig-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 78% 35%,rgba(0,155,170,0.16) 0%,transparent 55%);pointer-events:none;}
+  .izig-hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .izig-eyebrow{font-family:'Inter',sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
+  .izig-title-row{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .izig-logo{width:48px;height:48px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.4));}
+  .izig-title{font-family:'Sora',sans-serif;font-size:clamp(1.2rem,2.2vw,1.7rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1.1;}
+  .izig-title em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+  .izig-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.46);margin-top:4px;max-width:460px;}
+  .izig-hstats{display:flex;gap:18px;flex-wrap:wrap;}
+  .izig-stat-n{font-family:'Sora',sans-serif;font-size:1.25rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;}
+  .izig-stat-l{font-family:'Inter',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.36);margin-top:2px;max-width:82px;line-height:1.35;}
+
+  .izig-body{background:#F3F5F7;padding:22px 28px;}
+  .izig-slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:#6B7587;display:block;margin-bottom:7px;}
+
+  /* Zero Trust equation */
+  .izig-eq{background:var(--navy-mid);border-radius:8px;padding:16px 20px;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:nowrap;overflow-x:auto;margin-bottom:14px;}
+  .izig-eitem{display:flex;align-items:center;gap:9px;flex-shrink:0;}
+  .izig-eico{width:38px;height:38px;border-radius:6px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .izig-eico img{width:22px;height:22px;object-fit:contain;}
+  .izig-elabel{font-family:'Inter',sans-serif;font-size:0.57rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);display:block;margin-bottom:1px;}
+  .izig-evalue{font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:800;color:white;letter-spacing:-0.02em;}
+  .izig-evalue.teal{color:var(--teal);}
+  .izig-eop{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:400;color:rgba(255,255,255,0.2);padding:0 12px;flex-shrink:0;}
+  .izig-eres{margin-left:8px;background:rgba(0,155,170,0.15);border:1px solid rgba(0,155,170,0.4);border-radius:6px;padding:8px 16px;flex-shrink:0;text-align:center;}
+  .izig-eres-label{font-family:'Inter',sans-serif;font-size:0.57rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:2px;}
+  .izig-eres-value{font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:800;color:white;white-space:nowrap;}
+
+  /* Threat row */
+  .izig-threat{background:linear-gradient(90deg,#1a0505,#2d0a0a);border:1px solid #6b1414;border-radius:8px;padding:10px 16px;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .izig-threat-label{font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;color:#fc8181;flex-shrink:0;}
+  .izig-tc{font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:600;padding:2px 8px;border-radius:100px;background:rgba(197,48,48,0.2);border:1px solid rgba(197,48,48,0.4);color:#fc8181;white-space:nowrap;}
+
+  /* Layers */
+  .izig-layers{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;}
+  .izig-layer{display:grid;grid-template-columns:190px 1fr;border-radius:8px;overflow:hidden;border:1px solid #DEE4EA;}
+  .izig-lid{padding:11px 13px;display:flex;align-items:center;gap:8px;}
+  .izig-lid img{width:24px;height:24px;object-fit:contain;flex-shrink:0;}
+  .izig-lname{font-family:'Sora',sans-serif;font-size:0.74rem;font-weight:700;line-height:1.2;}
+  .izig-ltool{font-family:'Inter',sans-serif;font-size:0.59rem;margin-top:2px;opacity:0.7;}
+  .izig-lcontent{padding:9px 13px;display:flex;align-items:center;flex-wrap:wrap;gap:5px;}
+  .izig-li{display:flex;align-items:center;gap:4px;padding:3px 9px;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.63rem;font-weight:500;border:1px solid;white-space:nowrap;}
+  .izig-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+
+  .izig-layer.mfa .izig-lid{background:#EEF9FB;} .izig-layer.mfa .izig-lname{color:var(--teal-deep);} .izig-layer.mfa .izig-ltool{color:var(--teal);} .izig-layer.mfa .izig-lcontent{background:white;} .izig-layer.mfa .izig-li{background:var(--teal-pale);border-color:var(--teal-border);color:var(--teal-deep);} .izig-layer.mfa .izig-dot{background:var(--teal);}
+  .izig-layer.ca .izig-lid{background:#EDE9FE;} .izig-layer.ca .izig-lname{color:#5B21B6;} .izig-layer.ca .izig-ltool{color:#7C3AED;} .izig-layer.ca .izig-lcontent{background:white;} .izig-layer.ca .izig-li{background:#EDE9FE;border-color:#C4B5FD;color:#5B21B6;} .izig-layer.ca .izig-dot{background:#7C3AED;}
+  .izig-layer.gov .izig-lid{background:#FEF3C7;} .izig-layer.gov .izig-lname{color:#92600A;} .izig-layer.gov .izig-ltool{color:#E8920A;} .izig-layer.gov .izig-lcontent{background:white;} .izig-layer.gov .izig-li{background:#FEF3E2;border-color:#F5D9A8;color:#92600A;} .izig-layer.gov .izig-dot{background:#E8920A;}
+  .izig-layer.pam .izig-lid{background:#F0FFF4;} .izig-layer.pam .izig-lname{color:#276749;} .izig-layer.pam .izig-ltool{color:#38A169;} .izig-layer.pam .izig-lcontent{background:white;} .izig-layer.pam .izig-li{background:#F0FFF4;border-color:#9AE6B4;color:#276749;} .izig-layer.pam .izig-dot{background:#48BB78;}
+  .izig-layer.risk .izig-lid{background:var(--navy);border-right:2px solid var(--teal);} .izig-layer.risk .izig-lname{color:white;} .izig-layer.risk .izig-ltool{color:var(--teal);} .izig-layer.risk .izig-lcontent{background:var(--navy-mid);} .izig-layer.risk .izig-li{background:rgba(0,155,170,0.15);border-color:rgba(0,155,170,0.4);color:rgba(255,255,255,0.82);} .izig-layer.risk .izig-dot{background:var(--teal);} .izig-layer.risk{border-color:var(--teal-border);}
+
+  /* Stats */
+  .izig-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:12px;}
+  .izig-sc{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:10px 12px;border-top:3px solid var(--teal);}
+  .izig-sc.a{border-top-color:#E8920A;} .izig-sc.r{border-top-color:#C53030;} .izig-sc.g{border-top-color:#276749;}
+  .izig-sc-n{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;margin-bottom:3px;}
+  .izig-sc.a .izig-sc-n{color:#E8920A;} .izig-sc.r .izig-sc-n{color:#C53030;} .izig-sc.g .izig-sc-n{color:#276749;}
+  .izig-sc-l{font-family:'Inter',sans-serif;font-size:0.63rem;color:#2C3340;line-height:1.4;}
+
+  /* Compliance band */
+  .izig-compliance{background:var(--navy);border-radius:8px;padding:14px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .izig-comp-title{font-family:'Sora',sans-serif;font-size:0.7rem;font-weight:700;color:var(--teal);margin-bottom:3px;}
+  .izig-comp-desc{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.48);line-height:1.4;}
+
+  /* Footer */
+  .izig-footer{background:var(--navy);padding:16px 40px;display:flex;align-items:center;justify-content:center;}
+  .izig-footer-text{font-family:'Sora',sans-serif;font-size:clamp(0.85rem,1.4vw,1rem);font-weight:700;color:white;text-align:center;line-height:1.4;}
+  .izig-footer-text em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+
   @media(max-width:860px){
-    .ig2{padding:0 1rem;}
-    .ig2-hdr{padding:22px 20px 20px;}
-    .ig2-pillars{grid-template-columns:1fr 1fr;}
-    .ig2-pillar{border-bottom:1px solid var(--rule);}
-    .ig2-pillar:nth-child(odd){border-right:1px solid var(--rule);}
-    .ig2-pillar:nth-child(even){border-right:none;}
-    .ig2-eq{padding:18px 20px;}
-    .ig2-bottom{padding:18px 20px;}
+    .izig-hdr{padding:20px 20px 18px;} .izig-body{padding:16px 16px;}
+    .izig-layer{grid-template-columns:1fr;} .izig-lid{border-bottom:1px solid #DEE4EA;}
+    .izig-stats-row{grid-template-columns:1fr 1fr;}
+    .izig-compliance{grid-template-columns:1fr;}
+    .izig-eq{padding:14px 12px;} .izig-eop{padding:0 7px;}
   }
   @media(max-width:520px){
-    .ig2{padding:0 0.5rem;}
-    .ig2-pillars{grid-template-columns:1fr;}
-    .ig2-pillar{border-right:none!important;}
-    .ig2-logo{width:44px;height:44px;}
-    .ig2-eop{padding:0 6px;}
+    .izig-stats-row{grid-template-columns:1fr;}
+    .izig-hdr-inner{flex-direction:column;align-items:flex-start;}
   }
   </style>
-  <div class="ig2">
-    <div class="ig2-inner">
-      <div class="ig2-hdr">
-        <div class="ig2-hdr-inner">
-          <span class="ig2-eyebrow">Endpoint Security Deep-Dive</span>
-          <div class="ig2-title-row">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Microsoft Intune" class="ig2-logo">
+
+  <div class="izig-card">
+    <div class="izig-hdr">
+      <div class="izig-hdr-inner">
+        <div>
+          <span class="izig-eyebrow">Identity &amp; Zero Trust Security</span>
+          <div class="izig-title-row">
+            <img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID" class="izig-logo">
             <div>
-              <div class="ig2-h1">Intune<span class="plus">+</span>Zero Trust</div>
-              <div class="ig2-h2">Stronger Than You Think</div>
+              <div class="izig-title">A stolen password<br><em>should not be enough.</em></div>
             </div>
           </div>
-          <div class="ig2-callout">
-            <div class="ig2-callout-icon">
-              <img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="Device Compliance">
-            </div>
-            <p>Are you enforcing trust at the <strong>device level?</strong><br>
-               Most organisations enforce identity — but leave devices unmanaged and unverified.</p>
-          </div>
+          <div class="izig-sub">Zero Trust means every access request is verified — identity, device, location, and risk — before it is granted. Not once at login. Every time.</div>
         </div>
-      </div>
-      <div class="ig2-pillars">
-        <div class="ig2-pillar">
-          <span class="ig2-step">Step 01</span>
-          <div class="ig2-pico c1"><img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="Device Compliance"></div>
-          <div class="ig2-ptitle">Compliant Device Required</div>
-          <p class="ig2-pdesc">Access is only granted to devices that pass Intune compliance policy — patched, encrypted, and enrolled.</p>
+        <div class="izig-hstats">
+          <div><div class="izig-stat-n">80%+</div><div class="izig-stat-l">Of breaches involve stolen credentials</div></div>
+          <div><div class="izig-stat-n">Common</div><div class="izig-stat-l">CA policies that exist but block nothing</div></div>
+          <div><div class="izig-stat-n">Frequent</div><div class="izig-stat-l">Ex-staff accounts active at first review</div></div>
         </div>
-        <div class="ig2-pillar">
-          <span class="ig2-step">Step 02</span>
-          <div class="ig2-pico c2"><img src="https://az-icons.com/export/icons/5f360a6eb1a9832935cf184718fe7792.svg" alt="Conditional Access"></div>
-          <div class="ig2-ptitle">Conditional Access Applied</div>
-          <p class="ig2-pdesc">Entra ID Conditional Access enforces device compliance as a condition — alongside MFA and sign-in risk signals.</p>
-        </div>
-        <div class="ig2-pillar">
-          <span class="ig2-step">Step 03</span>
-          <div class="ig2-pico c3"><img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="Defender"></div>
-          <div class="ig2-ptitle">Non-Compliant Devices Blocked</div>
-          <p class="ig2-pdesc">Unmanaged or out-of-policy devices are blocked at the authentication layer — before they reach data.</p>
-        </div>
-        <div class="ig2-pillar">
-          <span class="ig2-step">Step 04</span>
-          <div class="ig2-pico c4"><img src="https://az-icons.com/export/icons/5909f625fdfc6e6b2f81423f01726934.svg" alt="Device Configuration"></div>
-          <div class="ig2-ptitle">Dynamic Policy Enforcement</div>
-          <p class="ig2-pdesc">Compliance is re-evaluated continuously. A device that falls out of policy loses access automatically.</p>
-        </div>
-      </div>
-      <div class="ig2-eq">
-        <div class="ig2-eitem">
-          <div class="ig2-eico"><img src="https://az-icons.com/export/icons/06c2a09f4135f9abddcf315efd9b90ef.svg" alt="Identity"></div>
-          <div><span class="ig2-elabel">Layer 1</span><div class="ig2-evalue">Identity</div></div>
-        </div>
-        <div class="ig2-eop">+</div>
-        <div class="ig2-eitem">
-          <div class="ig2-eico"><img src="https://az-icons.com/export/icons/659e967167dca5288784b2ea918bb670.svg" alt="Device"></div>
-          <div><span class="ig2-elabel">Layer 2</span><div class="ig2-evalue teal">Device</div></div>
-        </div>
-        <div class="ig2-eop">+</div>
-        <div class="ig2-eitem">
-          <div class="ig2-eico"><img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="Compliance"></div>
-          <div><span class="ig2-elabel">Layer 3</span><div class="ig2-evalue">Compliance</div></div>
-        </div>
-        <div class="ig2-eop">+</div>
-        <div class="ig2-eitem">
-          <div class="ig2-eico"><img src="https://az-icons.com/export/icons/0495923a6969cd34bde0711df1aad297.svg" alt="Risk"></div>
-          <div><span class="ig2-elabel">Layer 4</span><div class="ig2-evalue">Risk</div></div>
-        </div>
-        <div class="ig2-eop">=</div>
-        <div class="ig2-eres">
-          <span class="ig2-eres-label">Zero Trust Posture</span>
-          <div class="ig2-eres-value">Full Zero Trust</div>
-        </div>
-      </div>
-      <div class="ig2-bottom">
-        <div class="ig2-bottom-text">Require Compliance. <em>Not Just Document It.</em></div>
       </div>
     </div>
+
+    <div class="izig-body">
+
+      <!-- ZERO TRUST EQUATION -->
+      <div class="izig-slabel">The Zero Trust access decision</div>
+      <div class="izig-eq">
+        <div class="izig-eitem">
+          <div class="izig-eico"><img src="https://az-icons.com/export/icons/06c2a09f4135f9abddcf315efd9b90ef.svg" alt="Identity"></div>
+          <div><span class="izig-elabel">Who</span><div class="izig-evalue">Identity</div></div>
+        </div>
+        <div class="izig-eop">+</div>
+        <div class="izig-eitem">
+          <div class="izig-eico"><img src="https://az-icons.com/export/icons/659e967167dca5288784b2ea918bb670.svg" alt="Device"></div>
+          <div><span class="izig-elabel">What device</span><div class="izig-evalue teal">Compliance</div></div>
+        </div>
+        <div class="izig-eop">+</div>
+        <div class="izig-eitem">
+          <div class="izig-eico"><img src="https://az-icons.com/export/icons/453fc99579a671917d1a327b385d0c83.svg" alt="Location"></div>
+          <div><span class="izig-elabel">Where</span><div class="izig-evalue">Location</div></div>
+        </div>
+        <div class="izig-eop">+</div>
+        <div class="izig-eitem">
+          <div class="izig-eico"><img src="https://az-icons.com/export/icons/0495923a6969cd34bde0711df1aad297.svg" alt="Risk"></div>
+          <div><span class="izig-elabel">Risk signal</span><div class="izig-evalue">Risk Score</div></div>
+        </div>
+        <div class="izig-eop">=</div>
+        <div class="izig-eres">
+          <span class="izig-eres-label">Decision</span>
+          <div class="izig-eres-value">Grant or Block</div>
+        </div>
+      </div>
+
+      <!-- THREAT ROW -->
+      <div class="izig-threat">
+        <div class="izig-threat-label">&#9888; What weak identity controls enable</div>
+        <span class="izig-tc">Credential phishing</span>
+        <span class="izig-tc">Account takeover</span>
+        <span class="izig-tc">Lateral movement</span>
+        <span class="izig-tc">Dormant ex-staff access</span>
+        <span class="izig-tc">Admin privilege abuse</span>
+        <span class="izig-tc">Legacy auth bypass</span>
+      </div>
+
+      <!-- LAYERS -->
+      <div class="izig-slabel">The identity security stack</div>
+      <div class="izig-layers">
+
+        <div class="izig-layer mfa">
+          <div class="izig-lid">
+            <img src="https://az-icons.com/export/icons/85f6f83144709b45bb5c2f5c749f6445.svg" alt="MFA">
+            <div><div class="izig-lname">Multi-Factor Authentication</div><div class="izig-ltool">Entra ID + Authenticator</div></div>
+          </div>
+          <div class="izig-lcontent">
+            <span class="izig-li"><span class="izig-dot"></span>FIDO2 phishing-resistant keys</span>
+            <span class="izig-li"><span class="izig-dot"></span>Authenticator number matching</span>
+            <span class="izig-li"><span class="izig-dot"></span>Legacy authentication blocked</span>
+            <span class="izig-li"><span class="izig-dot"></span>MFA enforced — not just enabled</span>
+            <span class="izig-li"><span class="izig-dot"></span>Per-user and per-app policies</span>
+          </div>
+        </div>
+
+        <div class="izig-layer ca">
+          <div class="izig-lid">
+            <img src="https://az-icons.com/export/icons/5f360a6eb1a9832935cf184718fe7792.svg" alt="Conditional Access">
+            <div><div class="izig-lname">Conditional Access</div><div class="izig-ltool">Entra ID Policy Engine</div></div>
+          </div>
+          <div class="izig-lcontent">
+            <span class="izig-li"><span class="izig-dot"></span>Device compliance required</span>
+            <span class="izig-li"><span class="izig-dot"></span>Named location enforcement</span>
+            <span class="izig-li"><span class="izig-dot"></span>Sign-in risk conditions</span>
+            <span class="izig-li"><span class="izig-dot"></span>Tested and validated — not Report-Only</span>
+            <span class="izig-li"><span class="izig-dot"></span>Session controls for sensitive apps</span>
+          </div>
+        </div>
+
+        <div class="izig-layer gov">
+          <div class="izig-lid">
+            <img src="https://az-icons.com/export/icons/f7c90a3079ec81426842441d06aab2c3.svg" alt="Identity Governance">
+            <div><div class="izig-lname">Identity Governance</div><div class="izig-ltool">Entra ID Governance</div></div>
+          </div>
+          <div class="izig-lcontent">
+            <span class="izig-li"><span class="izig-dot"></span>User lifecycle management</span>
+            <span class="izig-li"><span class="izig-dot"></span>Access reviews (quarterly)</span>
+            <span class="izig-li"><span class="izig-dot"></span>Stale account remediation</span>
+            <span class="izig-li"><span class="izig-dot"></span>Guest &amp; external access governed</span>
+            <span class="izig-li"><span class="izig-dot"></span>Entitlement management</span>
+          </div>
+        </div>
+
+        <div class="izig-layer pam">
+          <div class="izig-lid">
+            <img src="https://az-icons.com/export/icons/f9e49b2f6656066720a98c5e9923c6f7.svg" alt="PIM">
+            <div><div class="izig-lname">Privileged Access Management</div><div class="izig-ltool">Entra PIM</div></div>
+          </div>
+          <div class="izig-lcontent">
+            <span class="izig-li"><span class="izig-dot"></span>Admin accounts separated</span>
+            <span class="izig-li"><span class="izig-dot"></span>Just-in-time access via PIM</span>
+            <span class="izig-li"><span class="izig-dot"></span>Approval workflow for elevation</span>
+            <span class="izig-li"><span class="izig-dot"></span>Emergency access accounts configured</span>
+            <span class="izig-li"><span class="izig-dot"></span>Admin activity audited</span>
+          </div>
+        </div>
+
+        <div class="izig-layer risk">
+          <div class="izig-lid">
+            <img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="ID Protection">
+            <div><div class="izig-lname">Identity Risk &amp; Protection</div><div class="izig-ltool">Entra ID Protection</div></div>
+          </div>
+          <div class="izig-lcontent">
+            <span class="izig-li"><span class="izig-dot"></span>Compromised credential detection</span>
+            <span class="izig-li"><span class="izig-dot"></span>Impossible travel alerts</span>
+            <span class="izig-li"><span class="izig-dot"></span>Anomalous sign-in detection</span>
+            <span class="izig-li"><span class="izig-dot"></span>Automated remediation policies</span>
+            <span class="izig-li"><span class="izig-dot"></span>Feeds into Microsoft Sentinel (SIEM)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COMPLIANCE BAND -->
+      <div class="izig-compliance">
+        <div><div class="izig-comp-title">NIS2 Article 21</div><div class="izig-comp-desc">We implement the MFA, access control, and privileged access management controls mandated by NIS2. All controls documented for supervisory authority review.</div></div>
+        <div><div class="izig-comp-title">ISO 27001 Alignment</div><div class="izig-comp-desc">Identity and access management controls configured to align with ISO 27001 Annex A requirements. Evidence pack available for audit and tender submissions.</div></div>
+        <div><div class="izig-comp-title">Cyber Insurance</div><div class="izig-comp-desc">MFA enforcement, CA policy documentation, and stale account remediation are the identity controls most commonly required by cyber insurance underwriters.</div></div>
+      </div>
+
+    </div>
+
+    <div class="izig-footer">
+      <div class="izig-footer-text">A stolen password alone <em>should never be enough to access your systems.</em></div>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -503,78 +585,78 @@ footer{background:var(--navy);padding:1.5rem 0;}
     
       <div class="persona-content active" data-buyer="generic">
         <div>
-          <h3 class="persona-headline">A device that is not managed is a device you cannot protect, patch, or wipe</h3>
-          <p class="persona-body">Unmanaged devices are the gap that ransomware operators look for. If a device is not enrolled in Intune, you cannot enforce encryption, cannot verify patch status, and cannot remotely wipe it if it is lost or an employee leaves under difficult circumstances. We deploy Microsoft Intune - included in your M365 Business Premium licence - across every device in your fleet.</p>
-          <div class="persona-pains"><div class="pain-item">No visibility into which devices are patched, encrypted, or compliant</div>
-<div class="pain-item">New starters receive a laptop but no standardised configuration is applied</div>
-<div class="pain-item">When a staff member leaves, there is no automated process to wipe or secure their device</div>
-<div class="pain-item">Personal devices accessing company email and Teams with no management controls in place</div></div>
+          <h3 class="persona-headline">A password is no longer a sufficient credential</h3>
+          <p class="persona-body">The most common attack pattern against SMEs is simple: an employee receives a phishing email, enters their credentials on a convincing fake login page, and the attacker has everything they need. Without Conditional Access enforcing device compliance, MFA, and sign-in risk conditions, a stolen password is all it takes. With Zero Trust identity controls properly configured, it is not enough.</p>
+          <div class="persona-pains"><div class="pain-item">MFA is enabled but not enforced - users can still authenticate without it</div>
+<div class="pain-item">Conditional Access policies exist in the portal but have never been tested or validated</div>
+<div class="pain-item">No process exists for removing access when a staff member or contractor leaves</div>
+<div class="pain-item">Guest and external user accounts from old projects remain active in the tenant</div></div>
           <div class="persona-cta-row">
             <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
           </div>
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">9/10</div><div class="p-stat-label"><strong>Environments with Defender for Endpoint undeployed despite being licensed</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">65%</div><div class="p-stat-label"><strong>Of SME laptops carry a critical unpatched vulnerability at any given time</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">0</div><div class="p-stat-label"><strong>Unmanaged devices in a 4DS-managed environment after 30-day onboarding</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">Common</div><div class="p-stat-label"><strong>Environments with CA policies in Report-Only or heavily excluded state</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">Frequent</div><div class="p-stat-label"><strong>Environments with former employee accounts still active at first review</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">80%+</div><div class="p-stat-label"><strong>Of data breaches involve compromised or stolen credentials (Verizon DBIR)</strong></div></div>
         </div>
       </div>
       <div class="persona-content" data-buyer="ops">
         <div>
-          <h3 class="persona-headline">You need patch visibility and compliance enforcement without manual effort</h3>
-          <p class="persona-body">Chasing patch status across a device fleet by hand does not scale. When you are responsible for 30, 50, or 100 devices, you need a system that enforces compliance automatically and reports the results. Intune provides a single console showing every device, its compliance status, its patch level, and its encryption state - with automated remediation when something falls out of compliance.</p>
-          <div class="persona-pains"><div class="pain-item">No central console for device compliance - patch status checked manually or not at all</div>
-<div class="pain-item">Third-party applications like Chrome and Adobe are never patched, only Windows updates run</div>
-<div class="pain-item">Local administrator rights are enabled on all devices with no privileged access model</div>
-<div class="pain-item">Defender for Endpoint is licensed but has never been activated</div></div>
+          <h3 class="persona-headline">You are responsible when an account gets compromised - make sure the controls work</h3>
+          <p class="persona-body">The gap between Conditional Access being enabled and Conditional Access being enforced is where almost every identity-based breach happens. Policies in Report-Only mode generate alerts but block nothing. Policies with broad exclusions for legacy clients leave the door open. Policies that were configured once and never reviewed may no longer reflect your environment. We audit every policy and fix every gap.</p>
+          <div class="persona-pains"><div class="pain-item">CA policies show as Enabled but have never been tested - you do not know what they actually block</div>
+<div class="pain-item">Legacy authentication protocols are still active, allowing MFA bypass via older clients</div>
+<div class="pain-item">No formal process for offboarding - access left behind when people leave</div>
+<div class="pain-item">Admin accounts are used for daily tasks rather than being separated and privileged</div></div>
           <div class="persona-cta-row">
             <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
           </div>
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">9/10</div><div class="p-stat-label"><strong>Environments with Defender for Endpoint never deployed</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">150+</div><div class="p-stat-label"><strong>Third-party applications patchable via Intune in addition to Windows Updates</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">30 days</div><div class="p-stat-label"><strong>Maximum onboarding period to full Intune coverage for a 50-device fleet</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">Common</div><div class="p-stat-label"><strong>CA policies found in ineffective state in a first identity audit</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">4 avg</div><div class="p-stat-label"><strong>Former employee or contractor accounts found active per environment</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">15 min</div><div class="p-stat-label"><strong>Maximum response time for critical identity incidents under a 4DS managed service</strong></div></div>
         </div>
       </div>
       <div class="persona-content" data-buyer="ceo">
         <div>
-          <h3 class="persona-headline">Lost laptop, no remote wipe - that is the scenario endpoint management prevents</h3>
-          <p class="persona-body">An unencrypted, unmanaged laptop left on a train or taken by a departing employee is a GDPR reportable incident. Under the regulation, you may be required to notify the Data Protection Commission and affected individuals. Intune gives you remote wipe capability, BitLocker encryption enforcement, and automated offboarding - so a lost device is an inconvenience, not a data breach.</p>
-          <div class="persona-pains"><div class="pain-item">No remote wipe capability for lost or stolen devices</div>
-<div class="pain-item">Devices belonging to former employees may not have been wiped or recovered</div>
-<div class="pain-item">GDPR breach notification could follow an unencrypted device loss - are all devices encrypted?</div>
-<div class="pain-item">New devices take a day to set up manually when they could self-provision in under an hour</div></div>
+          <h3 class="persona-headline">The average ransomware incident begins with one compromised account</h3>
+          <p class="persona-body">Ransomware operators do not typically exploit technical vulnerabilities in software. They steal credentials through phishing, buy them from breach databases, or use credential stuffing. Once they have a valid username and password, they log in. If Conditional Access is properly enforced, a stolen password is not enough. If it is not enforced, one phishing email is the beginning of an incident that costs tens of thousands of euros to remediate.</p>
+          <div class="persona-pains"><div class="pain-item">You are not certain MFA is enforced for every user in the organisation</div>
+<div class="pain-item">Your cyber insurer is asking about access controls and you are not confident you can answer</div>
+<div class="pain-item">You have no visibility into which accounts have administrative privileges to your business systems</div>
+<div class="pain-item">A competitor or peer organisation has recently suffered an account compromise incident</div></div>
           <div class="persona-cta-row">
             <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
           </div>
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">GDPR</div><div class="p-stat-label"><strong>Unencrypted device loss is a notifiable breach under Article 33</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">1 min</div><div class="p-stat-label"><strong>Time to remotely wipe a device under a 4DS managed Intune environment</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">€0</div><div class="p-stat-label"><strong>Additional licence cost to deploy Intune if you are on M365 Business Premium</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">1 hour</div><div class="p-stat-label"><strong>Typical time for full emergency access lockdown under a 4DS incident response</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>Of 4DS-managed environments have documented, tested Conditional Access policy baselines</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>Of 4DS-managed environments have documented, tested Conditional Access policy baselines</strong></div></div>
         </div>
       </div>
       <div class="persona-content" data-buyer="tender">
         <div>
-          <h3 class="persona-headline">MDM coverage and device compliance are scored in most ICT procurement frameworks</h3>
-          <p class="persona-body">Healthcare and public sector procurement frameworks require evidence of formal device management, endpoint encryption at rest, and a documented patch management process. Intune provides the compliance reporting needed to satisfy all three requirements - device enrolment status, BitLocker encryption evidence, and patch compliance rates per device group.</p>
-          <div class="persona-pains"><div class="pain-item">No MDM solution in place to evidence in tender documentation</div>
-<div class="pain-item">BitLocker encryption not enforced or not documented across the device fleet</div>
-<div class="pain-item">No patch management process or compliance reporting available for a submission</div>
-<div class="pain-item">BYOD devices accessing company data with no documented management policy</div></div>
+          <h3 class="persona-headline">NIS2 and public sector frameworks require documented, enforced access controls</h3>
+          <p class="persona-body">NIS2 Directive Article 21 requires organisations in scope to implement multi-factor authentication, access control policies, and privileged access management as baseline security measures. Public sector ICT tenders increasingly require documented evidence of these controls - not simply that MFA is enabled, but that it is enforced, tested, and reviewed periodically. We implement the controls and produce the documentation.</p>
+          <div class="persona-pains"><div class="pain-item">No documented Conditional Access policy baseline to include in a submission</div>
+<div class="pain-item">MFA enabled but not enforced - cannot certify compliance with NIS2 access control requirements</div>
+<div class="pain-item">No periodic access review process or evidence of stale account remediation</div>
+<div class="pain-item">Privileged access not formally managed, documented, or subject to just-in-time controls</div></div>
           <div class="persona-cta-row">
             <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
           </div>
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Practice-level certification supporting the endpoint management evidence</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">HSE</div><div class="p-stat-label"><strong>Intune deployments documented to HSE ICT security standard where required</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>BitLocker encryption enforcement across all managed Windows devices</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">NIS2</div><div class="p-stat-label"><strong>We implement the MFA, access control, and PAM requirements of NIS2 Article 21</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Identity controls configured to align with ISO 27001 access management requirements</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">48 hrs</div><div class="p-stat-label"><strong>Typical turnaround for identity governance evidence pack production</strong></div></div>
         </div>
       </div>
   </div>
@@ -587,9 +669,9 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <h2 class="section-title">The gaps we find in almost every environment</h2>
     <p class="section-sub">These are not edge cases. They are the standard state of an SME environment without an independent review.</p>
     <div class="findings-grid">
-      <div class="finding-card"><div class="finding-n">9/10</div><h4>Defender for Endpoint never activated</h4><p>Included in M365 Business Premium. Enterprise-grade endpoint threat protection sitting idle because the previous provider never deployed it.</p></div>
-<div class="finding-card"><div class="finding-n">7/10</div><h4>No patch management process</h4><p>Windows on automatic, no visibility into actual status. Third-party apps like Chrome and Adobe never patched at all.</p></div>
-<div class="finding-card"><div class="finding-n">8/10</div><h4>Local admin rights on all devices</h4><p>Every user running as local administrator - trivial malware installation and easy lateral movement after a compromise.</p></div>
+      <div class="finding-card"><div class="finding-n">Common</div><h4>CA policies that block nothing</h4><p>Report-Only mode or so many exclusions the policies are effectively disabled. Looks configured on paper - prevents nothing.</p></div>
+<div class="finding-card"><div class="finding-n">Frequent</div><h4>Ex-staff accounts still active</h4><p>Average of 4 former employee accounts found per environment. Some had been gone for over 12 months with live credentials.</p></div>
+<div class="finding-card"><div class="finding-n">80%+</div><h4>Of breaches involve stolen credentials</h4><p>Conditional Access with enforced MFA is the single most effective control against credential-based attacks.</p></div>
     </div>
   </div>
 </section>
@@ -601,10 +683,10 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <h2 class="section-title">The 4DS delivery process</h2>
     <p class="section-sub">Four stages. No handovers to junior staff mid-project. No scope surprises.</p>
     <div class="how-steps">
-      <div class="how-step"><span class="step-n">STEP 01</span><h4>Device Inventory</h4><p>Every device assessed - corporate and personal. Compliance status, OS version, patch level, and encryption status documented.</p></div>
-<div class="how-step"><span class="step-n">STEP 02</span><h4>Intune Architecture</h4><p>Tenant configuration, enrolment profiles, compliance policies, and configuration baselines designed to your device fleet.</p></div>
-<div class="how-step"><span class="step-n">STEP 03</span><h4>Enrolment &amp; Hardening</h4><p>Devices enrolled, CIS profiles applied, local admin removed, Defender for Endpoint activated on every endpoint.</p></div>
-<div class="how-step"><span class="step-n">STEP 04</span><h4>Patch Reporting</h4><p>AutoPatch configured. Third-party patching enabled. Monthly device compliance report showing patch status across the full fleet.</p></div>
+      <div class="how-step"><span class="step-n">STEP 01</span><h4>Identity Audit</h4><p>Every user, admin, guest, and service account reviewed. Stale and orphaned accounts identified. Admin role assignments documented.</p></div>
+<div class="how-step"><span class="step-n">STEP 02</span><h4>Policy Design</h4><p>Conditional Access policies designed for your environment and risk tolerance with a staged rollout plan to avoid disruption.</p></div>
+<div class="how-step"><span class="step-n">STEP 03</span><h4>MFA &amp; Zero Trust Rollout</h4><p>Phishing-resistant MFA deployed. Legacy authentication blocked. Device compliance and sign-in risk conditions enforced.</p></div>
+<div class="how-step"><span class="step-n">STEP 04</span><h4>Ongoing Identity Hygiene</h4><p>Monthly access review, quarterly stale account audit, continuous Entra ID Protection monitoring with automated risk response.</p></div>
     </div>
   </div>
 </section>
@@ -617,25 +699,16 @@ footer{background:var(--navy);padding:1.5rem 0;}
       <div>
         <span class="eyebrow">Get in touch</span>
         <h2 class="section-title">Get in touch</h2>
-        <p class="section-sub" style="margin-bottom:1.5rem;">Tell us about your device fleet and what you are looking to improve. A senior engineer responds within 2 hours. No commitment required.</p>
+        <p class="section-sub" style="margin-bottom:1.5rem;">Tell us about your current identity setup and what you are concerned about. A senior engineer responds within 2 hours. No commitment required.</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;">
-          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);">
-            <span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>
-            We audit your full device fleet — managed and unmanaged
-          </li>
-          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);">
-            <span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>
-            Patch status, encryption, Defender deployment — all documented
-          </li>
-          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);">
-            <span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>
-            Fixed monthly fee — no billable hours, no surprise invoices
-          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Full identity audit — every account, admin role, and CA policy reviewed</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Conditional Access tested and validated, not just enabled on paper</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Fixed monthly fee — no billable hours, no surprise invoices</li>
         </ul>
       </div>
       <div class="form-card" id="enquiry">
-        <h3>Speak to a senior engineer</h3>
-        <p class="form-sub" id="enquiryNote">Tell us about your current device fleet - size, OS mix, and any management tools already in place.</p>
+        <h3>Get in touch</h3>
+        <p class="form-sub" id="enquiryNote">Tell us about your current identity setup and what you are concerned about.</p>
         <div id="enquiryForm">
           <input type="hidden" id="formBuyer" value="generic">
           <div class="f-group"><label>Your Name *</label><input type="text" id="eName" placeholder="Jane Murphy" required></div>
@@ -660,7 +733,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <footer>
   <div class="container">
     <div class="foot-inner">
-      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321. ISO 27001 Certified.</span>
+      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321.</span>
       <span>
         <a href="../ict-services.html">Home</a> &nbsp;&middot;&nbsp;
         <a href="../ict-services.html#services">All Services</a> &nbsp;&middot;&nbsp;
@@ -672,16 +745,16 @@ footer{background:var(--navy);padding:1.5rem 0;}
 
 <script>
 window.buyerSubs = {
-  generic: "Unmanaged devices are the most common gap in SME environments. We deploy Intune to give you full control over every laptop, phone, and tablet accessing your data.",
-  ops: "You need to know the patch status of every device without chasing people. Intune gives you a single dashboard for the full fleet with automated compliance enforcement.",
-  ceo: "If a laptop is lost or stolen, can you wipe it remotely? If an employee leaves, are their devices secured? Endpoint management answers both questions.",
-  tender: "Device compliance, MDM coverage, and endpoint encryption are standard scored requirements in public sector and healthcare ICT frameworks. We implement and document all three.",
+  generic: "Compromised credentials are the entry point for over 80% of breaches. We implement Zero Trust controls that stop attackers even after a password is stolen.",
+  ops: "Conditional Access policies that are in Report-Only mode, or that have so many exclusions they block nothing, give a false sense of security. We fix the configuration so the controls actually work.",
+  ceo: "A single compromised account is typically how a ransomware incident begins. We make it technically impossible for a stolen password alone to provide access to your systems.",
+  tender: "Zero Trust identity architecture and enforced MFA are baseline requirements under NIS2 Article 21 and most public sector ICT security frameworks. We implement and document both.",
 };
 window.enquiryNotes = {
-  generic: "Tell us about your current device fleet - size, OS mix, and any management tools already in place.",
-  ops: "Tell us how many devices you manage and whether any MDM is currently in use.",
-  ceo: "Tell us your headcount and whether you have had any device loss or offboarding concerns.",
-  tender: "Tell us the compliance framework you are targeting and your current MDM coverage.",
+  generic: "Tell us about your current identity setup and what you are concerned about.",
+  ops: "Tell us which CA policies you have in place and whether any are in Report-Only mode.",
+  ceo: "Tell us your headcount and whether MFA is enforced for all users currently.",
+  tender: "Tell us the framework you are submitting under and your compliance deadline.",
 };
 
 // Persona switching
