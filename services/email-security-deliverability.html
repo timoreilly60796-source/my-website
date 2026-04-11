@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Email Security, DMARC &amp; Deliverability Services Ireland | 4DS</title>
-<meta name="description" content="4DS configures and enforces DMARC, SPF, and DKIM for SMEs across Ireland and the UK. Stop domain spoofing, prevent business email compromise, and fix deliverability issues. ISO 27001 certified practice. Free domain check.">
+<meta name="description" content="4DS configures and enforces DMARC, SPF, and DKIM for SMEs across Ireland and the UK. Stop domain spoofing, prevent business email compromise, and fix deliverability issues. ISO 27001 aligned practice. Free domain check.">
 <meta name="keywords" content="DMARC Ireland, email security, SPF DKIM configuration, domain spoofing protection, business email compromise, Defender for Office 365, email deliverability, NIS2 email security, 4DS">
 <meta property="og:title" content="Email Security &amp; DMARC Enforcement | 4DS Ireland">
 <meta property="og:description" content="7 in 10 SME domains can be spoofed. We configure DMARC to p=reject, fix SPF and DKIM, and deploy advanced email gateway protection. Free domain check included.">
@@ -45,8 +45,9 @@ nav{position:sticky;top:0;z-index:9000;background:#fff;border-bottom:1px solid v
 .nav-menu>li>a{display:block;padding:0.5rem 0.95rem;border-radius:6px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:var(--body);transition:color 0.15s,background 0.15s;}
 .nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale);}
 .nav-dropdown{position:relative;}
-.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:260px;box-shadow:var(--shadow-lg);list-style:none;z-index:9001;}
+.dropdown{display:none;position:absolute;top:100%;left:0;padding-top:10px;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:260px;box-shadow:var(--shadow-lg);list-style:none;z-index:9001;}
 .nav-dropdown:hover .dropdown{display:block;}
+.dropdown::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;background:transparent;}
 .dropdown li a{display:block;padding:0.55rem 1rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;color:var(--body);transition:all 0.15s;}
 .dropdown li a:hover{color:var(--teal);background:var(--teal-pale);}
 .dropdown li a.current-page{color:var(--teal);font-weight:700;background:var(--teal-pale);}
@@ -111,9 +112,9 @@ section{padding:64px 0;}
 .persona-body{font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--body);line-height:1.7;margin-bottom:1rem;}
 .persona-pains{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.25rem;}
 .pain-item{font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--body);padding:0.6rem 0.85rem;background:#fff;border-radius:var(--r-card);border-left:3px solid var(--amber);}
-.persona-stat{display:grid;grid-template-columns:90px 1fr;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);align-items:start;}
+.persona-stat{display:grid;grid-template-columns:80px 1fr;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);align-items:start;}
 .persona-stat:last-child{border-bottom:none;}
-.p-stat-n{font-family:'Sora',sans-serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:800;color:var(--teal);letter-spacing:0;white-space:nowrap;}
+.p-stat-n{font-family:'Sora',sans-serif;font-size:clamp(0.85rem,1.6vw,1.05rem);font-weight:800;color:var(--teal);letter-spacing:0;line-height:1.2;white-space:nowrap;padding-right:0.5rem;}
 .p-stat-label{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--body);line-height:1.45;}
 .persona-aside h4{font-family:'Sora',sans-serif;font-size:0.88rem;font-weight:700;color:var(--ink);margin-bottom:0.75rem;}
 .btn-persona-cta{display:inline-block;font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;padding:0.7rem 1.4rem;background:var(--teal);color:#fff;border-radius:var(--r-btn);transition:background 0.2s;}
@@ -219,24 +220,23 @@ footer{background:var(--navy);padding:1.5rem 0;}
       </div>
     </a>
     <ul class="nav-menu">
-      <li class="nav-dropdown"><a href="../ict-services.html#services">Services &#9662;</a>
+      <li class="nav-dropdown"><a href="../ict-services.html#services" class="active-page">Services &#9662;</a>
         <ul class="dropdown">
           <li><a href="m365-modern-workplace.html">Microsoft 365 &amp; Modern Workplace</a></li>
           <li><a href="identity-zero-trust.html">Identity &amp; Zero Trust</a></li>
-          <li><a href="endpoint-device-management.html">Endpoint &amp; Device Management</a></li>
           <li><a href="cybersecurity-ai-security.html">Cybersecurity &amp; AI Security</a></li>
           <li><a href="email-security-deliverability.html" class="current-page">Email Security &amp; Deliverability</a></li>
           <li><a href="network-wifi-infrastructure.html">Network, Wi-Fi &amp; Infrastructure</a></li>
-          <li><a href="backup-dr-continuity.html">Backup, DR &amp; Business Continuity</a></li>
+          <li><a href="backup-dr-continuity.html">Backup, DR &amp; Continuity</a></li>
           <li><a href="automation-it-governance.html">Automation &amp; IT Governance</a></li>
         </ul>
       </li>
-      <li><a href="../ict-services.html#why">About</a></li>
+      <li><a href="../ict-services.html#industries">Industries</a></li>
       <li><a href="../ict-services.html#approach">Approach</a></li>
-      <li><a href="../ict-services.html#testimonials">Clients</a></li>
+      <li><a href="../ict-services.html#why">About</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Contact Us</a>
     </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -244,18 +244,19 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <div class="drawer-overlay" id="drawerOverlay"></div>
 <div class="drawer" id="drawer">
   <div class="drawer-inner">
-    <a href="../ict-services.html#services" class="drawer-link">All Services</a>
-    <a href="m365-modern-workplace.html"    class="drawer-sub-link">M365 &amp; Modern Workplace</a>
-    <a href="identity-zero-trust.html"      class="drawer-sub-link">Identity &amp; Zero Trust</a>
-    <a href="endpoint-device-management.html" class="drawer-sub-link">Endpoint &amp; Device Mgmt</a>
-    <a href="cybersecurity-ai-security.html"  class="drawer-sub-link">Cybersecurity &amp; AI</a>
-    <a href="email-security-deliverability.html" class="drawer-sub-link" style="color:var(--teal);font-weight:700;">Email Security</a>
-    <a href="network-wifi-infrastructure.html"   class="drawer-sub-link">Network &amp; Wi-Fi</a>
-    <a href="backup-dr-continuity.html"          class="drawer-sub-link">Backup &amp; DR</a>
-    <a href="automation-it-governance.html"      class="drawer-sub-link">Automation &amp; Governance</a>
-    <a href="../ict-services.html#why"      class="drawer-link">About Us</a>
-    <a href="../ict-services.html#approach" class="drawer-link">Our Approach</a>
-    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Get Free Health Check</a>
+    <span class="drawer-heading">Services</span>
+    <a href="m365-modern-workplace.html" class="drawer-sub-link">Microsoft 365 &amp; Modern Workplace</a>
+    <a href="identity-zero-trust.html" class="drawer-sub-link">Identity &amp; Zero Trust</a>
+    <a href="cybersecurity-ai-security.html" class="drawer-sub-link">Cybersecurity &amp; AI Security</a>
+    <a href="email-security-deliverability.html" class="drawer-sub-link current">Email Security &amp; Deliverability</a>
+    <a href="network-wifi-infrastructure.html" class="drawer-sub-link">Network, Wi-Fi &amp; Infrastructure</a>
+    <a href="backup-dr-continuity.html" class="drawer-sub-link">Backup, DR &amp; Continuity</a>
+    <a href="automation-it-governance.html" class="drawer-sub-link">Automation &amp; IT Governance</a>
+    <div class="drawer-divider"></div>
+    <a href="../ict-services.html#industries" class="drawer-link">Industries</a>
+    <a href="../ict-services.html#approach"   class="drawer-link">Approach</a>
+    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
+    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Contact Us</a>
   </div>
 </div>
 
@@ -449,11 +450,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
       <div class="hdr-title">Your domain is probably<br><em>being spoofed right now.</em></div>
       <div class="hdr-sub">DMARC, DKIM, and SPF are the three DNS records that determine whether your email is trustworthy. We configure, enforce, and monitor all three.</div>
     </div>
-    <div class="hdr-stats">
-      <div><div class="hdr-stat-n">7/10</div><div class="hdr-stat-l">SME domains spoofable due to absent DMARC</div></div>
-      <div><div class="hdr-stat-n">94%</div><div class="hdr-stat-l">Of phishing attacks delivered by email (DBIR)</div></div>
-      <div><div class="hdr-stat-n">2 days</div><div class="hdr-stat-l">Typical time to reach p=quarantine from zero</div></div>
-    </div>
   </div>
 </div>
 
@@ -605,14 +601,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
 
   </div>
 
-  <!-- STATS ROW -->
-  <div class="stats-row">
-    <div class="sc r"><div class="sc-n">7/10</div><div class="sc-l">Domains spoofable — DMARC missing or at p=none</div></div>
-    <div class="sc a"><div class="sc-n">6/10</div><div class="sc-l">SPF records broken or over the 10-lookup limit</div></div>
-    <div class="sc r"><div class="sc-n">8/10</div><div class="sc-l">Environments with no gateway beyond Exchange defaults</div></div>
-    <div class="sc g"><div class="sc-n">€0</div><div class="sc-l">Additional licence cost — DMARC is a DNS change, not a new product</div></div>
-  </div>
-
 </div>
 
 <!-- FOOTER -->
@@ -649,7 +637,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
       </div>
       <div class="persona-aside">
         <h4>By the numbers</h4>
-        <div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>SME environments with DMARC missing or at p=none in a first review</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">DMARC</div><div class="p-stat-label"><strong>The primary control that prevents unauthorised senders impersonating your domain</strong></div></div>
         <div class="persona-stat"><div class="p-stat-n">94%</div><div class="p-stat-label"><strong>Of phishing attacks are delivered by email (Verizon DBIR)</strong></div></div>
         <div class="persona-stat"><div class="p-stat-n">2 days</div><div class="p-stat-label"><strong>Typical time to reach p=quarantine DMARC enforcement from a standing start</strong></div></div>
       </div>
@@ -668,8 +656,8 @@ footer{background:var(--navy);padding:1.5rem 0;}
       </div>
       <div class="persona-aside">
         <h4>By the numbers</h4>
-        <div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>Environments with DMARC at p=none or missing entirely</strong></div></div>
-        <div class="persona-stat"><div class="p-stat-n">6/10</div><div class="p-stat-label"><strong>SPF records with lookup limit exceeded or deprecated mechanisms</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">SPF</div><div class="p-stat-label"><strong>SPF records commonly have lookup limit issues or missing third-party sender includes</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">DKIM</div><div class="p-stat-label"><strong>DKIM must be configured for Exchange Online and every third-party sending service</strong></div></div>
         <div class="persona-stat"><div class="p-stat-n">Monthly</div><div class="p-stat-label"><strong>DMARC aggregate report review and anomaly alerting under 4DS managed service</strong></div></div>
       </div>
     </div>
@@ -688,8 +676,8 @@ footer{background:var(--navy);padding:1.5rem 0;}
       <div class="persona-aside">
         <h4>By the numbers</h4>
         <div class="persona-stat"><div class="p-stat-n">BEC</div><div class="p-stat-label"><strong>Business email compromise is the highest-value cybercrime category per the FBI IC3 report</strong></div></div>
-        <div class="persona-stat"><div class="p-stat-n">7/10</div><div class="p-stat-label"><strong>Domains we review are spoofable due to absent or unenforced DMARC</strong></div></div>
-        <div class="persona-stat"><div class="p-stat-n">€0</div><div class="p-stat-label"><strong>Additional licence cost — DMARC configuration is a DNS and gateway change, not a new product</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">No DMARC</div><div class="p-stat-label"><strong>Domains without DMARC enforcement can be spoofed by anyone — clients cannot tell the difference</strong></div></div>
+        <div class="persona-stat"><div class="p-stat-n">DNS only</div><div class="p-stat-label"><strong>DMARC is configured via DNS — no additional licence or product purchase required</strong></div></div>
       </div>
     </div>
     <div class="persona-content" data-buyer="tender">
@@ -721,9 +709,9 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <h2 class="section-title">The gaps we find in almost every environment</h2>
     <p class="section-sub">These are not edge cases. They are the standard state of an SME environment without an independent review.</p>
     <div class="findings-grid">
-      <div class="finding-card"><div class="finding-n">7/10</div><h4>DMARC at p=none or missing</h4><p>Domain spoofable by anyone. p=none monitors but does not block. Most organisations have been at this stage for years with no progression.</p></div>
-      <div class="finding-card"><div class="finding-n">6/10</div><h4>SPF record broken or over limit</h4><p>Records exceeding the 10-lookup DNS limit, deprecated PTR mechanisms, or missing includes for third-party senders causing legitimate mail to fail.</p></div>
-      <div class="finding-card"><div class="finding-n">8/10</div><h4>No email gateway beyond defaults</h4><p>Exchange Online default filtering is insufficient for targeted phishing and business email compromise. Defender for O365 Plan 2 or Proofpoint required.</p></div>
+      <div class="finding-card"><div class="finding-n">Common</div><h4>DMARC at p=none or missing</h4><p>Domain spoofable by anyone. p=none monitors but does not block. Most organisations have been at this stage for years with no progression.</p></div>
+      <div class="finding-card"><div class="finding-n">Frequent</div><h4>SPF record broken or over limit</h4><p>Records exceeding the 10-lookup DNS limit, deprecated PTR mechanisms, or missing includes for third-party senders causing legitimate mail to fail.</p></div>
+      <div class="finding-card"><div class="finding-n">Many</div><h4>No email gateway beyond defaults</h4><p>Exchange Online default filtering is insufficient for targeted phishing and business email compromise. Defender for O365 Plan 2 or Proofpoint required.</p></div>
     </div>
   </div>
 </section>
@@ -784,7 +772,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <footer>
   <div class="container">
     <div class="foot-inner">
-      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321. ISO 27001 Certified.</span>
+      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321.</span>
       <span>
         <a href="../ict-services.html">Home</a> &nbsp;&middot;&nbsp;
         <a href="../ict-services.html#services">All Services</a> &nbsp;&middot;&nbsp;
