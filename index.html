@@ -451,21 +451,21 @@ body.nav-open .hamburger span:nth-child(2){opacity:0;transform:scaleX(0);}
 body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
 /* ── TEAM SECTION ───────────────────────────────────── */
-#team{background:var(--surface);padding:96px 0;}
+#team{background:var(--navy-light);padding:96px 0;}
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-bottom:2.5rem;}
-.team-card{background:white;border:1px solid var(--rule);border-radius:var(--r-card);overflow:hidden;transition:box-shadow 0.25s,transform 0.25s;}
-.team-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);}
+.team-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--r-card);overflow:hidden;transition:box-shadow 0.25s,transform 0.25s;}
+.team-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.35);transform:translateY(-4px);border-color:rgba(0,155,170,0.4);}
 .team-avatar{width:100%;height:220px;overflow:hidden;}
 .team-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 0.4s;}
 .team-card:hover .team-avatar img{transform:scale(1.04);}
 .team-body{padding:1.4rem 1.5rem 1.6rem;}
-.team-body h4{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.team-body h4{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:white;margin-bottom:2px;}
 .team-role{font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:0.85rem;}
-.team-body p{font-family:'Inter',sans-serif;font-size:0.83rem;line-height:1.7;color:var(--muted);margin-bottom:1.1rem;}
+.team-body p{font-family:'Inter',sans-serif;font-size:0.83rem;line-height:1.7;color:rgba(255,255,255,0.6);margin-bottom:1.1rem;}
 .team-tags{display:flex;gap:6px;flex-wrap:wrap;}
-.team-tags span{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:var(--r-pill);padding:2px 10px;}
+.team-tags span{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;color:var(--teal);background:rgba(0,155,170,0.15);border:1px solid rgba(0,155,170,0.35);border-radius:var(--r-pill);padding:2px 10px;}
 .team-footer{text-align:center;padding-top:1rem;}
-.team-footer p{font-family:'Inter',sans-serif;font-size:0.95rem;color:var(--muted);margin-bottom:1.2rem;}
+.team-footer p{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(255,255,255,0.55);margin-bottom:1.2rem;}
 .team-footer strong{color:var(--ink);}
 
 /* ── RESPONSIVE ─────────────────────────────────────── */
@@ -1001,10 +1001,10 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 <!-- ══ MICROSOFT PLATFORM INFOGRAPHIC ══════════════════════ -->
 <section style="padding:48px 0;background:var(--surface);">
   <div class="container">
-    <div class="section-hdr" style="margin-bottom:2rem;text-align:center;">
+    <div class="section-hdr" style="margin-bottom:2rem;">
       <span class="eyebrow">Platform Architecture</span>
       <h2 class="section-title">One platform. Every workload covered.</h2>
-      <p class="section-sub" style="margin:0 auto;">Microsoft 365 Business Premium contains every tool your business needs for identity, devices, security, and collaboration. Most SMEs have it. Almost none have it fully deployed.</p>
+      <p class="section-sub">Microsoft 365 Business Premium contains every tool your business needs for identity, devices, security, and collaboration. Most SMEs have it. Almost none have it fully deployed.</p>
     </div>
   </div>
   <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;">
@@ -1916,33 +1916,12 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
 </section>
 
-<!-- ══ LEAD MAGNET (mid-page) ═══════════════════════════════ -->
-<div class="lead-magnet">
-  <div class="lead-magnet-inner">
-    <h4>📋 Not ready to book a call yet? Take this away first.</h4>
-    <p>Download our free guide: <em>"10 Things Your IT Provider Should Be Doing  -  But Probably Isn't."</em> Written by engineers who've worked inside the enterprises your IT provider claims to emulate.</p>
-    <div class="lead-magnet-form">
-      <input type="email" id="lmEmail" placeholder="your@email.com">
-      <button onclick="handleLeadMagnet()">Send Me the Guide →</button>
-    </div>
-    <p class="lead-magnet-note">No spam. One email with the guide. That's it.</p>
-    <div id="lmOk" style="display:none;color:var(--teal);font-family:'Inter',sans-serif;font-size:0.85rem;margin-top:0.75rem;">✅ On its way  -  check your inbox.</div>
-    <div style="margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);">
-      <p style="font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">Follow us for practical IT insights  -  no fluff, no vendor marketing.</p>
-      <a href="https://linkedin.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;color:white;background:#0077B5;padding:0.55rem 1.2rem;border-radius:var(--r-btn);text-decoration:none;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        Follow 4DS on LinkedIn
-      </a>
-    </div>
-  </div>
-</div>
-
 <section id="team">
   <div class="container">
     <div class="section-hdr">
       <span class="eyebrow">The People Behind 4DS</span>
-      <h2 class="section-title">Three senior engineers.<br>Every client, direct access.</h2>
-      <p class="section-sub">No account managers. No junior helpdesk. No escalation queue. When you work with 4DS, you work directly with the engineers who know your environment inside out.</p>
+      <h2 class="section-title" style="color:white;">Three senior engineers.<br>Every client, direct access.</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.6);">No account managers. No junior helpdesk. No escalation queue. When you work with 4DS, you work directly with the engineers who know your environment inside out.</p>
     </div>
     <div class="team-grid" style="grid-template-columns:repeat(3,1fr);">
       <div class="team-card">
@@ -1980,7 +1959,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
       </div>
     </div>
     <div class="team-footer">
-      <p>Unlike larger MSPs where your account gets handed to a junior helpdesk, every 4DS client works directly with the engineers who built and know their environment  -  no middleman, no escalation queue.</p>
+      <p style="color:rgba(255,255,255,0.55);">Unlike larger MSPs where your account gets handed to a junior helpdesk, every 4DS client works directly with the engineers who built and know their environment  -  no middleman, no escalation queue.</p>
       <div class="capacity-signal">
         <span class="capacity-dot"></span>
         <span>We take on a small number of new clients each quarter to ensure every engagement gets our full attention. <strong>We currently have capacity for new managed service clients  -  enquire to check availability.</strong></span>
