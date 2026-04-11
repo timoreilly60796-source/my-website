@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Network, Wi-Fi &amp; Infrastructure Services Ireland | 4DS</title>
-<meta name="description" content="4DS designs and manages enterprise network infrastructure for SMEs across Ireland and the UK. VLAN segmentation, enterprise Wi-Fi, Palo Alto NGFW, SD-WAN, and network monitoring. Cisco and Palo Alto certified. Free network review.">
+<meta name="description" content="4DS designs and manages enterprise network infrastructure for SMEs across Ireland and the UK. VLAN segmentation, enterprise Wi-Fi, Palo Alto NGFW, SD-WAN, and network monitoring. Cisco and Palo Alto experienced. Free network review.">
 <meta name="keywords" content="network infrastructure Ireland, enterprise Wi-Fi, VLAN segmentation, Palo Alto firewall, SD-WAN, Cisco Meraki, network monitoring, network design Ireland, 4DS">
 <meta property="og:title" content="Network, Wi-Fi &amp; Infrastructure | 4DS Ireland">
 <meta property="og:description" content="70% of SME networks have no VLAN segmentation. We design, implement and manage enterprise-grade network infrastructure at SME scale. Free network review.">
@@ -46,8 +46,9 @@ nav{position:sticky;top:0;z-index:9000;background:#fff;border-bottom:1px solid v
 .nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale);}
 .nav-menu>li>a.active-page{color:var(--teal);}
 .nav-dropdown{position:relative;}
-.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
+.dropdown{display:none;position:absolute;top:100%;left:0;padding-top:10px;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
 .nav-dropdown:hover .dropdown{display:block;}
+.dropdown::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;background:transparent;}
 .dropdown li a{display:block;padding:0.55rem 1rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;color:var(--body);transition:all 0.15s;}
 .dropdown li a:hover{color:var(--teal);background:var(--teal-pale);}
 .dropdown li a.current-page{color:var(--teal);font-weight:700;background:var(--teal-pale);}
@@ -247,7 +248,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
         <ul class="dropdown">
           <li><a href="m365-modern-workplace.html">Microsoft 365 &amp; Modern Workplace</a></li>
           <li><a href="identity-zero-trust.html">Identity &amp; Zero Trust</a></li>
-          <li><a href="endpoint-device-management.html">Endpoint &amp; Device Management</a></li>
           <li><a href="cybersecurity-ai-security.html">Cybersecurity &amp; AI Security</a></li>
           <li><a href="email-security-deliverability.html">Email Security &amp; Deliverability</a></li>
           <li><a href="network-wifi-infrastructure.html" class="current-page">Network, Wi-Fi &amp; Infrastructure</a></li>
@@ -255,22 +255,12 @@ footer{background:var(--navy);padding:1.5rem 0;}
           <li><a href="automation-it-governance.html">Automation &amp; IT Governance</a></li>
         </ul>
       </li>
-      <li class="nav-dropdown"><a href="../ict-services.html#industries">Industries &#9662;</a>
-        <ul class="dropdown">
-          <li><a href="../ict-services.html#industries">Healthcare</a></li>
-          <li><a href="../ict-services.html#industries">Manufacturing</a></li>
-          <li><a href="../ict-services.html#industries">Finance &amp; Professional Services</a></li>
-          <li><a href="../ict-services.html#industries">Legal &amp; Professional</a></li>
-          <li><a href="../ict-services.html#industries">Education</a></li>
-          <li><a href="../ict-services.html#industries">Public Sector &amp; Non-Profit</a></li>
-        </ul>
-      </li>
-      <li><a href="../ict-services.html#why">About</a></li>
+      <li><a href="../ict-services.html#industries">Industries</a></li>
       <li><a href="../ict-services.html#approach">Approach</a></li>
-      <li><a href="../ict-services.html#testimonials">Clients</a></li>
+      <li><a href="../ict-services.html#why">About</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Contact Us</a>
     </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -283,7 +273,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <span class="drawer-heading">Services</span>
     <a href="m365-modern-workplace.html" class="drawer-sub-link">Microsoft 365 &amp; Modern Workplace</a>
     <a href="identity-zero-trust.html" class="drawer-sub-link">Identity &amp; Zero Trust</a>
-    <a href="endpoint-device-management.html" class="drawer-sub-link">Endpoint &amp; Device Management</a>
     <a href="cybersecurity-ai-security.html" class="drawer-sub-link">Cybersecurity &amp; AI Security</a>
     <a href="email-security-deliverability.html" class="drawer-sub-link">Email Security &amp; Deliverability</a>
     <a href="network-wifi-infrastructure.html" class="drawer-sub-link current">Network, Wi-Fi &amp; Infrastructure</a>
@@ -291,10 +280,9 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <a href="automation-it-governance.html" class="drawer-sub-link">Automation &amp; IT Governance</a>
     <div class="drawer-divider"></div>
     <a href="../ict-services.html#industries" class="drawer-link">Industries</a>
-    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
     <a href="../ict-services.html#approach"   class="drawer-link">Approach</a>
-    <a href="../ict-services.html#testimonials" class="drawer-link">Clients</a>
-    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Get Free Health Check</a>
+    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
+    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Contact Us</a>
   </div>
 </div>
 
@@ -314,7 +302,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
         <h1>Your network was set up once<br><em>and never properly reviewed.</em></h1>
         <p class="hero-sub" id="heroSub">Flat networks, consumer Wi-Fi, and no traffic segmentation are the SME norm. We design and implement infrastructure that matches enterprise security standards at your scale.</p>
         <div class="trust-pills">
-          <span class="trust-pill">Cisco &amp; Palo Alto Certified</span><span class="trust-pill">SD-WAN Deployment</span><span class="trust-pill">Enterprise Wi-Fi Design</span>
+          <span class="trust-pill">Cisco &amp; Palo Alto Experienced</span><span class="trust-pill">SD-WAN Deployment</span><span class="trust-pill">Enterprise Wi-Fi Design</span>
         </div>
       </div>
 
@@ -533,13 +521,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
       </div>
 
       <!-- STATS -->
-      <div class="nig-stats-row">
-        <div class="nig-sc r"><div class="nig-sc-n">7/10</div><div class="nig-sc-l">Flat networks — no VLAN segmentation, one breach reaches everything</div></div>
-        <div class="nig-sc a"><div class="nig-sc-n">6/10</div><div class="nig-sc-l">Consumer-grade Wi-Fi with dead zones and no central management</div></div>
-        <div class="nig-sc p"><div class="nig-sc-n">5/10</div><div class="nig-sc-l">No network topology documentation for audit or incident response</div></div>
-        <div class="nig-sc g"><div class="nig-sc-n">100%</div><div class="nig-sc-l">Of 4DS network engagements produce full topology and config docs</div></div>
-      </div>
-
+      
       <!-- COMPLIANCE BAND -->
       <div class="nig-compliance">
         <div><div class="nig-comp-title">Network Segmentation</div><div class="nig-comp-desc">VLAN architecture containing lateral movement. Mandatory for NIS2 network security controls and most public sector ICT frameworks.</div></div>
@@ -624,7 +606,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
           <h4>By the numbers</h4>
           <div class="persona-stat"><div class="p-stat-n">8 hrs</div><div class="p-stat-label"><strong>Estimated productivity lost per staff member per year due to network reliability issues</strong></div></div>
 <div class="persona-stat"><div class="p-stat-n">Automatic</div><div class="p-stat-label"><strong>Failover to mobile 4G/5G backup connection if primary broadband fails</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">€0</div><div class="p-stat-label"><strong>Downtime cost after failover implementation vs extended outage on single-connection sites</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">Automatic</div><div class="p-stat-label"><strong>Failover to secondary connection — no manual intervention required during an outage</strong></div></div>
         </div>
       </div>
       <div class="persona-content" data-buyer="tender">
@@ -642,7 +624,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
         <div class="persona-aside">
           <h4>By the numbers</h4>
           <div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>Of 4DS network engagements produce full topology and configuration documentation</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Network management processes aligned to ISO 27001 Annex A controls</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Controls configured to ISO 27001 alignment — evidence available for submissions</strong></div></div>
 <div class="persona-stat"><div class="p-stat-n">48 hrs</div><div class="p-stat-label"><strong>Typical turnaround for network architecture evidence pack for tender</strong></div></div>
         </div>
       </div>
@@ -694,7 +676,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
         </ul>
       </div>
       <div class="form-card" id="enquiry">
-        <h3>Speak to a senior engineer</h3>
+        <h3>Get in touch</h3>
         <p class="form-sub" id="enquiryNote">Tell us your site count, approximate headcount, and the main network issues you are experiencing.</p>
         <div id="enquiryForm">
           <input type="hidden" id="formBuyer" value="generic">
@@ -720,7 +702,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <footer>
   <div class="container">
     <div class="foot-inner">
-      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321. ISO 27001 Certified.</span>
+      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321.</span>
       <span>
         <a href="../ict-services.html">Home</a> &nbsp;&middot;&nbsp;
         <a href="../ict-services.html#services">All Services</a> &nbsp;&middot;&nbsp;
