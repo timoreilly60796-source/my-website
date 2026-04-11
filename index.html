@@ -231,12 +231,15 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);bo
 .svc-img{display:none;}
 /* SVG icon wrapper  -  line-art style like Version1 */
 .svc-icon{
-  width:64px;height:64px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:2.4rem;
+  width:100%;
+  display:flex;align-items:center;justify-content:flex-start;
   margin-bottom:1.8rem;
   flex-shrink:0;
-  filter:drop-shadow(0 0 8px rgba(0,155,170,0.4));
+  background:none;border:none;box-shadow:none;
+}
+.svc-icon img{
+  height:52px;width:auto;max-width:140px;object-fit:contain;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));
 }
 .svc-body{display:flex;flex-direction:column;flex:1;padding:0;}
 .svc-body h3{
@@ -1474,13 +1477,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
       <!-- 1. Microsoft 365 & Modern Workplace -->
       <div class="svc-card">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M44 34a8 8 0 0 0-8-8H12a8 8 0 1 0 0 16h24a8 8 0 0 0 8-8z"/>
-            <path d="M44 22a8 8 0 0 0-8-8H20"/>
-            <circle cx="18" cy="34" r="3" fill="#009BAA" stroke="none"/>
-            <circle cx="28" cy="34" r="3" fill="#009BAA" stroke="none"/>
-          </svg>
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg" alt="Microsoft 365" style="width:52px;height:52px;object-fit:contain;">
         </div>
         <div class="svc-body">
           <h3>Microsoft 365 &amp; Modern Workplace</h3>
@@ -1502,12 +1500,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
       <!-- 2. Identity, Access & Zero Trust -->
       <div class="svc-card core-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="28" cy="20" r="8"/>
-            <path d="M12 46c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
-            <path d="M36 30l3 3 7-7"/>
-          </svg>
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Microsoft Entra ID" style="width:52px;height:52px;object-fit:contain;">
         </div>
         <div class="svc-body">
           <h3>Identity &amp; Zero Trust Security <span class="core-badge">Core Expertise</span></h3>
@@ -1530,14 +1524,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
       <!-- 3. Endpoint & Device Management -->
       <div class="svc-card">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="12" width="40" height="26" rx="3"/>
-            <path d="M20 38l-4 6h24l-4-6"/>
-            <path d="M16 38h24"/>
-            <circle cx="28" cy="25" r="5"/>
-            <path d="M21 25h-5M40 25h-7"/>
-          </svg>
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Microsoft Intune" style="width:52px;height:52px;object-fit:contain;">
         </div>
         <div class="svc-body">
           <h3>Endpoint &amp; Device Management</h3>
@@ -1560,11 +1548,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
       <!-- 4. Cybersecurity & AI Security -->
       <div class="svc-card core-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M28 8L12 15v14c0 10 7 19 16 22 9-3 16-12 16-22V15L28 8z"/>
-            <path d="M20 28l5 5 11-11"/>
-          </svg>
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="Microsoft Defender" style="width:52px;height:52px;object-fit:contain;">
         </div>
         <div class="svc-body">
           <h3>Cybersecurity &amp; AI Security <span class="core-badge">Core Expertise</span></h3>
@@ -1587,12 +1572,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
       <!-- 5. Email Security & Deliverability -->
       <div class="svc-card core-svc hidden-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="14" width="40" height="30" rx="3"/>
-            <path d="M8 18l20 14 20-14"/>
-            <path d="M38 34l6 6M44 34l-6 6"/>
-          </svg>
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://az-icons.com/export/icons/a5063b5911ebfde641a1cac4f68bd47e.svg" alt="Defender for Office 365" style="width:52px;height:52px;object-fit:contain;">
         </div>
         <div class="svc-body">
           <h3>Email Security &amp; Deliverability <span class="core-badge">Core Expertise</span></h3>
@@ -1614,11 +1595,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
       <!-- 6. Network, Wi-Fi & Infrastructure -->
       <div class="svc-card hidden-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="28" cy="28" r="18"/>
-            <path d="M10 28h36M28 10a28 28 0 0 1 0 36M28 10a28 28 0 0 0 0 36"/>
-          </svg>
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/PaloAltoNetworks_2020_Logo.svg" alt="Palo Alto Networks">
         </div>
         <div class="svc-body">
           <h3>Network, Wi-Fi &amp; Infrastructure</h3>
@@ -1641,11 +1619,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
       <!-- 7. Backup, DR & Business Continuity -->
       <div class="svc-card hidden-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M36 20a8 8 0 1 0-16 0v4H14v20h28V24h-6v-4z"/>
-            <path d="M24 32v6M28 30v8M32 33v5"/>
-          </svg>
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Veeam_logo.svg/960px-Veeam_logo.svg.png?_=20210914131322" alt="Veeam">
         </div>
         <div class="svc-body">
           <h3>Backup, DR &amp; Business Continuity</h3>
@@ -1667,12 +1642,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 
       <!-- 8. Onboarding, Offboarding & Governance -->
       <div class="svc-card hidden-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="10" y="10" width="36" height="36" rx="3"/>
-            <path d="M22 22l-6 6 6 6M34 22l6 6-6 6"/>
-            <path d="M26 36l4-16"/>
-          </svg>
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://az-icons.com/export/icons/4da8cd05c336e516540abe0d69e3423e.svg" alt="Power Automate" style="width:52px;height:52px;object-fit:contain;">
         </div>
         <div class="svc-body">
           <h3>Automation, Governance &amp; IT Operations</h3>
