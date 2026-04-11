@@ -231,12 +231,15 @@ nav{position:sticky;top:0;left:0;right:0;z-index:9000;background:var(--white);bo
 .svc-img{display:none;}
 /* SVG icon wrapper  -  line-art style like Version1 */
 .svc-icon{
-  width:64px;height:64px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:2.4rem;
+  width:100%;
+  display:flex;align-items:center;justify-content:flex-start;
   margin-bottom:1.8rem;
   flex-shrink:0;
-  filter:drop-shadow(0 0 8px rgba(0,155,170,0.4));
+  background:none;border:none;box-shadow:none;
+}
+.svc-icon img{
+  height:52px;width:auto;max-width:140px;object-fit:contain;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));
 }
 .svc-body{display:flex;flex-direction:column;flex:1;padding:0;}
 .svc-body h3{
@@ -448,21 +451,21 @@ body.nav-open .hamburger span:nth-child(2){opacity:0;transform:scaleX(0);}
 body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
 /* ── TEAM SECTION ───────────────────────────────────── */
-#team{background:var(--surface);padding:96px 0;}
+#team{background:var(--navy-light);padding:96px 0;}
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-bottom:2.5rem;}
-.team-card{background:white;border:1px solid var(--rule);border-radius:var(--r-card);overflow:hidden;transition:box-shadow 0.25s,transform 0.25s;}
-.team-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);}
+.team-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--r-card);overflow:hidden;transition:box-shadow 0.25s,transform 0.25s;}
+.team-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.35);transform:translateY(-4px);border-color:rgba(0,155,170,0.4);}
 .team-avatar{width:100%;height:220px;overflow:hidden;}
 .team-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 0.4s;}
 .team-card:hover .team-avatar img{transform:scale(1.04);}
 .team-body{padding:1.4rem 1.5rem 1.6rem;}
-.team-body h4{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.team-body h4{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:white;margin-bottom:2px;}
 .team-role{font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:0.85rem;}
-.team-body p{font-family:'Inter',sans-serif;font-size:0.83rem;line-height:1.7;color:var(--muted);margin-bottom:1.1rem;}
+.team-body p{font-family:'Inter',sans-serif;font-size:0.83rem;line-height:1.7;color:rgba(255,255,255,0.6);margin-bottom:1.1rem;}
 .team-tags{display:flex;gap:6px;flex-wrap:wrap;}
-.team-tags span{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;color:var(--teal);background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:var(--r-pill);padding:2px 10px;}
+.team-tags span{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;color:var(--teal);background:rgba(0,155,170,0.15);border:1px solid rgba(0,155,170,0.35);border-radius:var(--r-pill);padding:2px 10px;}
 .team-footer{text-align:center;padding-top:1rem;}
-.team-footer p{font-family:'Inter',sans-serif;font-size:0.95rem;color:var(--muted);margin-bottom:1.2rem;}
+.team-footer p{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(255,255,255,0.55);margin-bottom:1.2rem;}
 .team-footer strong{color:var(--ink);}
 
 /* ── RESPONSIVE ─────────────────────────────────────── */
@@ -885,8 +888,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
         </ul>
       </li>
       <li><a href="#industries">Industries</a></li>
-      <li><a href="#why">About</a></li>
       <li><a href="#approach">Approach</a></li>
+      <li><a href="#why">About</a></li>
     </ul>
     <div class="nav-actions">
       
@@ -901,8 +904,8 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 <div class="drawer" id="drawer">
   <div class="drawer-inner">
     <a href="#services"  class="drawer-link">Services</a>
-    <a href="#why"       class="drawer-link">About Us</a>
     <a href="#approach"  class="drawer-link">Our Approach</a>
+    <a href="#why"       class="drawer-link">About Us</a>
     <a href="#industries"class="drawer-link">Industries</a>
     <a href="#team"      class="drawer-link">Our Team</a>
     <a href="#contact"   class="drawer-link">Contact</a>
@@ -954,7 +957,6 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
 </section>
 
-
 <!-- ══ BEFORE / AFTER ══════════════════════════════════════ -->
 <div class="before-after">
   <div class="container">
@@ -994,359 +996,6 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
     </div>
   </div>
 </div>
-
-<!-- ══ WHY US  -  moved here so trust is established before services ══ -->
-<section id="why" class="why-early">
-  <div class="container">
-    <div class="why-grid">
-      <!-- LEFT: Credentials panel -->
-      <div class="why-creds">
-        <span class="eyebrow">Why 4DS</span>
-        <h2 class="section-title">Most IT providers configure your environment once.<br>We audit it continuously.</h2>
-        <div class="why-cred-items">
-          <div class="why-cred-item">
-            <div class="why-cred-val">NIS2</div>
-            <div class="why-cred-label">Framework Implementation</div>
-          </div>
-          <div class="why-cred-item">
-            <div class="why-cred-val">3</div>
-            <div class="why-cred-label">Senior Engineers  -  ex-Enterprise</div>
-          </div>
-          <div class="why-cred-item">
-            <div class="why-cred-val">&lt;15m</div>
-            <div class="why-cred-label">Critical Incident Response</div>
-          </div>
-          <div class="why-cred-item">
-            <div class="why-cred-val">40+</div>
-            <div class="why-cred-label">Years Combined Experience</div>
-          </div>
-        </div>
-        <div class="why-cred-badges">
-          <span class="why-badge">eTenders Registered</span>
-          <span class="why-badge">PI Insured</span>
-          <span class="why-badge">DPC Compliant</span>
-          <span class="why-badge">NIS2 Framework Aware</span>
-        </div>
-        <p class="why-levity">We've never found an M365 tenant that didn't need work. Not once.</p>
-      </div>
-      <!-- RIGHT: Feat rows -->
-      <div class="why-feats">
-        <div class="feat-row"><div class="feat-ico">🔍</div><div><h4>We Find What Others Miss</h4><p>We've reviewed M365 tenants where Conditional Access was technically "enabled" but never actually enforced  -  leaving accounts fully exposed. That kind of gap is why clients come to us after their previous provider.</p></div></div>
-        <div class="feat-row"><div class="feat-ico">⚡</div><div><h4>Senior Engineers Answer the Phone</h4><p>Not a first-line helpdesk reading from a script. Every client gets direct access to the engineers who built their environment  -  critical issues acknowledged in under 15 minutes, 24/7/365.</p></div></div>
-        <div class="feat-row"><div class="feat-ico">📉</div><div><h4>We Measure Ticket Reduction</h4><p>Our goal is to make ourselves less needed for reactive support  -  by fixing root causes, not symptoms. We track support ticket volume from day one and report on the reduction every month.</p></div></div>
-        <div class="feat-row"><div class="feat-ico">💡</div><div><h4>You're Already Paying for the Tools</h4><p>Most M365 subscribers use less than 30% of what's included in their licence. We identify, configure, and deploy the security and productivity tools you're already paying for  -  at no extra cost.</p></div></div>
-        <div class="one-thing">
-          <span class="one-thing-label">One thing worth knowing</span>
-          <p>Most M365 Business Premium licences include Microsoft Defender for Endpoint  -  enterprise-grade endpoint protection worth €15/user/month if bought separately. Fewer than 15% of SMEs on this licence have it deployed. If yours isn't active, you're paying for enterprise-grade security and getting none of it. We find this in 9 out of 10 environments we review.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ MISCONCEPTIONS ══════════════════════════════════════ -->
-<div class="misconceptions">
-  <div class="container">
-    <div class="section-hdr center">
-      <span class="eyebrow">Common Misconceptions</span>
-      <h2 class="section-title">Things that sound right  -  but aren't</h2>
-      <p class="section-sub">These are the beliefs that leave SME environments exposed. We find the consequences of all three in almost every audit we run.</p>
-    </div>
-    <div class="mc-grid">
-      <div class="mc-card">
-        <span class="mc-myth">Myth</span>
-        <h4>"Our firewall protects us from phishing."</h4>
-        <p>A firewall controls network traffic. It cannot inspect the content of an email, detect a credential-harvesting link, or stop an employee from entering their password on a spoofed login page. Phishing bypasses firewalls entirely  -  and it's the #1 entry point for ransomware in SMEs.</p>
-      </div>
-      <div class="mc-card">
-        <span class="mc-myth">Myth</span>
-        <h4>"Microsoft backs up our Microsoft 365 data."</h4>
-        <p>Microsoft provides infrastructure redundancy  -  not data backup. If a file is deleted, a mailbox is wiped, or ransomware encrypts your SharePoint, Microsoft's retention window is limited and not designed for full recovery. You need a dedicated third-party backup. Most businesses don't have one.</p>
-      </div>
-      <div class="mc-card">
-        <span class="mc-myth">Myth</span>
-        <h4>"No news from our IT provider means everything is fine."</h4>
-        <p>Silence from your IT provider means they're not looking. A properly managed environment generates alerts, compliance reports, patch logs, and security posture scores  -  regularly. If you're not receiving monthly reports with data in them, your environment is being managed reactively, not proactively.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ RIBBON ═════════════════════════════════════════════ -->
-<div class="ribbon">
-  <div class="ribbon-inner">
-    <div class="ribbon-label">Expertise across</div>
-    <div class="ribbon-track-wrap">
-      <div class="ribbon-track" id="ribbonTrack">
-
-        <!-- Set 1 -->
-        <div class="ribbon-logo" title="Microsoft 365"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg" alt="Microsoft 365" height="28"></div>
-        <div class="ribbon-logo" title="Microsoft Intune"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Intune" height="28"></div>
-        <div class="ribbon-logo" title="Microsoft Entra ID"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID" height="28"></div>
-        <div class="ribbon-logo" title="Microsoft Copilot"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot" height="28"></div>
-        <div class="ribbon-logo" title="OneDrive"><img src="https://files.brandlogos.net/svg/HNipmYPqfV/microsoft-onedrive-2025-logo-brandlogos.net_ynzfdy0ej.svg" alt="OneDrive" height="28"></div>
-        <div class="ribbon-logo" title="Palo Alto Networks"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/PaloAltoNetworks_2020_Logo.svg" alt="Palo Alto Networks" height="24"></div>
-        <div class="ribbon-logo" title="Cisco"><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco" height="26"></div>
-        <div class="ribbon-logo" title="Dell"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell" height="26"></div>
-        <div class="ribbon-logo" title="HP"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/HP_logo_2025.svg" alt="HP" height="28"></div>
-
-        <!-- Set 2 — duplicate for seamless loop -->
-        <div class="ribbon-logo" title="Microsoft 365"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg" alt="Microsoft 365" height="28"></div>
-        <div class="ribbon-logo" title="Microsoft Intune"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Intune" height="28"></div>
-        <div class="ribbon-logo" title="Microsoft Entra ID"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID" height="28"></div>
-        <div class="ribbon-logo" title="Microsoft Copilot"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot" height="28"></div>
-        <div class="ribbon-logo" title="OneDrive"><img src="https://files.brandlogos.net/svg/HNipmYPqfV/microsoft-onedrive-2025-logo-brandlogos.net_ynzfdy0ej.svg" alt="OneDrive" height="28"></div>
-        <div class="ribbon-logo" title="Palo Alto Networks"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/PaloAltoNetworks_2020_Logo.svg" alt="Palo Alto Networks" height="24"></div>
-        <div class="ribbon-logo" title="Cisco"><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco" height="26"></div>
-        <div class="ribbon-logo" title="Dell"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell" height="26"></div>
-        <div class="ribbon-logo" title="HP"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/HP_logo_2025.svg" alt="HP" height="28"></div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<!-- ══ SERVICES ══════════════════════════════════════════ -->
-<section id="services">
-  <div class="container">
-    <div class="section-hdr">
-      <h2 class="section-title">Where the gaps live  -  and what we do about them</h2>
-      <p class="section-sub section-sub-light">These are the areas where SMEs most commonly come to us first  -  and where we most consistently find what previous providers missed. Identity, email security, and endpoint management are where the biggest gaps tend to live.</p>
-    </div>
-    <div class="services-grid">
-
-      <!-- 1. Microsoft 365 & Modern Workplace -->
-      <div class="svc-card">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M44 34a8 8 0 0 0-8-8H12a8 8 0 1 0 0 16h24a8 8 0 0 0 8-8z"/>
-            <path d="M44 22a8 8 0 0 0-8-8H20"/>
-            <circle cx="18" cy="34" r="3" fill="#009BAA" stroke="none"/>
-            <circle cx="28" cy="34" r="3" fill="#009BAA" stroke="none"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Microsoft 365 &amp; Modern Workplace</h3>
-          <p>Most businesses have M365  -  few actually use it. We unlock the full suite: from Exchange Online and Teams Phone to SharePoint, Power Platform, and Dynamics 365. Full licensing advisory included.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Exchange Online</span>
-            <span class="tech-tag">Teams Phone</span>
-            <span class="tech-tag">SharePoint</span>
-            <span class="tech-tag">Power Platform</span>
-            <span class="tech-tag">Dynamics 365</span>
-            <span class="tech-tag">Microsoft Licensing</span>
-            <span class="tech-tag">Google Workspace</span>
-            <span class="tech-tag">GW → M365 Migration</span>
-          </div>
-          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
-          <a href="services/m365-modern-workplace.html" class="svc-link" id="svc-link-1">Learn more &#8594;</a>
-        </div>
-      </div>
-
-      <!-- 2. Identity, Access & Zero Trust -->
-      <div class="svc-card core-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="28" cy="20" r="8"/>
-            <path d="M12 46c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
-            <path d="M36 30l3 3 7-7"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Identity &amp; Zero Trust Security <span class="core-badge">Core Expertise</span></h3>
-          <p>We lock down your identity layer  -  the #1 attack surface. Every app behind your IDP with SAML SSO, SCIM provisioning, and bulletproof Conditional Access. ZTNA replaces legacy VPN entirely.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Entra ID</span>
-            <span class="tech-tag">Entra Internet Access</span>
-            <span class="tech-tag">Entra Private Access</span>
-            <span class="tech-tag">ZTNA</span>
-            <span class="tech-tag">SAML SSO</span>
-            <span class="tech-tag">SCIM</span>
-            <span class="tech-tag">Conditional Access</span>
-            <span class="tech-tag">Okta</span>
-            <span class="tech-tag">MFA / PKI</span>
-          </div>
-          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
-          <a href="services/identity-zero-trust.html" class="svc-link" id="svc-link-2">Learn more &#8594;</a>
-        </div>
-      </div>
-
-      <!-- 3. Endpoint & Device Management -->
-      <div class="svc-card">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="12" width="40" height="26" rx="3"/>
-            <path d="M20 38l-4 6h24l-4-6"/>
-            <path d="M16 38h24"/>
-            <circle cx="28" cy="25" r="5"/>
-            <path d="M21 25h-5M40 25h-7"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Endpoint &amp; Device Management</h3>
-          <p>Enterprise-grade endpoint control for every device in your fleet. Automated onboarding via Autopilot, CIS-hardened config profiles, privilege management, and third-party patching  -  all policy-driven.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Intune Suite</span>
-            <span class="tech-tag">Autopilot</span>
-            <span class="tech-tag">AutoPatch</span>
-            <span class="tech-tag">RoboPatch</span>
-            <span class="tech-tag">Endpoint Privilege Mgmt</span>
-            <span class="tech-tag">CIS Benchmarks</span>
-            <span class="tech-tag">MDM / MAM</span>
-            <span class="tech-tag">Asset Management</span>
-            <span class="tech-tag">Dell / HP Hardware</span>
-          </div>
-          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
-          <a href="services/endpoint-device-management.html" class="svc-link" id="svc-link-3">Learn more &#8594;</a>
-        </div>
-      </div>
-
-      <!-- 4. Cybersecurity & AI Security -->
-      <div class="svc-card core-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M28 8L12 15v14c0 10 7 19 16 22 9-3 16-12 16-22V15L28 8z"/>
-            <path d="M20 28l5 5 11-11"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Cybersecurity &amp; AI Security <span class="core-badge">Core Expertise</span></h3>
-          <p>Beyond firewalls  -  layered defence including AI-powered threat detection, phishing simulations, security awareness training, and CASB. Deploying next-gen AI security tools competitors haven't reached yet.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Defender for Business</span>
-            <span class="tech-tag">Microsoft Sentinel</span>
-            <span class="tech-tag">CASB</span>
-            <span class="tech-tag">Ovalix AI Security</span>
-            <span class="tech-tag">Prompt Security</span>
-            <span class="tech-tag">Phishing Simulations</span>
-            <span class="tech-tag">Security Awareness</span>
-            <span class="tech-tag">Palo Alto NGFW</span>
-            <span class="tech-tag">ISO 27001 Alignment</span>
-          </div>
-          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
-          <a href="services/cybersecurity-ai-security.html" class="svc-link" id="svc-link-4">Learn more &#8594;</a>
-        </div>
-      </div>
-
-      <!-- 5. Email Security & Deliverability -->
-      <div class="svc-card core-svc hidden-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="14" width="40" height="30" rx="3"/>
-            <path d="M8 18l20 14 20-14"/>
-            <path d="M38 34l6 6M44 34l-6 6"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Email Security &amp; Deliverability <span class="core-badge">Core Expertise</span></h3>
-          <p>Misconfigured SPF, DKIM, or DMARC is why your email lands in spam  -  and most companies don't know it. We bulletproof your mail stack end-to-end, from gateway filtering to authentication alignment.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Proofpoint</span>
-            <span class="tech-tag">Defender for O365</span>
-            <span class="tech-tag">DMARC</span>
-            <span class="tech-tag">DKIM / SPF</span>
-            <span class="tech-tag">Exchange Online</span>
-            <span class="tech-tag">Email Gateway</span>
-            <span class="tech-tag">Anti-Phishing</span>
-            <span class="tech-tag">Mail Flow Rules</span>
-          </div>
-          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
-          <a href="services/email-security-deliverability.html" class="svc-link" id="svc-link-5">Learn more &#8594;</a>
-        </div>
-      </div>
-
-      <!-- 6. Network, Wi-Fi & Infrastructure -->
-      <div class="svc-card hidden-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="28" cy="28" r="18"/>
-            <path d="M10 28h36M28 10a28 28 0 0 1 0 36M28 10a28 28 0 0 0 0 36"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Network, Wi-Fi &amp; Infrastructure</h3>
-          <p>From next-gen firewall deployment to Wi-Fi 7 and RADIUS-secured wireless, we design and deliver enterprise-grade networks. On-prem server management and cloud migration included.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Cisco Meraki</span>
-            <span class="tech-tag">Palo Alto NGFW</span>
-            <span class="tech-tag">SonicWall</span>
-            <span class="tech-tag">SD-WAN</span>
-            <span class="tech-tag">Wi-Fi 7</span>
-            <span class="tech-tag">RADIUS / PKI</span>
-            <span class="tech-tag">Meraki Cameras</span>
-            <span class="tech-tag">Azure Virtual Desktop</span>
-            <span class="tech-tag">On-Prem → Cloud</span>
-          </div>
-          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
-          <a href="services/network-wifi-infrastructure.html" class="svc-link" id="svc-link-6">Learn more &#8594;</a>
-        </div>
-      </div>
-
-      <!-- 7. Backup, DR & Business Continuity -->
-      <div class="svc-card hidden-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M36 20a8 8 0 1 0-16 0v4H14v20h28V24h-6v-4z"/>
-            <path d="M24 32v6M28 30v8M32 33v5"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Backup, DR &amp; Business Continuity</h3>
-          <p>Immutable, tested, recoverable backups  -  not just scheduled jobs. We design full DR runbooks, test failover regularly, and ensure your recovery objectives are actually met when it matters.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Commvault Metallic</span>
-            <span class="tech-tag">Veeam Cloud</span>
-            <span class="tech-tag">Datto Backupify</span>
-            <span class="tech-tag">Azure Backup</span>
-            <span class="tech-tag">Azure Site Recovery</span>
-            <span class="tech-tag">Immutable Storage</span>
-            <span class="tech-tag">DR Runbooks</span>
-            <span class="tech-tag">RTO / RPO Planning</span>
-          </div>
-          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
-          <a href="services/backup-dr-continuity.html" class="svc-link" id="svc-link-7">Learn more &#8594;</a>
-        </div>
-      </div>
-
-      <!-- 8. Onboarding, Offboarding & Governance -->
-      <div class="svc-card hidden-svc">
-        <div class="svc-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#009BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="10" y="10" width="36" height="36" rx="3"/>
-            <path d="M22 22l-6 6 6 6M34 22l6 6-6 6"/>
-            <path d="M26 36l4-16"/>
-          </svg>
-        </div>
-        <div class="svc-body">
-          <h3>Automation, Governance &amp; IT Operations</h3>
-          <p>Eliminate manual IT processes. Automated onboarding and offboarding, ITSM workflows, cloud virtualisation, and project delivery  -  with full documentation and visibility across your environment.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Autopilot Onboarding</span>
-            <span class="tech-tag">Offboarding Protocols</span>
-            <span class="tech-tag">Jira / Confluence</span>
-            <span class="tech-tag">Power Automate</span>
-            <span class="tech-tag">Azure DevOps</span>
-            <span class="tech-tag">Azure Virtual Desktop</span>
-            <span class="tech-tag">AWS / GCP</span>
-            <span class="tech-tag">ITIL / ITSM</span>
-          </div>
-          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
-          <a href="services/automation-it-governance.html" class="svc-link" id="svc-link-8">Learn more &#8594;</a>
-        </div>
-      </div>
-
-    </div>
-    <div style="text-align:center;margin-top:1.5rem;">
-      <button class="show-more-svcs" id="showMoreSvcs" onclick="revealServices()">Show all 8 services ↓</button>
-    </div>
-    <div class="services-cta"><a href="#contact" class="btn-outline-teal">Discuss Your Requirements →</a></div>
-  </div>
-</section>
-
-
 
 
 <!-- ══ MICROSOFT PLATFORM INFOGRAPHIC ══════════════════════ -->
@@ -1593,7 +1242,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
       </div>
       <div class="mpa-plyr-body">
         <div class="mpa-atile"><img src="https://az-icons.com/export/icons/4da8cd05c336e516540abe0d69e3423e.svg" alt="Power Automate"><div class="mpa-atile-text"><div class="mpa-atile-name">Power Automate</div><div class="mpa-atile-sub">Workflow automation</div></div></div>
-        <div class="mpa-atile"><img src="https://img.icons8.com/fluent/96/microsoft-power-bi-2021.png" alt="Power BI"><div class="mpa-atile-text"><div class="mpa-atile-name">Power BI</div><div class="mpa-atile-sub">Dashboards</div></div></div>
+        <div class="mpa-atile"><img src="https://brandlogos.net/wp-content/uploads/2025/04/microsoft_power_bi-logo_brandlogos.net_1gwgj-512x667.png" alt="Power BI"><div class="mpa-atile-text"><div class="mpa-atile-name">Power BI</div><div class="mpa-atile-sub">Dashboards</div></div></div>
         <div class="mpa-atile"><img src="https://az-icons.com/export/icons/659e967167dca5288784b2ea918bb670.svg" alt="CMDB"><div class="mpa-atile-text"><div class="mpa-atile-name">Asset Register</div><div class="mpa-atile-sub">CMDB</div></div></div>
         <div class="mpa-atile"><img src="https://az-icons.com/export/icons/5c9e5285f43633acf1d817f038a3fd74.svg" alt="Governance"><div class="mpa-atile-text"><div class="mpa-atile-name">ITIL Governance</div><div class="mpa-atile-sub">Process docs</div></div></div>
         <div class="mpa-atile"><img src="https://az-icons.com/export/icons/f9e49b2f6656066720a98c5e9923c6f7.svg" alt="Security Score"><div class="mpa-atile-text"><div class="mpa-atile-name">Secure Score</div><div class="mpa-atile-sub">Posture tracking</div></div></div>
@@ -1701,6 +1350,330 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
 </div>
   </div>
 </section>
+
+
+<!-- ══ WHY US  -  moved here so trust is established before services ══ -->
+<section id="why" class="why-early">
+  <div class="container">
+    <div class="why-grid">
+      <!-- LEFT: Credentials panel -->
+      <div class="why-creds">
+        <span class="eyebrow">Why 4DS</span>
+        <h2 class="section-title">Most IT providers configure your environment once.<br>We audit it continuously.</h2>
+        <div class="why-cred-items">
+          <div class="why-cred-item">
+            <div class="why-cred-val">NIS2</div>
+            <div class="why-cred-label">Framework Implementation</div>
+          </div>
+          <div class="why-cred-item">
+            <div class="why-cred-val">3</div>
+            <div class="why-cred-label">Senior Engineers  -  ex-Enterprise</div>
+          </div>
+          <div class="why-cred-item">
+            <div class="why-cred-val">&lt;15m</div>
+            <div class="why-cred-label">Critical Incident Response</div>
+          </div>
+          <div class="why-cred-item">
+            <div class="why-cred-val">40+</div>
+            <div class="why-cred-label">Years Combined Experience</div>
+          </div>
+        </div>
+        <div class="why-cred-badges">
+          <span class="why-badge">eTenders Registered</span>
+          <span class="why-badge">PI Insured</span>
+          <span class="why-badge">DPC Compliant</span>
+          <span class="why-badge">NIS2 Framework Aware</span>
+        </div>
+        <p class="why-levity">We've never found an M365 tenant that didn't need work. Not once.</p>
+      </div>
+      <!-- RIGHT: Feat rows -->
+      <div class="why-feats">
+        <div class="feat-row"><div class="feat-ico">🔍</div><div><h4>We Find What Others Miss</h4><p>We've reviewed M365 tenants where Conditional Access was technically "enabled" but never actually enforced  -  leaving accounts fully exposed. That kind of gap is why clients come to us after their previous provider.</p></div></div>
+        <div class="feat-row"><div class="feat-ico">⚡</div><div><h4>Senior Engineers Answer the Phone</h4><p>Not a first-line helpdesk reading from a script. Every client gets direct access to the engineers who built their environment  -  critical issues acknowledged in under 15 minutes, 24/7/365.</p></div></div>
+        <div class="feat-row"><div class="feat-ico">📉</div><div><h4>We Measure Ticket Reduction</h4><p>Our goal is to make ourselves less needed for reactive support  -  by fixing root causes, not symptoms. We track support ticket volume from day one and report on the reduction every month.</p></div></div>
+        <div class="feat-row"><div class="feat-ico">💡</div><div><h4>You're Already Paying for the Tools</h4><p>Most M365 subscribers use less than 30% of what's included in their licence. We identify, configure, and deploy the security and productivity tools you're already paying for  -  at no extra cost.</p></div></div>
+        <div class="one-thing">
+          <span class="one-thing-label">One thing worth knowing</span>
+          <p>Most M365 Business Premium licences include Microsoft Defender for Endpoint  -  enterprise-grade endpoint protection worth €15/user/month if bought separately. Fewer than 15% of SMEs on this licence have it deployed. If yours isn't active, you're paying for enterprise-grade security and getting none of it. We find this in 9 out of 10 environments we review.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MISCONCEPTIONS ══════════════════════════════════════ -->
+<div class="misconceptions">
+  <div class="container">
+    <div class="section-hdr center">
+      <span class="eyebrow">Common Misconceptions</span>
+      <h2 class="section-title">Things that sound right  -  but aren't</h2>
+      <p class="section-sub">These are the beliefs that leave SME environments exposed. We find the consequences of all three in almost every audit we run.</p>
+    </div>
+    <div class="mc-grid">
+      <div class="mc-card">
+        <span class="mc-myth">Myth</span>
+        <h4>"Our firewall protects us from phishing."</h4>
+        <p>A firewall controls network traffic. It cannot inspect the content of an email, detect a credential-harvesting link, or stop an employee from entering their password on a spoofed login page. Phishing bypasses firewalls entirely  -  and it's the #1 entry point for ransomware in SMEs.</p>
+      </div>
+      <div class="mc-card">
+        <span class="mc-myth">Myth</span>
+        <h4>"Microsoft backs up our Microsoft 365 data."</h4>
+        <p>Microsoft provides infrastructure redundancy  -  not data backup. If a file is deleted, a mailbox is wiped, or ransomware encrypts your SharePoint, Microsoft's retention window is limited and not designed for full recovery. You need a dedicated third-party backup. Most businesses don't have one.</p>
+      </div>
+      <div class="mc-card">
+        <span class="mc-myth">Myth</span>
+        <h4>"No news from our IT provider means everything is fine."</h4>
+        <p>Silence from your IT provider means they're not looking. A properly managed environment generates alerts, compliance reports, patch logs, and security posture scores  -  regularly. If you're not receiving monthly reports with data in them, your environment is being managed reactively, not proactively.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ RIBBON ═════════════════════════════════════════════ -->
+<div class="ribbon">
+  <div class="ribbon-inner">
+    <div class="ribbon-label">Expertise across</div>
+    <div class="ribbon-track-wrap">
+      <div class="ribbon-track" id="ribbonTrack">
+
+        <!-- Set 1 -->
+        <div class="ribbon-logo" title="Microsoft 365"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg" alt="Microsoft 365" height="28"></div>
+        <div class="ribbon-logo" title="Microsoft Intune"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Intune" height="28"></div>
+        <div class="ribbon-logo" title="Microsoft Entra ID"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID" height="28"></div>
+        <div class="ribbon-logo" title="Microsoft Copilot"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot" height="28"></div>
+        <div class="ribbon-logo" title="OneDrive"><img src="https://files.brandlogos.net/svg/HNipmYPqfV/microsoft-onedrive-2025-logo-brandlogos.net_ynzfdy0ej.svg" alt="OneDrive" height="28"></div>
+        <div class="ribbon-logo" title="Palo Alto Networks"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/PaloAltoNetworks_2020_Logo.svg" alt="Palo Alto Networks" height="24"></div>
+        <div class="ribbon-logo" title="Cisco"><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco" height="26"></div>
+        <div class="ribbon-logo" title="Dell"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell" height="26"></div>
+        <div class="ribbon-logo" title="HP"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/HP_logo_2025.svg" alt="HP" height="28"></div>
+
+        <!-- Set 2 — duplicate for seamless loop -->
+        <div class="ribbon-logo" title="Microsoft 365"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg" alt="Microsoft 365" height="28"></div>
+        <div class="ribbon-logo" title="Microsoft Intune"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Intune" height="28"></div>
+        <div class="ribbon-logo" title="Microsoft Entra ID"><img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Entra ID" height="28"></div>
+        <div class="ribbon-logo" title="Microsoft Copilot"><img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="Copilot" height="28"></div>
+        <div class="ribbon-logo" title="OneDrive"><img src="https://files.brandlogos.net/svg/HNipmYPqfV/microsoft-onedrive-2025-logo-brandlogos.net_ynzfdy0ej.svg" alt="OneDrive" height="28"></div>
+        <div class="ribbon-logo" title="Palo Alto Networks"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/PaloAltoNetworks_2020_Logo.svg" alt="Palo Alto Networks" height="24"></div>
+        <div class="ribbon-logo" title="Cisco"><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco" height="26"></div>
+        <div class="ribbon-logo" title="Dell"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell" height="26"></div>
+        <div class="ribbon-logo" title="HP"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/HP_logo_2025.svg" alt="HP" height="28"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ══ SERVICES ══════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="section-hdr">
+      <h2 class="section-title">Where the gaps live  -  and what we do about them</h2>
+      <p class="section-sub section-sub-light">These are the areas where SMEs most commonly come to us first  -  and where we most consistently find what previous providers missed. Identity, email security, and endpoint management are where the biggest gaps tend to live.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- 1. Microsoft 365 & Modern Workplace -->
+      <div class="svc-card">
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg" alt="Microsoft 365" style="width:52px;height:52px;object-fit:contain;">
+        </div>
+        <div class="svc-body">
+          <h3>Microsoft 365 &amp; Modern Workplace</h3>
+          <p>Most businesses have M365  -  few actually use it. We unlock the full suite: from Exchange Online and Teams Phone to SharePoint, Power Platform, and Dynamics 365. Full licensing advisory included.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Exchange Online</span>
+            <span class="tech-tag">Teams Phone</span>
+            <span class="tech-tag">SharePoint</span>
+            <span class="tech-tag">Power Platform</span>
+            <span class="tech-tag">Dynamics 365</span>
+            <span class="tech-tag">Microsoft Licensing</span>
+            <span class="tech-tag">Google Workspace</span>
+            <span class="tech-tag">GW → M365 Migration</span>
+          </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
+          <a href="services/m365-modern-workplace.html" class="svc-link" id="svc-link-1">Learn more &#8594;</a>
+        </div>
+      </div>
+
+      <!-- 2. Identity, Access & Zero Trust -->
+      <div class="svc-card core-svc">
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://brandlogos.net/wp-content/uploads/2025/02/microsoft_entra_id-logo_brandlogos.net_tqfef-512x455.png" alt="Microsoft Entra ID" style="width:52px;height:52px;object-fit:contain;">
+        </div>
+        <div class="svc-body">
+          <h3>Identity &amp; Zero Trust Security <span class="core-badge">Core Expertise</span></h3>
+          <p>We lock down your identity layer  -  the #1 attack surface. Every app behind your IDP with SAML SSO, SCIM provisioning, and bulletproof Conditional Access. ZTNA replaces legacy VPN entirely.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Entra ID</span>
+            <span class="tech-tag">Entra Internet Access</span>
+            <span class="tech-tag">Entra Private Access</span>
+            <span class="tech-tag">ZTNA</span>
+            <span class="tech-tag">SAML SSO</span>
+            <span class="tech-tag">SCIM</span>
+            <span class="tech-tag">Conditional Access</span>
+            <span class="tech-tag">Okta</span>
+            <span class="tech-tag">MFA / PKI</span>
+          </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
+          <a href="services/identity-zero-trust.html" class="svc-link" id="svc-link-2">Learn more &#8594;</a>
+        </div>
+      </div>
+
+      <!-- 3. Endpoint & Device Management -->
+      <div class="svc-card">
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Microsoft-intune.svg" alt="Microsoft Intune" style="width:52px;height:52px;object-fit:contain;">
+        </div>
+        <div class="svc-body">
+          <h3>Endpoint &amp; Device Management</h3>
+          <p>Enterprise-grade endpoint control for every device in your fleet. Automated onboarding via Autopilot, CIS-hardened config profiles, privilege management, and third-party patching  -  all policy-driven.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Intune Suite</span>
+            <span class="tech-tag">Autopilot</span>
+            <span class="tech-tag">AutoPatch</span>
+            <span class="tech-tag">RoboPatch</span>
+            <span class="tech-tag">Endpoint Privilege Mgmt</span>
+            <span class="tech-tag">CIS Benchmarks</span>
+            <span class="tech-tag">MDM / MAM</span>
+            <span class="tech-tag">Asset Management</span>
+            <span class="tech-tag">Dell / HP Hardware</span>
+          </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
+          <a href="services/endpoint-device-management.html" class="svc-link" id="svc-link-3">Learn more &#8594;</a>
+        </div>
+      </div>
+
+      <!-- 4. Cybersecurity & AI Security -->
+      <div class="svc-card core-svc">
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="Microsoft Defender" style="width:52px;height:52px;object-fit:contain;">
+        </div>
+        <div class="svc-body">
+          <h3>Cybersecurity &amp; AI Security <span class="core-badge">Core Expertise</span></h3>
+          <p>Beyond firewalls  -  layered defence including AI-powered threat detection, phishing simulations, security awareness training, and CASB. Deploying next-gen AI security tools competitors haven't reached yet.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Defender for Business</span>
+            <span class="tech-tag">Microsoft Sentinel</span>
+            <span class="tech-tag">CASB</span>
+            <span class="tech-tag">Ovalix AI Security</span>
+            <span class="tech-tag">Prompt Security</span>
+            <span class="tech-tag">Phishing Simulations</span>
+            <span class="tech-tag">Security Awareness</span>
+            <span class="tech-tag">Palo Alto NGFW</span>
+            <span class="tech-tag">ISO 27001 Alignment</span>
+          </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
+          <a href="services/cybersecurity-ai-security.html" class="svc-link" id="svc-link-4">Learn more &#8594;</a>
+        </div>
+      </div>
+
+      <!-- 5. Email Security & Deliverability -->
+      <div class="svc-card core-svc hidden-svc">
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://az-icons.com/export/icons/a5063b5911ebfde641a1cac4f68bd47e.svg" alt="Defender for Office 365" style="width:52px;height:52px;object-fit:contain;">
+        </div>
+        <div class="svc-body">
+          <h3>Email Security &amp; Deliverability <span class="core-badge">Core Expertise</span></h3>
+          <p>Misconfigured SPF, DKIM, or DMARC is why your email lands in spam  -  and most companies don't know it. We bulletproof your mail stack end-to-end, from gateway filtering to authentication alignment.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Proofpoint</span>
+            <span class="tech-tag">Defender for O365</span>
+            <span class="tech-tag">DMARC</span>
+            <span class="tech-tag">DKIM / SPF</span>
+            <span class="tech-tag">Exchange Online</span>
+            <span class="tech-tag">Email Gateway</span>
+            <span class="tech-tag">Anti-Phishing</span>
+            <span class="tech-tag">Mail Flow Rules</span>
+          </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
+          <a href="services/email-security-deliverability.html" class="svc-link" id="svc-link-5">Learn more &#8594;</a>
+        </div>
+      </div>
+
+      <!-- 6. Network, Wi-Fi & Infrastructure -->
+      <div class="svc-card hidden-svc">
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/PaloAltoNetworks_2020_Logo.svg" alt="Palo Alto Networks">
+        </div>
+        <div class="svc-body">
+          <h3>Network, Wi-Fi &amp; Infrastructure</h3>
+          <p>From next-gen firewall deployment to Wi-Fi 7 and RADIUS-secured wireless, we design and deliver enterprise-grade networks. On-prem server management and cloud migration included.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Cisco Meraki</span>
+            <span class="tech-tag">Palo Alto NGFW</span>
+            <span class="tech-tag">SonicWall</span>
+            <span class="tech-tag">SD-WAN</span>
+            <span class="tech-tag">Wi-Fi 7</span>
+            <span class="tech-tag">RADIUS / PKI</span>
+            <span class="tech-tag">Meraki Cameras</span>
+            <span class="tech-tag">Azure Virtual Desktop</span>
+            <span class="tech-tag">On-Prem → Cloud</span>
+          </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
+          <a href="services/network-wifi-infrastructure.html" class="svc-link" id="svc-link-6">Learn more &#8594;</a>
+        </div>
+      </div>
+
+      <!-- 7. Backup, DR & Business Continuity -->
+      <div class="svc-card hidden-svc">
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Veeam_logo.svg/960px-Veeam_logo.svg.png?_=20210914131322" alt="Veeam">
+        </div>
+        <div class="svc-body">
+          <h3>Backup, DR &amp; Business Continuity</h3>
+          <p>Immutable, tested, recoverable backups  -  not just scheduled jobs. We design full DR runbooks, test failover regularly, and ensure your recovery objectives are actually met when it matters.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Commvault Metallic</span>
+            <span class="tech-tag">Veeam Cloud</span>
+            <span class="tech-tag">Datto Backupify</span>
+            <span class="tech-tag">Azure Backup</span>
+            <span class="tech-tag">Azure Site Recovery</span>
+            <span class="tech-tag">Immutable Storage</span>
+            <span class="tech-tag">DR Runbooks</span>
+            <span class="tech-tag">RTO / RPO Planning</span>
+          </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
+          <a href="services/backup-dr-continuity.html" class="svc-link" id="svc-link-7">Learn more &#8594;</a>
+        </div>
+      </div>
+
+      <!-- 8. Onboarding, Offboarding & Governance -->
+      <div class="svc-card hidden-svc">
+        <div class="svc-icon" style="background:none;border:none;box-shadow:none;">
+          <img src="https://az-icons.com/export/icons/4da8cd05c336e516540abe0d69e3423e.svg" alt="Power Automate" style="width:52px;height:52px;object-fit:contain;">
+        </div>
+        <div class="svc-body">
+          <h3>Automation, Governance &amp; IT Operations</h3>
+          <p>Eliminate manual IT processes. Automated onboarding and offboarding, ITSM workflows, cloud virtualisation, and project delivery  -  with full documentation and visibility across your environment.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Autopilot Onboarding</span>
+            <span class="tech-tag">Offboarding Protocols</span>
+            <span class="tech-tag">Jira / Confluence</span>
+            <span class="tech-tag">Power Automate</span>
+            <span class="tech-tag">Azure DevOps</span>
+            <span class="tech-tag">Azure Virtual Desktop</span>
+            <span class="tech-tag">AWS / GCP</span>
+            <span class="tech-tag">ITIL / ITSM</span>
+          </div>
+          <button class="svc-tags-toggle" onclick="toggleTags(this)">+ Show technical detail</button>
+          <a href="services/automation-it-governance.html" class="svc-link" id="svc-link-8">Learn more &#8594;</a>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <button class="show-more-svcs" id="showMoreSvcs" onclick="revealServices()">Show all 8 services ↓</button>
+    </div>
+    <div class="services-cta"><a href="#contact" class="btn-outline-teal">Discuss Your Requirements →</a></div>
+  </div>
+</section>
+
+
+
+
 
 <!-- ══ VALUE STRIP ════════════════════════════════════════ -->
 <div class="value-strip">
@@ -1943,33 +1916,12 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
   </div>
 </section>
 
-<!-- ══ LEAD MAGNET (mid-page) ═══════════════════════════════ -->
-<div class="lead-magnet">
-  <div class="lead-magnet-inner">
-    <h4>📋 Not ready to book a call yet? Take this away first.</h4>
-    <p>Download our free guide: <em>"10 Things Your IT Provider Should Be Doing  -  But Probably Isn't."</em> Written by engineers who've worked inside the enterprises your IT provider claims to emulate.</p>
-    <div class="lead-magnet-form">
-      <input type="email" id="lmEmail" placeholder="your@email.com">
-      <button onclick="handleLeadMagnet()">Send Me the Guide →</button>
-    </div>
-    <p class="lead-magnet-note">No spam. One email with the guide. That's it.</p>
-    <div id="lmOk" style="display:none;color:var(--teal);font-family:'Inter',sans-serif;font-size:0.85rem;margin-top:0.75rem;">✅ On its way  -  check your inbox.</div>
-    <div style="margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);">
-      <p style="font-family:'Inter',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">Follow us for practical IT insights  -  no fluff, no vendor marketing.</p>
-      <a href="https://linkedin.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'Sora',sans-serif;font-size:0.82rem;font-weight:700;color:white;background:#0077B5;padding:0.55rem 1.2rem;border-radius:var(--r-btn);text-decoration:none;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        Follow 4DS on LinkedIn
-      </a>
-    </div>
-  </div>
-</div>
-
 <section id="team">
   <div class="container">
     <div class="section-hdr">
       <span class="eyebrow">The People Behind 4DS</span>
-      <h2 class="section-title">Three senior engineers.<br>Every client, direct access.</h2>
-      <p class="section-sub">No account managers. No junior helpdesk. No escalation queue. When you work with 4DS, you work directly with the engineers who know your environment inside out.</p>
+      <h2 class="section-title" style="color:white;">Three senior engineers.<br>Every client, direct access.</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.6);">No account managers. No junior helpdesk. No escalation queue. When you work with 4DS, you work directly with the engineers who know your environment inside out.</p>
     </div>
     <div class="team-grid" style="grid-template-columns:repeat(3,1fr);">
       <div class="team-card">
@@ -2007,7 +1959,7 @@ body.nav-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45
       </div>
     </div>
     <div class="team-footer">
-      <p>Unlike larger MSPs where your account gets handed to a junior helpdesk, every 4DS client works directly with the engineers who built and know their environment  -  no middleman, no escalation queue.</p>
+      <p style="color:rgba(255,255,255,0.55);">Unlike larger MSPs where your account gets handed to a junior helpdesk, every 4DS client works directly with the engineers who built and know their environment  -  no middleman, no escalation queue.</p>
       <div class="capacity-signal">
         <span class="capacity-dot"></span>
         <span>We take on a small number of new clients each quarter to ensure every engagement gets our full attention. <strong>We currently have capacity for new managed service clients  -  enquire to check availability.</strong></span>
