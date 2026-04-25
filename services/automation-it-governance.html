@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>IT Automation &amp; Governance Services Ireland | 4DS</title>
-<meta name="description" content="4DS automates onboarding, offboarding, patching and reporting for SMEs across Ireland and the UK. Power Automate workflows, asset register, ITIL-aligned process design, and ISO 27001 governance framework. Fixed monthly fee. Free governance review.">
-<meta name="keywords" content="IT automation Ireland, Power Automate, IT governance, onboarding automation, offboarding, ITIL, ISO 27001, asset register, CMDB, 4DS">
-<meta property="og:title" content="IT Automation &amp; Governance | 4DS Ireland">
-<meta property="og:description" content="9 in 10 environments have no documented onboarding process. We automate IT operations and build the governance framework that makes IT repeatable and auditable.">
+<title>Backup, DR &amp; Business Continuity Services Ireland | 4DS</title>
+<meta name="description" content="4DS implements and manages backup, disaster recovery and business continuity for SMEs across Ireland and the UK. Immutable backup, tested RTO/RPO, M365 backup, ransomware-resilient architecture. ISO 27001 aligned. Free backup review.">
+<meta name="keywords" content="backup Ireland, disaster recovery, business continuity, Veeam backup, Acronis, M365 backup, immutable backup, ransomware recovery, RTO RPO, 4DS">
+<meta property="og:title" content="Backup, DR &amp; Business Continuity | 4DS Ireland">
+<meta property="og:description" content="5 in 10 backups have never been tested. We implement immutable, tested backup and DR — and prove you can actually recover. Free backup review.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://4ds.ie/services/automation-it-governance">
-<link rel="canonical" href="https://4ds.ie/services/automation-it-governance">
+<meta property="og:url" content="https://4ds.ie/services/backup-dr-continuity">
+<link rel="canonical" href="https://4ds.ie/services/backup-dr-continuity">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -46,8 +46,9 @@ nav{position:sticky;top:0;z-index:9000;background:#fff;border-bottom:1px solid v
 .nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale);}
 .nav-menu>li>a.active-page{color:var(--teal);}
 .nav-dropdown{position:relative;}
-.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
+.dropdown{display:none;position:absolute;top:100%;left:0;padding-top:10px;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
 .nav-dropdown:hover .dropdown{display:block;}
+.dropdown::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;background:transparent;}
 .dropdown li a{display:block;padding:0.55rem 1rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;color:var(--body);transition:all 0.15s;}
 .dropdown li a:hover{color:var(--teal);background:var(--teal-pale);}
 .dropdown li a.current-page{color:var(--teal);font-weight:700;background:var(--teal-pale);}
@@ -109,6 +110,7 @@ body.nav-open .drawer-overlay{display:block;}
 .btn-submit{width:100%;font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:700;padding:0.85rem;background:var(--amber);color:#fff;border:none;border-radius:var(--r-btn);cursor:pointer;box-shadow:var(--shadow-amber);transition:background 0.2s;margin-top:0.25rem;}
 .btn-submit:hover{background:var(--amber-deep)}
 .form-micro{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);text-align:center;margin-top:0.65rem;line-height:1.5;}
+.contact-grid{display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;}
 .form-thanks{display:none;text-align:center;padding:1.5rem 0;}
 .form-thanks h4{font-family:'Sora',sans-serif;font-size:1rem;color:var(--ink);margin-bottom:0.5rem;}
 .form-thanks p{font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--muted);line-height:1.6;}
@@ -247,30 +249,19 @@ footer{background:var(--navy);padding:1.5rem 0;}
         <ul class="dropdown">
           <li><a href="m365-modern-workplace.html">Microsoft 365 &amp; Modern Workplace</a></li>
           <li><a href="identity-zero-trust.html">Identity &amp; Zero Trust</a></li>
-          <li><a href="endpoint-device-management.html">Endpoint &amp; Device Management</a></li>
           <li><a href="cybersecurity-ai-security.html">Cybersecurity &amp; AI Security</a></li>
           <li><a href="email-security-deliverability.html">Email Security &amp; Deliverability</a></li>
           <li><a href="network-wifi-infrastructure.html">Network, Wi-Fi &amp; Infrastructure</a></li>
-          <li><a href="backup-dr-continuity.html">Backup, DR &amp; Continuity</a></li>
-          <li><a href="automation-it-governance.html" class="current-page">Automation &amp; IT Governance</a></li>
+          <li><a href="backup-dr-continuity.html" class="current-page">Backup, DR &amp; Continuity</a></li>
+          <li><a href="automation-it-governance.html">Automation &amp; IT Governance</a></li>
         </ul>
       </li>
-      <li class="nav-dropdown"><a href="../ict-services.html#industries">Industries &#9662;</a>
-        <ul class="dropdown">
-          <li><a href="../ict-services.html#industries">Healthcare</a></li>
-          <li><a href="../ict-services.html#industries">Manufacturing</a></li>
-          <li><a href="../ict-services.html#industries">Finance &amp; Professional Services</a></li>
-          <li><a href="../ict-services.html#industries">Legal &amp; Professional</a></li>
-          <li><a href="../ict-services.html#industries">Education</a></li>
-          <li><a href="../ict-services.html#industries">Public Sector &amp; Non-Profit</a></li>
-        </ul>
-      </li>
-      <li><a href="../ict-services.html#why">About</a></li>
+      <li><a href="../ict-services.html#industries">Industries</a></li>
       <li><a href="../ict-services.html#approach">Approach</a></li>
-      <li><a href="../ict-services.html#testimonials">Clients</a></li>
+      <li><a href="../ict-services.html#why">About</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Contact Us</a>
     </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -283,18 +274,16 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <span class="drawer-heading">Services</span>
     <a href="m365-modern-workplace.html" class="drawer-sub-link">Microsoft 365 &amp; Modern Workplace</a>
     <a href="identity-zero-trust.html" class="drawer-sub-link">Identity &amp; Zero Trust</a>
-    <a href="endpoint-device-management.html" class="drawer-sub-link">Endpoint &amp; Device Management</a>
     <a href="cybersecurity-ai-security.html" class="drawer-sub-link">Cybersecurity &amp; AI Security</a>
     <a href="email-security-deliverability.html" class="drawer-sub-link">Email Security &amp; Deliverability</a>
     <a href="network-wifi-infrastructure.html" class="drawer-sub-link">Network, Wi-Fi &amp; Infrastructure</a>
-    <a href="backup-dr-continuity.html" class="drawer-sub-link">Backup, DR &amp; Continuity</a>
-    <a href="automation-it-governance.html" class="drawer-sub-link current">Automation &amp; IT Governance</a>
+    <a href="backup-dr-continuity.html" class="drawer-sub-link current">Backup, DR &amp; Continuity</a>
+    <a href="automation-it-governance.html" class="drawer-sub-link">Automation &amp; IT Governance</a>
     <div class="drawer-divider"></div>
     <a href="../ict-services.html#industries" class="drawer-link">Industries</a>
-    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
     <a href="../ict-services.html#approach"   class="drawer-link">Approach</a>
-    <a href="../ict-services.html#testimonials" class="drawer-link">Clients</a>
-    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Get Free Health Check</a>
+    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
+    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Contact Us</a>
   </div>
 </div>
 
@@ -310,11 +299,11 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <button class="buyer-btn" data-buyer="ceo" onclick="setPersona('ceo')">CEO / MD</button>
 <button class="buyer-btn" data-buyer="tender" onclick="setPersona('tender')">Procurement</button>
         </div>
-        <span class="hero-eyebrow">Service Deep-Dive - IT Governance</span>
-        <h1>Manual IT processes do not scale.<br><em>Governance is what makes IT repeatable.</em></h1>
-        <p class="hero-sub" id="heroSub">Every manual IT task running on memory is a risk. We automate onboarding, offboarding, patching, and reporting - and document everything that cannot be automated.</p>
+        <span class="hero-eyebrow">Service Deep-Dive - Backup &amp; DR</span>
+        <h1>Most businesses have backups.<br><em>Almost none have tested them.</em></h1>
+        <p class="hero-sub" id="heroSub">A backup that has never been tested is not a backup - it is a false sense of security. We implement, verify, and regularly test your full backup and recovery capability.</p>
         <div class="trust-pills">
-          <span class="trust-pill">Power Automate &amp; Power Platform</span><span class="trust-pill">ITIL-Aligned Process Design</span><span class="trust-pill">ISO 27001 Governance Framework</span>
+          <span class="trust-pill">3-2-1 Backup Architecture</span><span class="trust-pill">Immutable Backup Targets</span><span class="trust-pill">Tested RTO/RPO</span>
         </div>
       </div>
 
@@ -329,274 +318,253 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <h2 class="section-title">Everything included in this service</h2>
     <p class="section-sub">Delivered by senior engineers on a fixed monthly fee. No billable hours. No scope surprises.</p>
     <div class="covers-grid">
-      <div class="cover-item"><div class="cover-ico">🚀</div><div><h4>User Onboarding Automation</h4><p>M365 provisioning, licence assignment, group membership, device enrolment, and application deployment triggered automatically. New starter ready in under an hour.</p></div></div>
-<div class="cover-item"><div class="cover-ico">🔒</div><div><h4>Offboarding &amp; Access Revocation</h4><p>Automated offboarding: account disable, MFA removal, mailbox conversion, OneDrive retention, and access revocation across all systems - within minutes.</p></div></div>
-<div class="cover-item"><div class="cover-ico">⚙️</div><div><h4>IT Process Documentation</h4><p>Documentation of all core IT processes to ITIL-aligned standards: change management, incident management, service request handling, and supplier management.</p></div></div>
-<div class="cover-item"><div class="cover-ico">📊</div><div><h4>Reporting &amp; Dashboard Automation</h4><p>Power BI dashboards for security posture, licence utilisation, and device compliance. Automated monthly reports distributed without manual effort.</p></div></div>
-<div class="cover-item"><div class="cover-ico">🗂️</div><div><h4>Asset Register &amp; CMDB</h4><p>Complete IT asset register covering hardware, software licences, SaaS subscriptions, and cloud resources. CMDB maintained and kept current.</p></div></div>
-<div class="cover-item"><div class="cover-ico">🔄</div><div><h4>Power Automate Workflows</h4><p>Business process automation for IT-adjacent tasks: approval workflows, notifications, ticket creation, and system integrations.</p></div></div>
+      <div class="cover-item"><div class="cover-ico">☁️</div><div><h4>Microsoft 365 Third-Party Backup</h4><p>Veeam Backup for M365 or Acronis covering Exchange Online, SharePoint, OneDrive, and Teams. Microsoft native retention is not a data backup.</p></div></div>
+<div class="cover-item"><div class="cover-ico">💾</div><div><h4>On-Premise &amp; Hybrid Backup</h4><p>Veeam or Acronis for physical and virtual servers. Immutable copies to protect against ransomware encryption. Air-gapped and offsite replication.</p></div></div>
+<div class="cover-item"><div class="cover-ico">🔄</div><div><h4>Disaster Recovery Planning</h4><p>RTO and RPO defined for each system. DR runbooks documented and tested. Cloud-based failover for critical workloads.</p></div></div>
+<div class="cover-item"><div class="cover-ico">📋</div><div><h4>Business Continuity Planning</h4><p>Business impact analysis, critical process identification, and IT failure continuity procedures. Staff communication plans documented.</p></div></div>
+<div class="cover-item"><div class="cover-ico">🧪</div><div><h4>Recovery Testing</h4><p>Scheduled recovery tests for all critical systems. Results documented and reported. RTO/RPO validated against agreed targets.</p></div></div>
+<div class="cover-item"><div class="cover-ico">🔒</div><div><h4>Ransomware-Resilient Architecture</h4><p>Immutable backup targets, backup account isolation from production, offline copy retention. Designed to survive a full domain compromise.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ══ AUTOMATION & GOVERNANCE INFOGRAPHIC ══ -->
+<!-- ══ BACKUP & DR INFOGRAPHIC ══ -->
 <section style="padding:40px 0;background:var(--surface);">
   <div class="container">
     <span class="eyebrow">Platform overview</span>
   </div>
   <div style="width:100%;max-width:1100px;margin:0 auto;padding:0 2rem;box-sizing:border-box;">
   <style>
-  .agig-card{width:100%;border-radius:10px;overflow:hidden;border:1px solid #DEE4EA;box-shadow:0 8px 40px rgba(11,28,46,0.12);}
+  .brig-card{width:100%;border-radius:10px;overflow:hidden;border:1px solid #DEE4EA;box-shadow:0 8px 40px rgba(11,28,46,0.12);}
 
   /* header */
-  .agig-hdr{background:var(--navy);padding:28px 40px 24px;position:relative;overflow:hidden;}
-  .agig-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 78% 35%,rgba(0,155,170,0.16) 0%,transparent 55%);pointer-events:none;}
-  .agig-hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-  .agig-eyebrow{font-family:'Inter',sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
-  .agig-title{font-family:'Sora',sans-serif;font-size:clamp(1.2rem,2.2vw,1.7rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1.1;}
-  .agig-title em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
-  .agig-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.46);margin-top:4px;max-width:460px;}
-  .agig-hstats{display:flex;gap:18px;flex-wrap:wrap;}
-  .agig-stat-n{font-family:'Sora',sans-serif;font-size:1.25rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;}
-  .agig-stat-l{font-family:'Inter',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.36);margin-top:2px;max-width:82px;line-height:1.35;}
+  .brig-hdr{background:var(--navy);padding:28px 40px 24px;position:relative;overflow:hidden;}
+  .brig-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 78% 35%,rgba(0,155,170,0.16) 0%,transparent 55%);pointer-events:none;}
+  .brig-hdr-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .brig-eyebrow{font-family:'Inter',sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px;}
+  .brig-title{font-family:'Sora',sans-serif;font-size:clamp(1.2rem,2.2vw,1.7rem);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1.1;}
+  .brig-title em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+  .brig-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.46);margin-top:4px;max-width:460px;}
+  .brig-hstats{display:flex;gap:18px;flex-wrap:wrap;}
+  .brig-stat-n{font-family:'Sora',sans-serif;font-size:1.25rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;}
+  .brig-stat-l{font-family:'Inter',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.36);margin-top:2px;max-width:82px;line-height:1.35;}
 
   /* body */
-  .agig-body{background:#F3F5F7;padding:22px 28px;}
-  .agig-slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:#6B7587;display:block;margin-bottom:7px;}
+  .brig-body{background:#F3F5F7;padding:22px 28px;}
+  .brig-slabel{font-family:'Inter',sans-serif;font-size:0.59rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:#6B7587;display:block;margin-bottom:7px;}
 
-  /* before/after transform */
-  .agig-transform{display:grid;grid-template-columns:1fr 48px 1fr;gap:0;margin-bottom:14px;align-items:stretch;}
-  .agig-before,.agig-after{border-radius:8px;overflow:hidden;border:1px solid #DEE4EA;}
-  .agig-before .agig-col-hdr{background:#2d0a0a;border-bottom:2px solid #6b1414;padding:10px 14px;display:flex;align-items:center;gap:6px;}
-  .agig-before .agig-col-hdr-title{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;color:#fc8181;}
-  .agig-before .agig-col-hdr-sub{font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(252,129,129,0.6);margin-top:1px;}
-  .agig-after .agig-col-hdr{background:var(--teal-pale);border-bottom:2px solid var(--teal-border);padding:10px 14px;display:flex;align-items:center;gap:6px;}
-  .agig-after .agig-col-hdr-title{font-family:'Sora',sans-serif;font-size:0.75rem;font-weight:700;color:var(--teal-deep);}
-  .agig-after .agig-col-hdr-sub{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--teal);margin-top:1px;}
-  .agig-col-body{background:white;padding:10px 14px;display:flex;flex-direction:column;gap:5px;}
-  .agig-col-item{display:flex;align-items:flex-start;gap:6px;font-family:'Inter',sans-serif;font-size:0.67rem;line-height:1.4;padding:4px 0;border-bottom:1px solid #F3F5F7;}
-  .agig-col-item:last-child{border-bottom:none;}
-  .agig-col-item.bad{color:#C53030;} .agig-col-item.bad::before{content:'✕';color:#E53E3E;flex-shrink:0;font-size:0.6rem;margin-top:2px;}
-  .agig-col-item.good{color:#276749;} .agig-col-item.good::before{content:'✓';color:#48BB78;flex-shrink:0;font-size:0.6rem;font-weight:800;margin-top:2px;}
-  .agig-arrow-col{display:flex;align-items:center;justify-content:center;}
-  .agig-arrow-badge{background:var(--teal);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:white;flex-shrink:0;}
+  /* 3-2-1 visual */
+  .brig-321{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px;}
+  .brig-321-card{border-radius:8px;overflow:hidden;border:1px solid #DEE4EA;}
+  .brig-321-hdr{padding:10px 14px;display:flex;align-items:center;gap:8px;}
+  .brig-321-hdr img{width:22px;height:22px;object-fit:contain;flex-shrink:0;}
+  .brig-321-num{font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;letter-spacing:-0.04em;line-height:1;}
+  .brig-321-label{font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;margin-top:2px;}
+  .brig-321-sub{font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:600;opacity:0.65;margin-top:1px;}
+  .brig-321-body{background:white;padding:10px 14px;}
+  .brig-321-desc{font-family:'Inter',sans-serif;font-size:0.7rem;color:#2C3340;line-height:1.5;margin-bottom:7px;}
+  .brig-321-items{display:flex;flex-direction:column;gap:4px;}
+  .brig-321-item{display:flex;align-items:flex-start;gap:6px;font-family:'Inter',sans-serif;font-size:0.65rem;color:#6B7587;line-height:1.4;}
+  .brig-321-item::before{content:'→';color:var(--teal);flex-shrink:0;font-size:0.65rem;margin-top:1px;}
+  .brig-321-card.c1 .brig-321-hdr{background:var(--teal-pale);} .brig-321-card.c1 .brig-321-num{color:var(--teal-deep);} .brig-321-card.c1 .brig-321-label{color:var(--teal-deep);}
+  .brig-321-card.c2 .brig-321-hdr{background:#FEF3E2;} .brig-321-card.c2 .brig-321-num{color:#C97A06;} .brig-321-card.c2 .brig-321-label{color:#92600A;}
+  .brig-321-card.c3 .brig-321-hdr{background:#EDE9FE;} .brig-321-card.c3 .brig-321-num{color:#5B21B6;} .brig-321-card.c3 .brig-321-label{color:#5B21B6;}
 
-  /* automation workflows */
-  .agig-workflows{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;}
-  .agig-wf{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:12px 14px;border-top:3px solid var(--teal);}
-  .agig-wf.amber{border-top-color:#E8920A;}
-  .agig-wf.purple{border-top-color:#5B21B6;}
-  .agig-wf.green{border-top-color:#276749;}
-  .agig-wf.navy{border-top-color:var(--navy);}
-  .agig-wf-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
-  .agig-wf-hdr img{width:22px;height:22px;object-fit:contain;flex-shrink:0;}
-  .agig-wf-title{font-family:'Sora',sans-serif;font-size:0.76rem;font-weight:700;color:var(--ink);}
-  .agig-wf-tool{font-family:'Inter',sans-serif;font-size:0.58rem;color:#6B7587;margin-top:1px;}
-  .agig-wf-items{display:flex;flex-direction:column;gap:3px;}
-  .agig-wf-item{font-family:'Inter',sans-serif;font-size:0.63rem;color:#555F6E;display:flex;align-items:flex-start;gap:5px;line-height:1.35;}
-  .agig-wf-item::before{content:'→';color:var(--teal);flex-shrink:0;font-size:0.6rem;margin-top:2px;}
-  .agig-wf.amber .agig-wf-item::before{color:#E8920A;}
-  .agig-wf.purple .agig-wf-item::before{color:#5B21B6;}
-  .agig-wf.green .agig-wf-item::before{color:#276749;}
-  .agig-wf.navy .agig-wf-item::before{color:var(--teal);}
+  /* layers */
+  .brig-layers{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;}
+  .brig-layer{display:grid;grid-template-columns:190px 1fr;border-radius:8px;overflow:hidden;border:1px solid #DEE4EA;}
+  .brig-lid{padding:11px 13px;display:flex;align-items:center;gap:8px;}
+  .brig-lid img{width:24px;height:24px;object-fit:contain;flex-shrink:0;}
+  .brig-lname{font-family:'Sora',sans-serif;font-size:0.74rem;font-weight:700;line-height:1.2;}
+  .brig-ltool{font-family:'Inter',sans-serif;font-size:0.59rem;margin-top:2px;opacity:0.7;}
+  .brig-lcontent{padding:9px 13px;display:flex;align-items:center;flex-wrap:wrap;gap:5px;}
+  .brig-li{display:flex;align-items:center;gap:4px;padding:3px 9px;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.63rem;font-weight:500;border:1px solid;white-space:nowrap;}
+  .brig-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+
+  .brig-layer.m365 .brig-lid{background:#EEF9FB;} .brig-layer.m365 .brig-lname{color:var(--teal-deep);} .brig-layer.m365 .brig-ltool{color:var(--teal);} .brig-layer.m365 .brig-lcontent{background:white;} .brig-layer.m365 .brig-li{background:var(--teal-pale);border-color:var(--teal-border);color:var(--teal-deep);} .brig-layer.m365 .brig-dot{background:var(--teal);}
+  .brig-layer.onp .brig-lid{background:#F0FFF4;} .brig-layer.onp .brig-lname{color:#276749;} .brig-layer.onp .brig-ltool{color:#38A169;} .brig-layer.onp .brig-lcontent{background:white;} .brig-layer.onp .brig-li{background:#F0FFF4;border-color:#9AE6B4;color:#276749;} .brig-layer.onp .brig-dot{background:#48BB78;}
+  .brig-layer.dr .brig-lid{background:#FEF3C7;} .brig-layer.dr .brig-lname{color:#92600A;} .brig-layer.dr .brig-ltool{color:#E8920A;} .brig-layer.dr .brig-lcontent{background:white;} .brig-layer.dr .brig-li{background:#FEF3E2;border-color:#F5D9A8;color:#92600A;} .brig-layer.dr .brig-dot{background:#E8920A;}
+  .brig-layer.ran .brig-lid{background:var(--navy);border-right:2px solid var(--teal);} .brig-layer.ran .brig-lname{color:white;} .brig-layer.ran .brig-ltool{color:var(--teal);} .brig-layer.ran .brig-lcontent{background:var(--navy-mid);} .brig-layer.ran .brig-li{background:rgba(0,155,170,0.15);border-color:rgba(0,155,170,0.4);color:rgba(255,255,255,0.82);} .brig-layer.ran .brig-dot{background:var(--teal);} .brig-layer.ran{border-color:var(--teal-border);}
+
+  /* threat row */
+  .brig-threat{background:linear-gradient(90deg,#1a0505,#2d0a0a);border:1px solid #6b1414;border-radius:8px;padding:10px 16px;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .brig-threat-label{font-family:'Sora',sans-serif;font-size:0.68rem;font-weight:700;color:#fc8181;flex-shrink:0;display:flex;align-items:center;gap:5px;}
+  .brig-tc{font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:600;padding:2px 8px;border-radius:100px;background:rgba(197,48,48,0.2);border:1px solid rgba(197,48,48,0.4);color:#fc8181;white-space:nowrap;}
 
   /* stats */
-  .agig-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:12px;}
-  .agig-sc{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:10px 12px;border-top:3px solid var(--teal);}
-  .agig-sc.a{border-top-color:#E8920A;} .agig-sc.r{border-top-color:#C53030;} .agig-sc.g{border-top-color:#276749;}
-  .agig-sc-n{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;margin-bottom:3px;}
-  .agig-sc.a .agig-sc-n{color:#E8920A;} .agig-sc.r .agig-sc-n{color:#C53030;} .agig-sc.g .agig-sc-n{color:#276749;}
-  .agig-sc-l{font-family:'Inter',sans-serif;font-size:0.63rem;color:#2C3340;line-height:1.4;}
+  .brig-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:12px;}
+  .brig-sc{background:white;border:1px solid #DEE4EA;border-radius:8px;padding:10px 12px;border-top:3px solid var(--teal);}
+  .brig-sc.a{border-top-color:#E8920A;} .brig-sc.r{border-top-color:#C53030;} .brig-sc.g{border-top-color:#276749;}
+  .brig-sc-n{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:800;color:var(--teal);letter-spacing:-0.04em;line-height:1;margin-bottom:3px;}
+  .brig-sc.a .brig-sc-n{color:#E8920A;} .brig-sc.r .brig-sc-n{color:#C53030;} .brig-sc.g .brig-sc-n{color:#276749;}
+  .brig-sc-l{font-family:'Inter',sans-serif;font-size:0.63rem;color:#2C3340;line-height:1.4;}
 
-  /* governance band */
-  .agig-gov{background:var(--navy);border-radius:8px;padding:14px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
-  .agig-gov-title{font-family:'Sora',sans-serif;font-size:0.7rem;font-weight:700;color:var(--teal);margin-bottom:3px;}
-  .agig-gov-desc{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.48);line-height:1.4;}
+  /* compliance band */
+  .brig-compliance{background:var(--navy);border-radius:8px;padding:14px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .brig-comp-title{font-family:'Sora',sans-serif;font-size:0.7rem;font-weight:700;color:var(--teal);margin-bottom:3px;}
+  .brig-comp-desc{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.48);line-height:1.4;}
 
   /* footer */
-  .agig-footer{background:var(--navy);padding:16px 40px;display:flex;align-items:center;justify-content:center;}
-  .agig-footer-text{font-family:'Sora',sans-serif;font-size:clamp(0.85rem,1.4vw,1rem);font-weight:700;color:white;text-align:center;line-height:1.4;}
-  .agig-footer-text em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
+  .brig-footer{background:var(--navy);padding:16px 40px;display:flex;align-items:center;justify-content:center;}
+  .brig-footer-text{font-family:'Sora',sans-serif;font-size:clamp(0.85rem,1.4vw,1rem);font-weight:700;color:white;line-height:1.4;text-align:center;}
+  .brig-footer-text em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--teal);font-weight:400;}
 
   /* responsive */
   @media(max-width:860px){
-    .agig-hdr{padding:20px 20px 18px;} .agig-body{padding:16px 16px;}
-    .agig-transform{grid-template-columns:1fr;}
-    .agig-arrow-col{padding:8px 0;}
-    .agig-arrow-badge{transform:rotate(90deg);}
-    .agig-workflows{grid-template-columns:1fr 1fr;}
-    .agig-stats-row{grid-template-columns:1fr 1fr;}
-    .agig-gov{grid-template-columns:1fr;}
+    .brig-hdr{padding:20px 20px 18px;} .brig-body{padding:16px 16px;}
+    .brig-321{grid-template-columns:1fr;}
+    .brig-layer{grid-template-columns:1fr;} .brig-lid{border-bottom:1px solid #DEE4EA;}
+    .brig-stats-row{grid-template-columns:1fr 1fr;}
+    .brig-compliance{grid-template-columns:1fr;}
   }
   @media(max-width:520px){
-    .agig-workflows{grid-template-columns:1fr;}
-    .agig-stats-row{grid-template-columns:1fr;}
-    .agig-hdr-inner{flex-direction:column;align-items:flex-start;}
+    .brig-stats-row{grid-template-columns:1fr;}
+    .brig-hdr-inner{flex-direction:column;align-items:flex-start;}
   }
   </style>
 
-  <div class="agig-card">
+  <div class="brig-card">
     <!-- HEADER -->
-    <div class="agig-hdr">
-      <div class="agig-hdr-inner">
+    <div class="brig-hdr">
+      <div class="brig-hdr-inner">
         <div>
-          <span class="agig-eyebrow">Automation &amp; IT Governance</span>
-          <div class="agig-title">Manual IT processes do not scale.<br><em>Governance is what makes IT repeatable.</em></div>
-          <div class="agig-sub">Replace memory and habit with documented, automated, auditable processes across every IT function.</div>
+          <span class="brig-eyebrow">Backup, DR &amp; Business Continuity</span>
+          <div class="brig-title">Most businesses have backups.<br><em>Almost none have tested them.</em></div>
+          <div class="brig-sub">Immutable, tested backup and recovery — designed to survive ransomware, documented to satisfy auditors.</div>
         </div>
-        <div class="agig-hstats">
-          <div><div class="agig-stat-n">4 hrs</div><div class="agig-stat-l">Manual onboarding → under 1 hr automated</div></div>
-          <div><div class="agig-stat-n">€14.4k</div><div class="agig-stat-l">Average unused licence spend found in first review</div></div>
-          <div><div class="agig-stat-n">9/10</div><div class="agig-stat-l">Environments with no documented onboarding</div></div>
-        </div>
-      </div>
+              </div>
     </div>
 
-    <div class="agig-body">
+    <div class="brig-body">
 
-      <!-- BEFORE / AFTER -->
-      <div class="agig-slabel">Before and after governance</div>
-      <div class="agig-transform">
-        <div class="agig-before">
-          <div class="agig-col-hdr">
-            <div>
-              <div class="agig-col-hdr-title">Without governance</div>
-              <div class="agig-col-hdr-sub">Running on memory</div>
+      <!-- 3-2-1 RULE -->
+      <div class="brig-slabel">The 3-2-1 backup architecture</div>
+      <div class="brig-321">
+        <div class="brig-321-card c1">
+          <div class="brig-321-hdr">
+            <img src="https://az-icons.com/export/icons/951234a0ba8dbe62234b12afb5c7a488.svg" alt="3">
+            <div><div class="brig-321-num">3</div><div class="brig-321-label">Copies of data</div><div class="brig-321-sub">At minimum, at all times</div></div>
+          </div>
+          <div class="brig-321-body">
+            <div class="brig-321-desc">Three independent copies ensure that no single failure — hardware, ransomware, or human error — can destroy all your data.</div>
+            <div class="brig-321-items">
+              <div class="brig-321-item">Production data (primary)</div>
+              <div class="brig-321-item">Local backup copy (fast restore)</div>
+              <div class="brig-321-item">Offsite or cloud copy (DR)</div>
             </div>
           </div>
-          <div class="agig-col-body">
-            <div class="agig-col-item bad">Onboarding takes 4 hours and steps are frequently missed</div>
-            <div class="agig-col-item bad">Leavers' accounts and SaaS access left active after departure</div>
-            <div class="agig-col-item bad">No asset register — unknown licences paid for every month</div>
-            <div class="agig-col-item bad">Production changes made without documentation or rollback plan</div>
-            <div class="agig-col-item bad">Monthly reporting requires hours of manual spreadsheet work</div>
-            <div class="agig-col-item bad">IT processes depend on one person — holiday or departure is a risk</div>
+        </div>
+        <div class="brig-321-card c2">
+          <div class="brig-321-hdr">
+            <img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="2">
+            <div><div class="brig-321-num">2</div><div class="brig-321-label">Different media types</div><div class="brig-321-sub">No single point of failure</div></div>
           </div>
-        </div>
-        <div class="agig-arrow-col">
-          <div class="agig-arrow-badge">&#8594;</div>
-        </div>
-        <div class="agig-after">
-          <div class="agig-col-hdr">
-            <div>
-              <div class="agig-col-hdr-title">With 4DS governance</div>
-              <div class="agig-col-hdr-sub">Documented &amp; automated</div>
+          <div class="brig-321-body">
+            <div class="brig-321-desc">Two different storage media ensures a hardware class failure (e.g. disk failure) cannot wipe multiple copies simultaneously.</div>
+            <div class="brig-321-items">
+              <div class="brig-321-item">On-premises NAS or tape</div>
+              <div class="brig-321-item">Cloud object storage (immutable)</div>
+              <div class="brig-321-item">Air-gapped media for critical workloads</div>
             </div>
           </div>
-          <div class="agig-col-body">
-            <div class="agig-col-item good">Onboarding completes in under 1 hour via automated workflow</div>
-            <div class="agig-col-item good">Offboarding runs in 15 minutes — full access revocation, every system</div>
-            <div class="agig-col-item good">Complete asset register — hardware, licences, SaaS, cloud resources</div>
-            <div class="agig-col-item good">All changes logged with approval, test, and rollback procedure</div>
-            <div class="agig-col-item good">Monthly reports auto-generated and distributed to stakeholders</div>
-            <div class="agig-col-item good">All processes documented — any engineer can execute them</div>
+        </div>
+        <div class="brig-321-card c3">
+          <div class="brig-321-hdr">
+            <img src="https://az-icons.com/export/icons/c942e4fe2f9031806a31665a08efe37f.svg" alt="1">
+            <div><div class="brig-321-num">1</div><div class="brig-321-label">Copy offsite</div><div class="brig-321-sub">Physically separate location</div></div>
+          </div>
+          <div class="brig-321-body">
+            <div class="brig-321-desc">An offsite copy protects against site-level disasters — fire, flood, or a ransomware attack that encrypts everything on the local network.</div>
+            <div class="brig-321-items">
+              <div class="brig-321-item">Cloud replication (Azure, Veeam Cloud)</div>
+              <div class="brig-321-item">Isolated from production credentials</div>
+              <div class="brig-321-item">Immutable — ransomware cannot delete it</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- WORKFLOWS -->
-      <div class="agig-slabel">Automation workflows &amp; tools</div>
-      <div class="agig-workflows">
+      <!-- THREAT ROW -->
+      <div class="brig-threat">
+        <div class="brig-threat-label">&#9888; What an untested backup leaves you exposed to</div>
+        <span class="brig-tc">Ransomware encrypts backups</span>
+        <span class="brig-tc">Backup credentials compromised</span>
+        <span class="brig-tc">M365 data unprotected</span>
+        <span class="brig-tc">Unknown recovery time</span>
+        <span class="brig-tc">Corrupt backup discovered mid-recovery</span>
+        <span class="brig-tc">No DR runbook</span>
+      </div>
 
-        <div class="agig-wf">
-          <div class="agig-wf-hdr">
-            <img src="https://az-icons.com/export/icons/06c2a09f4135f9abddcf315efd9b90ef.svg" alt="Onboarding">
-            <div><div class="agig-wf-title">User Onboarding</div><div class="agig-wf-tool">Power Automate + Intune</div></div>
+      <!-- COVERAGE LAYERS -->
+      <div class="brig-slabel">What we back up and protect</div>
+      <div class="brig-layers">
+        <div class="brig-layer m365">
+          <div class="brig-lid">
+            <img src="https://files.brandlogos.net/svg/RwAX3bZKbl/microsoft-365-copilot-logo-brandlogos.net_78lfgdevk.svg" alt="M365">
+            <div><div class="brig-lname">Microsoft 365 Backup</div><div class="brig-ltool">Veeam for M365 / Acronis</div></div>
           </div>
-          <div class="agig-wf-items">
-            <div class="agig-wf-item">M365 account &amp; licence provisioning</div>
-            <div class="agig-wf-item">Group membership &amp; app assignment</div>
-            <div class="agig-wf-item">Intune device enrolment triggered</div>
-            <div class="agig-wf-item">Welcome email &amp; manager notification</div>
+          <div class="brig-lcontent">
+            <span class="brig-li"><span class="brig-dot"></span>Exchange Online mailboxes</span>
+            <span class="brig-li"><span class="brig-dot"></span>SharePoint sites &amp; document libraries</span>
+            <span class="brig-li"><span class="brig-dot"></span>OneDrive for Business</span>
+            <span class="brig-li"><span class="brig-dot"></span>Microsoft Teams data &amp; channels</span>
+            <span class="brig-li"><span class="brig-dot"></span>Point-in-time restore — not just recycle bin</span>
           </div>
         </div>
-
-        <div class="agig-wf amber">
-          <div class="agig-wf-hdr">
-            <img src="https://az-icons.com/export/icons/0495923a6969cd34bde0711df1aad297.svg" alt="Offboarding">
-            <div><div class="agig-wf-title">User Offboarding</div><div class="agig-wf-tool">Power Automate + Entra ID</div></div>
+        <div class="brig-layer onp">
+          <div class="brig-lid">
+            <img src="https://az-icons.com/export/icons/659e967167dca5288784b2ea918bb670.svg" alt="Servers">
+            <div><div class="brig-lname">On-Premise &amp; Hybrid</div><div class="brig-ltool">Veeam / Acronis</div></div>
           </div>
-          <div class="agig-wf-items">
-            <div class="agig-wf-item">Account disabled &amp; MFA devices removed</div>
-            <div class="agig-wf-item">Mailbox converted, OneDrive retained</div>
-            <div class="agig-wf-item">All SaaS access revoked</div>
-            <div class="agig-wf-item">Executed in 15 minutes from trigger</div>
-          </div>
-        </div>
-
-        <div class="agig-wf purple">
-          <div class="agig-wf-hdr">
-            <img src="https://az-icons.com/export/icons/5909f625fdfc6e6b2f81423f01726934.svg" alt="Reporting">
-            <div><div class="agig-wf-title">Automated Reporting</div><div class="agig-wf-tool">Power BI + M365</div></div>
-          </div>
-          <div class="agig-wf-items">
-            <div class="agig-wf-item">Security posture score (monthly)</div>
-            <div class="agig-wf-item">Licence utilisation &amp; cost report</div>
-            <div class="agig-wf-item">Device compliance summary</div>
-            <div class="agig-wf-item">Auto-distributed to stakeholders</div>
+          <div class="brig-lcontent">
+            <span class="brig-li"><span class="brig-dot"></span>Physical &amp; virtual server backup</span>
+            <span class="brig-li"><span class="brig-dot"></span>Hyper-V &amp; VMware support</span>
+            <span class="brig-li"><span class="brig-dot"></span>Application-aware backups (SQL, Exchange)</span>
+            <span class="brig-li"><span class="brig-dot"></span>Offsite replication to cloud</span>
+            <span class="brig-li"><span class="brig-dot"></span>Bare-metal recovery capability</span>
           </div>
         </div>
-
-        <div class="agig-wf green">
-          <div class="agig-wf-hdr">
-            <img src="https://az-icons.com/export/icons/d2fa62ae1fdd4a4cb6a967d3fd294789.svg" alt="Asset">
-            <div><div class="agig-wf-title">Asset Register &amp; CMDB</div><div class="agig-wf-tool">Documented &amp; Maintained</div></div>
+        <div class="brig-layer dr">
+          <div class="brig-lid">
+            <img src="https://az-icons.com/export/icons/5909f625fdfc6e6b2f81423f01726934.svg" alt="DR">
+            <div><div class="brig-lname">Disaster Recovery</div><div class="brig-ltool">Documented RTO/RPO</div></div>
           </div>
-          <div class="agig-wf-items">
-            <div class="agig-wf-item">Hardware inventory — all devices</div>
-            <div class="agig-wf-item">Software licences &amp; renewal dates</div>
-            <div class="agig-wf-item">SaaS subscriptions &amp; costs</div>
-            <div class="agig-wf-item">Cloud resources catalogued</div>
-          </div>
-        </div>
-
-        <div class="agig-wf navy">
-          <div class="agig-wf-hdr">
-            <img src="https://az-icons.com/export/icons/232997b804dcb2f462fff392c28d31ca.svg" alt="Change">
-            <div><div class="agig-wf-title">Change Management</div><div class="agig-wf-tool">ITIL-Aligned Process</div></div>
-          </div>
-          <div class="agig-wf-items">
-            <div class="agig-wf-item">Change request &amp; approval workflow</div>
-            <div class="agig-wf-item">Test plan &amp; rollback documented</div>
-            <div class="agig-wf-item">Change log maintained</div>
-            <div class="agig-wf-item">Post-implementation review</div>
+          <div class="brig-lcontent">
+            <span class="brig-li"><span class="brig-dot"></span>RTO defined per workload</span>
+            <span class="brig-li"><span class="brig-dot"></span>RPO defined per workload</span>
+            <span class="brig-li"><span class="brig-dot"></span>DR runbook documented &amp; tested</span>
+            <span class="brig-li"><span class="brig-dot"></span>Cloud-based DR failover option</span>
+            <span class="brig-li"><span class="brig-dot"></span>Tabletop exercises annually</span>
           </div>
         </div>
-
-        <div class="agig-wf" style="border-top-color:#5B21B6;">
-          <div class="agig-wf-hdr">
-            <img src="https://az-icons.com/export/icons/4da8cd05c336e516540abe0d69e3423e.svg" alt="Power Automate">
-            <div><div class="agig-wf-title">Power Automate Flows</div><div class="agig-wf-tool">Business Process Automation</div></div>
+        <div class="brig-layer ran">
+          <div class="brig-lid">
+            <img src="https://az-icons.com/export/icons/3f3bbb24efa49bab13fc9b7b996286cf.svg" alt="Ransomware">
+            <div><div class="brig-lname">Ransomware-Resilient Architecture</div><div class="brig-ltool">Immutable + Isolated</div></div>
           </div>
-          <div class="agig-wf-items">
-            <div class="agig-wf-item">Approval workflows &amp; notifications</div>
-            <div class="agig-wf-item">Ticket creation &amp; routing</div>
-            <div class="agig-wf-item">System integrations (CRM, HR, etc.)</div>
-            <div class="agig-wf-item">Scheduled maintenance triggers</div>
+          <div class="brig-lcontent">
+            <span class="brig-li"><span class="brig-dot"></span>Immutable backup targets</span>
+            <span class="brig-li"><span class="brig-dot"></span>Backup accounts isolated from AD</span>
+            <span class="brig-li"><span class="brig-dot"></span>MFA on all backup management consoles</span>
+            <span class="brig-li"><span class="brig-dot"></span>Offline/air-gapped copy retained</span>
+            <span class="brig-li"><span class="brig-dot"></span>Designed to survive full domain compromise</span>
           </div>
         </div>
-
       </div>
 
       <!-- STATS -->
-      <div class="agig-stats-row">
-        <div class="agig-sc r"><div class="agig-sc-n">9/10</div><div class="agig-sc-l">No documented onboarding or offboarding process at first engagement</div></div>
-        <div class="agig-sc a"><div class="agig-sc-n">8/10</div><div class="agig-sc-l">No complete asset register — unknown SaaS tools being paid for</div></div>
-        <div class="agig-sc a"><div class="agig-sc-n">€14.4k</div><div class="agig-sc-l">Average unused or duplicate licence spend found in first governance review</div></div>
-        <div class="agig-sc g"><div class="agig-sc-n">100%</div><div class="agig-sc-l">Of 4DS environments have documented asset register and change management process</div></div>
-      </div>
-
-      <!-- GOVERNANCE BAND -->
-      <div class="agig-gov">
-        <div><div class="agig-gov-title">ITIL v4 Aligned</div><div class="agig-gov-desc">Change, incident, and service request processes designed to ITIL v4 alignment. Service catalogue and CMDB produced as standard deliverables.</div></div>
-        <div><div class="agig-gov-title">ISO 27001 Governance</div><div class="agig-gov-desc">Asset management, change control, and access management controls aligned to ISO 27001 Annex A. Documentation available for audit submissions.</div></div>
-        <div><div class="agig-gov-title">Tender &amp; Compliance Ready</div><div class="agig-gov-desc">Complete governance documentation set produced for every engagement — asset register, process docs, and CMDB available for procurement submissions.</div></div>
+      
+      <!-- COMPLIANCE BAND -->
+      <div class="brig-compliance">
+        <div><div class="brig-comp-title">ISO 27001 &amp; NIS2</div><div class="brig-comp-desc">Backup and BC/DR controls aligned to ISO 27001 Annex A and NIS2 Article 21. Documentation produced as a standard deliverable.</div></div>
+        <div><div class="brig-comp-title">HSE &amp; Healthcare</div><div class="brig-comp-desc">BC/DR documentation produced to HSE ICT security standard where specified. RTO/RPO validated and evidenced for audit submissions.</div></div>
+        <div><div class="brig-comp-title">Cyber Insurance</div><div class="brig-comp-desc">Immutability, tested RTO, and documented IR plan are the controls insurers require. We implement and document all three to underwriter standard.</div></div>
       </div>
 
     </div>
 
-    <div class="agig-footer">
-      <div class="agig-footer-text">IT governance turns tribal knowledge into <em>repeatable, auditable business process.</em></div>
+    <div class="brig-footer">
+      <div class="brig-footer-text">Backup that runs is not enough. <em>Backup you can recover from is.</em></div>
     </div>
   </div>
   </div>
@@ -618,78 +586,78 @@ footer{background:var(--navy);padding:1.5rem 0;}
     
       <div class="persona-content active" data-buyer="generic">
         <div>
-          <h3 class="persona-headline">If IT processes live in one person's head, they are not business processes</h3>
-          <p class="persona-body">Onboarding that runs from a mental checklist misses steps. Offboarding done in a rush leaves access behind. Changes made without documentation create incidents that are impossible to diagnose. Governance replaces memory and habit with documented, auditable, repeatable processes. Automation ensures those processes execute consistently, every time.</p>
-          <div class="persona-pains"><div class="pain-item">Onboarding and offboarding run from memory - steps get missed and access gets left behind</div>
-<div class="pain-item">No complete asset register - unknown SaaS tools being paid for, duplicate licences active</div>
-<div class="pain-item">Production system changes made without a change management process or change log</div>
-<div class="pain-item">No IT reporting available to leadership without significant manual effort to compile</div></div>
+          <h3 class="persona-headline">The backup being green does not mean you can recover</h3>
+          <p class="persona-body">Backup status lights showing green means the job ran. It does not mean the data is recoverable, that the restore process works, that the backup is complete, or that the backup itself would survive a ransomware attack. Recovery capability must be tested, documented, and reported. We implement the architecture and run the tests.</p>
+          <div class="persona-pains"><div class="pain-item">Backup jobs run and show green but recovery has never been attempted</div>
+<div class="pain-item">Microsoft 365 data is not independently backed up - relying on Microsoft recycle bin</div>
+<div class="pain-item">Backup credentials are accessible from the same environment as production systems</div>
+<div class="pain-item">No documented RTO or RPO - you do not know how long recovery would take</div></div>
           <div class="persona-cta-row">
             <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
           </div>
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">4 hrs</div><div class="p-stat-label"><strong>Average manual time to onboard a new starter, reduced to under 1 hour with automation</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">€14.4k</div><div class="p-stat-label"><strong>Average SaaS and licence spend identified as unused or duplicated in a first governance review</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>Of 4DS-managed environments have a documented asset register and change management process</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">5/10</div><div class="p-stat-label"><strong>Environments with backups that have never been recovery-tested</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">58%</div><div class="p-stat-label"><strong>Of SMEs that suffer a major data loss event close within 6 months</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">Zero</div><div class="p-stat-label"><strong>4DS client environments without a tested, documented recovery procedure</strong></div></div>
         </div>
       </div>
       <div class="persona-content" data-buyer="ops">
         <div>
-          <h3 class="persona-headline">When you are the process, every handover is a risk</h3>
-          <p class="persona-body">IT departments that run on tribal knowledge are fragile. When the person who knows the onboarding process is on leave, onboarding breaks. When the person who knows the network configuration leaves, documentation starts from zero. We replace knowledge dependencies with documented procedures and automate the high-frequency tasks so they execute without intervention.</p>
-          <div class="persona-pains"><div class="pain-item">No documented onboarding or offboarding procedure - both run from memory</div>
-<div class="pain-item">Access review relies on manually checking Active Directory rather than an automated process</div>
-<div class="pain-item">Change management is informal - changes logged retrospectively if at all</div>
-<div class="pain-item">Monthly reporting requires several hours of manual data gathering and spreadsheet work</div></div>
+          <h3 class="persona-headline">You need to know your RTO and RPO before the incident, not during it</h3>
+          <p class="persona-body">When something goes wrong, the two most important numbers are your Recovery Time Objective (how long to restore) and your Recovery Point Objective (how much data you lose). Without testing, neither number is known. We define both for every critical workload, implement the backup architecture to meet them, test them quarterly, and report the results. When an incident happens, you already know what the recovery looks like.</p>
+          <div class="persona-pains"><div class="pain-item">No defined RTO or RPO for critical systems - recovery time is unknown until it happens</div>
+<div class="pain-item">Backup coverage gaps for cloud systems including M365, SaaS tools, and cloud-hosted servers</div>
+<div class="pain-item">Backup account credentials stored in Active Directory accessible from production environment</div>
+<div class="pain-item">Ransomware could reach and encrypt backup targets via the same credentials used for production</div></div>
           <div class="persona-cta-row">
             <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
           </div>
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">Monthly</div><div class="p-stat-label"><strong>Automated reporting delivered to stakeholders without manual effort</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">9/10</div><div class="p-stat-label"><strong>Environments with no documented offboarding procedure at first engagement</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">15 min</div><div class="p-stat-label"><strong>Time to complete full user offboarding via automated workflow vs average 3 hours manually</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">Monthly</div><div class="p-stat-label"><strong>Backup health monitoring and reporting under 4DS managed service</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">Quarterly</div><div class="p-stat-label"><strong>Recovery tests conducted and results documented per agreed RTO/RPO targets</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">3-2-1</div><div class="p-stat-label"><strong>Architecture: 3 copies, 2 different media, 1 offsite - applied to all critical workloads</strong></div></div>
         </div>
       </div>
       <div class="persona-content" data-buyer="ceo">
         <div>
-          <h3 class="persona-headline">IT governance gives you visibility into what your IT function actually does</h3>
-          <p class="persona-body">Without governance, IT is a cost centre that produces unpredictable results. With governance, IT is a documented business function with measurable outputs, known costs, and improving performance over time. Monthly reports show security posture trends, licence utilisation, device compliance, and support ticket volumes. You can see whether IT is getting better - and hold it accountable if it is not.</p>
-          <div class="persona-pains"><div class="pain-item">No visibility into IT costs beyond the monthly invoice</div>
-<div class="pain-item">You have no asset register - you do not know what software licences the business is currently paying for</div>
-<div class="pain-item">IT changes are made without a formal process - you find out when something breaks</div>
-<div class="pain-item">No monthly IT report to review at board or leadership level</div></div>
+          <h3 class="persona-headline">Recovery capability is what matters - not backup capability</h3>
+          <p class="persona-body">The businesses that recover quickly from ransomware or catastrophic data loss are those that knew their recovery time, had a runbook, had tested it, and had immutable backups that ransomware could not reach. The businesses that close or sustain existential damage are those that discovered how fragile their backup was at the worst possible time. We ensure you are in the first category.</p>
+          <div class="persona-pains"><div class="pain-item">You have no confident answer to the question of how long recovery from ransomware would take</div>
+<div class="pain-item">Your cyber insurer is asking about backup immutability and RTO - you are not certain you can answer</div>
+<div class="pain-item">Microsoft 365 data is not independently backed up despite being business-critical</div>
+<div class="pain-item">No business continuity plan exists for IT failure scenarios affecting the whole organisation</div></div>
           <div class="persona-cta-row">
             <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
           </div>
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">Monthly</div><div class="p-stat-label"><strong>Board-level IT summary report delivered as standard under 4DS managed governance</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">€14.4k</div><div class="p-stat-label"><strong>Average licence spend recovered through first governance audit</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>IT changes documented in change log with rollback procedure before implementation</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">58%</div><div class="p-stat-label"><strong>Of SMEs that experience major data loss close within 6 months (University of Texas)</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">Zero</div><div class="p-stat-label"><strong>Additional data loss in a 4DS-managed ransomware scenario with immutable backup in place</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">24 hrs</div><div class="p-stat-label"><strong>Maximum RTO target we define and test for critical workloads in a standard engagement</strong></div></div>
         </div>
       </div>
       <div class="persona-content" data-buyer="tender">
         <div>
-          <h3 class="persona-headline">IT governance documentation is a scored requirement in formal ICT procurement</h3>
-          <p class="persona-body">Change management procedures, configuration management databases, asset registers, and ITSM process documentation are standard requirements in public sector and enterprise ICT tenders. Organisations without these documents - or that produce them retrospectively for a submission - score poorly at the governance assessment stage. We implement the governance framework and produce the documentation as part of the engagement.</p>
-          <div class="persona-pains"><div class="pain-item">No change management process or documentation for a tender submission</div>
-<div class="pain-item">No asset register or CMDB to evidence configuration management capability</div>
-<div class="pain-item">ITSM processes undocumented - cannot demonstrate service management maturity</div>
-<div class="pain-item">No IT governance framework aligned to recognised standards such as ITIL or ISO 27001</div></div>
+          <h3 class="persona-headline">Backup and BC/DR documentation is mandatory in healthcare and public sector tenders</h3>
+          <p class="persona-body">HSE and HIQA frameworks, as well as most public sector ICT procurement requirements, specify that suppliers must have documented backup procedures with defined recovery time objectives and evidence of periodic testing. A backup that has never been tested and an RTO that has never been validated cannot satisfy these requirements. We implement the procedures and produce the documentation.</p>
+          <div class="persona-pains"><div class="pain-item">No documented backup procedures or RTO/RPO evidence for a tender submission</div>
+<div class="pain-item">Recovery has never been tested - cannot certify backup capability in a compliance context</div>
+<div class="pain-item">No business continuity plan or IT disaster recovery runbook</div>
+<div class="pain-item">M365 backup coverage gaps that cannot be evidenced in a healthcare or public sector audit</div></div>
           <div class="persona-cta-row">
             <a href="#enquiry" class="btn-persona-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Discuss this with an engineer &rarr;</a>
           </div>
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">ITIL</div><div class="p-stat-label"><strong>IT governance processes designed to ITIL v4 alignment where specified</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Governance documentation aligned to ISO 27001 Annex A controls</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>Of 4DS governance engagements produce a complete asset register and process documentation set</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Controls configured to ISO 27001 alignment — evidence available for submissions</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">HSE</div><div class="p-stat-label"><strong>BC/DR documentation produced to HSE ICT security standard where specified</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>Of 4DS client environments have documented and tested backup procedures</strong></div></div>
         </div>
       </div>
   </div>
@@ -702,9 +670,9 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <h2 class="section-title">The gaps we find in almost every environment</h2>
     <p class="section-sub">These are not edge cases. They are the standard state of an SME environment without an independent review.</p>
     <div class="findings-grid">
-      <div class="finding-card"><div class="finding-n">9/10</div><h4>No documented onboarding process</h4><p>New starters configured manually from memory. Leavers access not fully revoked - accounts and SaaS tools frequently overlooked.</p></div>
-<div class="finding-card"><div class="finding-n">8/10</div><h4>No asset register</h4><p>No complete inventory of hardware, licences, or SaaS subscriptions. Renewals missed, duplicates purchased, shadow IT uncontrolled.</p></div>
-<div class="finding-card"><div class="finding-n">7/10</div><h4>No change management process</h4><p>Production system changes made without documentation, testing, or rollback planning. Incident investigations hampered by no change record.</p></div>
+      <div class="finding-card"><div class="finding-n">5/10</div><h4>Backup never tested</h4><p>Backup software shows green. Recovery has never been attempted. In several cases the backup was found to be incomplete when tested.</p></div>
+<div class="finding-card"><div class="finding-n">6/10</div><h4>M365 data not independently backed up</h4><p>Organisations relying on Microsoft 30-day recycle bin. Not a substitute for point-in-time recovery of mailboxes, SharePoint, or Teams.</p></div>
+<div class="finding-card"><div class="finding-n">4/10</div><h4>Backup accessible from production</h4><p>Ransomware operators routinely encrypt backup targets. Backups in accounts accessible from the compromised environment provide no protection.</p></div>
     </div>
   </div>
 </section>
@@ -716,10 +684,10 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <h2 class="section-title">The 4DS delivery process</h2>
     <p class="section-sub">Four stages. No handovers to junior staff mid-project. No scope surprises.</p>
     <div class="how-steps">
-      <div class="how-step"><span class="step-n">STEP 01</span><h4>Process Audit</h4><p>Current IT processes documented or gaps identified. Priority gaps ranked by operational risk and compliance exposure.</p></div>
-<div class="how-step"><span class="step-n">STEP 02</span><h4>Governance Framework</h4><p>IT governance framework designed for your size and complexity. Change, incident, and asset management processes documented.</p></div>
-<div class="how-step"><span class="step-n">STEP 03</span><h4>Automation Build</h4><p>Power Automate workflows for onboarding and offboarding. Intune provisioning automation. Power BI dashboards for operational visibility.</p></div>
-<div class="how-step"><span class="step-n">STEP 04</span><h4>Ongoing Governance</h4><p>Monthly governance review. Asset register maintenance. Quarterly process audit. Automation enhancement as the business evolves.</p></div>
+      <div class="how-step"><span class="step-n">STEP 01</span><h4>Backup Audit</h4><p>All data sources inventoried. Current backup solution, retention policy, and last recovery test reviewed. Gap analysis produced.</p></div>
+<div class="how-step"><span class="step-n">STEP 02</span><h4>Architecture Design</h4><p>3-2-1 architecture designed with immutable targets. RTO and RPO defined per workload. Ransomware-resilient architecture specified.</p></div>
+<div class="how-step"><span class="step-n">STEP 03</span><h4>Implementation &amp; Testing</h4><p>Solution deployed and verified. Initial recovery test conducted before handover. Results documented and reported.</p></div>
+<div class="how-step"><span class="step-n">STEP 04</span><h4>Ongoing Management</h4><p>Monthly backup job monitoring. Quarterly recovery tests. Annual BC/DR plan review and tabletop exercise.</p></div>
     </div>
   </div>
 </section>
@@ -728,20 +696,20 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <!-- CONTACT FORM -->
 <section style="padding:72px 0;background:var(--surface);" id="contact-section">
   <div class="container">
-    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;">
+    <div class="contact-grid">
       <div>
         <span class="eyebrow">Get in touch</span>
         <h2 class="section-title">Get in touch</h2>
-        <p class="section-sub" style="margin-bottom:1.5rem;">Tell us about your current IT processes and where you feel the most operational risk. A senior engineer responds within 2 hours. No commitment required.</p>
+        <p class="section-sub" style="margin-bottom:1.5rem;">Tell us about your current backup setup and whether any recovery tests have been conducted. A senior engineer responds within 2 hours. No commitment required.</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;">
-          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Full governance posture review — onboarding, offboarding, asset register, change management</li>
-          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Automation opportunities identified and scoped before any commitment</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Full backup posture review — M365 coverage, immutability, recovery testing status</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>RTO and RPO defined and validated — not just documented</li>
           <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Fixed monthly fee — no billable hours, no surprise invoices</li>
         </ul>
       </div>
       <div class="form-card" id="enquiry">
-        <h3>Speak to a senior engineer</h3>
-        <p class="form-sub" id="enquiryNote">Tell us about your current IT processes and where you feel the most operational risk.</p>
+        <h3>Get in touch</h3>
+        <p class="form-sub" id="enquiryNote">Tell us about your current backup setup and whether any recovery tests have been conducted.</p>
         <div id="enquiryForm">
           <input type="hidden" id="formBuyer" value="generic">
           <div class="f-group"><label>Your Name *</label><input type="text" id="eName" placeholder="Jane Murphy" required></div>
@@ -766,11 +734,11 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <footer>
   <div class="container">
     <div class="foot-inner">
-      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321. ISO 27001 Certified.</span>
+      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321.</span>
       <span>
         <a href="../ict-services.html">Home</a> &nbsp;&middot;&nbsp;
         <a href="../ict-services.html#services">All Services</a> &nbsp;&middot;&nbsp;
-        <a href="../ict-services.html#contact">Contact</a>
+        <a href="#enquiry" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
       </span>
     </div>
   </div>
@@ -778,16 +746,16 @@ footer{background:var(--navy);padding:1.5rem 0;}
 
 <script>
 window.buyerSubs = {
-  generic: "Every manual IT task running on memory is a risk. We automate onboarding, offboarding, patching, and reporting - and document everything that cannot be automated.",
-  ops: "When you are the process, every holiday and handover is a risk. We replace tribal knowledge with documented, automated workflows that work regardless of who is in the office.",
-  ceo: "IT governance turns ad-hoc technology management into a repeatable, auditable business process. We implement the framework that makes IT operations measurable and visible.",
-  tender: "Documented change management, asset registers, and IT governance frameworks are scored requirements in most formal ICT procurement processes.",
+  generic: "A backup that has never been tested is not a backup - it is a false sense of security. We implement, verify, and regularly test your full backup and recovery capability.",
+  ops: "The question is not whether backups are running. It is whether you can recover from them, how long it will take, and how much data you will lose. We establish and test those answers.",
+  ceo: "If ransomware encrypted your systems today, how long before you could resume operations? We implement the infrastructure that makes that answer a known number rather than a guess.",
+  tender: "Documented backup procedures, tested recovery time objectives, and business continuity plans are mandatory in healthcare and public sector ICT procurement frameworks.",
 };
 window.enquiryNotes = {
-  generic: "Tell us about your current IT processes and where you feel the most operational risk.",
-  ops: "Tell us which processes currently run on memory or informal checklists rather than documented procedures.",
-  ceo: "Tell us what IT reporting you currently receive and what visibility gaps concern you most.",
-  tender: "Tell us the governance framework requirements specified in the tender you are targeting.",
+  generic: "Tell us about your current backup setup and whether any recovery tests have been conducted.",
+  ops: "Tell us what backup solution you are running, what it covers, and when recovery was last tested.",
+  ceo: "Tell us your business size and the IT systems that are most critical to daily operations.",
+  tender: "Tell us the framework you are targeting and what backup documentation is specified in the requirements.",
 };
 
 // Persona switching
