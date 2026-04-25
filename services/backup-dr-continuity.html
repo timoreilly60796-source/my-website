@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Backup, DR &amp; Business Continuity Services Ireland | 4DS</title>
-<meta name="description" content="4DS implements and manages backup, disaster recovery and business continuity for SMEs across Ireland and the UK. Immutable backup, tested RTO/RPO, M365 backup, ransomware-resilient architecture. ISO 27001 certified. Free backup review.">
+<meta name="description" content="4DS implements and manages backup, disaster recovery and business continuity for SMEs across Ireland and the UK. Immutable backup, tested RTO/RPO, M365 backup, ransomware-resilient architecture. ISO 27001 aligned. Free backup review.">
 <meta name="keywords" content="backup Ireland, disaster recovery, business continuity, Veeam backup, Acronis, M365 backup, immutable backup, ransomware recovery, RTO RPO, 4DS">
 <meta property="og:title" content="Backup, DR &amp; Business Continuity | 4DS Ireland">
 <meta property="og:description" content="5 in 10 backups have never been tested. We implement immutable, tested backup and DR — and prove you can actually recover. Free backup review.">
@@ -46,8 +46,9 @@ nav{position:sticky;top:0;z-index:9000;background:#fff;border-bottom:1px solid v
 .nav-menu>li>a:hover{color:var(--teal);background:var(--teal-pale);}
 .nav-menu>li>a.active-page{color:var(--teal);}
 .nav-dropdown{position:relative;}
-.dropdown{display:none;position:absolute;top:calc(100% + 10px);left:0;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
+.dropdown{display:none;position:absolute;top:100%;left:0;padding-top:10px;background:white;border:1px solid var(--rule);border-top:2px solid var(--teal);border-radius:0 0 8px 8px;padding:6px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,0.10);list-style:none;z-index:9001;}
 .nav-dropdown:hover .dropdown{display:block;}
+.dropdown::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;background:transparent;}
 .dropdown li a{display:block;padding:0.55rem 1rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;color:var(--body);transition:all 0.15s;}
 .dropdown li a:hover{color:var(--teal);background:var(--teal-pale);}
 .dropdown li a.current-page{color:var(--teal);font-weight:700;background:var(--teal-pale);}
@@ -109,6 +110,7 @@ body.nav-open .drawer-overlay{display:block;}
 .btn-submit{width:100%;font-family:'Sora',sans-serif;font-size:0.92rem;font-weight:700;padding:0.85rem;background:var(--amber);color:#fff;border:none;border-radius:var(--r-btn);cursor:pointer;box-shadow:var(--shadow-amber);transition:background 0.2s;margin-top:0.25rem;}
 .btn-submit:hover{background:var(--amber-deep)}
 .form-micro{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);text-align:center;margin-top:0.65rem;line-height:1.5;}
+.contact-grid{display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;}
 .form-thanks{display:none;text-align:center;padding:1.5rem 0;}
 .form-thanks h4{font-family:'Sora',sans-serif;font-size:1rem;color:var(--ink);margin-bottom:0.5rem;}
 .form-thanks p{font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--muted);line-height:1.6;}
@@ -247,7 +249,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
         <ul class="dropdown">
           <li><a href="m365-modern-workplace.html">Microsoft 365 &amp; Modern Workplace</a></li>
           <li><a href="identity-zero-trust.html">Identity &amp; Zero Trust</a></li>
-          <li><a href="endpoint-device-management.html">Endpoint &amp; Device Management</a></li>
           <li><a href="cybersecurity-ai-security.html">Cybersecurity &amp; AI Security</a></li>
           <li><a href="email-security-deliverability.html">Email Security &amp; Deliverability</a></li>
           <li><a href="network-wifi-infrastructure.html">Network, Wi-Fi &amp; Infrastructure</a></li>
@@ -255,22 +256,12 @@ footer{background:var(--navy);padding:1.5rem 0;}
           <li><a href="automation-it-governance.html">Automation &amp; IT Governance</a></li>
         </ul>
       </li>
-      <li class="nav-dropdown"><a href="../ict-services.html#industries">Industries &#9662;</a>
-        <ul class="dropdown">
-          <li><a href="../ict-services.html#industries">Healthcare</a></li>
-          <li><a href="../ict-services.html#industries">Manufacturing</a></li>
-          <li><a href="../ict-services.html#industries">Finance &amp; Professional Services</a></li>
-          <li><a href="../ict-services.html#industries">Legal &amp; Professional</a></li>
-          <li><a href="../ict-services.html#industries">Education</a></li>
-          <li><a href="../ict-services.html#industries">Public Sector &amp; Non-Profit</a></li>
-        </ul>
-      </li>
-      <li><a href="../ict-services.html#why">About</a></li>
+      <li><a href="../ict-services.html#industries">Industries</a></li>
       <li><a href="../ict-services.html#approach">Approach</a></li>
-      <li><a href="../ict-services.html#testimonials">Clients</a></li>
+      <li><a href="../ict-services.html#why">About</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Get Free Health Check</a>
+      <a href="#enquiry" class="btn-amber" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Contact Us</a>
     </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -283,7 +274,6 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <span class="drawer-heading">Services</span>
     <a href="m365-modern-workplace.html" class="drawer-sub-link">Microsoft 365 &amp; Modern Workplace</a>
     <a href="identity-zero-trust.html" class="drawer-sub-link">Identity &amp; Zero Trust</a>
-    <a href="endpoint-device-management.html" class="drawer-sub-link">Endpoint &amp; Device Management</a>
     <a href="cybersecurity-ai-security.html" class="drawer-sub-link">Cybersecurity &amp; AI Security</a>
     <a href="email-security-deliverability.html" class="drawer-sub-link">Email Security &amp; Deliverability</a>
     <a href="network-wifi-infrastructure.html" class="drawer-sub-link">Network, Wi-Fi &amp; Infrastructure</a>
@@ -291,10 +281,9 @@ footer{background:var(--navy);padding:1.5rem 0;}
     <a href="automation-it-governance.html" class="drawer-sub-link">Automation &amp; IT Governance</a>
     <div class="drawer-divider"></div>
     <a href="../ict-services.html#industries" class="drawer-link">Industries</a>
-    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
     <a href="../ict-services.html#approach"   class="drawer-link">Approach</a>
-    <a href="../ict-services.html#testimonials" class="drawer-link">Clients</a>
-    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Get Free Health Check</a>
+    <a href="../ict-services.html#why"        class="drawer-link">About Us</a>
+    <a href="#enquiry" class="drawer-cta" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});closeDrawer();return false;">Contact Us</a>
   </div>
 </div>
 
@@ -443,12 +432,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
           <div class="brig-title">Most businesses have backups.<br><em>Almost none have tested them.</em></div>
           <div class="brig-sub">Immutable, tested backup and recovery — designed to survive ransomware, documented to satisfy auditors.</div>
         </div>
-        <div class="brig-hstats">
-          <div><div class="brig-stat-n">5/10</div><div class="brig-stat-l">Backups never recovery-tested</div></div>
-          <div><div class="brig-stat-n">58%</div><div class="brig-stat-l">Of SMEs suffering data loss close within 6 months</div></div>
-          <div><div class="brig-stat-n">Zero</div><div class="brig-stat-l">4DS clients without a tested recovery procedure</div></div>
-        </div>
-      </div>
+              </div>
     </div>
 
     <div class="brig-body">
@@ -569,13 +553,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
       </div>
 
       <!-- STATS -->
-      <div class="brig-stats-row">
-        <div class="brig-sc r"><div class="brig-sc-n">5/10</div><div class="brig-sc-l">Backups never tested — green light does not mean recoverable</div></div>
-        <div class="brig-sc a"><div class="brig-sc-n">6/10</div><div class="brig-sc-l">M365 data not independently backed up — relying on recycle bin</div></div>
-        <div class="brig-sc r"><div class="brig-sc-n">4/10</div><div class="brig-sc-l">Backup credentials accessible from production — ransomware can reach them</div></div>
-        <div class="brig-sc g"><div class="brig-sc-n">100%</div><div class="brig-sc-l">Of 4DS clients have documented, tested backup and recovery procedures</div></div>
-      </div>
-
+      
       <!-- COMPLIANCE BAND -->
       <div class="brig-compliance">
         <div><div class="brig-comp-title">ISO 27001 &amp; NIS2</div><div class="brig-comp-desc">Backup and BC/DR controls aligned to ISO 27001 Annex A and NIS2 Article 21. Documentation produced as a standard deliverable.</div></div>
@@ -659,7 +637,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
         <div class="persona-aside">
           <h4>By the numbers</h4>
           <div class="persona-stat"><div class="p-stat-n">58%</div><div class="p-stat-label"><strong>Of SMEs that experience major data loss close within 6 months (University of Texas)</strong></div></div>
-<div class="persona-stat"><div class="p-stat-n">€0</div><div class="p-stat-label"><strong>Additional data loss in a 4DS-managed ransomware scenario due to immutable backup architecture</strong></div></div>
+<div class="persona-stat"><div class="p-stat-n">Zero</div><div class="p-stat-label"><strong>Additional data loss in a 4DS-managed ransomware scenario with immutable backup in place</strong></div></div>
 <div class="persona-stat"><div class="p-stat-n">24 hrs</div><div class="p-stat-label"><strong>Maximum RTO target we define and test for critical workloads in a standard engagement</strong></div></div>
         </div>
       </div>
@@ -677,7 +655,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
         </div>
         <div class="persona-aside">
           <h4>By the numbers</h4>
-          <div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Practice certification covering backup and BC/DR controls for submissions</strong></div></div>
+          <div class="persona-stat"><div class="p-stat-n">ISO 27001</div><div class="p-stat-label"><strong>Controls configured to ISO 27001 alignment — evidence available for submissions</strong></div></div>
 <div class="persona-stat"><div class="p-stat-n">HSE</div><div class="p-stat-label"><strong>BC/DR documentation produced to HSE ICT security standard where specified</strong></div></div>
 <div class="persona-stat"><div class="p-stat-n">100%</div><div class="p-stat-label"><strong>Of 4DS client environments have documented and tested backup procedures</strong></div></div>
         </div>
@@ -718,7 +696,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <!-- CONTACT FORM -->
 <section style="padding:72px 0;background:var(--surface);" id="contact-section">
   <div class="container">
-    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 440px;gap:4rem;align-items:start;max-width:960px;">
+    <div class="contact-grid">
       <div>
         <span class="eyebrow">Get in touch</span>
         <h2 class="section-title">Get in touch</h2>
@@ -730,7 +708,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
         </ul>
       </div>
       <div class="form-card" id="enquiry">
-        <h3>Speak to a senior engineer</h3>
+        <h3>Get in touch</h3>
         <p class="form-sub" id="enquiryNote">Tell us about your current backup setup and whether any recovery tests have been conducted.</p>
         <div id="enquiryForm">
           <input type="hidden" id="formBuyer" value="generic">
@@ -756,11 +734,11 @@ footer{background:var(--navy);padding:1.5rem 0;}
 <footer>
   <div class="container">
     <div class="foot-inner">
-      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321. ISO 27001 Certified.</span>
+      <span>&copy; 2026 4DS Technology Solutions Ltd. Registered in Ireland No. 654321.</span>
       <span>
         <a href="../ict-services.html">Home</a> &nbsp;&middot;&nbsp;
         <a href="../ict-services.html#services">All Services</a> &nbsp;&middot;&nbsp;
-        <a href="../ict-services.html#contact">Contact</a>
+        <a href="#enquiry" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
       </span>
     </div>
   </div>
