@@ -315,7 +315,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
   <div class="container">
     <span class="eyebrow">What it covers</span>
     <h2 class="section-title">Everything included in this service</h2>
-    <p class="section-sub">Delivered by senior engineers on a fixed monthly fee. No billable hours. No scope surprises.</p>
+    <p class="section-sub">Delivered by senior engineers. Scoped and priced upfront. No scope surprises.</p>
     <div class="covers-grid">
       <div class="cover-item"><div class="cover-ico">🔀</div><div><h4>Network Design &amp; Segmentation</h4><p>VLAN architecture separating corporate, guest, IoT, and server traffic. Segmentation to contain lateral movement in the event of a compromise.</p></div></div>
 <div class="cover-item"><div class="cover-ico">📡</div><div><h4>Enterprise Wi-Fi Deployment</h4><p>Cisco Meraki or Ubiquiti UniFi access point design, placement, and configuration. Coverage surveys, channel planning, and seamless roaming.</p></div></div>
@@ -668,11 +668,11 @@ footer{background:var(--navy);padding:1.5rem 0;}
       <div>
         <span class="eyebrow">Get in touch</span>
         <h2 class="section-title">Get in touch</h2>
-        <p class="section-sub" style="margin-bottom:1.5rem;">Tell us your site count, headcount, and the main network issues you are experiencing. A senior engineer responds within 2 hours. No commitment required.</p>
+        <p class="section-sub" style="margin-bottom:1.5rem;">Tell us your site count, headcount, and the main network issues you are experiencing. No commitment required.</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.85rem;">
           <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Full topology discovery — we document what exists before recommending anything</li>
           <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Segmentation, Wi-Fi, firewall, and connectivity reviewed as a single architecture</li>
-          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Fixed monthly fee — no billable hours, no surprise invoices</li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;font-family:'Inter',sans-serif;font-size:0.85rem;color:var(--body);"><span style="color:var(--teal);font-weight:700;flex-shrink:0;">&#10003;</span>Scoped and priced upfront — clear costs before any commitment</li>
         </ul>
       </div>
       <div class="form-card" id="enquiry">
@@ -686,12 +686,12 @@ footer{background:var(--navy);padding:1.5rem 0;}
           <div class="f-group"><label>Phone <span class="f-optional">(optional)</span></label><input type="tel" id="ePhone" placeholder="+353 1 234 5678"></div>
           <div class="f-group"><label>Brief note <span class="f-optional">(optional)</span></label><textarea id="eNote" placeholder="Tell us what you are looking to resolve or improve..."></textarea></div>
           <button class="btn-submit" onclick="handleEnquiry(event)">Send Enquiry &rarr;</button>
-          <p class="form-micro">A senior engineer responds within 2 hours. No commitment required.</p>
+          <p class="form-micro">No commitment required.</p>
         </div>
         <div class="form-thanks" id="enquiryThanks">
           <div style="font-size:2rem;margin-bottom:0.75rem;">&#10003;</div>
           <h4>Enquiry received</h4>
-          <p>A senior engineer will be in touch within 2 business hours.<br>No commitment is required at this stage.</p>
+          <p>No commitment is required at this stage.</p>
         </div>
       </div>
     </div>
@@ -706,7 +706,7 @@ footer{background:var(--navy);padding:1.5rem 0;}
       <span>
         <a href="../ict-services.html">Home</a> &nbsp;&middot;&nbsp;
         <a href="../ict-services.html#services">All Services</a> &nbsp;&middot;&nbsp;
-        <a href="../ict-services.html#contact">Contact</a>
+        <a href="#enquiry" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
       </span>
     </div>
   </div>
